@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<overlay id="saveURLBar-browserOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="browserOverlay.js" />
+  <script type="application/x-javascript"
+          src="chrome://global/content/nsUserSettings.js" />
+
+	<stringbundleset id="stringbundleset">
+    <stringbundle id="saveURLBar-strings"
+                  src="chrome://saveurlbar/locale/saveurlbar.properties"/>
+  </stringbundleset>
+
+
+</overlay>
+

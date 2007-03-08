@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<overlay id="saveURLBar-customizeToolbarOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript">
+  <![CDATA[
+    window.addEventListener("unload", function() {
+      var gURLBar = gToolboxDocument.getElementById("urlbar");
+      if (!gURLBar) return;
+      var SaveURLBar = gToolboxDocument.defaultView.SaveURLBar;
+      gURLBar.addEventListener("popupshowing", SaveURLBar.addItem, false);
+    }, false);
+  ]]>
+  </script>
+
+</overlay>
+

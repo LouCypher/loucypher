@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://viewlinksource/locale/viewlinksource.dtd">
+
+<overlay id="viewLinkSource-browserOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="browserOverlay.js" />
+  <script type="application/x-javascript"
+          src="chrome://global/content/nsUserSettings.js"/>
+
+  <popup id="contentAreaContextMenu">
+    <menuitem
+      id="context-viewlinksource"
+      label="&viewLinkSource.label;"
+      accesskey="&viewLinkSource.key;"
+      oncommand="viewLinkSource.open();"
+      onclick="viewLinkSource.open(event);"
+      insertafter="context-viewsource" />
+  </popup>
+
+</overlay>
+

@@ -1,0 +1,15 @@
+overlay	chrome://browser/content/browser.xul	chrome://viewlinksource/content/browserOverlay.xul
+
+content viewlinksource	          chrome/viewlinksource/content/
+
+locale	viewlinksource  bg-BG     chrome/viewlinksource/locale/bg-BG/
+locale	viewlinksource  da-DK     chrome/viewlinksource/locale/da-DK/
+locale	viewlinksource  de-DE     chrome/viewlinksource/locale/de-DE/
+locale	viewlinksource  en-US     chrome/viewlinksource/locale/en-US/
+locale	viewlinksource  es-ES     chrome/viewlinksource/locale/es-ES/
+locale	viewlinksource  fr-FR     chrome/viewlinksource/locale/fr-FR/
+locale	viewlinksource  it-IT     chrome/viewlinksource/locale/it-IT/
+locale	viewlinksource  nl-NL     chrome/viewlinksource/locale/nl-NL/
+locale	viewlinksource  pt-BR     chrome/viewlinksource/locale/pt-BR/
+locale	viewlinksource  tr-TR     chrome/viewlinksource/locale/tr-TR/
+

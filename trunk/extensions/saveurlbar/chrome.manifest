@@ -1,0 +1,6 @@
+overlay	chrome://browser/content/browser.xul	        chrome://saveurlbar/content/browserOverlay.xul
+overlay chrome://global/content/customizeToolbar.xul  chrome://saveurlbar/content/customizeToolbarOverlay.xul
+
+content	saveurlbar	        chrome/saveurlbar/content/
+locale	saveurlbar	en-US   chrome/saveurlbar/locale/en-US/
+
