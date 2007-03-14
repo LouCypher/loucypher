@@ -21,7 +21,7 @@ var SaveURLBar = {
       alert(stringBundle.getString("msgEnterValidURL"));
       return;
     }
-    saveURL(url, "", null, this.useCache, false, null);
+    saveURL(url, "", null, !this.useCache, false, null);
   },
 
   addItem: function saveURLBar_addItem(aEvent) {
