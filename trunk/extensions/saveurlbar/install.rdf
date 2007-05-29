@@ -6,7 +6,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>saveurlbar@loucypher</em:id>
     <em:name>Save URLBar</em:name>
-    <em:version>0.4a.2007031401</em:version>
+    <em:version>0.4</em:version>
     <em:description>Saves URL in location bar.</em:description>
     <em:creator>LouCypher</em:creator>
     <em:homepageURL>http://loucypher.wordpress.com/extensions/</em:homepageURL>
