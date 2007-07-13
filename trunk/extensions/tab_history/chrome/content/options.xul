@@ -11,74 +11,182 @@
 <prefwindow
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
   id="tabHistory-config"
-	title="&prefWindow.title;"
-	width="320" height="240">
+	title="&config.title;">
 
   <prefpane
     id="prefpane-menu"
-    label="&prefWindow.prefPane.label;"
-    accesskey="&prefWindow.prefPane.accesskey;">
+    label="&config.prefPane.label;"
+    accesskey="&config.prefPane.accesskey;">
 
     <preferences>
       <preference
-        id="extensions.TabHistory.showMenu.Back"
-        name="extensions.TabHistory.showMenu.Back"
+        id="extensions.TabHistory.showMenu.contentBack"
+        name="extensions.TabHistory.showMenu.contentBack"
         type="bool" />
 
       <preference
-        id="extensions.TabHistory.showMenu.Forward"
-        name="extensions.TabHistory.showMenu.Forward"
+        id="extensions.TabHistory.showMenu.contentForward"
+        name="extensions.TabHistory.showMenu.contentForward"
         type="bool" />
 
       <preference
-        id="extensions.TabHistory.showMenu.Start"
-        name="extensions.TabHistory.showMenu.Start"
+        id="extensions.TabHistory.showMenu.contentStart"
+        name="extensions.TabHistory.showMenu.contentStart"
         type="bool" />
 
       <preference
-        id="extensions.TabHistory.showMenu.Last"
-        name="extensions.TabHistory.showMenu.Last"
+        id="extensions.TabHistory.showMenu.contentLast"
+        name="extensions.TabHistory.showMenu.contentLast"
         type="bool" />
 
       <preference
-        id="extensions.TabHistory.showMenu.History"
-        name="extensions.TabHistory.showMenu.History"
+        id="extensions.TabHistory.showMenu.contentHistory"
+        name="extensions.TabHistory.showMenu.contentHistory"
+        type="bool" />
+
+      <preference
+        id="extensions.TabHistory.showMenu.tabBack"
+        name="extensions.TabHistory.showMenu.tabBack"
+        type="bool" />
+
+      <preference
+        id="extensions.TabHistory.showMenu.tabForward"
+        name="extensions.TabHistory.showMenu.tabForward"
+        type="bool" />
+
+      <preference
+        id="extensions.TabHistory.showMenu.tabStart"
+        name="extensions.TabHistory.showMenu.tabStart"
+        type="bool" />
+
+      <preference
+        id="extensions.TabHistory.showMenu.tabLast"
+        name="extensions.TabHistory.showMenu.tabLast"
+        type="bool" />
+
+      <preference
+        id="extensions.TabHistory.showMenu.tabHistory"
+        name="extensions.TabHistory.showMenu.tabHistory"
+        type="bool" />
+
+      <preference
+        id="browser.sessionhistory.max_entries"
+        name="browser.sessionhistory.max_entries"
+        type="int" />
+
+      <preference
+        id="extensions.TabHistory.showMenu.contentHiddenTabBarOnly"
+        name="extensions.TabHistory.showMenu.contentHiddenTabBarOnly"
         type="bool" />
     </preferences>
 
-    <groupbox>
-      <caption label="&prefWindow.caption.label;" />
+    <tabbox>
+      <tabs>
+        <tab label="&config.tab.tab.label;&config.tab.context.label;" />
+        <tab label="&config.tab.main.label;&config.tab.context.label;" />
+      </tabs>
 
-      <checkbox
-        id="extensions.TabHistory.showMenu.Back-check"
-        label="&backCmd.label;"
-        accesskey="&backCmd.accesskey;"
-        preference="extensions.TabHistory.showMenu.Back" />
+      <tabpanels>
+        <tabpanel orient="vertical">
+          <groupbox>
+            <caption label="&config.caption.label;&config.tab.tab.label;&config.tab.context.label;" />
 
-      <checkbox
-        id="extensions.TabHistory.showMenu.Forward-check"
-        label="&forwardCmd.label;"
-        accesskey="&forwardCmd.accesskey;"
-        preference="extensions.TabHistory.showMenu.Forward" />
+            <checkbox
+              id="extensions.TabHistory.showMenu.tabBack-check"
+              label="&backCmd.label;"
+              accesskey="&backCmd.accesskey;"
+              preference="extensions.TabHistory.showMenu.tabBack" />
 
-      <checkbox
-        id="extensions.TabHistory.showMenu.Start-check"
-        label="&tabContext.tabStart.label;"
-        accesskey="&tabContext.tabStart.accesskey;"
-        preference="extensions.TabHistory.showMenu.Start" />
+            <checkbox
+              id="extensions.TabHistory.showMenu.tabForward-check"
+              label="&forwardCmd.label;"
+              accesskey="&forwardCmd.accesskey;"
+              preference="extensions.TabHistory.showMenu.tabForward" />
 
-      <checkbox
-        id="extensions.TabHistory.showMenu.Last-check"
-        label="&tabContext.tabLast.label;"
-        accesskey="&tabContext.tabLast.accesskey;"
-        preference="extensions.TabHistory.showMenu.Last" />
+            <checkbox
+              id="extensions.TabHistory.showMenu.tabStart-check"
+              label="&context.tabStart.label;"
+              accesskey="&context.tabStart.accesskey;"
+              preference="extensions.TabHistory.showMenu.tabStart" />
 
-      <checkbox
-        id="extensions.TabHistory.showMenu.History-check"
-        label="&historyButton.label;"
-        accesskey="&historySidebarCmd.commandKey;"
-        preference="extensions.TabHistory.showMenu.History" />
-    </groupbox>
+            <checkbox
+              id="extensions.TabHistory.showMenu.tabLast-check"
+              label="&context.tabLast.label;"
+              accesskey="&context.tabLast.accesskey;"
+              preference="extensions.TabHistory.showMenu.tabLast" />
+
+            <checkbox
+              id="extensions.TabHistory.showMenu.tabHistory-check"
+              label="&historyButton.label;"
+              accesskey="&historySidebarCmd.commandKey;"
+              preference="extensions.TabHistory.showMenu.tabHistory" />
+          </groupbox>
+        </tabpanel>
+
+        <tabpanel orient="vertical">
+          <groupbox>
+            <caption label="&config.caption.label;&config.tab.main.label;&config.tab.context.label;" />
+
+            <checkbox
+              hidden="true"
+              id="extensions.TabHistory.showMenu.contentBack-check"
+              label="&backCmd.label;"
+              accesskey="&backCmd.accesskey;"
+              preference="extensions.TabHistory.showMenu.contentBack" />
+
+            <checkbox
+              hidden="true"
+              id="extensions.TabHistory.showMenu.contentForward-check"
+              label="&forwardCmd.label;"
+              accesskey="&forwardCmd.accesskey;"
+              preference="extensions.TabHistory.showMenu.contentForward" />
+
+            <checkbox
+              id="extensions.TabHistory.showMenu.contentStart-check"
+              label="&context.tabStart.label;"
+              accesskey="&context.tabStart.accesskey;"
+              preference="extensions.TabHistory.showMenu.contentStart" />
+
+            <checkbox
+              id="extensions.TabHistory.showMenu.contentLast-check"
+              label="&context.tabLast.label;"
+              accesskey="&context.tabLast.accesskey;"
+              preference="extensions.TabHistory.showMenu.contentLast" />
+
+            <checkbox
+              id="extensions.TabHistory.showMenu.contentHistory-check"
+              label="&historyButton.label;"
+              accesskey="&historySidebarCmd.commandKey;"
+              preference="extensions.TabHistory.showMenu.contentHistory" />
+          </groupbox>
+
+          <checkbox
+            id="extensions.TabHistory.showMenu.contentHiddenTabBarOnly-check"
+            label="&config.hiddenTabBarOnly.label;"
+            accesskey="&config.hiddenTabBarOnly.accesskey;"
+            preference="extensions.TabHistory.showMenu.contentHiddenTabBarOnly" />
+        </tabpanel>
+      </tabpanels>
+    </tabbox>
+
+    <!--hbox align="center" style="margin-top: 1em;">
+      <spacer style="width: 1em;"/>
+
+      <label
+        value="&config.maxEntries.label;"
+        accesskey="&config.maxEntries.accesskey;"
+        control="browser.sessionhistory.max_entries-check" />
+
+      <textbox
+        id="browser.sessionhistory.max_entries-check"
+        preference="browser.sessionhistory.max_entries"
+        type="number"
+        style="width:5em;" />
+
+      <label
+        value="(&config.maxEntries.default;)"
+        control="browser.sessionhistory.max_entries-check" />
+    </hbox-->
 
   </prefpane>
 

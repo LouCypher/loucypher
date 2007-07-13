@@ -1,12 +1,12 @@
 var TabHistory = {
   CONTEXT_ID: [
-    "tabcontext-tabHistory-separator-1",
-    "tabcontext-tabHistory-history",
-    "tabcontext-tabHistory-last",
-    "tabcontext-tabHistory-start",
-    "tabcontext-tabHistory-forward",
-    "tabcontext-tabHistory-back",
-    "tabcontext-tabHistory-separator-0"
+    "context-tabHistory-separator-1",
+    "context-tabHistory-history",
+    "context-tabHistory-last",
+    "context-tabHistory-start",
+    "context-tabHistory-forward",
+    "context-tabHistory-back",
+    "context-tabHistory-separator-0"
   ],
 
   MENU: ["History", "Last", "Start", "Forward", "Back"],
@@ -122,55 +122,76 @@ var TabHistory = {
   },
 
   setItemAttributes: function tabHist_setItemAttr(aNode, aMenu, aCondition, aIndex) {
-    aNode.setAttribute("disabled", aCondition);
     if (aCondition) {
       aNode.removeAttribute("tooltiptext");
     } else {
       aNode.tooltipText = this.getEntry(aIndex).title;
     }
     aNode.statusText = aCondition ? "" : this.getEntry(aIndex).URI.spec;
-    aNode.hidden = !this.menuShown(this.MENU[aMenu]);
+    if ((aNode.id == "context-back") || (aNode.id == "context-forward")) return;
+    aNode.setAttribute("disabled", aCondition);
+    if (gContextMenu) {
+      aNode.hidden = !this.menuShown("content" + this.MENU[aMenu]) ||
+                       (this.menuShown("contentHiddenTabBarOnly") &&
+                        !getBrowser().mStrip.collapsed)
+    } else if (getBrowser().mContextTab) {
+      aNode.hidden = !this.menuShown("tab" + this.MENU[aMenu]);
+    }
   },
 
-  initTabContext: function tabHist_initiateTabContext(aEvent) {
+  initContext: function tabHist_initiateContext(aEvent) {
+    if (gContextMenu) {
+      getBrowser().mContextTab = null;
+    }
     var browser = TabHistory.getBrowser();
-    var canGoBack = browser.canGoBack;
-    var canGoForward = browser.canGoForward;
+    var canGoBack = browser.webNavigation.canGoBack;
+    var canGoForward = browser.webNavigation.canGoForward;
     var index = TabHistory.getHistory().index;
     var count = TabHistory.getHistory().count;
+    var mBack, mForward, mStart, mLast, mHist;
 
-    var mHist = document.getElementById(TabHistory.CONTEXT_ID[1]);
+    if (gContextMenu) {
+      mBack = document.getElementById("context-back");
+      mForward = document.getElementById("context-forward");
+      mStart = document.getElementById(TabHistory.CONTEXT_ID[3]);
+      mLast = document.getElementById(TabHistory.CONTEXT_ID[2]);
+      mHist = document.getElementById(TabHistory.CONTEXT_ID[1]);
+      mHist.hidden = !TabHistory.menuShown("content" + TabHistory.MENU[0]) ||
+                     (TabHistory.menuShown("contentHiddenTabBarOnly") &&
+                      !getBrowser().mStrip.collapsed);
+
+    } else if (getBrowser().mContextTab) {
+      mBack = document.getElementById("tab" + TabHistory.CONTEXT_ID[5]);
+      mForward = document.getElementById("tab" + TabHistory.CONTEXT_ID[4]);
+      mStart = document.getElementById("tab" + TabHistory.CONTEXT_ID[3]);
+      mLast = document.getElementById("tab" + TabHistory.CONTEXT_ID[2]);
+      mHist = document.getElementById("tab" + TabHistory.CONTEXT_ID[1]);
+      mHist.hidden = !TabHistory.menuShown("tab" + TabHistory.MENU[0]);
+
+    }
     mHist.setAttribute("disabled", count <= 1);
-    mHist.hidden = !TabHistory.menuShown(TabHistory.MENU[0]);
-
-    var mLast = document.getElementById(TabHistory.CONTEXT_ID[2]);
-    mLast.value = count - 1;
-    TabHistory.setItemAttributes(mLast, 1, !canGoForward, count - 1);
-
-    var mStart = document.getElementById(TabHistory.CONTEXT_ID[3]);
-    TabHistory.setItemAttributes(mStart, 2, !canGoBack, 0);
-
-    var mForward = document.getElementById(TabHistory.CONTEXT_ID[4]);
-    TabHistory.setItemAttributes(mForward, 3, !canGoForward, index + 1);
-
-    var mBack = document.getElementById(TabHistory.CONTEXT_ID[5]);
     TabHistory.setItemAttributes(mBack, 4, !canGoBack, index - 1);
-
+    TabHistory.setItemAttributes(mForward, 3, !canGoForward, index + 1);
+    TabHistory.setItemAttributes(mStart, 2, !canGoBack, 0);
+    TabHistory.setItemAttributes(mLast, 1, !canGoForward, count - 1);
+    mLast.value = count - 1;
   }
 }
 
 window.addEventListener("load", function(e) {
+  var context = document.getElementById("contentAreaContextMenu");
   var tabContext = document.getAnonymousElementByAttribute(
                     gBrowser, "anonid", "tabContextMenu");
   //var sep = tabContext.getElementsByTagName("menuseparator")[0];
   var mID = TabHistory.CONTEXT_ID;
   for (var i in mID) {
-    var mi = document.getElementById(mID[i]);
+    var mi = document.getElementById("tab" + mID[i]);
     //tabContext.insertBefore(mi, sep); // doesn't work on Fx3.0
     tabContext.insertBefore(mi, tabContext.firstChild);
   }
 
-  tabContext.addEventListener("popupshowing", TabHistory.initTabContext, false);
+  context.addEventListener("popupshowing", TabHistory.initContext, false);
+  tabContext.addEventListener("popupshowing", TabHistory.initContext, false);
 
   // fix tab tooltips bug
   if (typeof gBrowser.createTooltip != "function") {

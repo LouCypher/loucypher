@@ -1,12 +1,26 @@
-<!ENTITY tabContext.tabStart.label          "Go to Start Page">
-<!ENTITY tabContext.tabStart.accesskey      "G">
+<!ENTITY context.tabStart.label               "Go to Start Page">
+<!ENTITY context.tabStart.accesskey           "G">
 
-<!ENTITY tabContext.tabLast.label           "Go to Last Page">
-<!ENTITY tabContext.tabLast.accesskey       "L">
+<!ENTITY context.tabLast.label                "Go to Last Page">
+<!ENTITY context.tabLast.accesskey            "L">
 
-<!ENTITY prefWindow.title                   "Tab History Preferences">
-<!ENTITY prefWindow.prefPane.label          "Menu">
-<!ENTITY prefWindow.prefPane.accesskey      "M">
-<!ENTITY prefWindow.caption.label           "Show in Tab Context Menu">
-<!ENTITY prefWindow.caption.accesskey       "">
+<!ENTITY config.title                         "Tab History Options">
+<!ENTITY config.prefPane.label                "Menu">
+<!ENTITY config.prefPane.accesskey            "M">
+
+<!ENTITY config.tab.tab.label                 "Tab ">
+<!ENTITY config.tab.tab.accesskey             "T">
+<!ENTITY config.tab.main.label                "Main ">
+<!ENTITY config.tab.main.accesskey            "C">
+<!ENTITY config.tab.context.label             "Context Menu">
+
+<!ENTITY config.caption.label                 "Show in ">
+
+<!ENTITY config.hiddenTabBarOnly.label        "Only shown if the tab bar is hidden">
+<!ENTITY config.hiddenTabBarOnly.accesskey    "O">
+
+
+<!ENTITY config.maxEntries.label              "Maximum history entries">
+<!ENTITY config.maxEntries.accesskey          "x">
+<!ENTITY config.maxEntries.default            "default is 50">
 

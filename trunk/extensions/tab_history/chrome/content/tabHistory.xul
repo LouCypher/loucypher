@@ -15,6 +15,56 @@
 
 
   <popupset id="mainPopupSet">
+    <popup id="contentAreaContextMenu">
+      <menu id="context-tabHistory-history"
+            insertafter="context-forward"
+            label="&historyButton.label;"
+            accesskey="&historySidebarCmd.commandKey;">
+        <menupopup
+          onpopupshowing="TabHistory.populateTabHistory(this);"
+          oncommand="TabHistory.gotoIndex(event);"
+          onclick="checkForMiddleClick(this, event);"
+          onmouseover="TabHistory.setStatusMessage(event.target);"
+          onmouseout="TabHistory.clearStatusMessage();"  />
+      </menu>
+
+      <menuitem
+        id="context-tabHistory-last"
+        insertafter="context-forward"
+        value="1"
+        label="&context.tabLast.label;"
+        accesskey="&context.tabLast.accesskey;"
+        oncommand="TabHistory.gotoIndex(event);"
+        onclick="checkForMiddleClick(this, event);"
+        onmouseover="TabHistory.setStatusMessage(this);"
+        onmouseout="TabHistory.clearStatusMessage();" />
+
+      <menuitem
+        id="context-tabHistory-start"
+        insertafter="context-forward"
+        value="0"
+        label="&context.tabStart.label;"
+        accesskey="&context.tabStart.accesskey;"
+        oncommand="TabHistory.gotoIndex(event);"
+        onclick="checkForMiddleClick(this, event);"
+        onmouseover="TabHistory.setStatusMessage(this);"
+        onmouseout="TabHistory.clearStatusMessage();" />
+
+      <menuitem
+        id="context-forward"
+        label="&forwardCmd.label;"
+        accesskey="&forwardCmd.accesskey;"
+        onmouseover="TabHistory.setStatusMessage(this);"
+        onmouseout="TabHistory.clearStatusMessage();" />
+
+      <menuitem
+        id="context-back"
+        label="&backCmd.label;"
+        accesskey="&backCmd.accesskey;"
+        onmouseover="TabHistory.setStatusMessage(this);"
+        onmouseout="TabHistory.clearStatusMessage();" />
+    </popup>
+
     <popup id="tabHistory-popup">
       <menuseparator id="tabcontext-tabHistory-separator-0" />
 
@@ -39,8 +89,8 @@
       <menuitem
         id="tabcontext-tabHistory-start"
         value="0"
-        label="&tabContext.tabStart.label;"
-        accesskey="&tabContext.tabStart.accesskey;"
+        label="&context.tabStart.label;"
+        accesskey="&context.tabStart.accesskey;"
         oncommand="TabHistory.gotoIndex(event);"
         onclick="checkForMiddleClick(this, event);"
         onmouseover="TabHistory.setStatusMessage(this);"
@@ -49,8 +99,8 @@
       <menuitem
         id="tabcontext-tabHistory-last"
         value="1"
-        label="&tabContext.tabLast.label;"
-        accesskey="&tabContext.tabLast.accesskey;"
+        label="&context.tabLast.label;"
+        accesskey="&context.tabLast.accesskey;"
         oncommand="TabHistory.gotoIndex(event);"
         onclick="checkForMiddleClick(this, event);"
         onmouseover="TabHistory.setStatusMessage(this);"

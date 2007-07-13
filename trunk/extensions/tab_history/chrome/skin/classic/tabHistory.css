@@ -4,6 +4,7 @@
   display: none;
 }
 
+#context-tabHistory-history [checked="true"],
 #tabcontext-tabHistory-history [checked="true"] {
   list-style-image: url(chrome://global/skin/menu/menu-radio.gif);
   font-weight: bold;
