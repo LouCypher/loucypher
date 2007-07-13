@@ -1,0 +1,6 @@
+<!ENTITY tabContext.tabStart.label          "Go to Start Page">
+<!ENTITY tabContext.tabStart.accesskey      "S">
+
+<!ENTITY tabContext.tabLast.label           "Go to Last Page">
+<!ENTITY tabContext.tabLast.accesskey       "L">
+

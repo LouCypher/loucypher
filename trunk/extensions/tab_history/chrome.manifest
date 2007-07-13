@@ -1,0 +1,7 @@
+content   tabhistory                    chrome/content/
+skin      tabhistory    classic/1.0     chrome/skin/classic/
+locale    tabhistory    en-US           chrome/locale/en-US/
+
+overlay   chrome://browser/content/browser.xul  chrome://tabhistory/content/tabHistory.xul
+style     chrome://browser/content/browser.xul  chrome://tabhistory/skin/tabHistory.css
+

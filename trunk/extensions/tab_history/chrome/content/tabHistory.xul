@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="../skin/tabHistory.css"?>
+
+<!DOCTYPE overlay [
+  <!ENTITY % tabHistoryDTD SYSTEM "../locale/tabHistory.dtd" >
+  %tabHistoryDTD;
+  <!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd" >
+  %browserDTD;
+]>
+
+<overlay id="tabHistory-browserOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="tabHistory.js" />
+
+
+  <popupset id="mainPopupSet">
+    <popup id="tabHistory-popup">
+      <menuseparator id="tabcontext-tabHistory-separator-0" />
+
+      <menuitem
+        id="tabcontext-tabBack"
+        label="&backCmd.label;"
+        accesskey="&backCmd.accesskey;"
+        oncommand="TabHistory.tabBack(event);"
+        onclick="checkForMiddleClick(this, event);"
+        onmouseover="TabHistory.setStatusMessage(this);"
+        onmouseout="TabHistory.clearStatusMessage();" />
+
+      <menuitem
+        id="tabcontext-tabForward"
+        label="&forwardCmd.label;"
+        accesskey="&forwardCmd.accesskey;"
+        oncommand="TabHistory.tabForward(event);"
+        onclick="checkForMiddleClick(this, event);"
+        onmouseover="TabHistory.setStatusMessage(this);"
+        onmouseout="TabHistory.clearStatusMessage();" />
+
+      <menuitem
+        id="tabcontext-tabStart"
+        value="0"
+        label="&tabContext.tabStart.label;"
+        accesskey="&tabContext.tabStart.accesskey;"
+        oncommand="TabHistory.gotoIndex(event);"
+        onclick="checkForMiddleClick(this, event);"
+        onmouseover="TabHistory.setStatusMessage(this);"
+        onmouseout="TabHistory.clearStatusMessage();" />
+
+      <menuitem
+        id="tabcontext-tabLast"
+        value="1"
+        label="&tabContext.tabLast.label;"
+        accesskey="&tabContext.tabLast.accesskey;"
+        oncommand="TabHistory.gotoIndex(event);"
+        onclick="checkForMiddleClick(this, event);"
+        onmouseover="TabHistory.setStatusMessage(this);"
+        onmouseout="TabHistory.clearStatusMessage();" />
+
+      <menu id="tabcontext-tabHistory"
+            label="&historyMenu.label;"
+            accesskey="&historyMenu.accesskey;">
+        <menupopup
+          onpopupshowing="TabHistory.populateTabHistory(this);"
+          oncommand="TabHistory.gotoIndex(event);"
+          onclick="checkForMiddleClick(this, event);"
+          onmouseover="TabHistory.setStatusMessage(event.target);"
+          onmouseout="TabHistory.clearStatusMessage();"  />
+      </menu>
+
+      <menuseparator id="tabcontext-tabHistory-separator-1" />
+    </popup>
+  </popupset>
+
+</overlay>
+

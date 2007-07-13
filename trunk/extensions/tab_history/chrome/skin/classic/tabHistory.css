@@ -1,0 +1,11 @@
+[collapsed="true"] + [id^="tabcontext-tabHistory-separator"],
+[hidden="true"] + [id^="tabcontext-tabHistory-separator"],
+[id^="tabcontext-tabHistory-separator"]:first-child {
+  display: none;
+}
+
+#tabcontext-tabHistory menuitem[checked="true"] {
+  list-style-image: url(chrome://global/skin/menu/menu-radio.gif);
+  font-weight: bold;
+}
+
