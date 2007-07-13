@@ -128,12 +128,17 @@ var TabHistory = {
       aNode.tooltipText = this.getEntry(aIndex).title;
     }
     aNode.statusText = aCondition ? "" : this.getEntry(aIndex).URI.spec;
-    if ((aNode.id == "context-back") || (aNode.id == "context-forward")) return;
+    if (((aNode.id == "context-back") || (aNode.id == "context-forward")) &&
+        !this.prefs.getBoolPref("allowHidingContentBackForward")) return;
     aNode.setAttribute("disabled", aCondition);
     if (gContextMenu) {
       aNode.hidden = !this.menuShown("content" + this.MENU[aMenu]) ||
-                       (this.menuShown("contentHiddenTabBarOnly") &&
-                        !getBrowser().mStrip.collapsed)
+                     (this.menuShown("contentHiddenTabBarOnly") &&
+                      !getBrowser().mStrip.collapsed) ||
+                     (gContextMenu.isContentSelected ||
+                       gContextMenu.onLink ||
+                       gContextMenu.onImage ||
+                       gContextMenu.onTextInput);
     } else if (getBrowser().mContextTab) {
       aNode.hidden = !this.menuShown("tab" + this.MENU[aMenu]);
     }
@@ -158,7 +163,10 @@ var TabHistory = {
       mHist = document.getElementById(TabHistory.CONTEXT_ID[1]);
       mHist.hidden = !TabHistory.menuShown("content" + TabHistory.MENU[0]) ||
                      (TabHistory.menuShown("contentHiddenTabBarOnly") &&
-                      !getBrowser().mStrip.collapsed);
+                      !getBrowser().mStrip.collapsed) ||
+                     (gContextMenu.isContentSelected ||
+                      gContextMenu.onLink || gContextMenu.onImage ||
+                      gContextMenu.onTextInput);
 
     } else if (getBrowser().mContextTab) {
       mBack = document.getElementById("tab" + TabHistory.CONTEXT_ID[5]);

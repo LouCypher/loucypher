@@ -1,26 +1,29 @@
-<!ENTITY context.tabStart.label               "Go to Start Page">
-<!ENTITY context.tabStart.accesskey           "G">
+<!ENTITY context.tabStart.label                     "Go to Start Page">
+<!ENTITY context.tabStart.accesskey                 "G">
 
-<!ENTITY context.tabLast.label                "Go to Last Page">
-<!ENTITY context.tabLast.accesskey            "L">
+<!ENTITY context.tabLast.label                      "Go to Last Page">
+<!ENTITY context.tabLast.accesskey                  "L">
 
-<!ENTITY config.title                         "Tab History Options">
-<!ENTITY config.prefPane.label                "Menu">
-<!ENTITY config.prefPane.accesskey            "M">
+<!ENTITY config.title                               "Tab History Options">
+<!ENTITY config.prefPane.label                      "Menu">
+<!ENTITY config.prefPane.accesskey                  "M">
 
-<!ENTITY config.tab.tab.label                 "Tab ">
-<!ENTITY config.tab.tab.accesskey             "T">
-<!ENTITY config.tab.main.label                "Main ">
-<!ENTITY config.tab.main.accesskey            "C">
-<!ENTITY config.tab.context.label             "Context Menu">
+<!ENTITY config.tab.tab.label                       "Tab ">
+<!ENTITY config.tab.tab.accesskey                   "T">
+<!ENTITY config.tab.main.label                      "Main ">
+<!ENTITY config.tab.main.accesskey                  "C">
+<!ENTITY config.tab.context.label                   "Context Menu">
 
-<!ENTITY config.caption.label                 "Show in ">
+<!ENTITY config.caption.label                       "Show in ">
 
-<!ENTITY config.hiddenTabBarOnly.label        "Only shown if the tab bar is hidden">
-<!ENTITY config.hiddenTabBarOnly.accesskey    "O">
+<!ENTITY config.hiddenTabBarOnly.label              "Only shown if the tab bar is hidden">
+<!ENTITY config.hiddenTabBarOnly.accesskey          "O">
+
+<!ENTITY config.allowHidingBackForward.label        "Allow hiding ">
+<!ENTITY config.allowHidingBackForward.accesskey    "A">
 
 
-<!ENTITY config.maxEntries.label              "Maximum history entries">
-<!ENTITY config.maxEntries.accesskey          "x">
-<!ENTITY config.maxEntries.default            "default is 50">
+<!ENTITY config.maxEntries.label                    "Maximum history entries">
+<!ENTITY config.maxEntries.accesskey                "x">
+<!ENTITY config.maxEntries.default                  "default is 50">
 

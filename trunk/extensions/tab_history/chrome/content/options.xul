@@ -11,12 +11,14 @@
 <prefwindow
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
   id="tabHistory-config"
-	title="&config.title;">
+	title="&config.title;"
+	width="300" height="300">
 
   <prefpane
     id="prefpane-menu"
     label="&config.prefPane.label;"
-    accesskey="&config.prefPane.accesskey;">
+    accesskey="&config.prefPane.accesskey;"
+    onpaneload="thConfig.init();">
 
     <preferences>
       <preference
@@ -78,6 +80,11 @@
         id="extensions.TabHistory.showMenu.contentHiddenTabBarOnly"
         name="extensions.TabHistory.showMenu.contentHiddenTabBarOnly"
         type="bool" />
+
+      <preference
+        id="extensions.TabHistory.allowHidingContentBackForward"
+        name="extensions.TabHistory.allowHidingContentBackForward"
+        type="bool" />
     </preferences>
 
     <tabbox>
@@ -87,7 +94,7 @@
       </tabs>
 
       <tabpanels>
-        <tabpanel orient="vertical">
+        <tabpanel orient="vertical" onfocus="thConfig.setLastTab(this);">
           <groupbox>
             <caption label="&config.caption.label;&config.tab.tab.label;&config.tab.context.label;" />
 
@@ -123,19 +130,19 @@
           </groupbox>
         </tabpanel>
 
-        <tabpanel orient="vertical">
+        <tabpanel orient="vertical" onfocus="thConfig.setLastTab(this);">
           <groupbox>
             <caption label="&config.caption.label;&config.tab.main.label;&config.tab.context.label;" />
 
             <checkbox
-              hidden="true"
+              disabled="true"
               id="extensions.TabHistory.showMenu.contentBack-check"
               label="&backCmd.label;"
               accesskey="&backCmd.accesskey;"
               preference="extensions.TabHistory.showMenu.contentBack" />
 
             <checkbox
-              hidden="true"
+              disabled="true"
               id="extensions.TabHistory.showMenu.contentForward-check"
               label="&forwardCmd.label;"
               accesskey="&forwardCmd.accesskey;"
@@ -165,6 +172,13 @@
             label="&config.hiddenTabBarOnly.label;"
             accesskey="&config.hiddenTabBarOnly.accesskey;"
             preference="extensions.TabHistory.showMenu.contentHiddenTabBarOnly" />
+
+          <checkbox
+            id="extensions.TabHistory.allowHidingContentBackForward-check"
+            label="&config.allowHidingBackForward.label;&backCmd.label;/&forwardCmd.label;"
+            accesskey="&config.allowHidingBackForward.accesskey;"
+            preference="extensions.TabHistory.allowHidingContentBackForward"
+            onclick="thConfig.disableBaFo(this.checked);" />
         </tabpanel>
       </tabpanels>
     </tabbox>
@@ -189,6 +203,8 @@
     </hbox-->
 
   </prefpane>
+
+  <script type="application/x-javascript" src="options.js" />
 
 </prefwindow>
 

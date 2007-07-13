@@ -6,7 +6,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>TabHistory@loucypher</em:id>
     <em:name>Tab History</em:name>
-    <em:version>0.2</em:version>
+    <em:version>0.2.1</em:version>
     <em:description>Navigates through tabs history from tab context menu.</em:description>
     <em:creator>LouCypher</em:creator>
     <em:optionsURL>chrome://tabhistory/content/options.xul</em:optionsURL>
