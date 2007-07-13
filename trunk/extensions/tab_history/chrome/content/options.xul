@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/"?>
+
+<!DOCTYPE overlay [
+  <!ENTITY % tabHistoryDTD SYSTEM "../locale/tabHistory.dtd" >
+  %tabHistoryDTD;
+  <!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd" >
+  %browserDTD;
+]>
+
+<prefwindow
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  id="tabHistory-config"
+	title="&prefWindow.title;"
+	width="320" height="240">
+
+  <prefpane
+    id="prefpane-menu"
+    label="&prefWindow.prefPane.label;"
+    accesskey="&prefWindow.prefPane.accesskey;">
+
+    <preferences>
+      <preference
+        id="extensions.TabHistory.showMenu.Back"
+        name="extensions.TabHistory.showMenu.Back"
+        type="bool" />
+
+      <preference
+        id="extensions.TabHistory.showMenu.Forward"
+        name="extensions.TabHistory.showMenu.Forward"
+        type="bool" />
+
+      <preference
+        id="extensions.TabHistory.showMenu.Start"
+        name="extensions.TabHistory.showMenu.Start"
+        type="bool" />
+
+      <preference
+        id="extensions.TabHistory.showMenu.Last"
+        name="extensions.TabHistory.showMenu.Last"
+        type="bool" />
+
+      <preference
+        id="extensions.TabHistory.showMenu.History"
+        name="extensions.TabHistory.showMenu.History"
+        type="bool" />
+    </preferences>
+
+    <groupbox>
+      <caption label="&prefWindow.caption.label;" />
+
+      <checkbox
+        id="extensions.TabHistory.showMenu.Back-check"
+        label="&backCmd.label;"
+        accesskey="&backCmd.accesskey;"
+        preference="extensions.TabHistory.showMenu.Back" />
+
+      <checkbox
+        id="extensions.TabHistory.showMenu.Forward-check"
+        label="&forwardCmd.label;"
+        accesskey="&forwardCmd.accesskey;"
+        preference="extensions.TabHistory.showMenu.Forward" />
+
+      <checkbox
+        id="extensions.TabHistory.showMenu.Start-check"
+        label="&tabContext.tabStart.label;"
+        accesskey="&tabContext.tabStart.accesskey;"
+        preference="extensions.TabHistory.showMenu.Start" />
+
+      <checkbox
+        id="extensions.TabHistory.showMenu.Last-check"
+        label="&tabContext.tabLast.label;"
+        accesskey="&tabContext.tabLast.accesskey;"
+        preference="extensions.TabHistory.showMenu.Last" />
+
+      <checkbox
+        id="extensions.TabHistory.showMenu.History-check"
+        label="&historyMenu.label;"
+        accesskey="&historyMenu.accesskey;"
+        preference="extensions.TabHistory.showMenu.History" />
+    </groupbox>
+
+  </prefpane>
+
+</prefwindow>
+

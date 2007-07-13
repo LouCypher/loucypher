@@ -1,6 +1,12 @@
 <!ENTITY tabContext.tabStart.label          "Go to Start Page">
-<!ENTITY tabContext.tabStart.accesskey      "S">
+<!ENTITY tabContext.tabStart.accesskey      "G">
 
 <!ENTITY tabContext.tabLast.label           "Go to Last Page">
 <!ENTITY tabContext.tabLast.accesskey       "L">
+
+<!ENTITY prefWindow.title                   "Tab History Preferences">
+<!ENTITY prefWindow.prefPane.label          "Menu">
+<!ENTITY prefWindow.prefPane.accesskey      "M">
+<!ENTITY prefWindow.caption.label           "Show in Tab Context Menu">
+<!ENTITY prefWindow.caption.accesskey       "">
 
