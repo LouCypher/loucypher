@@ -75,8 +75,8 @@
 
       <checkbox
         id="extensions.TabHistory.showMenu.History-check"
-        label="&historyMenu.label;"
-        accesskey="&historyMenu.accesskey;"
+        label="&historyButton.label;"
+        accesskey="&historySidebarCmd.commandKey;"
         preference="extensions.TabHistory.showMenu.History" />
     </groupbox>
 
