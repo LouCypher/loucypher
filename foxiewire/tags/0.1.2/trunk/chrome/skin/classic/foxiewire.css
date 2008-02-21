@@ -1,0 +1,8 @@
+#foxiewire-button {
+  list-style-image: url("foxiewire_24.png");
+}
+
+toolbar[iconsize="small"] #foxiewire-button {
+  list-style-image: url("foxiewire_16.png");
+}
+
