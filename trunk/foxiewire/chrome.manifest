@@ -1,6 +1,7 @@
 content   foxiewire                                     chrome/content/
 skin      foxiewire     classic/1.0                     chrome/skin/classic/
 locale    foxiewire     en-US                           chrome/locale/en-US/
+locale    foxiewire     id                              chrome/locale/id/
 
 overlay   chrome://browser/content/browser.xul          chrome://foxiewire/content/foxiewire.xul
 style     chrome://browser/content/browser.xul          chrome://foxiewire/skin/foxiewire.css
