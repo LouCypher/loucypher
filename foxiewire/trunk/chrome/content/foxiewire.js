@@ -1,7 +1,7 @@
 var FoxieWire = {
 
   isValidScheme: function foxiewire_isValidScheme(aProtocol) {
-    var reg = new RegExp("https?|ftp", "i");
+    var reg = new RegExp("^https?|^ftp", "i");
     return reg.test(aProtocol);
   },
 
@@ -11,8 +11,13 @@ var FoxieWire = {
                           encodeURIComponent(aURL) +
                           "&sourceid=FoxieWire+Extension")
     } else {
-      var strings = document.getElementById("foxiewire-strings");
-      alert(aURL.match(/^\w+\:/) + " " + strings.getString("invalidScheme"));
+      var STRINGS = document.getElementById("foxiewire-strings");
+      var scheme = [aURL.match(/^\S[^\:]+\:/).toString()];
+      var string = STRINGS.getFormattedString("invalidScheme", scheme);
+
+      var PROMPTS = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                              .getService(Components.interfaces.nsIPromptService);
+      PROMPTS.alert(null, "FoxieWire", string);
     }
   },
 

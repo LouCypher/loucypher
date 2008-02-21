@@ -17,8 +17,8 @@
       id="foxiewire-button"
       label="FoxieWire"
       tooltiptext="&foxiewire.sendPage.label; FoxieWire"
-      oncommand="FoxieWire.submit(content.document.URL);"
-      onmouseover="FoxieWire.setStatus(content.document.URL);"
+      oncommand="FoxieWire.submit(content.document.documentURI);"
+      onmouseover="FoxieWire.setStatus(content.document.documentURI);"
       onmouseout="FoxieWire.setStatus('');" />
   </toolbarpalette>
 
@@ -35,16 +35,16 @@
       id="context-foxiewire-page"
       label="&foxiewire.sendPage.label; FoxieWire"
       insertafter="context-bookmarkpage"
-      oncommand="FoxieWire.submit(content.document.URL);"
-      onmouseover="FoxieWire.setStatus(content.document.URL);"
+      oncommand="FoxieWire.submit(content.document.documentURI);"
+      onmouseover="FoxieWire.setStatus(content.document.documentURI);"
       onmouseout="FoxieWire.setStatus('');" />
 
     <menuitem
       id="context-foxiewire-frame"
       label="&foxiewire.sendFrame.label; FoxieWire"
       insertafter="frame"
-      oncommand="FoxieWire.submit(gContextMenu.target.ownerDocument.URL);"
-      onmouseover="FoxieWire.setStatus(gContextMenu.target.ownerDocument.URL);"
+      oncommand="FoxieWire.submit(gContextMenu.target.ownerDocument.documentURI);"
+      onmouseover="FoxieWire.setStatus(gContextMenu.target.ownerDocument.documentURI);"
       onmouseout="FoxieWire.setStatus('');" />
 
   </menupopup>
