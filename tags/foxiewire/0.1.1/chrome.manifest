@@ -1,0 +1,8 @@
+content   foxiewire                                     chrome/content/
+skin      foxiewire     classic/1.0                     chrome/skin/classic/
+locale    foxiewire     en-US                           chrome/locale/en-US/
+
+overlay   chrome://browser/content/browser.xul          chrome://foxiewire/content/foxiewire.xul
+style     chrome://browser/content/browser.xul          chrome://foxiewire/skin/foxiewire.css
+style     chrome://global/content/customizeToolbar.xul  chrome://foxiewire/skin/foxiewire.css
+
