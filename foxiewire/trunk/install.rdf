@@ -6,9 +6,12 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>foxiewire@foxiewire.com</em:id>
     <em:name>FoxieWire</em:name>
-    <em:version>0.1</em:version>
+    <em:version>0.1.1</em:version>
     <em:description>Send a web page, link, or frame to FoxieWire.</em:description>
     <em:creator>FoxieWire</em:creator>
+    <em:contributor>LouCypher - http://loucypher.wordpress.com/</em:contributor>
+    <em:contributor>Jamey Boje - http://www.graphicsguru.com/</em:contributor>
+    <em:iconURL>chrome://foxiewire/skin/foxiewire_32.png</em:iconURL>
     <em:homepageURL>http://www.foxiewire/</em:homepageURL>
 
     <!-- Firefox -->
