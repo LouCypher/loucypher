@@ -8,4 +8,4 @@
 
 == Install ==
 
- * [http://loucypher.googlecode.com/svn/xpi/shortenURL.xpi Install]
+ * [http://loucypher.googlecode.com/svn/xpi/shortenURL.xpi dev build]
