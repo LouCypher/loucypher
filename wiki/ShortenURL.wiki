@@ -14,6 +14,5 @@
 _,,TBA,,_
 
 
-== Links ==
- * [http://www.killertechtips.com/2009/03/25/shorten-url-firefox/ Shorten URLs using Multiple Services in Firefox]
-
+==External links ==
+ * [http://www.killertechtips.com/2009/03/25/shorten-url-firefox/ Shorten URLs using Multiple Services in Firefox] / Shankar Ganesh
