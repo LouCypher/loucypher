@@ -1,5 +1,4 @@
 #summary Shorten URL with your chosen shorten URL service
-#labels Featured,Phase-Deploy
 
 == Compatibility ==
 
