@@ -1,1 +1,5 @@
 #summary Shorten URL extension
+#labels Featured,Phase-Deploy
+
+ * [http://loucypher.googlecode.com/svn/xpi/shortenURL.xpi Install]
+
