@@ -1,5 +1,5 @@
 #summary Browse the source
 
-= Firefox extensions =
+== Firefox extensions ==
 * [http://code.google.com/p/foxiewirex/source/browse/ FoxieWire]
 * [http://code.google.com/p/loucypher/source/browse/#svn/trunk/shortenurl Shorten URL]
