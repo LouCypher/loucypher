@@ -9,3 +9,6 @@
 == Install ==
 
  * [http://loucypher.googlecode.com/svn/xpi/shortenURL.xpi dev build]
+
+== Screnshots ==
+_,,TBA,,_
