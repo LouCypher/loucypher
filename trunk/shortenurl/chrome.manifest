@@ -1,6 +1,0 @@
-content   shortenurl                                    jar:chrome/shortenURL.jar!/content/
-locale    shortenurl     en-US                          jar:chrome/shortenURL.jar!/locale/en-US/
-
-overlay   chrome://browser/content/browser.xul          chrome://shortenurl/content/browser.xul
-overlay   chrome://browser/content/openLocation.xul     chrome://shortenurl/content/openLocation.xul
-
