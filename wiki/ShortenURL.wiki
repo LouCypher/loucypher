@@ -1,5 +1,11 @@
 #summary Shorten URL extension
 #labels Featured,Phase-Deploy
 
- * [http://loucypher.googlecode.com/svn/xpi/shortenURL.xpi Install]
+== Compatibility ==
 
+ * Mozilla Firefox 2.0 - 3.1b3
+ * Flock 1.0 - 2.*
+
+== Install ==
+
+ * [http://loucypher.googlecode.com/svn/xpi/shortenURL.xpi Install]
