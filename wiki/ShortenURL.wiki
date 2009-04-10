@@ -4,7 +4,7 @@
 == Compatibility ==
 
  * Mozilla Firefox 2.0 - 3.1b3
- * Flock 1.0 - 2.*
+ * Flock 1.0 - 2.`*`
 
 == Install ==
 
