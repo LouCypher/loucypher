@@ -1,0 +1,12 @@
+<!ENTITY context.page           "Shorten this page URL">
+<!ENTITY context.link           "Shorten this link URL">
+<!ENTITY context.frame          "Shorten this frame URL">
+
+<!ENTITY options.title          "Options">
+<!ENTITY options.select         "Service">
+<!ENTITY options.select.key     "S">
+<!ENTITY options.autocopy       "Copy to clipboard">
+<!ENTITY options.autocopy.key   "C">
+<!ENTITY options.autotweet      "Post to Twitter">
+<!ENTITY options.autotweet.key  "T">
+
