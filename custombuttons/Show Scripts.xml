@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custombutton xmlns:cb="http://xsms.nm.ru/custombuttons/"
+              xmlns:html="http://www.w3.org/1999/xhtml">
+  <html:head>
+    <html:title><![CDATA[Show Scripts]]></html:title>
+    <html:link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAFXRFWHRDcmVhdGlvbiBUaW1lAAfVCRsJAwWFuOpgAAAAB3RJTUUH1QkbCQM5f9Z1lwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAwBQTFRFcHBwaWqbaGuea26ha3CjbHKlb3ircXuucn6xdYS3doe6d4m8eYu+eo7BpH2F44c73JNWnp7Hnp7/hqfakqDGk6bNmKzVmLLcmLrkkr3wrK3SorDQprvclMLusMHcrdfupdL/qNP/tMbmstj/tNn/utb/uNv/v9//tuL0s+X/tun/vuTxvvH/xL65w8nizdnvwNj3wtz60t3wxOH/x+P/zOX/xPX/yfr/z/z/1eb91On/3eHy2Oj80f7/2f///8D/5+/75fL/5///7fb/6///8vj/8/r/+fz/+v///Pz8/f7//v//////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyIGgAAAEB0Uk5T////////////////////////////////////////////////////////////////////////////////////AMJ7sUQAAAC1SURBVHjaVczZGoFQGIXhtiFFMjWgX5lFFCWZM2RK9389GrbH4ztb78EiXLfVqIuiwPOo4oYRIZzfb99/3FCNw3AKgsC/XxFCRAL7lw6iqM+rDIadbpgTVZgvChhMWZs6B1Wy81+A8erirXmLxmCA6nhPA0YUhtmM044mKP0chhLblQRQBj0yhlKZlbe2NRr2OtkYymxzYy+j3c7EwBahGwUA6eSjwDB5msqRZDqVgEv8SuCvD41XKAjj9lLsAAAAAElFTkSuQmCC"/>
+    <html:style type="text/css"><![CDATA[body { font-size: medium; margin: 0; }
+body, code:before, help:before, initcode:before {
+  font-family: "Verdana", sans-serif;
+} 
+#wrapper { position: fixed; top: 1em; right: 1em; text-align: center; }
+p { font-size: small; text-align: center; }
+#button {
+  background-image: -moz-linear-gradient(center top, rgb(147, 200, 94) 30%, rgb(85, 168, 2) 55%);
+  border: 1px outset rgb(58, 116, 4);
+  border-radius: 1em;
+  padding: 0;
+  text-shadow: 0pt -1px 0pt rgb(58, 116, 4);
+  margin-bottom: 1em;
+}
+#button a {
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  text-decoration: none;
+}
+#button a, code, code:before, initcode, initcode:before, help, help:before {
+  display: block;
+}
+#credits { position: fixed; bottom: 1em; right: 1em; font-size: small; }
+custombutton { background-color: rgb(171, 171, 171); margin: 1em; }
+image, mode, accelkey { display: none; }
+name { font-weight: bold; font-size: x-large; }
+code:before, help:before, initcode:before {
+  font-weight: bold;
+  font-size: large;
+  margin: 0 0 1em;
+  padding: .5em;
+}
+code:before { content: "CODE"; }
+help:before { content: "Help"; }
+initcode:before { content: "Initialization Code"; }
+code, initcode, help {
+  background-color: rgb(255, 255, 255);
+  border: 1px inset rgb(170, 170, 170);
+  font: medium monospace;
+  margin: 1em 1em 2em 0;
+  padding: 1em;
+  text-align: left;
+  width: 840px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.clear { clear: both; }
+]]></html:style>
+  </html:head>
+  <html:body>
+    <html:div id="wrapper">
+      <html:div id="button">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EShow%20Scripts%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bdata%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAFXRFWHRDcmVhdGlvbiBUaW1lAAfVCRsJAwWFuOpgAAAAB3RJTUUH1QkbCQM5f9Z1lwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAwBQTFRFcHBwaWqbaGuea26ha3CjbHKlb3ircXuucn6xdYS3doe6d4m8eYu+eo7BpH2F44c73JNWnp7Hnp7/hqfakqDGk6bNmKzVmLLcmLrkkr3wrK3SorDQprvclMLusMHcrdfupdL/qNP/tMbmstj/tNn/utb/uNv/v9//tuL0s+X/tun/vuTxvvH/xL65w8nizdnvwNj3wtz60t3wxOH/x+P/zOX/xPX/yfr/z/z/1eb91On/3eHy2Oj80f7/2f///8D/5+/75fL/5///7fb/6///8vj/8/r/+fz/+v///Pz8/f7//v//////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyIGgAAAEB0Uk5T////////////////////////////////////////////////////////////////////////////////////AMJ7sUQAAAC1SURBVHjaVczZGoFQGIXhtiFFMjWgX5lFFCWZM2RK9389GrbH4ztb78EiXLfVqIuiwPOo4oYRIZzfb99/3FCNw3AKgsC/XxFCRAL7lw6iqM+rDIadbpgTVZgvChhMWZs6B1Wy81+A8erirXmLxmCA6nhPA0YUhtmM044mKP0chhLblQRQBj0yhlKZlbe2NRr2OtkYymxzYy+j3c7EwBahGwUA6eSjwDB5msqRZDqVgEv8SuCvD41XKAjj9lLsAAAAAElFTkSuQmCC%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5Bthis.showScript%20%3D%20function%28%29%20%7B%0A%20%20var%20test%20%3D%20content.document.getElementById%28%27showScripts.css%27%29%3B%0A%20%20if%28test%29%20test.parentNode.removeChild%28test%29%3B%0A%20%20else%20%7B%0A%20%20%20%20var%20head%20%3D%20content.document.getElementsByTagName%28%27head%27%29%5B0%5D%3B%0A%20%20%20%20if%28%21head%29%20return%3B%0A%0A%20%20%20%20var%20css%20%3D%20%28%27%5C%0A%20%20%20%20head%20%7B%5C%0A%20%20%20%20%20%20display%3A%20block%20%21important%3B%5C%0A%20%20%20%20%7D%5C%0A%20%20%20%20head%20*%3Anot%28script%29%20%7B%5C%0A%20%20%20%20%20%20display%3A%20none%20%21important%3B%5C%0A%20%20%20%20%7D%5C%0A%20%20%20%20html%20script%20%7B%5C%0A%20%20%20%20%20%20display%3A%20block%20%21important%3B%5C%0A%20%20%20%20%20%20padding%3A%201em%3B%5C%0A%20%20%20%20%20%20background-color%3A%20%23e0e0e0%3B%5C%0A%20%20%20%20%20%20border%3A%202px%20solid%20%23aaa%3B%5C%0A%20%20%20%20%20%20color%3A%20%23000%3B%5C%0A%20%20%20%20%20%20font-family%3A%20monospace%3B%5C%0A%20%20%20%20%20%20font-size%3A%2010pt%3B%5C%0A%20%20%20%20%20%20text-align%3A%20left%3B%5C%0A%20%20%20%20%20%20white-space%3A%20-moz-pre-wrap%3B%5C%0A%20%20%20%20%20%20overflow-x%3A%20auto%3B%5C%0A%20%20%20%20%20%20//position%3A%20absolute%3B%5C%0A%20%20%20%20%20%20//opacity%3A%20.1%3B%5C%0A%20%20%20%20%7D%5C%0A%20%20%20%20html%20script%3Ahover%20%7B%5C%0A%20%20%20%20%20%20background-color%3A%20%23eee%3B%5C%0A%20%20%20%20%20%20border%3A%202px%20dashed%20%23aaa%3B%5C%0A%20%20%20%20%20%20opacity%3A%201%3B%5C%0A%20%20%20%20%7D%5C%0A%20%20%20%20%27%29%0A%0A%20%20%20%20var%20style%20%3D%20content.document.createElement%28%27style%27%29%3B%0A%20%20%20%20style.id%20%3D%20%27showScripts.css%27%3B%0A%20%20%20%20style.type%20%3D%20%27text/css%27%3B%0A%20%20%20%20style.innerHTML%20%3D%20css%3B%0A%0A%20%20%20%20head.appendChild%28style%29%3B%0A%20%20%7D%0A%7D%0A%0Athis.getScripts%20%3D%20function%28%29%20%7B%0A%20%20var%20sArray%20%3D%20%5B%5D%3B%0A%20%20var%20scripts%20%3D%20content.document.evaluate%28%22//script%5B@src%5D%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20content.document%2C%20null%2C%206%2C%20null%29%3B%0A%20%20if%20%28%21scripts.snapshotLength%29%20return%3B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20scripts.snapshotLength%3B%20i++%29%20%7B%0A%20%20%20%20sArray.push%28scripts.snapshotItem%28i%29.src%29%3B%0A%20%20%7D%0A%20%20return%20sArray%3B%0A%7D%0A%0Athis.setStatus%20%3D%20function%28aString%29%20%7B%0A%20%20document.getElementById%28%22statusbar-display%22%29.setAttribute%28%22label%22%2C%20aString%29%3B%0A%7D%0A%0Athis.populate%20%3D%20function%28aNode%29%20%7B%0A%20%20while%20%28aNode.lastChild%29%20%7B%0A%20%20%20%20aNode.removeChild%28aNode.lastChild%29%3B%0A%20%20%7D%0A%20%20var%20s%20%3D%20this.getScripts%28%29%3B%0A%20%20if%20%28s%29%20%7B%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20s.length%3B%20i++%29%20%7B%0A%20%20%20%20%20%20addMenuItem%28aNode%2C%20%28i%20+%201%29%2C%20s%5Bi%5D%29%3B%0A%20%20%20%20%7D%0A%20%20%7D%20else%20%7B%0A%20%20%20%20addDisabledMenuItem%28aNode%29%3B%0A%20%20%7D%0A%7D%0A%0Afunction%20addDisabledMenuItem%28aNode%29%20%7B%0A%20%20var%20mi%20%3D%20aNode.appendChild%28document.createElement%28%22menuitem%22%29%29%3B%0A%20%20mi.setAttribute%28%22label%22%2C%20%22No%20external%20scripts%20found%22%29%3B%0A%20%20//mi.setAttribute%28%22disabled%22%2C%20true%29%3B%0A%20%20mi.style.color%20%3D%20%22graytext%22%3B%0A%7D%0A%0Afunction%20addMenuItem%28aNode%2C%20aNum%2C%20aURL%29%20%7B%0A%20%20var%20mi%20%3D%20aNode.appendChild%28document.createElement%28%22menuitem%22%29%29%3B%0A%20%20mi.setAttribute%28%22label%22%2C%20aNum%20+%20%22.%20%22%20+%20aURL%29%3B%0A%20%20mi.setAttribute%28%22url%22%2C%20aURL%29%3B%0A%20%20mi.setAttribute%28%22oncommand%22%2C%20%22gBrowser.loadOneTab%28this.getAttribute%28%27url%27%29%29%3B%22%29%3B%0A%20%20mi.setAttribute%28%22onmouseover%22%2C%20%22this.parentNode.parentNode.setStatus%28this.getAttribute%28%27label%27%29%29%3B%22%29%3B%0A%20%20mi.setAttribute%28%22onmouseout%22%2C%20%22this.parentNode.parentNode.setStatus%28%27%27%29%3B%22%29%3B%0A%7D%0A%0Avar%20mPopup%20%3D%20this.appendChild%28document.createElement%28%22menupopup%22%29%29%3B%0AmPopup.setAttribute%28%22oncommand%22%2C%20%22event.stopPropagation%28%29%3B%22%29%3B%0AmPopup.setAttribute%28%22onpopupshowing%22%2C%20%22this.parentNode.populate%28this%29%3B%22%29%3B%0A%0Athis.type%20%3D%20%22menu-button%22%3B%0A%0A%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bthis.showScript%28%29%3B%0A%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" title="Show Scripts">
+        <![CDATA[Install this button]]>
+        </html:a>
+      </html:div>
+      <html:a href="https://addons.mozilla.org/addon/custom-buttons/">
+        <![CDATA[What's this?]]>
+      </html:a>
+      <html:div id="credits">
+        <html:a href="http://custombuttons.mozdev.org/drupal/node/484">
+          <![CDATA[Custom Buttons XML]]><html:br/><![CDATA[Exporter/Importer]]>
+        </html:a>
+      </html:div>
+    </html:div>
+  </html:body>
+
+  <name>Show Scripts</name>
+  <image><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAFXRFWHRDcmVhdGlvbiBUaW1lAAfVCRsJAwWFuOpgAAAAB3RJTUUH1QkbCQM5f9Z1lwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAwBQTFRFcHBwaWqbaGuea26ha3CjbHKlb3ircXuucn6xdYS3doe6d4m8eYu+eo7BpH2F44c73JNWnp7Hnp7/hqfakqDGk6bNmKzVmLLcmLrkkr3wrK3SorDQprvclMLusMHcrdfupdL/qNP/tMbmstj/tNn/utb/uNv/v9//tuL0s+X/tun/vuTxvvH/xL65w8nizdnvwNj3wtz60t3wxOH/x+P/zOX/xPX/yfr/z/z/1eb91On/3eHy2Oj80f7/2f///8D/5+/75fL/5///7fb/6///8vj/8/r/+fz/+v///Pz8/f7//v//////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyIGgAAAEB0Uk5T////////////////////////////////////////////////////////////////////////////////////AMJ7sUQAAAC1SURBVHjaVczZGoFQGIXhtiFFMjWgX5lFFCWZM2RK9389GrbH4ztb78EiXLfVqIuiwPOo4oYRIZzfb99/3FCNw3AKgsC/XxFCRAL7lw6iqM+rDIadbpgTVZgvChhMWZs6B1Wy81+A8erirXmLxmCA6nhPA0YUhtmM044mKP0chhLblQRQBj0yhlKZlbe2NRr2OtkYymxzYy+j3c7EwBahGwUA6eSjwDB5msqRZDqVgEv8SuCvD41XKAjj9lLsAAAAAElFTkSuQmCC]]></image>
+  <mode>0</mode>
+  <initcode><![CDATA[this.showScript = function() {
+  var test = content.document.getElementById('showScripts.css');
+  if(test) test.parentNode.removeChild(test);
+  else {
+    var head = content.document.getElementsByTagName('head')[0];
+    if(!head) return;
+
+    var css = ('\
+    head {\
+      display: block !important;\
+    }\
+    head *:not(script) {\
+      display: none !important;\
+    }\
+    html script {\
+      display: block !important;\
+      padding: 1em;\
+      background-color: #e0e0e0;\
+      border: 2px solid #aaa;\
+      color: #000;\
+      font-family: monospace;\
+      font-size: 10pt;\
+      text-align: left;\
+      white-space: -moz-pre-wrap;\
+      overflow-x: auto;\
+      //position: absolute;\
+      //opacity: .1;\
+    }\
+    html script:hover {\
+      background-color: #eee;\
+      border: 2px dashed #aaa;\
+      opacity: 1;\
+    }\
+    ')
+
+    var style = content.document.createElement('style');
+    style.id = 'showScripts.css';
+    style.type = 'text/css';
+    style.innerHTML = css;
+
+    head.appendChild(style);
+  }
+}
+
+this.getScripts = function() {
+  var sArray = [];
+  var scripts = content.document.evaluate("//script[@src]",
+                content.document, null, 6, null);
+  if (!scripts.snapshotLength) return;
+  for (var i = 0; i < scripts.snapshotLength; i++) {
+    sArray.push(scripts.snapshotItem(i).src);
+  }
+  return sArray;
+}
+
+this.setStatus = function(aString) {
+  document.getElementById("statusbar-display").setAttribute("label", aString);
+}
+
+this.populate = function(aNode) {
+  while (aNode.lastChild) {
+    aNode.removeChild(aNode.lastChild);
+  }
+  var s = this.getScripts();
+  if (s) {
+    for (var i = 0; i < s.length; i++) {
+      addMenuItem(aNode, (i + 1), s[i]);
+    }
+  } else {
+    addDisabledMenuItem(aNode);
+  }
+}
+
+function addDisabledMenuItem(aNode) {
+  var mi = aNode.appendChild(document.createElement("menuitem"));
+  mi.setAttribute("label", "No external scripts found");
+  //mi.setAttribute("disabled", true);
+  mi.style.color = "graytext";
+}
+
+function addMenuItem(aNode, aNum, aURL) {
+  var mi = aNode.appendChild(document.createElement("menuitem"));
+  mi.setAttribute("label", aNum + ". " + aURL);
+  mi.setAttribute("url", aURL);
+  mi.setAttribute("oncommand", "gBrowser.loadOneTab(this.getAttribute('url'));");
+  mi.setAttribute("onmouseover", "this.parentNode.parentNode.setStatus(this.getAttribute('label'));");
+  mi.setAttribute("onmouseout", "this.parentNode.parentNode.setStatus('');");
+}
+
+var mPopup = this.appendChild(document.createElement("menupopup"));
+mPopup.setAttribute("oncommand", "event.stopPropagation();");
+mPopup.setAttribute("onpopupshowing", "this.parentNode.populate(this);");
+
+this.type = "menu-button";
+
+]]></initcode>
+  <code><![CDATA[this.showScript();
+
+]]></code>
+  <accelkey><![CDATA[]]></accelkey>
+  <help><![CDATA[]]></help>
+  <attributes/>
+</custombutton>
