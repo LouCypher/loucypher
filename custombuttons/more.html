@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>More Tools for Custom Buttons XML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+  body { background: rgb(0, 153, 185); font-family: "Verdana"; }
+  #wrapper {
+    border-radius: 5px;
+    font-size: large;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 1em auto;
+    padding: 1em 2em 3em;
+    width: 900px;
+  }
+  a:link { color: rgb(0, 51, 153); text-decoration: underline; }
+  a:visited { color: rgb(153, 0, 51); }
+  a:link:hover { background-color: rgb(0, 51, 153); }
+  a:visited:hover { background-color: rgb(153, 0, 51); }
+  a:link:hover, a:visited:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  #___plusone_0, .fb_edge_widget_with_comment.fb_iframe_widget { float: right; }
+</style>
+<!--script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script-->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+</script>
+</head>
+<body>
+<div id="wrapper">
+<g:plusone href="http://zoolcar9.lhukie.net/mozilla/custombuttons/more.html">
+</g:plusone>
+<h1>More Tools for Custom Buttons XML</h1>
+<!--fb:like></fb:like-->
+<h2>Greasemonkey user script</h2>
+<p>This <a href=
+"https://addons.mozilla.org/addon/greasemonkey">Greasemonkey</a> 
+<a href="http://wiki.greasespot.net/User_script">user script</a> 
+will prompt you to install the button while opening a Custom Buttons XML
+file.</p>
+<p>To install the user script, click the following link.</p>
+<ul>
+<li><a href="userscript.user.js">Import XML as Custom Button</a> 
+user script.</li>
+</ul>
+<h2>Bookmarklet</h2>
+<p>Greasemonkey user script above doesn't work on local file. To install XML
+as new button, you need to run this 
+<a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a> while 
+opening a Custom Buttons XML file into Firefox from your computer.</p>
+<p>To install this bookmarklet, drag the following link onto your bookmarks 
+toolbar.</p>
+<ul>
+<li><a 
+href="javascript:void(location='custombutton://'+escape(new%20XMLSerializer().serializeToString(document)))" 
+title="Drag this link onto your bookmarks toolbar" 
+onclick="event.preventDefault(); alert(this.title);">Import XML as 
+Custom Button</a> bookmarklet.</li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://addons.mozilla.org/addon/custom-buttons">Custom Buttons 
+at Mozilla Add-ons</a></li>
+<li><a href="http://custombuttons.mozdev.org/">Custom Buttons project 
+home</a></li>
+<li><a href="http://custombuttons.mozdev.org/drupal/">Custom Buttons blog 
+and forums</a></li>
+<li><a href="http://custombuttons.mozdev.org/drupal/node/484">Export/Import 
+Custom Buttons to/from XML File</a></li>
+<li><a href="./">More Custom Buttons XMLs</a></li>
+</ul>
+</div>
+</body>
+</html>
