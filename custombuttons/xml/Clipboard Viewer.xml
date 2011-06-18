@@ -56,7 +56,7 @@ code, initcode, help {
   <html:body>
     <html:div id="wrapper">
       <html:div id="button">
-        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EClipboard%20Viewer%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bdata%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAArdJREFUeNpsU11IU2EYfs/Zt+Vy7sfKEZEp2pxmF2uKUVhq2VKwTB0FmT8FCUbgpTddBWFBICJRgVleRC5GUeRNpPZj+bfMrJZhajeWRTPa2mTnr/c77Iyj9cLD2fd97/PsOc/7HQawytMQW0AuhoF49a+rzmQYZp+yliTpSclP74yybh6QgHTuhdV1DeGkP6zPvNAyNONUDtp3Z/pgW7zPh2hiRQlADUEE5373SafVnu888eCtUxBYMBiMQJ90TffpOe2jKoQX/nEAtuYumOjthZHRp2A0GsGQmAgcx0EwGIQNpa1gq6qCR7dvyL1E+I9AKBKBEpcLvi0sANFoQMOywCJopaWno1MJFB6J8iu4DA3x+9ISrDebIctmkzcpQRRFWYRHJouinCLA8Wo2FG+0O/TJJhPf4/WOdns8U5i8VFdTk9vgdheggpbFJoLgYzyCYajrWPHZtk2evr6Rx2P+F1cvX8+gmxeudL7UaO+LtZWVeyLoQK9ywFIHKmRt3r7T8LC/f+xIZUPq5x98AkXt0VMZjwYHx3FIEF5eBh5fR3G+OgOgTSaLhUvS60hOqnkN3fsaCILRYokKSPyDAScmJYHCW+1gen5iOOQuK8t///GVP4FI4lotML6pockql2tHMByGZRyngKHGHYTCqIIT0hI5xPEv/g+HDzSeKdTqXgudd3ue0xALHY5d+dnZJfM41hSrFTSEwK9gTIDePpaRBSoKqutbXadbUu51tC+mZufkna+rK6JN/pHh0MXy0k+zkxMR5VXxT32ygDxnERodh+rPHb90M72rpWGur/tWW+A35OFRVqx/GnFHw8IAQooTaeXqAWpMME6tdjTVzxYZoMKuwxsHK2FWBZ2MjrcS+esE8g5D1fHgPahjYBHA84aDOeyxI6IILvaMqtZ8AC9mIBbiXwEGADy0Lb/f2n5rAAAAAElFTkSuQmCC%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5B/*%0A%20%20Version%3A%20MPL%201.1/GPL%202.0/LGPL%202.1%0A%0A%20%20The%20contents%20of%20this%20file%20are%20subject%20to%20the%20Mozilla%20Public%20License%20Version%0A%20%201.1%20%28the%20%22License%22%29%3B%20you%20may%20not%20use%20this%20file%20except%20in%20compliance%20with%0A%20%20the%20License.%20You%20may%20obtain%20a%20copy%20of%20the%20License%20at%0A%20%20http%3A//www.mozilla.org/MPL/%0A%0A%20%20Software%20distributed%20under%20the%20License%20is%20distributed%20on%20an%20%22AS%20IS%22%20basis%2C%0A%20%20WITHOUT%20WARRANTY%20OF%20ANY%20KIND%2C%20either%20express%20or%20implied.%20See%20the%20License%0A%20%20for%20the%20specific%20language%20governing%20rights%20and%20limitations%20under%20the%0A%20%20License.%0A%0A%20%20The%20Original%20Code%20is%20Clipboard%20Viewer%0A%0A%20%20The%20Initial%20Developer%20of%20the%20Original%20Code%20is%20LouCypher.%0A%20%20Portions%20created%20by%20the%20Initial%20Developer%20are%20Copyright%20%28C%29%202011%0A%20%20the%20Initial%20Developer.%20All%20Rights%20Reserved.%0A%0A%20%20Contributor%28s%29%3A%0A%20%20-%20LouCypher%0A%0A%20%20Alternatively%2C%20the%20contents%20of%20this%20file%20may%20be%20used%20under%20the%20terms%20of%0A%20%20either%20the%20GNU%20General%20Public%20License%20Version%202%20or%20later%20%28the%20%22GPL%22%29%2C%20or%0A%20%20the%20GNU%20Lesser%20General%20Public%20License%20Version%202.1%20or%20later%20%28the%20%22LGPL%22%29%2C%0A%20%20in%20which%20case%20the%20provisions%20of%20the%20GPL%20or%20the%20LGPL%20are%20applicable%20instead%0A%20%20of%20those%20above.%20If%20you%20wish%20to%20allow%20use%20of%20your%20version%20of%20this%20file%20only%0A%20%20under%20the%20terms%20of%20either%20the%20GPL%20or%20the%20LGPL%2C%20and%20not%20to%20allow%20others%20to%0A%20%20use%20your%20version%20of%20this%20file%20under%20the%20terms%20of%20the%20MPL%2C%20indicate%20your%0A%20%20decision%20by%20deleting%20the%20provisions%20above%20and%20replace%20them%20with%20the%20notice%0A%20%20and%20other%20provisions%20required%20by%20the%20GPL%20or%20the%20LGPL.%20If%20you%20do%20not%20delete%0A%20%20the%20provisions%20above%2C%20a%20recipient%20may%20use%20your%20version%20of%20this%20file%20under%0A%20%20the%20terms%20of%20any%20one%20of%20the%20MPL%2C%20the%20GPL%20or%20the%20LGPL.%0A*/%0A%0AgCBClipboardViewer%20%3D%20this%3B%20//%20global%20obj%0Athis.toString%20%3D%20function%20toString%28%29%20%7Breturn%20this.name%3B%7D%0A%0Avar%20xul%20%3D%20%22%3C%3Fxml%20version%3D%5C%221.0%5C%22%3F%3E%5Cn%5C%0A%3C%3Fxml-stylesheet%20type%3D%5C%22text/css%5C%22%20href%3D%5C%22chrome%3A//global/skin/%5C%22%3F%3E%5Cn%5C%0A%3C%3Fxml-stylesheet%20type%3D%5C%22text/css%5C%22%20href%3D%5C%22data%3Atext/css%3Bbase64%2CI3RleHRib3ggeyBmb250LWZhbWlseTogbW9ub3NwYWNlOyBmb250LXNpemU6IG1lZGl1bTsgd2hpdGUtc3BhY2U6IHByZS13cmFwOyB9%5C%22%3F%3E%5Cn%5C%0A%5Cn%5C%0A%3Cdialog%20xmlns%3D%5C%22http%3A//www.mozilla.org/keymaster/gatekeeper/there.is.only.xul%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20xmlns%3Ahtml%3D%5C%22http%3A//www.w3.org/1999/xhtml%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20id%3D%5C%22clipboard-viewer%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20width%3D%5C%22800%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20height%3D%5C%22600%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20title%3D%5C%22Clipboard%20Viewer%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20buttons%3D%5C%22extra1%2C%20extra2%2C%20cancel%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20buttonlabelextra1%3D%5C%22Edit%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20buttonlabelextra2%3D%5C%22Clear%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20buttonlabelcancel%3D%5C%22Close%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20buttonaccesskeyextra1%3D%5C%22E%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20buttonaccesskeyextra2%3D%5C%22r%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20buttonaccesskeycancel%3D%5C%22C%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20ondialogextra1%3D%5C%22toggleEdit%28%29%3B%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20ondialogextra2%3D%5C%22clearClipboard%28%29%3B%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20ondialogcancel%3D%5C%22closeDialog%28%29%3B%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20onfocus%3D%5C%22loadFromClipboard%28%29%3B%5C%22%3E%5Cn%5C%0A%5Cn%5C%0A%20%20%3Ckeyset%3E%3Ckey%20keycode%3D%5C%22VK_F5%5C%22%20oncommand%3D%5C%22loadFromClipboard%28%29%3B%5C%22%20/%3E%3C/keyset%3E%5Cn%5C%0A%5Cn%5C%0A%20%20%3Cpopupset%3E%5Cn%5C%0A%20%20%20%20%3Cmenupopup%20id%3D%5C%22contextmenu%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20onpopupshowing%3D%5C%22popupShowing%28event%29%3B%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20onpopuphiding%3D%5C%22loadFromClipboard%28%29%3B%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%5C%22var%20cmd%20%3D%20event.originalTarget.getAttribute%28%27cmd%27%29%3B%20if%20%28cmd%29%20document.popupNode.parentNode.doCommand%28cmd%29%3B%5C%22%3E%5Cn%5C%0A%20%20%20%20%20%20%3Cmenuitem%20id%3D%5C%22edit-copy%5C%22%20label%3D%5C%22Copy%5C%22%20accesskey%3D%5C%22c%5C%22%20cmd%3D%5C%22cmd_copy%5C%22%20/%3E%5Cn%5C%0A%20%20%20%20%20%20%3Cmenuseparator%20/%3E%5Cn%5C%0A%20%20%20%20%20%20%3Cmenuitem%20id%3D%5C%22edit-selectAll%5C%22%20label%3D%5C%22Select%20All%5C%22%20accesskey%3D%5C%22a%5C%22%20cmd%3D%5C%22cmd_selectAll%5C%22%20/%3E%5Cn%5C%0A%20%20%20%20%3C/menupopup%3E%5Cn%5C%0A%20%20%3C/popupset%3E%5Cn%5C%0A%5Cn%5C%0A%20%20%3Ctextbox%20id%3D%5C%22textbox%5C%22%20multiline%3D%5C%22true%5C%22%20flex%3D%5C%221%5C%22%5Cn%5C%0A%20%20%20%20%20%20%20%20%20%20%20context%3D%5C%22contextmenu%5C%22%20onkeyup%3D%5C%22copyToClipboard%28%29%3B%5C%22%20readonly%3D%5C%22%5C%22%20/%3E%5Cn%5C%0A%5Cn%5C%0A%20%20%3Cscript%20type%3D%5C%22application/x-javascript%5C%22%3E%3C%21%5Cx5bCDATA%5Cx5b%5Cn%5C%0Aconst%20Cc%20%3D%20Components.classes%3B%5Cn%5C%0Aconst%20Ci%20%3D%20Components.interfaces%3B%5Cn%5C%0A%5Cn%5C%0Aconst%20gTextbox%20%3D%20document.getElementById%28%5C%22textbox%5C%22%29%3B%5Cn%5C%0A%5Cn%5C%0Aconst%20clipboardHelper%20%3D%20Cc%5Cx5b%5C%22@mozilla.org/widget/clipboardhelper%3B1%5C%22%5Cx5d.%5Cn%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20getService%28Ci.nsIClipboardHelper%29%3B%5Cn%5C%0A%5Cn%5C%0Afunction%20getMainwin%28%29%20%7B%5Cn%5C%0A%20%20if%20%28window.frameElement%29%20%7B%5Cn%5C%0A%20%20%20%20return%20window.frameElement.ownerDocument.defaultView%3B%5Cn%5C%0A%5Cn%5C%0A%20%20%7D%20else%20if%20%28window.opener%29%20%7B%5Cn%5C%0A%20%20%20%20return%20window.opener%3B%5Cn%5C%0A%5Cn%5C%0A%20%20%7D%20else%20%7B%5Cn%5C%0A%20%20%20%20return%20Cc%5Cx5b%27@mozilla.org/appshell/window-mediator%3B1%27%5Cx5d.%5Cn%5C%0A%20%20%20%20%20%20%20%20%20%20%20getService%28%29.QueryInterface%28Ci.nsIWindowMediator%29.%5Cn%5C%0A%20%20%20%20%20%20%20%20%20%20%20getMostRecentWindow%28%5C%22navigator%3Abrowser%5C%22%29%5Cn%5C%0A%20%20%7D%5Cn%5C%0A%7D%5Cn%5C%0A%5Cn%5C%0Afunction%20readFromClipboard%28%29%20%7B%5Cn%5C%0A//http%3A//mxr.mozilla.org/mozilla2.0/source/browser/base/content/browser.js%232299%5Cn%5C%0A%20%20var%20string%3B%5Cn%5C%0A%20%20try%20%7B%5Cn%5C%0A%20%20%20%20%20%20var%20clipboard%20%3D%20Cc%5Cx5b%5C%22@mozilla.org/widget/clipboard%3B1%5C%22%5Cx5d.%5Cn%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20getService%28Ci.nsIClipboard%29%3B%5Cn%5C%0A%20%20%20%20%20%20var%20trans%20%3D%20Cc%5Cx5b%5C%22@mozilla.org/widget/transferable%3B1%5C%22%5Cx5d.%5Cn%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20createInstance%28Ci.nsITransferable%29%3B%5Cn%5C%0A%20%20%20%20%20%20trans.addDataFlavor%28%5C%22text/unicode%5C%22%29%3B%5Cn%5C%0A%20%20%20%20%20%20if%20%28clipboard.supportsSelectionClipboard%28%29%29%20%7B%5Cn%5C%0A%20%20%20%20%20%20%20%20clipboard.getData%28trans%2C%20clipboard.kSelectionClipboard%29%3B%5Cn%5C%0A%20%20%20%20%20%20%7D%20else%20%7B%5Cn%5C%0A%20%20%20%20%20%20%20%20clipboard.getData%28trans%2C%20clipboard.kGlobalClipboard%29%3B%5Cn%5C%0A%20%20%20%20%20%20%7D%5Cn%5C%0A%20%20%20%20%20%20var%20data%20%3D%20%7B%7D%3B%5Cn%5C%0A%20%20%20%20%20%20var%20dataLen%20%3D%20%7B%7D%3B%5Cn%5C%0A%20%20%20%20%20%20trans.getTransferData%28%5C%22text/unicode%5C%22%2C%20data%2C%20dataLen%29%3B%5Cn%5C%0A%20%20%20%20%20%20if%20%28data%29%20%7B%5Cn%5C%0A%20%20%20%20%20%20%20%20data%20%3D%20data.value.QueryInterface%28Ci.nsISupportsString%29%3B%5Cn%5C%0A%20%20%20%20%20%20%20%20string%20%3D%20data.data.substring%280%2C%20dataLen.value%20/%202%29%3B%5Cn%5C%0A%20%20%20%20%20%20%7D%5Cn%5C%0A%20%20%7D%20catch%20%28ex%29%20%7B%5Cn%5C%0A%20%20%7D%5Cn%5C%0A%20%20return%20string%3B%5Cn%5C%0A%7D%5Cn%5C%0A%5Cn%5C%0Afunction%20loadFromClipboard%28%29%20%7B%5Cn%5C%0A%20%20var%20string%20%3D%20readFromClipboard%28%29%3B%5Cn%5C%0A%20%20if%20%28gTextbox.value%20%21%3D%20string%29%20%7B%5Cn%5C%0A%20%20%20%20if%20%28%21string%29%20%7B%5Cn%5C%0A%20%20%20%20%20%20gTextbox.value%20%3D%20%5C%22%5C%22%3B%5Cn%5C%0A%20%20%20%20%7D%20else%20%7B%5Cn%5C%0A%20%20%20%20%20%20gTextbox.value%20%3D%20string%3B%5Cn%5C%0A%20%20%20%20%7D%5Cn%5C%0A%20%20%7D%5Cn%5C%0A%7D%5Cn%5C%0A%5Cn%5C%0Afunction%20copyToClipboard%28%29%20%7B%5Cn%5C%0A%20%20clipboardHelper.copyString%28gTextbox.value%29%3B%5Cn%5C%0A%7D%5Cn%5C%0A%5Cn%5C%0Afunction%20clearClipboard%28%29%20%7B%5Cn%5C%0A%20%20clipboardHelper.copyString%28%5C%22%5C%22%29%3B%5Cn%5C%0A%20%20gTextbox.value%20%3D%20%5C%22%5C%22%3B%5Cn%5C%0A%7D%5Cn%5C%0A%5Cn%5C%0Afunction%20toggleEdit%28%29%20%7B%5Cn%5C%0A%20%20var%20button%20%3D%20document.documentElement.getButton%28%5C%22extra1%5C%22%29%3B%5Cn%5C%0A%20%20switch%28gTextbox.readOnly%29%20%7B%5Cn%5C%0A%20%20%20%20case%20true%3A%5Cn%5C%0A%20%20%20%20%20%20gTextbox.readOnly%20%3D%20false%3B%5Cn%5C%0A%20%20%20%20%20%20button.label%20%3D%20%5C%22Lock%5C%22%3B%5Cn%5C%0A%20%20%20%20%20%20button.accessKey%20%3D%20%5C%22L%5C%22%3B%5Cn%5C%0A%20%20%20%20%20%20break%3B%5Cn%5C%0A%20%20%20%20case%20false%3A%5Cn%5C%0A%20%20%20%20%20%20gTextbox.readOnly%20%3D%20true%3B%5Cn%5C%0A%20%20%20%20%20%20button.label%20%3D%20%5C%22Edit%5C%22%3B%5Cn%5C%0A%20%20%20%20%20%20button.accessKey%20%3D%20%5C%22E%5C%22%3B%5Cn%5C%0A%20%20%7D%5Cn%5C%0A%20%20gTextbox.focus%28%29%3B%5Cn%5C%0A%7D%5Cn%5C%0A%5Cn%5C%0Afunction%20closeDialog%28%29%20%7B%5Cn%5C%0A%20%20if%20%28window.frameElement%29%20%7B%5Cn%5C%0A%20%20%20%20getMainwin%28%29.toggleSidebar%28%29%3B%5Cn%5C%0A%20%20%7D%20else%20%7B%5Cn%5C%0A%20%20%20%20window.close%28%29%3B%5Cn%5C%0A%20%20%7D%5Cn%5C%0A%7D%5Cn%5C%0A%5Cn%5C%0Afunction%20popupShowing%28aEvent%29%20%7B%5Cn%5C%0A%20%20var%20children%20%3D%20aEvent.target.childNodes%3B%5Cn%5C%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20children.length%3B%20i++%29%20%7B%5Cn%5C%0A%20%20%20%20var%20command%20%3D%20children%5Cx5bi%5Cx5d.getAttribute%28%5C%22cmd%5C%22%29%3B%5Cn%5C%0A%20%20%20%20if%20%28command%29%20%7B%5Cn%5C%0A%20%20%20%20%20%20var%20controller%20%3D%20document.commandDispatcher%5Cn%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.getControllerForCommand%28command%29%3B%5Cn%5C%0A%20%20%20%20%20%20var%20enabled%20%3D%20controller.isCommandEnabled%28command%29%3B%5Cn%5C%0A%20%20%20%20%20%20if%20%28enabled%29%20%7B%5Cn%5C%0A%20%20%20%20%20%20%20%20children%5Cx5bi%5Cx5d.removeAttribute%28%5C%22disabled%5C%22%29%3B%5Cn%5C%0A%20%20%20%20%20%20%7D%20else%20%7B%5Cn%5C%0A%20%20%20%20%20%20%20%20children%5Cx5bi%5Cx5d.setAttribute%28%5C%22disabled%5C%22%2C%20%5C%22true%5C%22%29%3B%5Cn%5C%0A%20%20%20%20%20%20%7D%5Cn%5C%0A%20%20%20%20%7D%5Cn%5C%0A%20%20%7D%5Cn%5C%0A%7D%5Cn%5C%0A%5Cn%5C%0Afunction%20init%28%29%20%7B%5Cn%5C%0A%20%20try%20%7B%5Cn%5C%0A%20%20%20%20var%20gCBClipboardViewer%20%3D%20getMainwin%28%29.gCBClipboardViewer%3B%5Cn%5C%0A%20%20%20%20document.documentElement.getButton%28%5C%22cancel%5C%22%29.hidden%20%3D%20gCBClipboardViewer.panel%3B%5Cn%5C%0A%20%20%7D%20catch%28ex%29%20%7B%5Cn%5C%0A%20%20%20%20Components.utils.reportError%28ex%29%3B%5Cn%5C%0A%20%20%7D%5Cn%5C%0A%7D%5Cn%5C%0A%5Cn%5C%0Awindow.addEventListener%28%5C%22load%5C%22%2C%20init%2C%20false%29%3B%5Cn%5C%0Awindow.removeEventListener%28%5C%22unload%5C%22%2C%20init%2C%20false%29%3B%5Cn%5C%0A%20%20%5Cx5d%5Cx5d%3E%3C/script%3E%5Cn%5C%0A%5Cn%5C%0A%3C/dialog%3E%22%3B%0A%0A//this.xurl%20%3D%20%22chrome%3A//chromedir/content/clipboard-viewer.xul%22%3B%0Athis.xurl%20%3D%20%22data%3Aapplication/vnd.mozilla.xul+xml%3Bbase64%2C%22%20+%20encodeURIComponent%28btoa%28xul%29%29%3B%0A%0Athis.panel%20%3D%20false%3B%0A%0Athis.onclick%20%3D%20function%28aEvent%29%20%7B%0A%20%20if%20%28aEvent.button%20%3D%3D%201%29%20%7B%20//%20Middle%20click%0A%20%20%20%20this.togglePanel%28%29%3B%20%20%20%20%20//%20open%20in%20bottom%20panel%0A%20%20%7D%0A%0A%20%20else%20if%20%28aEvent.shiftKey%29%20%7B%20%20%20//%20Shift+left-click%0A%20%20%20%20aEvent.preventDefault%28%29%3B%0A%20%20%20%20this.toggleSidebar%28%29%3B%20%20%20%20%20%20%20//%20open%20in%20sidebar%0A%20%20%7D%0A%0A//%20This%20won%27t%20work%20for%20data%3AURI%20XUL%20on%20Firefox%204%0A%20%20else%20if%20%28%28aEvent.ctrlKey%20%20%7C%7C%20aEvent.metaKey%29%20%26%26%20//%20Ctrl+left-click%0A%20%20%20%20%20%20%20%20%20%20%20%28Application.version%20%3C%20%224.0%22%29%29%20%7B%20%20%20%20%20%20%20//%20Firefox%20prior%20to%20version%204%0A%20%20%20%20aEvent.preventDefault%28%29%3B%0A%20%20%20%20var%20tabs%20%3D%20gBrowser.mTabs%3B%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20tabs.length%3B%20i++%29%20%7B%0A%20%20%20%20%20%20if%20%28tabs%5Bi%5D.linkedBrowser.currentURI.spec%20%3D%3D%20this.xurl%29%20%7B%0A%20%20%20%20%20%20%20%20gBrowser.selectedTab%20%3D%20tabs%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20return%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20gBrowser.loadOneTab%28this.xurl%2C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20open%20in%20new%20tab%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20null%2C%20null%2C%20null%2C%20false%29%3B%0A%20%20%7D%0A%7D%0A%0Afunction%20%24%28aId%29%20%7B%0A%20%20return%20document.getElementById%28aId%29%3B%0A%7D%0A%0Athis.togglePanel%20%3D%20function%28%29%20%7B%0A%20%20this.panel%20%3D%20%21this.panel%3B%0A%20%20%24%28this.id%20+%20%22-splitter%22%29.hidden%20%3D%20%21this.panel%3B%0A%20%20%24%28this.id%20+%20%22-panel%22%29.hidden%20%3D%20%21this.panel%3B%0A%20%20%24%28this.id%20+%20%22-iframe%22%29.setAttribute%28%22src%22%2C%20this.panel%20%3F%20this.xurl%20%3A%20%22%22%29%3B%0A%7D%0A%0Athis.toggleSidebar%20%3D%20function%28%29%20%7B%0A%20%20toggleSidebar%28this.id%20+%20%22-sidebar%22%29%3B%0A%7D%0A%0Afunction%20%24xml%28aNode%2C%20aId%2C%20aXML%29%20%7B%0A%20%20var%20node%20%3D%20%24%28aId%29%3B%0A%20%20if%20%28node%29%20node.parentNode.removeChild%28node%29%3B%0A%20%20aNode.appendChild%28cbu.makeXML%28aXML%29%29%0A%7D%0A%0A%24xml%28%24%28%22mainBroadcasterSet%22%29%2C%0A%20%20%20%20%20%20%20this.id%20+%20%22-sidebar%22%2C%0A%20%20%20%20%20%20%20%20%3Cbroadcaster%20xmlns%3D%7Bxulns%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20id%3D%7Bthis.id%20+%20%22-sidebar%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20label%3D%7Bthis.label%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sidebartitle%3D%7Bthis.label%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sidebarurl%3D%7Bthis.xurl%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22checkbox%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20autoCheck%3D%22false%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20group%3D%22sidebar%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22gCBClipboardViewer.toggleSidebar%28%29%3B%22%20/%3E%29%3B%0A%0A%24xml%28%24%28%22viewSidebarMenu%22%29%2C%0A%20%20%20%20%20%20%20this.id%20+%20%22-viewsidebar%22%2C%0A%20%20%20%20%20%20%20%3Cmenuitem%20xmlns%3D%7Bxulns%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20id%3D%7Bthis.id%20+%20%22-viewsidebar%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20observes%3D%7Bthis.id%20+%20%22-sidebar%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20label%3D%7Bthis.label%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sidebartitle%3D%7Bthis.label%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sidebarurl%3D%7Bthis.xurl%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22checkbox%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20autoCheck%3D%22false%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20group%3D%22sidebar%22%20/%3E%29%3B%0A%0A%24xml%28%24%28%22appcontent%22%29%2C%0A%20%20%20%20%20%20%20this.id%20+%20%22-splitter%22%2C%0A%20%20%20%20%20%20%20%3Csplitter%20xmlns%3D%7Bxulns%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20id%3D%7Bthis.id%20+%20%22-splitter%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20orient%3D%22vertical%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20hidden%3D%22true%22%3E%0A%20%20%20%20%20%20%20%20%20%3Cgrippy%20oncommand%3D%22this.parentNode.nextSibling.collapsed%20%3D%20%21this.parentNode.nextSibling.collapsed%3B%22/%3E%0A%20%20%20%20%20%20%20%3C/splitter%3E%29%3B%0A%0A%24xml%28%24%28%22appcontent%22%29%2C%0A%20%20%20%20%20%20%20this.id%20+%20%22-panel%22%2C%0A%20%20%20%20%20%20%20%3Cvbox%20xmlns%3D%7Bxulns%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20id%3D%7Bthis.id%20+%20%22-panel%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20height%3D%22300%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20hidden%3D%22true%22%3E%0A%20%20%20%20%20%20%20%20%20%3Ctoolbox%3E%0A%20%20%20%20%20%20%20%20%20%20%20%3Ctoolbar%20align%3D%22center%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Clabel%20value%3D%7Bthis.label%7D%20flex%3D%221%22%20crop%3D%22end%22%20/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ctoolbarbutton%20class%3D%22tabs-closebutton%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22gCBClipboardViewer.togglePanel%28%29%3B%22%20/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%3C/toolbar%3E%0A%20%20%20%20%20%20%20%20%20%3C/toolbox%3E%0A%20%20%20%20%20%20%20%20%20%3Ciframe%20id%3D%7Bthis.id%20+%20%22-iframe%22%7D%20src%3D%22%22%20flex%3D%221%22%20/%3E%0A%20%20%20%20%20%20%20%3C/vbox%3E%29%3B%0A%0Athis.tooltipText%20%3D%20this.Help%3B%0A%0A%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bvar%20ww%20%3D%20Components.classes%5B%22@mozilla.org/embedcomp/window-watcher%3B1%22%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.getService%28Components.interfaces.nsIWindowWatcher%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Avar%20em%20%3D%20ww.getWindowEnumerator%28%29%3B%0A%0Avar%20winName%20%3D%20%22clipview%22%3B%0A%0Avar%20index%20%3D%201%3B%0Awhile%20%28em.hasMoreElements%28%29%29%20%7B%0A%20%20let%20win%20%3D%20em.getNext%28%29%3B%0A%20%20if%28win.name%20%3D%3D%20winName%29%20%7B%0A%20%20%20%20win.focus%28%29%3B%0A%20%20%20%20return%3B%0A%20%20%7D%0A%20%20index++%0A%7D%0A%0AopenDialog%28this.xurl%2C%20winName%2C%20%22chrome%2C%20dialog%3Dno%2C%20centerscreen%2C%20minimizable%2C%20resizable%22%29%3B%0A%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%0ALeft-click%3A%20open%20in%20new%20window%0A%0AMiddle-click%3A%20open%20in%20bottom%20panel%0A%0AShift+click%3A%20open%20in%20sidebar%0A%0ACtrl+click%3A%20open%20in%20new%20tab%0A%28for%20Firefox%20prior%20to%20version%204%20only%29%0A%0A%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" title="Clipboard Viewer">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EClipboard%20Viewer%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bdata%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAArdJREFUeNpsU11IU2EYfs/Zt+Vy7sfKEZEp2pxmF2uKUVhq2VKwTB0FmT8FCUbgpTddBWFBICJRgVleRC5GUeRNpPZj+bfMrJZhajeWRTPa2mTnr/c77Iyj9cLD2fd97/PsOc/7HQawytMQW0AuhoF49a+rzmQYZp+yliTpSclP74yybh6QgHTuhdV1DeGkP6zPvNAyNONUDtp3Z/pgW7zPh2hiRQlADUEE5373SafVnu888eCtUxBYMBiMQJ90TffpOe2jKoQX/nEAtuYumOjthZHRp2A0GsGQmAgcx0EwGIQNpa1gq6qCR7dvyL1E+I9AKBKBEpcLvi0sANFoQMOywCJopaWno1MJFB6J8iu4DA3x+9ISrDebIctmkzcpQRRFWYRHJouinCLA8Wo2FG+0O/TJJhPf4/WOdns8U5i8VFdTk9vgdheggpbFJoLgYzyCYajrWPHZtk2evr6Rx2P+F1cvX8+gmxeudL7UaO+LtZWVeyLoQK9ywFIHKmRt3r7T8LC/f+xIZUPq5x98AkXt0VMZjwYHx3FIEF5eBh5fR3G+OgOgTSaLhUvS60hOqnkN3fsaCILRYokKSPyDAScmJYHCW+1gen5iOOQuK8t///GVP4FI4lotML6pockql2tHMByGZRyngKHGHYTCqIIT0hI5xPEv/g+HDzSeKdTqXgudd3ue0xALHY5d+dnZJfM41hSrFTSEwK9gTIDePpaRBSoKqutbXadbUu51tC+mZufkna+rK6JN/pHh0MXy0k+zkxMR5VXxT32ygDxnERodh+rPHb90M72rpWGur/tWW+A35OFRVqx/GnFHw8IAQooTaeXqAWpMME6tdjTVzxYZoMKuwxsHK2FWBZ2MjrcS+esE8g5D1fHgPahjYBHA84aDOeyxI6IILvaMqtZ8AC9mIBbiXwEGADy0Lb/f2n5rAAAAAElFTkSuQmCC%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5BgCBClipboardViewer%20%3D%20this%3B%20//%20global%20obj%0Athis.toString%20%3D%20function%20toString%28%29%20%7Breturn%20this.name%3B%7D%0A%0A//this.xurl%20%3D%20%22chrome%3A//chromedir/content/clipboard-viewer.xul%22%3B%0Athis.xurl%20%3D%20%22data%3Aapplication/vnd.mozilla.xul+xml%3Bbase64%2C%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20encodeURIComponent%28btoa%28this.Help%29%29%3B%0A%0Athis.panel%20%3D%20false%3B%0A%0Athis.onclick%20%3D%20function%28aEvent%29%20%7B%0A%20%20if%20%28aEvent.button%20%3D%3D%201%29%20%7B%20//%20Middle%20click%0A%20%20%20%20this.togglePanel%28%29%3B%20%20%20%20%20//%20open%20in%20bottom%20panel%0A%20%20%7D%0A%0A%20%20else%20if%20%28aEvent.shiftKey%29%20%7B%20%20%20//%20Shift+left-click%0A%20%20%20%20aEvent.preventDefault%28%29%3B%0A%20%20%20%20this.toggleSidebar%28%29%3B%20%20%20%20%20%20%20//%20open%20in%20sidebar%0A%20%20%7D%0A%0A//%20This%20won%27t%20work%20for%20data%3AURI%20XUL%20on%20Firefox%204%0A%20%20else%20if%20%28%28aEvent.ctrlKey%20%20%7C%7C%20aEvent.metaKey%29%20%26%26%20//%20if%20Ctrl+left-click%0A%20%20%20%20%20%20%20%20%20%20%20%28%28Application.version%20%3C%20%224.0%22%29%20%7C%7C%20%20//%20if%20Firefox%20prior%20to%20version%204%0A%20%20%20%20%20%20%20%20%20%20%20%20%28/%5Echrome%5C%3A/.test%28this.xurl%29%29%29%29%20%7B%20%20%20%20%20//%20if%20chrome%20URL%0A%20%20%20%20aEvent.preventDefault%28%29%3B%0A%20%20%20%20var%20tabs%20%3D%20gBrowser.mTabs%3B%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20tabs.length%3B%20i++%29%20%7B%0A%20%20%20%20%20%20if%20%28tabs%5Bi%5D.linkedBrowser.currentURI.spec%20%3D%3D%20this.xurl%29%20%7B%0A%20%20%20%20%20%20%20%20gBrowser.selectedTab%20%3D%20tabs%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20return%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20gBrowser.loadOneTab%28this.xurl%2C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20open%20in%20new%20tab%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20null%2C%20null%2C%20null%2C%20false%29%3B%0A%20%20%7D%0A%7D%0A%0Afunction%20%24%28aId%29%20%7B%0A%20%20return%20document.getElementById%28aId%29%3B%0A%7D%0A%0Athis.togglePanel%20%3D%20function%28%29%20%7B%0A%20%20this.panel%20%3D%20%21this.panel%3B%0A%20%20%24%28this.id%20+%20%22-splitter%22%29.hidden%20%3D%20%21this.panel%3B%0A%20%20%24%28this.id%20+%20%22-panel%22%29.hidden%20%3D%20%21this.panel%3B%0A%20%20%24%28this.id%20+%20%22-iframe%22%29.setAttribute%28%22src%22%2C%20this.panel%20%3F%20this.xurl%20%3A%20%22%22%29%3B%0A%7D%0A%0Athis.toggleSidebar%20%3D%20function%28%29%20%7B%0A%20%20toggleSidebar%28this.id%20+%20%22-sidebar%22%29%3B%0A%7D%0A%0Afunction%20%24xml%28aNode%2C%20aId%2C%20aXML%29%20%7B%0A%20%20var%20node%20%3D%20%24%28aId%29%3B%0A%20%20if%20%28node%29%20node.parentNode.removeChild%28node%29%3B%0A%20%20aNode.appendChild%28cbu.makeXML%28aXML%29%29%0A%7D%0A%0A%24xml%28%24%28%22mainBroadcasterSet%22%29%2C%0A%20%20%20%20%20%20%20this.id%20+%20%22-sidebar%22%2C%0A%20%20%20%20%20%20%20%20%3Cbroadcaster%20xmlns%3D%7Bxulns%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20id%3D%7Bthis.id%20+%20%22-sidebar%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20label%3D%7Bthis.label%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sidebartitle%3D%7Bthis.label%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sidebarurl%3D%7Bthis.xurl%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22checkbox%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20autoCheck%3D%22false%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20group%3D%22sidebar%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22gCBClipboardViewer.toggleSidebar%28%29%3B%22%20/%3E%29%3B%0A%0A%24xml%28%24%28%22viewSidebarMenu%22%29%2C%0A%20%20%20%20%20%20%20this.id%20+%20%22-viewsidebar%22%2C%0A%20%20%20%20%20%20%20%3Cmenuitem%20xmlns%3D%7Bxulns%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20id%3D%7Bthis.id%20+%20%22-viewsidebar%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20observes%3D%7Bthis.id%20+%20%22-sidebar%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20label%3D%7Bthis.label%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sidebartitle%3D%7Bthis.label%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sidebarurl%3D%7Bthis.xurl%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22checkbox%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20autoCheck%3D%22false%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20group%3D%22sidebar%22%20/%3E%29%3B%0A%0A%24xml%28%24%28%22appcontent%22%29%2C%0A%20%20%20%20%20%20%20this.id%20+%20%22-splitter%22%2C%0A%20%20%20%20%20%20%20%3Csplitter%20xmlns%3D%7Bxulns%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20id%3D%7Bthis.id%20+%20%22-splitter%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20orient%3D%22vertical%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20hidden%3D%22true%22%3E%0A%20%20%20%20%20%20%20%20%20%3Cgrippy%20oncommand%3D%7B%22this.parentNode.nextSibling.collapsed%20%3D%20%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%21this.parentNode.nextSibling.collapsed%3B%22%7D/%3E%0A%20%20%20%20%20%20%20%3C/splitter%3E%29%3B%0A%0A%24xml%28%24%28%22appcontent%22%29%2C%0A%20%20%20%20%20%20%20this.id%20+%20%22-panel%22%2C%0A%20%20%20%20%20%20%20%3Cvbox%20xmlns%3D%7Bxulns%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20id%3D%7Bthis.id%20+%20%22-panel%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20height%3D%22300%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20hidden%3D%22true%22%3E%0A%20%20%20%20%20%20%20%20%20%3Ctoolbox%3E%0A%20%20%20%20%20%20%20%20%20%20%20%3Ctoolbar%20align%3D%22center%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Clabel%20value%3D%7Bthis.label%7D%20flex%3D%221%22%20crop%3D%22end%22%20/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ctoolbarbutton%20class%3D%22tabs-closebutton%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22gCBClipboardViewer.togglePanel%28%29%3B%22%20/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%3C/toolbar%3E%0A%20%20%20%20%20%20%20%20%20%3C/toolbox%3E%0A%20%20%20%20%20%20%20%20%20%3Ciframe%20id%3D%7Bthis.id%20+%20%22-iframe%22%7D%20src%3D%22%22%20flex%3D%221%22%20/%3E%0A%20%20%20%20%20%20%20%3C/vbox%3E%29%3B%0A%0Athis.tooltipText%20%3D%20%22%5Cn%5C%0ALeft-click%3A%20open%20in%20new%20window%5Cn%5Cn%5C%0AMiddle-click%3A%20open%20in%20bottom%20panel%5Cn%5Cn%5C%0AShift+click%3A%20open%20in%20sidebar%5Cn%5Cn%5C%0ACtrl+click%3A%20open%20in%20new%20tab%5Cn%5C%0A%28for%20Firefox%20prior%20to%20version%204%20only%29%5Cn%5Cn%22%3B%0A%0A%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bvar%20ww%20%3D%20Components.classes%5B%22@mozilla.org/embedcomp/window-watcher%3B1%22%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.getService%28Components.interfaces.nsIWindowWatcher%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Avar%20em%20%3D%20ww.getWindowEnumerator%28%29%3B%0A%0Avar%20winName%20%3D%20%22clipview%22%3B%0A%0Avar%20index%20%3D%201%3B%0Awhile%20%28em.hasMoreElements%28%29%29%20%7B%0A%20%20let%20win%20%3D%20em.getNext%28%29%3B%0A%20%20if%28win.name%20%3D%3D%20winName%29%20%7B%0A%20%20%20%20win.focus%28%29%3B%0A%20%20%20%20return%3B%0A%20%20%7D%0A%20%20index++%0A%7D%0A%0AopenDialog%28this.xurl%2C%20winName%2C%20%22chrome%2C%20dialog%3Dno%2C%20centerscreen%2C%20minimizable%2C%20resizable%22%29%3B%0A%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%26lt%3B%3Fxml%20version%3D%221.0%22%3F%26gt%3B%0A%26lt%3B%21--%0A%20%20Version%3A%20MPL%201.1/GPL%202.0/LGPL%202.1%0A%0A%20%20The%20contents%20of%20this%20file%20are%20subject%20to%20the%20Mozilla%20Public%20License%20Version%0A%20%201.1%20%28the%20%22License%22%29%3B%20you%20may%20not%20use%20this%20file%20except%20in%20compliance%20with%0A%20%20the%20License.%20You%20may%20obtain%20a%20copy%20of%20the%20License%20at%0A%20%20http%3A//www.mozilla.org/MPL/%0A%0A%20%20Software%20distributed%20under%20the%20License%20is%20distributed%20on%20an%20%22AS%20IS%22%20basis%2C%0A%20%20WITHOUT%20WARRANTY%20OF%20ANY%20KIND%2C%20either%20express%20or%20implied.%20See%20the%20License%0A%20%20for%20the%20specific%20language%20governing%20rights%20and%20limitations%20under%20the%0A%20%20License.%0A%0A%20%20The%20Original%20Code%20is%20Clipboard%20Viewer%0A%0A%20%20The%20Initial%20Developer%20of%20the%20Original%20Code%20is%20LouCypher.%0A%20%20Portions%20created%20by%20the%20Initial%20Developer%20are%20Copyright%20%28C%29%202011%0A%20%20the%20Initial%20Developer.%20All%20Rights%20Reserved.%0A%0A%20%20Contributor%28s%29%3A%0A%20%20-%20LouCypher%20%26lt%3Bloucypher@mozillaca.com%26gt%3B%0A%0A%20%20Alternatively%2C%20the%20contents%20of%20this%20file%20may%20be%20used%20under%20the%20terms%20of%0A%20%20either%20the%20GNU%20General%20Public%20License%20Version%202%20or%20later%20%28the%20%22GPL%22%29%2C%20or%0A%20%20the%20GNU%20Lesser%20General%20Public%20License%20Version%202.1%20or%20later%20%28the%20%22LGPL%22%29%2C%0A%20%20in%20which%20case%20the%20provisions%20of%20the%20GPL%20or%20the%20LGPL%20are%20applicable%20instead%0A%20%20of%20those%20above.%20If%20you%20wish%20to%20allow%20use%20of%20your%20version%20of%20this%20file%20only%0A%20%20under%20the%20terms%20of%20either%20the%20GPL%20or%20the%20LGPL%2C%20and%20not%20to%20allow%20others%20to%0A%20%20use%20your%20version%20of%20this%20file%20under%20the%20terms%20of%20the%20MPL%2C%20indicate%20your%0A%20%20decision%20by%20deleting%20the%20provisions%20above%20and%20replace%20them%20with%20the%20notice%0A%20%20and%20other%20provisions%20required%20by%20the%20GPL%20or%20the%20LGPL.%20If%20you%20do%20not%20delete%0A%20%20the%20provisions%20above%2C%20a%20recipient%20may%20use%20your%20version%20of%20this%20file%20under%0A%20%20the%20terms%20of%20any%20one%20of%20the%20MPL%2C%20the%20GPL%20or%20the%20LGPL.%0A--%26gt%3B%0A%0A%26lt%3B%3Fxml-stylesheet%20type%3D%22text/css%22%20href%3D%22chrome%3A//global/skin/%22%3F%26gt%3B%0A%26lt%3B%3Fxml-stylesheet%20type%3D%22text/css%22%20href%3D%22clipboard-viewer.css%22%3F%26gt%3B%0A%0A%26lt%3Bdialog%20xmlns%3D%22http%3A//www.mozilla.org/keymaster/gatekeeper/there.is.only.xul%22%0A%20%20%20%20%20%20%20%20xmlns%3Ahtml%3D%22http%3A//www.w3.org/1999/xhtml%22%0A%20%20%20%20%20%20%20%20id%3D%22clipboard-viewer%22%0A%20%20%20%20%20%20%20%20width%3D%22800%22%0A%20%20%20%20%20%20%20%20height%3D%22600%22%0A%20%20%20%20%20%20%20%20title%3D%22Clipboard%20Viewer%22%0A%20%20%20%20%20%20%20%20buttons%3D%22extra1%2C%20extra2%2C%20cancel%22%0A%20%20%20%20%20%20%20%20buttonlabelextra1%3D%22Edit%22%0A%20%20%20%20%20%20%20%20buttonlabelextra2%3D%22Clear%22%0A%20%20%20%20%20%20%20%20buttonlabelcancel%3D%22Close%22%0A%20%20%20%20%20%20%20%20buttonaccesskeyextra1%3D%22E%22%0A%20%20%20%20%20%20%20%20buttonaccesskeyextra2%3D%22r%22%0A%20%20%20%20%20%20%20%20buttonaccesskeycancel%3D%22C%22%0A%20%20%20%20%20%20%20%20ondialogextra1%3D%22toggleEdit%28%29%3B%22%0A%20%20%20%20%20%20%20%20ondialogextra2%3D%22clearClipboard%28%29%3B%22%0A%20%20%20%20%20%20%20%20ondialogcancel%3D%22closeDialog%28%29%3B%22%0A%20%20%20%20%20%20%20%20onfocus%3D%22loadFromClipboard%28%29%3B%22%26gt%3B%0A%0A%20%20%26lt%3Bhtml%3Ahead%26gt%3B%0A%20%20%20%20%26lt%3Bhtml%3Alink%20rel%3D%22shortcut%20icon%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20href%3D%22chrome%3A//chromedir/content/clipboard-viewer.png%22%20/%26gt%3B%0A%20%20%26lt%3B/html%3Ahead%26gt%3B%0A%0A%20%20%26lt%3Bkeyset%26gt%3B%26lt%3Bkey%20keycode%3D%22VK_F5%22%20oncommand%3D%22loadFromClipboard%28%29%3B%22%20/%26gt%3B%26lt%3B/keyset%26gt%3B%0A%0A%20%20%26lt%3Bpopupset%26gt%3B%0A%20%20%20%20%26lt%3Bmenupopup%20id%3D%22contextmenu%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20onpopupshowing%3D%22popupShowing%28event%29%3B%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20onpopuphiding%3D%22loadFromClipboard%28%29%3B%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22var%20cmd%20%3D%20event.originalTarget.getAttribute%28%27cmd%27%29%3B%0A%20if%20%28cmd%29%20document.popupNode.parentNode.doCommand%28cmd%29%3B%22%26gt%3B%0A%20%20%20%20%20%20%26lt%3Bmenuitem%20id%3D%22edit-copy%22%20label%3D%22Copy%22%20accesskey%3D%22c%22%20cmd%3D%22cmd_copy%22%20/%26gt%3B%0A%20%20%20%20%20%20%26lt%3B%21--menuitem%20id%3D%22edit-delete%22%20label%3D%22Delete%22%20accesskey%3D%22d%22%20cmd%3D%22cmd_delete%22%20/--%26gt%3B%0A%20%20%20%20%20%20%26lt%3Bmenuseparator%20/%26gt%3B%0A%20%20%20%20%20%20%26lt%3Bmenuitem%20id%3D%22edit-selectAll%22%20label%3D%22Select%20All%22%20accesskey%3D%22a%22%20cmd%3D%22cmd_selectAll%22%20/%26gt%3B%0A%20%20%20%20%26lt%3B/menupopup%26gt%3B%0A%20%20%26lt%3B/popupset%26gt%3B%0A%0A%20%20%26lt%3Btextbox%20id%3D%22textbox%22%20multiline%3D%22true%22%20flex%3D%221%22%0A%20%20%20%20%20%20%20%20%20%20%20context%3D%22contextmenu%22%20onkeyup%3D%22copyToClipboard%28%29%3B%22%20readonly%3D%22%22%20/%26gt%3B%0A%0A%20%20%26lt%3Bscript%20type%3D%22application/x-javascript%22%26gt%3B%26lt%3B%21%5BCDATA%5B%0Aconst%20Cc%20%3D%20Components.classes%3B%0Aconst%20Ci%20%3D%20Components.interfaces%3B%0A%0Aconst%20gTextbox%20%3D%20document.getElementById%28%22textbox%22%29%3B%0A%0Aconst%20clipboardHelper%20%3D%20Cc%5B%22@mozilla.org/widget/clipboardhelper%3B1%22%5D.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20getService%28Ci.nsIClipboardHelper%29%3B%0A%0Afunction%20getMainwin%28%29%20%7B%0A%20%20if%20%28window.frameElement%29%20%7B%0A%20%20%20%20return%20window.frameElement.ownerDocument.defaultView%3B%0A%0A%20%20%7D%20else%20if%20%28window.opener%29%20%7B%0A%20%20%20%20return%20window.opener%3B%0A%0A%20%20%7D%20else%20%7B%0A%20%20%20%20return%20Cc%5B%27@mozilla.org/appshell/window-mediator%3B1%27%5D.%0A%20%20%20%20%20%20%20%20%20%20%20getService%28%29.QueryInterface%28Ci.nsIWindowMediator%29.%0A%20%20%20%20%20%20%20%20%20%20%20getMostRecentWindow%28%22navigator%3Abrowser%22%29%0A%20%20%7D%0A%7D%0A%0Afunction%20readFromClipboard%28%29%20%7B%0A//http%3A//mxr.mozilla.org/mozilla2.0/source/browser/base/content/browser.js%232299%0A%20%20var%20string%3B%0A%20%20try%20%7B%0A%20%20%20%20%20%20var%20clipboard%20%3D%20Cc%5B%22@mozilla.org/widget/clipboard%3B1%22%5D.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20getService%28Ci.nsIClipboard%29%3B%0A%20%20%20%20%20%20var%20trans%20%3D%20Cc%5B%22@mozilla.org/widget/transferable%3B1%22%5D.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20createInstance%28Ci.nsITransferable%29%3B%0A%20%20%20%20%20%20trans.addDataFlavor%28%22text/unicode%22%29%3B%0A%20%20%20%20%20%20if%20%28clipboard.supportsSelectionClipboard%28%29%29%20%7B%0A%20%20%20%20%20%20%20%20clipboard.getData%28trans%2C%20clipboard.kSelectionClipboard%29%3B%0A%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20clipboard.getData%28trans%2C%20clipboard.kGlobalClipboard%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20var%20data%20%3D%20%7B%7D%3B%0A%20%20%20%20%20%20var%20dataLen%20%3D%20%7B%7D%3B%0A%20%20%20%20%20%20trans.getTransferData%28%22text/unicode%22%2C%20data%2C%20dataLen%29%3B%0A%20%20%20%20%20%20if%20%28data%29%20%7B%0A%20%20%20%20%20%20%20%20data%20%3D%20data.value.QueryInterface%28Ci.nsISupportsString%29%3B%0A%20%20%20%20%20%20%20%20string%20%3D%20data.data.substring%280%2C%20dataLen.value%20/%202%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%7D%20catch%20%28ex%29%20%7B%0A%20%20%7D%0A%20%20return%20string%3B%0A%7D%0A%0Afunction%20loadFromClipboard%28%29%20%7B%0A%20%20var%20string%20%3D%20readFromClipboard%28%29%3B%0A%20%20if%20%28gTextbox.value%20%21%3D%20string%29%20%7B%0A%20%20%20%20if%20%28%21string%29%20%7B%0A%20%20%20%20%20%20gTextbox.value%20%3D%20%22%22%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20gTextbox.value%20%3D%20string%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%0Afunction%20copyToClipboard%28%29%20%7B%0A%20%20clipboardHelper.copyString%28gTextbox.value%29%3B%0A%7D%0A%0Afunction%20clearClipboard%28%29%20%7B%0A%20%20clipboardHelper.copyString%28%22%22%29%3B%0A%20%20gTextbox.value%20%3D%20%22%22%3B%0A%7D%0A%0Afunction%20toggleEdit%28%29%20%7B%0A%20%20var%20button%20%3D%20document.documentElement.getButton%28%22extra1%22%29%3B%0A%20%20switch%28gTextbox.readOnly%29%20%7B%0A%20%20%20%20case%20true%3A%0A%20%20%20%20%20%20gTextbox.readOnly%20%3D%20false%3B%0A%20%20%20%20%20%20button.label%20%3D%20%22Lock%22%3B%0A%20%20%20%20%20%20button.accessKey%20%3D%20%22L%22%3B%0A%20%20%20%20%20%20break%3B%0A%20%20%20%20case%20false%3A%0A%20%20%20%20%20%20gTextbox.readOnly%20%3D%20true%3B%0A%20%20%20%20%20%20button.label%20%3D%20%22Edit%22%3B%0A%20%20%20%20%20%20button.accessKey%20%3D%20%22E%22%3B%0A%20%20%7D%0A%20%20gTextbox.focus%28%29%3B%0A%7D%0A%0Afunction%20closeDialog%28%29%20%7B%0A%20%20if%20%28window.frameElement%29%20%7B%0A%20%20%20%20switch%20%28window.frameElement.id%29%20%7B%0A%20%20%20%20case%20%22sidebar%22%3A%0A%20%20%20%20%20%20getMainwin%28%29.toggleSidebar%28%29%3B%0A%20%20%20%20%20%20break%3B%0A%20%20%20%20default%3A%0A%20%20%20%20%20%20getMainwin%28%29.gCBClipboardViewer.togglePanel%28%29%3B%0A%20%20%20%20%7D%0A%20%20%7D%20else%20%7B%0A%20%20%20%20window.close%28%29%3B%0A%20%20%7D%0A%7D%0A%0Afunction%20popupShowing%28aEvent%29%20%7B%0A%20%20var%20children%20%3D%20aEvent.target.childNodes%3B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%26lt%3B%20children.length%3B%20i++%29%20%7B%0A%20%20%20%20var%20command%20%3D%20children%5Bi%5D.getAttribute%28%22cmd%22%29%3B%0A%20%20%20%20if%20%28command%29%20%7B%0A%20%20%20%20%20%20var%20controller%20%3D%20document.commandDispatcher%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.getControllerForCommand%28command%29%3B%0A%20%20%20%20%20%20var%20enabled%20%3D%20controller.isCommandEnabled%28command%29%3B%0A%20%20%20%20%20%20if%20%28enabled%29%20%7B%0A%20%20%20%20%20%20%20%20children%5Bi%5D.removeAttribute%28%22disabled%22%29%3B%0A%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20children%5Bi%5D.setAttribute%28%22disabled%22%2C%20%22true%22%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%20%20%5D%5D%26gt%3B%26lt%3B/script%26gt%3B%0A%0A%26lt%3B/dialog%26gt%3B%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Clipboard Viewer">
         <![CDATA[Install this button]]>
         </html:a>
       </html:div>
@@ -74,209 +74,12 @@ code, initcode, help {
   <name>Clipboard Viewer</name>
   <image><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAArdJREFUeNpsU11IU2EYfs/Zt+Vy7sfKEZEp2pxmF2uKUVhq2VKwTB0FmT8FCUbgpTddBWFBICJRgVleRC5GUeRNpPZj+bfMrJZhajeWRTPa2mTnr/c77Iyj9cLD2fd97/PsOc/7HQawytMQW0AuhoF49a+rzmQYZp+yliTpSclP74yybh6QgHTuhdV1DeGkP6zPvNAyNONUDtp3Z/pgW7zPh2hiRQlADUEE5373SafVnu888eCtUxBYMBiMQJ90TffpOe2jKoQX/nEAtuYumOjthZHRp2A0GsGQmAgcx0EwGIQNpa1gq6qCR7dvyL1E+I9AKBKBEpcLvi0sANFoQMOywCJopaWno1MJFB6J8iu4DA3x+9ISrDebIctmkzcpQRRFWYRHJouinCLA8Wo2FG+0O/TJJhPf4/WOdns8U5i8VFdTk9vgdheggpbFJoLgYzyCYajrWPHZtk2evr6Rx2P+F1cvX8+gmxeudL7UaO+LtZWVeyLoQK9ywFIHKmRt3r7T8LC/f+xIZUPq5x98AkXt0VMZjwYHx3FIEF5eBh5fR3G+OgOgTSaLhUvS60hOqnkN3fsaCILRYokKSPyDAScmJYHCW+1gen5iOOQuK8t///GVP4FI4lotML6pockql2tHMByGZRyngKHGHYTCqIIT0hI5xPEv/g+HDzSeKdTqXgudd3ue0xALHY5d+dnZJfM41hSrFTSEwK9gTIDePpaRBSoKqutbXadbUu51tC+mZufkna+rK6JN/pHh0MXy0k+zkxMR5VXxT32ygDxnERodh+rPHb90M72rpWGur/tWW+A35OFRVqx/GnFHw8IAQooTaeXqAWpMME6tdjTVzxYZoMKuwxsHK2FWBZ2MjrcS+esE8g5D1fHgPahjYBHA84aDOeyxI6IILvaMqtZ8AC9mIBbiXwEGADy0Lb/f2n5rAAAAAElFTkSuQmCC]]></image>
   <mode>0</mode>
-  <initcode><![CDATA[/*
-  Version: MPL 1.1/GPL 2.0/LGPL 2.1
-
-  The contents of this file are subject to the Mozilla Public License Version
-  1.1 (the "License"); you may not use this file except in compliance with
-  the License. You may obtain a copy of the License at
-  http://www.mozilla.org/MPL/
-
-  Software distributed under the License is distributed on an "AS IS" basis,
-  WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-  for the specific language governing rights and limitations under the
-  License.
-
-  The Original Code is Clipboard Viewer
-
-  The Initial Developer of the Original Code is LouCypher.
-  Portions created by the Initial Developer are Copyright (C) 2011
-  the Initial Developer. All Rights Reserved.
-
-  Contributor(s):
-  - LouCypher
-
-  Alternatively, the contents of this file may be used under the terms of
-  either the GNU General Public License Version 2 or later (the "GPL"), or
-  the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-  in which case the provisions of the GPL or the LGPL are applicable instead
-  of those above. If you wish to allow use of your version of this file only
-  under the terms of either the GPL or the LGPL, and not to allow others to
-  use your version of this file under the terms of the MPL, indicate your
-  decision by deleting the provisions above and replace them with the notice
-  and other provisions required by the GPL or the LGPL. If you do not delete
-  the provisions above, a recipient may use your version of this file under
-  the terms of any one of the MPL, the GPL or the LGPL.
-*/
-
-gCBClipboardViewer = this; // global obj
+  <initcode><![CDATA[gCBClipboardViewer = this; // global obj
 this.toString = function toString() {return this.name;}
 
-var xul = "<?xml version=\"1.0\"?>\n\
-<?xml-stylesheet type=\"text/css\" href=\"chrome://global/skin/\"?>\n\
-<?xml-stylesheet type=\"text/css\" href=\"data:text/css;base64,I3RleHRib3ggeyBmb250LWZhbWlseTogbW9ub3NwYWNlOyBmb250LXNpemU6IG1lZGl1bTsgd2hpdGUtc3BhY2U6IHByZS13cmFwOyB9\"?>\n\
-\n\
-<dialog xmlns=\"http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul\"\n\
-        xmlns:html=\"http://www.w3.org/1999/xhtml\"\n\
-        id=\"clipboard-viewer\"\n\
-        width=\"800\"\n\
-        height=\"600\"\n\
-        title=\"Clipboard Viewer\"\n\
-        buttons=\"extra1, extra2, cancel\"\n\
-        buttonlabelextra1=\"Edit\"\n\
-        buttonlabelextra2=\"Clear\"\n\
-        buttonlabelcancel=\"Close\"\n\
-        buttonaccesskeyextra1=\"E\"\n\
-        buttonaccesskeyextra2=\"r\"\n\
-        buttonaccesskeycancel=\"C\"\n\
-        ondialogextra1=\"toggleEdit();\"\n\
-        ondialogextra2=\"clearClipboard();\"\n\
-        ondialogcancel=\"closeDialog();\"\n\
-        onfocus=\"loadFromClipboard();\">\n\
-\n\
-  <keyset><key keycode=\"VK_F5\" oncommand=\"loadFromClipboard();\" /></keyset>\n\
-\n\
-  <popupset>\n\
-    <menupopup id=\"contextmenu\"\n\
-               onpopupshowing=\"popupShowing(event);\"\n\
-               onpopuphiding=\"loadFromClipboard();\"\n\
-               oncommand=\"var cmd = event.originalTarget.getAttribute('cmd'); if (cmd) document.popupNode.parentNode.doCommand(cmd);\">\n\
-      <menuitem id=\"edit-copy\" label=\"Copy\" accesskey=\"c\" cmd=\"cmd_copy\" />\n\
-      <menuseparator />\n\
-      <menuitem id=\"edit-selectAll\" label=\"Select All\" accesskey=\"a\" cmd=\"cmd_selectAll\" />\n\
-    </menupopup>\n\
-  </popupset>\n\
-\n\
-  <textbox id=\"textbox\" multiline=\"true\" flex=\"1\"\n\
-           context=\"contextmenu\" onkeyup=\"copyToClipboard();\" readonly=\"\" />\n\
-\n\
-  <script type=\"application/x-javascript\"><!\x5bCDATA\x5b\n\
-const Cc = Components.classes;\n\
-const Ci = Components.interfaces;\n\
-\n\
-const gTextbox = document.getElementById(\"textbox\");\n\
-\n\
-const clipboardHelper = Cc\x5b\"@mozilla.org/widget/clipboardhelper;1\"\x5d.\n\
-                        getService(Ci.nsIClipboardHelper);\n\
-\n\
-function getMainwin() {\n\
-  if (window.frameElement) {\n\
-    return window.frameElement.ownerDocument.defaultView;\n\
-\n\
-  } else if (window.opener) {\n\
-    return window.opener;\n\
-\n\
-  } else {\n\
-    return Cc\x5b'@mozilla.org/appshell/window-mediator;1'\x5d.\n\
-           getService().QueryInterface(Ci.nsIWindowMediator).\n\
-           getMostRecentWindow(\"navigator:browser\")\n\
-  }\n\
-}\n\
-\n\
-function readFromClipboard() {\n\
-//http://mxr.mozilla.org/mozilla2.0/source/browser/base/content/browser.js#2299\n\
-  var string;\n\
-  try {\n\
-      var clipboard = Cc\x5b\"@mozilla.org/widget/clipboard;1\"\x5d.\n\
-                      getService(Ci.nsIClipboard);\n\
-      var trans = Cc\x5b\"@mozilla.org/widget/transferable;1\"\x5d.\n\
-                  createInstance(Ci.nsITransferable);\n\
-      trans.addDataFlavor(\"text/unicode\");\n\
-      if (clipboard.supportsSelectionClipboard()) {\n\
-        clipboard.getData(trans, clipboard.kSelectionClipboard);\n\
-      } else {\n\
-        clipboard.getData(trans, clipboard.kGlobalClipboard);\n\
-      }\n\
-      var data = {};\n\
-      var dataLen = {};\n\
-      trans.getTransferData(\"text/unicode\", data, dataLen);\n\
-      if (data) {\n\
-        data = data.value.QueryInterface(Ci.nsISupportsString);\n\
-        string = data.data.substring(0, dataLen.value / 2);\n\
-      }\n\
-  } catch (ex) {\n\
-  }\n\
-  return string;\n\
-}\n\
-\n\
-function loadFromClipboard() {\n\
-  var string = readFromClipboard();\n\
-  if (gTextbox.value != string) {\n\
-    if (!string) {\n\
-      gTextbox.value = \"\";\n\
-    } else {\n\
-      gTextbox.value = string;\n\
-    }\n\
-  }\n\
-}\n\
-\n\
-function copyToClipboard() {\n\
-  clipboardHelper.copyString(gTextbox.value);\n\
-}\n\
-\n\
-function clearClipboard() {\n\
-  clipboardHelper.copyString(\"\");\n\
-  gTextbox.value = \"\";\n\
-}\n\
-\n\
-function toggleEdit() {\n\
-  var button = document.documentElement.getButton(\"extra1\");\n\
-  switch(gTextbox.readOnly) {\n\
-    case true:\n\
-      gTextbox.readOnly = false;\n\
-      button.label = \"Lock\";\n\
-      button.accessKey = \"L\";\n\
-      break;\n\
-    case false:\n\
-      gTextbox.readOnly = true;\n\
-      button.label = \"Edit\";\n\
-      button.accessKey = \"E\";\n\
-  }\n\
-  gTextbox.focus();\n\
-}\n\
-\n\
-function closeDialog() {\n\
-  if (window.frameElement) {\n\
-    getMainwin().toggleSidebar();\n\
-  } else {\n\
-    window.close();\n\
-  }\n\
-}\n\
-\n\
-function popupShowing(aEvent) {\n\
-  var children = aEvent.target.childNodes;\n\
-  for (var i = 0; i < children.length; i++) {\n\
-    var command = children\x5bi\x5d.getAttribute(\"cmd\");\n\
-    if (command) {\n\
-      var controller = document.commandDispatcher\n\
-                               .getControllerForCommand(command);\n\
-      var enabled = controller.isCommandEnabled(command);\n\
-      if (enabled) {\n\
-        children\x5bi\x5d.removeAttribute(\"disabled\");\n\
-      } else {\n\
-        children\x5bi\x5d.setAttribute(\"disabled\", \"true\");\n\
-      }\n\
-    }\n\
-  }\n\
-}\n\
-\n\
-function init() {\n\
-  try {\n\
-    var gCBClipboardViewer = getMainwin().gCBClipboardViewer;\n\
-    document.documentElement.getButton(\"cancel\").hidden = gCBClipboardViewer.panel;\n\
-  } catch(ex) {\n\
-    Components.utils.reportError(ex);\n\
-  }\n\
-}\n\
-\n\
-window.addEventListener(\"load\", init, false);\n\
-window.removeEventListener(\"unload\", init, false);\n\
-  \x5d\x5d></script>\n\
-\n\
-</dialog>";
-
 //this.xurl = "chrome://chromedir/content/clipboard-viewer.xul";
-this.xurl = "data:application/vnd.mozilla.xul+xml;base64," + encodeURIComponent(btoa(xul));
+this.xurl = "data:application/vnd.mozilla.xul+xml;base64," +
+            encodeURIComponent(btoa(this.Help));
 
 this.panel = false;
 
@@ -291,8 +94,9 @@ this.onclick = function(aEvent) {
   }
 
 // This won't work for data:URI XUL on Firefox 4
-  else if ((aEvent.ctrlKey  || aEvent.metaKey) && // Ctrl+left-click
-           (Application.version < "4.0")) {       // Firefox prior to version 4
+  else if ((aEvent.ctrlKey  || aEvent.metaKey) && // if Ctrl+left-click
+           ((Application.version < "4.0") ||  // if Firefox prior to version 4
+            (/^chrome\:/.test(this.xurl)))) {     // if chrome URL
     aEvent.preventDefault();
     var tabs = gBrowser.mTabs;
     for (var i = 0; i < tabs.length; i++) {
@@ -357,7 +161,8 @@ $xml($("appcontent"),
                  id={this.id + "-splitter"}
                  orient="vertical"
                  hidden="true">
-         <grippy oncommand="this.parentNode.nextSibling.collapsed = !this.parentNode.nextSibling.collapsed;"/>
+         <grippy oncommand={"this.parentNode.nextSibling.collapsed = " +
+                            "!this.parentNode.nextSibling.collapsed;"}/>
        </splitter>);
 
 $xml($("appcontent"),
@@ -376,7 +181,12 @@ $xml($("appcontent"),
          <iframe id={this.id + "-iframe"} src="" flex="1" />
        </vbox>);
 
-this.tooltipText = this.Help;
+this.tooltipText = "\n\
+Left-click: open in new window\n\n\
+Middle-click: open in bottom panel\n\n\
+Shift+click: open in sidebar\n\n\
+Ctrl+click: open in new tab\n\
+(for Firefox prior to version 4 only)\n\n";
 
 ]]></initcode>
   <code><![CDATA[var ww = Components.classes["@mozilla.org/embedcomp/window-watcher;1"]
@@ -400,16 +210,203 @@ openDialog(this.xurl, winName, "chrome, dialog=no, centerscreen, minimizable, re
 
 ]]></code>
   <accelkey><![CDATA[]]></accelkey>
-  <help><![CDATA[
-Left-click: open in new window
+  <help>&lt;?xml version="1.0"?&gt;
+&lt;!--
+  Version: MPL 1.1/GPL 2.0/LGPL 2.1
 
-Middle-click: open in bottom panel
+  The contents of this file are subject to the Mozilla Public License Version
+  1.1 (the "License"); you may not use this file except in compliance with
+  the License. You may obtain a copy of the License at
+  http://www.mozilla.org/MPL/
 
-Shift+click: open in sidebar
+  Software distributed under the License is distributed on an "AS IS" basis,
+  WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+  for the specific language governing rights and limitations under the
+  License.
 
-Ctrl+click: open in new tab
-(for Firefox prior to version 4 only)
+  The Original Code is Clipboard Viewer
 
-]]></help>
+  The Initial Developer of the Original Code is LouCypher.
+  Portions created by the Initial Developer are Copyright (C) 2011
+  the Initial Developer. All Rights Reserved.
+
+  Contributor(s):
+  - LouCypher &lt;loucypher@mozillaca.com&gt;
+
+  Alternatively, the contents of this file may be used under the terms of
+  either the GNU General Public License Version 2 or later (the "GPL"), or
+  the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+  in which case the provisions of the GPL or the LGPL are applicable instead
+  of those above. If you wish to allow use of your version of this file only
+  under the terms of either the GPL or the LGPL, and not to allow others to
+  use your version of this file under the terms of the MPL, indicate your
+  decision by deleting the provisions above and replace them with the notice
+  and other provisions required by the GPL or the LGPL. If you do not delete
+  the provisions above, a recipient may use your version of this file under
+  the terms of any one of the MPL, the GPL or the LGPL.
+--&gt;
+
+&lt;?xml-stylesheet type="text/css" href="chrome://global/skin/"?&gt;
+&lt;?xml-stylesheet type="text/css" href="clipboard-viewer.css"?&gt;
+
+&lt;dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        id="clipboard-viewer"
+        width="800"
+        height="600"
+        title="Clipboard Viewer"
+        buttons="extra1, extra2, cancel"
+        buttonlabelextra1="Edit"
+        buttonlabelextra2="Clear"
+        buttonlabelcancel="Close"
+        buttonaccesskeyextra1="E"
+        buttonaccesskeyextra2="r"
+        buttonaccesskeycancel="C"
+        ondialogextra1="toggleEdit();"
+        ondialogextra2="clearClipboard();"
+        ondialogcancel="closeDialog();"
+        onfocus="loadFromClipboard();"&gt;
+
+  &lt;html:head&gt;
+    &lt;html:link rel="shortcut icon"
+               href="chrome://chromedir/content/clipboard-viewer.png" /&gt;
+  &lt;/html:head&gt;
+
+  &lt;keyset&gt;&lt;key keycode="VK_F5" oncommand="loadFromClipboard();" /&gt;&lt;/keyset&gt;
+
+  &lt;popupset&gt;
+    &lt;menupopup id="contextmenu"
+               onpopupshowing="popupShowing(event);"
+               onpopuphiding="loadFromClipboard();"
+               oncommand="var cmd = event.originalTarget.getAttribute('cmd');
+ if (cmd) document.popupNode.parentNode.doCommand(cmd);"&gt;
+      &lt;menuitem id="edit-copy" label="Copy" accesskey="c" cmd="cmd_copy" /&gt;
+      &lt;!--menuitem id="edit-delete" label="Delete" accesskey="d" cmd="cmd_delete" /--&gt;
+      &lt;menuseparator /&gt;
+      &lt;menuitem id="edit-selectAll" label="Select All" accesskey="a" cmd="cmd_selectAll" /&gt;
+    &lt;/menupopup&gt;
+  &lt;/popupset&gt;
+
+  &lt;textbox id="textbox" multiline="true" flex="1"
+           context="contextmenu" onkeyup="copyToClipboard();" readonly="" /&gt;
+
+  &lt;script type="application/x-javascript"&gt;&lt;![CDATA[
+const Cc = Components.classes;
+const Ci = Components.interfaces;
+
+const gTextbox = document.getElementById("textbox");
+
+const clipboardHelper = Cc["@mozilla.org/widget/clipboardhelper;1"].
+                        getService(Ci.nsIClipboardHelper);
+
+function getMainwin() {
+  if (window.frameElement) {
+    return window.frameElement.ownerDocument.defaultView;
+
+  } else if (window.opener) {
+    return window.opener;
+
+  } else {
+    return Cc['@mozilla.org/appshell/window-mediator;1'].
+           getService().QueryInterface(Ci.nsIWindowMediator).
+           getMostRecentWindow("navigator:browser")
+  }
+}
+
+function readFromClipboard() {
+//http://mxr.mozilla.org/mozilla2.0/source/browser/base/content/browser.js#2299
+  var string;
+  try {
+      var clipboard = Cc["@mozilla.org/widget/clipboard;1"].
+                      getService(Ci.nsIClipboard);
+      var trans = Cc["@mozilla.org/widget/transferable;1"].
+                  createInstance(Ci.nsITransferable);
+      trans.addDataFlavor("text/unicode");
+      if (clipboard.supportsSelectionClipboard()) {
+        clipboard.getData(trans, clipboard.kSelectionClipboard);
+      } else {
+        clipboard.getData(trans, clipboard.kGlobalClipboard);
+      }
+      var data = {};
+      var dataLen = {};
+      trans.getTransferData("text/unicode", data, dataLen);
+      if (data) {
+        data = data.value.QueryInterface(Ci.nsISupportsString);
+        string = data.data.substring(0, dataLen.value / 2);
+      }
+  } catch (ex) {
+  }
+  return string;
+}
+
+function loadFromClipboard() {
+  var string = readFromClipboard();
+  if (gTextbox.value != string) {
+    if (!string) {
+      gTextbox.value = "";
+    } else {
+      gTextbox.value = string;
+    }
+  }
+}
+
+function copyToClipboard() {
+  clipboardHelper.copyString(gTextbox.value);
+}
+
+function clearClipboard() {
+  clipboardHelper.copyString("");
+  gTextbox.value = "";
+}
+
+function toggleEdit() {
+  var button = document.documentElement.getButton("extra1");
+  switch(gTextbox.readOnly) {
+    case true:
+      gTextbox.readOnly = false;
+      button.label = "Lock";
+      button.accessKey = "L";
+      break;
+    case false:
+      gTextbox.readOnly = true;
+      button.label = "Edit";
+      button.accessKey = "E";
+  }
+  gTextbox.focus();
+}
+
+function closeDialog() {
+  if (window.frameElement) {
+    switch (window.frameElement.id) {
+    case "sidebar":
+      getMainwin().toggleSidebar();
+      break;
+    default:
+      getMainwin().gCBClipboardViewer.togglePanel();
+    }
+  } else {
+    window.close();
+  }
+}
+
+function popupShowing(aEvent) {
+  var children = aEvent.target.childNodes;
+  for (var i = 0; i &lt; children.length; i++) {
+    var command = children[i].getAttribute("cmd");
+    if (command) {
+      var controller = document.commandDispatcher
+                               .getControllerForCommand(command);
+      var enabled = controller.isCommandEnabled(command);
+      if (enabled) {
+        children[i].removeAttribute("disabled");
+      } else {
+        children[i].setAttribute("disabled", "true");
+      }
+    }
+  }
+}
+  ]]&gt;&lt;/script&gt;
+
+&lt;/dialog&gt;</help>
   <attributes/>
 </custombutton>
