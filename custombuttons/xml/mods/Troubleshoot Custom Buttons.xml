@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custombutton xmlns:cb="http://xsms.nm.ru/custombuttons/"
+              xmlns:html="http://www.w3.org/1999/xhtml">
+  <html:head>
+    <html:title><![CDATA[Troubleshoot Custom Buttons]]></html:title>
+    <html:link rel="shortcut icon" href=""/>
+    <html:style type="text/css"><![CDATA[body { font-size: medium; margin: 0; }
+body, code:before, help:before, initcode:before {
+  font-family: "Verdana", sans-serif;
+} 
+#wrapper { position: fixed; top: 1em; right: 1em; text-align: center; }
+p { font-size: small; text-align: center; }
+#button {
+  background-image: -moz-linear-gradient(center top, rgb(147, 200, 94) 30%, rgb(85, 168, 2) 55%);
+  border: 1px outset rgb(58, 116, 4);
+  border-radius: 1em;
+  padding: 0;
+  text-shadow: 0pt -1px 0pt rgb(58, 116, 4);
+  margin-bottom: 1em;
+}
+#button a {
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  text-decoration: none;
+}
+#button a, code, code:before, initcode, initcode:before, help, help:before {
+  display: block;
+}
+#credits { position: fixed; bottom: 1em; right: 1em; font-size: small; }
+custombutton { background-color: rgb(171, 171, 171); margin: 1em; }
+image, mode, accelkey { display: none; }
+name { font-weight: bold; font-size: x-large; }
+code:before, help:before, initcode:before {
+  font-weight: bold;
+  font-size: large;
+  margin: 0 0 1em;
+  padding: .5em;
+}
+code:before { content: "CODE"; }
+help:before { content: "Help"; }
+initcode:before { content: "Initialization Code"; }
+code, initcode, help {
+  background-color: rgb(255, 255, 255);
+  border: 1px inset rgb(170, 170, 170);
+  font: medium monospace;
+  margin: 1em 1em 2em 0;
+  padding: 1em;
+  text-align: left;
+  width: 840px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.clear { clear: both; }
+]]></html:style>
+  </html:head>
+  <html:body>
+    <html:div id="wrapper">
+      <html:div id="button">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3ETroubleshoot%20Custom%20Buttons%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bcustombuttons-stdicon-2%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5B//%20by%20morat%0A//%20http%3A//custombuttons.mozdev.org/drupal/content/troubleshoot-custom-buttons%0A%0Avar%20data%20%3D%20%3Cwindow%20xmlns%3D%22http%3A//www.mozilla.org/keymaster/gatekeeper/there.is.only.xul%22%0A%20%20width%3D%22800%22%20height%3D%22600%22%0A%20%20title%3D%7Bthis.label%7D%20onload%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.load%28%29%27%7D%20%20%3E%0A%20%20%20%20%3Ckeyset%3E%0A%20%20%20%20%20%20%3Ckey%20keycode%3D%22VK_ESCAPE%22%20oncommand%3D%22close%28%29%22/%3E%0A%20%20%20%20%3C/keyset%3E%0A%20%20%20%20%3Cvbox%20flex%3D%221%22%3E%0A%20%20%20%20%20%20%3Ctree%20id%3D%22tree%22%20hidecolumnpicker%3D%22true%22%20seltype%3D%22single%22%20flex%3D%221%22%20context%3D%22_child%22%20enableColumnDrag%3D%22true%22%20%3E%0A%20%20%20%20%20%20%3Cmenupopup%3E%0A%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Edit%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.edit%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Delete%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.remove%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Attributes%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.attr%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Properties%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.prop%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22URI%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.link%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Inspect%20Button%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.inspect%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Export%20to%20XML%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.saveXML%28%29%27%7D/%3E%0A%20%20%20%20%20%20%3C/menupopup%3E%0A%20%20%20%20%20%20%20%20%3Ctreecols%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ctreecol%20id%3D%22firstColumn%22%20label%3D%22Id%22%20width%3D%22200%22%20sortDirection%3D%22ascending%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onclick%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.reorder%28this%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Csplitter%20class%3D%22tree-splitter%22%20/%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ctreecol%20id%3D%22secondColumn%22%20label%3D%22Image%20%26amp%3B%20Label%22%20flex%3D%221%22%20sortDirection%3D%22ascending%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onclick%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.reorder%28this%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3C/treecols%3E%0A%20%20%20%20%20%20%20%20%3Ctreechildren%20id%3D%22treechildren%22/%3E%0A%20%20%20%20%20%20%3C/tree%3E%0A%20%20%20%20%20%20%3Cseparator%20class%3D%22thin%22/%3E%0A%20%20%20%20%20%20%3Chbox%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20label%3D%22Edit%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.edit%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20label%3D%22Delete%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.remove%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20label%3D%22Attributes%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.attr%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20label%3D%22Properties%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.prop%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20label%3D%22URI%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.link%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20label%3D%22DOMi%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.inspect%28%29%27%7D/%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20label%3D%22XML%22%20oncommand%3D%7B%27opener.document.getElementById%28%22%27%20+%20this.id%20+%20%27%22%29.saveXML%28%29%27%7D/%3E%0A%20%20%20%20%20%20%3C/hbox%3E%0A%20%20%20%20%3C/vbox%3E%0A%3C/window%3E%3B%0A%0A//var%20css%20%3D%20%22data%3Atext/css%2C%22%20+%20encodeURIComponent%28%22treechildren%3A%3A-moz-tree-cell-text%20%7B%20color%3A%20blue%3B%20%7D%22%29%3B%0Avar%20css%20%3D%20%22%22%3B%0Avar%20bool%20%3D%20XML.prettyPrinting%3B%0AXML.prettyPrinting%20%3D%20false%3B%0Adata%20%3D%20%27%3C%3Fxml%20version%3D%221.0%22%3F%3E%3C%3Fxml-stylesheet%20href%3D%22chrome%3A//global/skin/%22%20type%3D%22text/css%22%3F%3E%27%20+%0A%20%20%20%20%20%20%20%27%3C%3Fxml-stylesheet%20href%3D%22%27%20+%20css%20+%20%27%22%20type%3D%22text/css%22%3F%3E%27%20+%20data.toXMLString%28%29%3B%0AXML.prettyPrinting%20%3D%20bool%3B%0A%0Avar%20dialog%3B%0A%0Afunction%20getImage%28s%29%20%7B%0A%20%20if%20%28s%20%3D%3D%20%22custombuttons-stdicon-1%22%29%20return%20%22chrome%3A//custombuttons/skin/button.png%22%3B%0A%20%20if%20%28s%20%3D%3D%20%22custombuttons-stdicon-2%22%29%20return%20%22chrome%3A//custombuttons/skin/stdicons/rbutton.png%22%3B%0A%20%20if%20%28s%20%3D%3D%20%22custombuttons-stdicon-3%22%29%20return%20%22chrome%3A//custombuttons/skin/stdicons/gbutton.png%22%3B%0A%20%20if%20%28s%20%3D%3D%20%22custombuttons-stdicon-4%22%29%20return%20%22chrome%3A//custombuttons/skin/stdicons/bbutton.png%22%3B%0A%20%20return%20%22http%3A//forum.mozilla-russia.org/uploaded/custombuttons_button.png%22%3B%0A%7D%0A%0Afunction%20openTab%28arr%29%20%7B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20arr.length%3B%20i++%29%20%7B%0A%20%20%20%20var%20converter%20%3D%20Components.classes%5B%22@mozilla.org/intl/scriptableunicodeconverter%22%5D.%0A%20%20%20%20%20%20createInstance%28Components.interfaces.nsIScriptableUnicodeConverter%29%3B%0A%20%20%20%20converter.charset%20%3D%20%22UTF-8%22%3B%0A%20%20%20%20arr%5Bi%5D%20%3D%20converter.ConvertFromUnicode%28arr%5Bi%5D%29%3B%0A%20%20%20%20arr%5Bi%5D%20%3D%20arr%5Bi%5D.replace%28/%26/g%2C%20%22%26amp%3B%22%29%3B%0A%20%20%20%20arr%5Bi%5D%20%3D%20arr%5Bi%5D.replace%28/%3E/g%2C%20%22%26gt%3B%22%29%3B%0A%20%20%20%20arr%5Bi%5D%20%3D%20arr%5Bi%5D.replace%28/%3C/g%2C%20%22%26lt%3B%22%29%3B%0A%20%20%20%20arr%5Bi%5D%20%3D%20arr%5Bi%5D.replace%28/%22/g%2C%20%22%26quot%3B%22%29%3B%0A%20%20%20%20arr%5Bi%5D%20%3D%20arr%5Bi%5D.replace%28/%27/g%2C%20%22%26apos%3B%22%29%3B%0A%20%20%7D%0A%20%20var%20data%20%3D%20%27%3C%21DOCTYPE%20HTML%20PUBLIC%20%22-//W3C//DTD%20HTML%204.01//EN%22%3E%27%3B%0A%20%20data%20+%3D%20%22%3Chtml%3E%3Chead%3E%3Ctitle%3E%22%20+%20arr%5B1%5D%20+%20%22%3C/title%3E%22%3B%0A%20%20data%20+%3D%20%27%3Cmeta%20http-equiv%3D%22Content-Type%22%20content%3D%22text/html%3B%20charset%3DUTF-8%22%3E%27%3B%0A%20%20data%20+%3D%20%22%3C/head%3E%3Cbody%3E%3Cpre%3E%22%20+%20arr.join%28%22%5Cn%5Cn%22%29%20+%20%22%3C/pre%3E%3C/body%3E%3C/html%3E%22%3B%0A%20%20var%20info%20%3D%20Components.classes%5B%22@mozilla.org/xre/app-info%3B1%22%5D.%0A%20%20%20%20getService%28Components.interfaces.nsIXULAppInfo%29%3B%0A%20%20if%20%28info.name%20%3D%3D%20%22Firefox%22%20%7C%7C%20info.name%20%3D%3D%20%22SeaMonkey%22%29%20%7B%0A%20%20%20%20gBrowser.addTab%28%22data%3Atext/html%3Bcharset%3Dutf-8%3Bbase64%2C%22%20+%20btoa%28data%29%29%3B%0A%20%20%7D%0A%20%20if%20%28info.name%20%3D%3D%20%22Thunderbird%22%29%20%7B%0A%20%20%20%20openContentTab%28%22data%3Atext/html%3Bcharset%3Dutf-8%3Bbase64%2C%22%20+%20btoa%28data%29%29%3B%0A%20%20%7D%0A%7D%0A%0Athis.openWindow%20%3D%20function%28%29%20%7B%0A%20%20var%20url%20%3D%20%22data%3Aapplication/vnd.mozilla.xul+xml%2C%22%20+%20data%3B%0A%20%20var%20feature%20%3D%20%22chrome%2Ccenterscreen%2Cwidth%3D600%2Cheight%3D200%2Cdialog%3Dno%22%3B%0A%20%20dialog%20%3D%20window.openDialog%28url%2C%20%22%22%2C%20feature%29%3B%0A%7D%0A%0Athis.load%20%3D%20function%28%29%20%7B%0A%20%20var%20nodeList%20%3D%20document.getElementsByTagName%28%22toolbarbutton%22%29%3B%0A%20%20var%20children%20%3D%20dialog.document.getElementById%28%22treechildren%22%29%3B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20nodeList.length%3B%20i++%29%20%7B%0A%20%20%20%20if%20%28nodeList%5Bi%5D.id.search%28%22custombuttons-button%22%29%20%3D%3D%200%29%20%7B%0A%20%20%20%20%20%20var%20item%20%3D%20document.createElement%28%22treeitem%22%29%3B%0A%20%20%20%20%20%20var%20row%20%3D%20document.createElement%28%22treerow%22%29%3B%0A%20%20%20%20%20%20var%20cell%20%3D%20document.createElement%28%22treecell%22%29%3B%0A%20%20%20%20%20%20cell.setAttribute%28%22label%22%2C%20nodeList%5Bi%5D.id%29%3B%0A%20%20%20%20%20%20row.appendChild%28cell%29%3B%0A%20%20%20%20%20%20var%20cell%20%3D%20document.createElement%28%22treecell%22%29%3B%0A%20%20%20%20%20%20cell.setAttribute%28%22src%22%2C%20nodeList%5Bi%5D.image%20%7C%7C%20getImage%28nodeList%5Bi%5D.cbStdIcon%29%29%3B%0A%20%20%20%20%20%20cell.setAttribute%28%22label%22%2C%20String.fromCharCode%2832%2C%2032%29%20+%20nodeList%5Bi%5D.label%29%3B%0A%20%20%20%20%20%20row.appendChild%28cell%29%3B%0A%20%20%20%20%20%20item.appendChild%28row%29%3B%0A%20%20%20%20%20%20children.appendChild%28item%29%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20dialog.document.getElementById%28%22tree%22%29.focus%28%29%3B%0A%20%20dialog.document.getElementById%28%22tree%22%29.view.selection.select%280%29%3B%0A%7D%0A%0Athis.reorder%20%3D%20function%28node%29%20%7B%0A%20%20var%20nodeList%20%3D%20document.getElementsByTagName%28%22toolbarbutton%22%29%3B%0A%20%20var%20orderArr%20%3D%20new%20Array%28%29%3B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20nodeList.length%3B%20i++%29%20%7B%0A%20%20%20%20if%20%28nodeList%5Bi%5D.id.search%28%22custombuttons-button%22%29%20%3D%3D%200%29%20%7B%0A%20%20%20%20%20%20var%20item%20%3D%20document.createElement%28%22treeitem%22%29%3B%0A%20%20%20%20%20%20var%20row%20%3D%20document.createElement%28%22treerow%22%29%3B%0A%20%20%20%20%20%20var%20cell%20%3D%20document.createElement%28%22treecell%22%29%3B%0A%20%20%20%20%20%20cell.setAttribute%28%22label%22%2C%20nodeList%5Bi%5D.id%29%3B%0A%20%20%20%20%20%20row.appendChild%28cell%29%3B%0A%20%20%20%20%20%20var%20cell%20%3D%20document.createElement%28%22treecell%22%29%3B%0A%20%20%20%20%20%20cell.setAttribute%28%22src%22%2C%20nodeList%5Bi%5D.image%20%7C%7C%20getImage%28nodeList%5Bi%5D.cbStdIcon%29%29%3B%0A%20%20%20%20%20%20cell.setAttribute%28%22label%22%2C%20String.fromCharCode%2832%2C%2032%29%20+%20nodeList%5Bi%5D.label%29%3B%0A%20%20%20%20%20%20row.appendChild%28cell%29%3B%0A%20%20%20%20%20%20item.appendChild%28row%29%3B%0A%20%20%20%20%20%20orderArr.push%28%5BnodeList%5Bi%5D.id.substring%2820%29%2C%20nodeList%5Bi%5D.label%2C%20item%5D%29%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%0A%20%20var%20id%20%3D%20node.getAttribute%28%22id%22%29%3B%0A%20%20var%20sortDirection%20%3D%20node.getAttribute%28%22sortDirection%22%29%3B%0A%20%20if%20%28id%20%3D%3D%20%22firstColumn%22%20%26%26%20sortDirection%20%3D%3D%20%22ascending%22%29%20orderArr.sort%28function%28a%2C%20b%29%20%7B%20return%20a%5B0%5D%20-%20b%5B0%5D%20%7D%29%3B%0A%20%20if%20%28id%20%3D%3D%20%22firstColumn%22%20%26%26%20sortDirection%20%3D%3D%20%22descending%22%29%20orderArr.sort%28function%28a%2C%20b%29%20%7B%20return%20b%5B0%5D%20-%20a%5B0%5D%20%7D%29%3B%0A%20%20if%20%28id%20%3D%3D%20%22secondColumn%22%20%26%26%20sortDirection%20%3D%3D%20%22ascending%22%29%20orderArr.sort%28function%28a%2C%20b%29%20%7B%20return%20a%5B1%5D%20%3E%20b%5B1%5D%20%7D%29%3B%0A%20%20if%20%28id%20%3D%3D%20%22secondColumn%22%20%26%26%20sortDirection%20%3D%3D%20%22descending%22%29%20orderArr.sort%28function%28a%2C%20b%29%20%7B%20return%20a%5B1%5D%20%3C%20b%5B1%5D%20%7D%29%3B%0A%20%20node.setAttribute%28%22sortDirection%22%2C%20sortDirection%20%3D%3D%20%22descending%22%20%3F%20%22ascending%22%20%3A%20%22descending%22%29%3B%0A%20%20var%20children%20%3D%20dialog.document.getElementById%28%22treechildren%22%29%3B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20children.childNodes.length%3B%20i++%29%20%7B%0A%20%20%20%20children.appendChild%28orderArr%5Bi%5D%5B2%5D%29%3B%0A%20%20%20%20children.removeChild%28children.firstChild%29%3B%0A%20%20%7D%0A%20%20dialog.document.getElementById%28%22tree%22%29.focus%28%29%3B%0A%20%20dialog.document.getElementById%28%22tree%22%29.view.selection.select%280%29%3B%0A%7D%0A%0Athis.edit%20%3D%20function%28%29%20%7B%0A%20%20var%20id%20%3D%20dialog.document.getElementById%28%22tree%22%29.view.getCellText%28%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.view.selection.currentIndex%2C%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.columns.getColumnAt%280%29%29%3B%0A%20%20custombuttons.editButton%28document.getElementById%28id%29%29%3B%0A%20%20dialog.close%28%29%3B%0A%7D%0A%0Athis.remove%20%3D%20function%28%29%20%7B%0A%20%20var%20id%20%3D%20dialog.document.getElementById%28%22tree%22%29.view.getCellText%28%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.view.selection.currentIndex%2C%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.columns.getColumnAt%280%29%29%3B%0A%20%20custombuttons.removeButton%28document.getElementById%28id%29%29%3B%0A%20%20dialog.close%28%29%3B%0A%7D%0A%0Athis.attr%20%3D%20function%28%29%20%7B%0A%20%20var%20id%20%3D%20dialog.document.getElementById%28%22tree%22%29.view.getCellText%28%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.view.selection.currentIndex%2C%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.columns.getColumnAt%280%29%29%3B%0A%20%20var%20node%20%3D%20document.getElementById%28id%29%3B%0A%20%20var%20out%20%3D%20new%20Array%28%29%3B%0A%20%20out.push%28%27windowtype%3D%22%27%20+%20document.documentElement.getAttribute%28%22windowtype%22%29%20+%20%27%22%20id%3D%22%27%20+%20id%20+%20%27%22%27%29%3B%0A%20%20out.push%28%22Attributes%22%29%3B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20node.attributes.length%3B%20i++%29%20%7B%0A%20%20%20%20if%20%28node.attributes%5Bi%5D.nodeName%20%3D%3D%20%22cb-oncommand%22%20%7C%7C%0A%20%20%20%20%20%20%20%20node.attributes%5Bi%5D.nodeName%20%3D%3D%20%22cb-init%22%20%20%20%20%20%20%7C%7C%0A%20%20%20%20%20%20%20%20node.attributes%5Bi%5D.nodeName%20%3D%3D%20%22Help%22%29%20%7B%0A%20%20%20%20%20%20out.push%28node.attributes%5Bi%5D.nodeName%20+%20%22%20%22%20+%20typeof%20node.attributes%5Bi%5D.nodeValue%20+%20%22%5Cn%22%20+%20%22%5Bomitted%5D%22%29%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20out.push%28node.attributes%5Bi%5D.nodeName%20+%20%22%20%22%20+%20typeof%20node.attributes%5Bi%5D.nodeValue%20+%20%22%5Cn%22%20+%20node.attributes%5Bi%5D.nodeValue%29%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20openTab%28out%29%3B%0A%20%20dialog.close%28%29%3B%0A%7D%0A%0Athis.prop%20%3D%20function%28%29%20%7B%0A%20%20var%20id%20%3D%20dialog.document.getElementById%28%22tree%22%29.view.getCellText%28%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.view.selection.currentIndex%2C%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.columns.getColumnAt%280%29%29%3B%0A%20%20var%20node%20%3D%20document.getElementById%28id%29%3B%0A%20%20var%20out%20%3D%20new%20Array%28%29%3B%0A%20%20out.push%28%27windowtype%3D%22%27%20+%20document.documentElement.getAttribute%28%22windowtype%22%29%20+%20%27%22%20id%3D%22%27%20+%20id%20+%20%27%22%27%29%3B%0A%20%20out.push%28%22Properties%22%29%3B%0A%20%20for%20%28var%20i%20in%20node%29%20%7B%0A%20%20%20%20if%20%28i%20%3D%3D%20%22cbCommand%22%20%20%7C%7C%0A%20%20%20%20%20%20%20%20i%20%3D%3D%20%22cbInitCode%22%20%7C%7C%0A%20%20%20%20%20%20%20%20i%20%3D%3D%20%22Help%22%20%20%20%20%20%20%20%7C%7C%0A%20%20%20%20%20%20%20%20i%20%3D%3D%20%22URI%22%29%20%7B%0A%20%20%20%20%20%20out.push%28i%20+%20%22%20%22%20+%20typeof%20node%5Bi%5D%20+%20%22%5Cn%22%20+%20%22%5Bomitted%5D%22%29%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20out.push%28i%20+%20%22%20%22%20+%20typeof%20node%5Bi%5D%20+%20%22%5Cn%22%20+%20node%5Bi%5D%29%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20openTab%28out%29%3B%0A%20%20dialog.close%28%29%3B%0A%7D%0A%0Athis.link%20%3D%20function%28%29%20%7B%0A%20%20var%20id%20%3D%20dialog.document.getElementById%28%22tree%22%29.view.getCellText%28%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.view.selection.currentIndex%2C%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.columns.getColumnAt%280%29%29%3B%0A%20%20var%20out%20%3D%20new%20Array%28%29%3B%0A%20%20out.push%28%27windowtype%3D%22%27%20+%20document.documentElement.getAttribute%28%22windowtype%22%29%20+%20%27%22%20id%3D%22%27%20+%20id%20+%20%27%22%27%29%3B%0A%20%20out.push%28%22URI%22%29%3B%0A%20%20out.push%28unescape%28document.getElementById%28id%29.URI%29%29%3B%0A%20%20openTab%28out%29%3B%0A%20%20dialog.close%28%29%3B%0A%7D%0A%0Athis.inspect%20%3D%20function%28%29%20%7B%0A%20%20if%20%28typeof%28inspectDOMDocument%29%20%3D%3D%20%22undefined%22%29%20%7B%0A%20%20%20%20custombuttons.alertBox%28this.label%2C%20%22DOM%20Inspector%20is%20not%20enabled%20or%20installed.%22%29%3B%0A%20%20%20%20return%3B%0A%20%20%7D%0A%20%20var%20id%20%3D%20dialog.document.getElementById%28%22tree%22%29.view.getCellText%28%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.view.selection.currentIndex%2C%0A%20%20%20%20dialog.document.getElementById%28%22tree%22%29.columns.getColumnAt%280%29%29%3B%0A%20%20inspectDOMNode%28document.getElementById%28id%29%29%3B%0A%20%20dialog.close%28%29%3B%0A%7D%0A%0Athis.saveXML%20%3D%20function%28%29%20%7B%0A%20%20var%20tbitms%20%3D%20document.getElementsByTagName%28%22toolbaritem%22%29%3B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20tbitms.length%3B%20i++%29%20%7B%0A%20%20%20%20tbitm%20%3D%20tbitms%5Bi%5D%3B%0A%20%20%20%20if%20%28tbitm.id%20%26%26%20/%5Ecustombuttons%5C-button%5Cd+%5C-toolbaritem%24/.test%28tbitm.id%29%29%20%7B%0A%20%20%20%20%20%20var%20btn%20%3D%20tbitm.nextSibling%3B%0A%20%20%20%20%20%20var%20id%20%3D%20dialog.document.getElementById%28%22tree%22%29.view.getCellText%28%0A%20%20%20%20%20%20%20%20dialog.document.getElementById%28%22tree%22%29.view.selection.currentIndex%2C%0A%20%20%20%20%20%20%20%20dialog.document.getElementById%28%22tree%22%29.columns.getColumnAt%280%29%29%3B%0A%20%20%20%20%20%20btn.saveXML%28document.getElementById%28id%29.URI%29%3B%0A%20%20%20%20%20%20return%20dialog.close%28%29%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20custombuttons.alertBox%28this.label%2C%20%22Custom%20Buttons%20XML%20Exporter/Importer%20is%20not%20installed%20or%20is%20disabled.%22%29%3B%0A%7D%0A%0A//%20this.setAttribute%28%22onclick%22%2C%20%22custombuttons.gQuot.mHandler%28event%2C%20this%29%22%29%3B%0A//%20Better%20use%20the%20%22Code%22%20tab%20or%20%22oncommand%22%20than%20adding%20%22onclick%22%0A//%20if%20it%20doesn%27t%20send%20any%20click%20events%0A%0A%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bthis.openWindow%28%29%3B%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Troubleshoot Custom Buttons">
+        <![CDATA[Install this button]]>
+        </html:a>
+      </html:div>
+      <html:a href="https://addons.mozilla.org/addon/custom-buttons/">
+        <![CDATA[What's this?]]>
+      </html:a>
+      <html:div id="credits">
+        <html:a href="http://custombuttons.mozdev.org/drupal/node/484">
+          <![CDATA[Custom Buttons XML]]><html:br/><![CDATA[Exporter/Importer]]>
+        </html:a>
+      </html:div>
+    </html:div>
+  </html:body>
+
+  <name>Troubleshoot Custom Buttons</name>
+  <image><![CDATA[custombuttons-stdicon-2]]></image>
+  <mode>0</mode>
+  <initcode><![CDATA[// by morat
+// http://custombuttons.mozdev.org/drupal/content/troubleshoot-custom-buttons
+
+var data = <window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  width="800" height="600"
+  title={this.label} onload={'opener.document.getElementById("' + this.id + '").load()'}  >
+    <keyset>
+      <key keycode="VK_ESCAPE" oncommand="close()"/>
+    </keyset>
+    <vbox flex="1">
+      <tree id="tree" hidecolumnpicker="true" seltype="single" flex="1" context="_child" enableColumnDrag="true" >
+      <menupopup>
+        <menuitem label="Edit" oncommand={'opener.document.getElementById("' + this.id + '").edit()'}/>
+        <menuitem label="Delete" oncommand={'opener.document.getElementById("' + this.id + '").remove()'}/>
+        <menuitem label="Attributes" oncommand={'opener.document.getElementById("' + this.id + '").attr()'}/>
+        <menuitem label="Properties" oncommand={'opener.document.getElementById("' + this.id + '").prop()'}/>
+        <menuitem label="URI" oncommand={'opener.document.getElementById("' + this.id + '").link()'}/>
+        <menuitem label="Inspect Button" oncommand={'opener.document.getElementById("' + this.id + '").inspect()'}/>
+        <menuitem label="Export to XML" oncommand={'opener.document.getElementById("' + this.id + '").saveXML()'}/>
+      </menupopup>
+        <treecols>
+          <treecol id="firstColumn" label="Id" width="200" sortDirection="ascending"
+            onclick={'opener.document.getElementById("' + this.id + '").reorder(this)'}/>
+          <splitter class="tree-splitter" />
+          <treecol id="secondColumn" label="Image &amp; Label" flex="1" sortDirection="ascending"
+            onclick={'opener.document.getElementById("' + this.id + '").reorder(this)'}/>
+        </treecols>
+        <treechildren id="treechildren"/>
+      </tree>
+      <separator class="thin"/>
+      <hbox>
+        <button label="Edit" oncommand={'opener.document.getElementById("' + this.id + '").edit()'}/>
+        <button label="Delete" oncommand={'opener.document.getElementById("' + this.id + '").remove()'}/>
+        <button label="Attributes" oncommand={'opener.document.getElementById("' + this.id + '").attr()'}/>
+        <button label="Properties" oncommand={'opener.document.getElementById("' + this.id + '").prop()'}/>
+        <button label="URI" oncommand={'opener.document.getElementById("' + this.id + '").link()'}/>
+        <button label="DOMi" oncommand={'opener.document.getElementById("' + this.id + '").inspect()'}/>
+        <button label="XML" oncommand={'opener.document.getElementById("' + this.id + '").saveXML()'}/>
+      </hbox>
+    </vbox>
+</window>;
+
+//var css = "data:text/css," + encodeURIComponent("treechildren::-moz-tree-cell-text { color: blue; }");
+var css = "";
+var bool = XML.prettyPrinting;
+XML.prettyPrinting = false;
+data = '<?xml version="1.0"?><?xml-stylesheet href="chrome://global/skin/" type="text/css"?>' +
+       '<?xml-stylesheet href="' + css + '" type="text/css"?>' + data.toXMLString();
+XML.prettyPrinting = bool;
+
+var dialog;
+
+function getImage(s) {
+  if (s == "custombuttons-stdicon-1") return "chrome://custombuttons/skin/button.png";
+  if (s == "custombuttons-stdicon-2") return "chrome://custombuttons/skin/stdicons/rbutton.png";
+  if (s == "custombuttons-stdicon-3") return "chrome://custombuttons/skin/stdicons/gbutton.png";
+  if (s == "custombuttons-stdicon-4") return "chrome://custombuttons/skin/stdicons/bbutton.png";
+  return "http://forum.mozilla-russia.org/uploaded/custombuttons_button.png";
+}
+
+function openTab(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].
+      createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+    converter.charset = "UTF-8";
+    arr[i] = converter.ConvertFromUnicode(arr[i]);
+    arr[i] = arr[i].replace(/&/g, "&amp;");
+    arr[i] = arr[i].replace(/>/g, "&gt;");
+    arr[i] = arr[i].replace(/</g, "&lt;");
+    arr[i] = arr[i].replace(/"/g, "&quot;");
+    arr[i] = arr[i].replace(/'/g, "&apos;");
+  }
+  var data = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">';
+  data += "<html><head><title>" + arr[1] + "</title>";
+  data += '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">';
+  data += "</head><body><pre>" + arr.join("\n\n") + "</pre></body></html>";
+  var info = Components.classes["@mozilla.org/xre/app-info;1"].
+    getService(Components.interfaces.nsIXULAppInfo);
+  if (info.name == "Firefox" || info.name == "SeaMonkey") {
+    gBrowser.addTab("data:text/html;charset=utf-8;base64," + btoa(data));
+  }
+  if (info.name == "Thunderbird") {
+    openContentTab("data:text/html;charset=utf-8;base64," + btoa(data));
+  }
+}
+
+this.openWindow = function() {
+  var url = "data:application/vnd.mozilla.xul+xml," + data;
+  var feature = "chrome,centerscreen,width=600,height=200,dialog=no";
+  dialog = window.openDialog(url, "", feature);
+}
+
+this.load = function() {
+  var nodeList = document.getElementsByTagName("toolbarbutton");
+  var children = dialog.document.getElementById("treechildren");
+  for (var i = 0; i < nodeList.length; i++) {
+    if (nodeList[i].id.search("custombuttons-button") == 0) {
+      var item = document.createElement("treeitem");
+      var row = document.createElement("treerow");
+      var cell = document.createElement("treecell");
+      cell.setAttribute("label", nodeList[i].id);
+      row.appendChild(cell);
+      var cell = document.createElement("treecell");
+      cell.setAttribute("src", nodeList[i].image || getImage(nodeList[i].cbStdIcon));
+      cell.setAttribute("label", String.fromCharCode(32, 32) + nodeList[i].label);
+      row.appendChild(cell);
+      item.appendChild(row);
+      children.appendChild(item);
+    }
+  }
+  dialog.document.getElementById("tree").focus();
+  dialog.document.getElementById("tree").view.selection.select(0);
+}
+
+this.reorder = function(node) {
+  var nodeList = document.getElementsByTagName("toolbarbutton");
+  var orderArr = new Array();
+  for (var i = 0; i < nodeList.length; i++) {
+    if (nodeList[i].id.search("custombuttons-button") == 0) {
+      var item = document.createElement("treeitem");
+      var row = document.createElement("treerow");
+      var cell = document.createElement("treecell");
+      cell.setAttribute("label", nodeList[i].id);
+      row.appendChild(cell);
+      var cell = document.createElement("treecell");
+      cell.setAttribute("src", nodeList[i].image || getImage(nodeList[i].cbStdIcon));
+      cell.setAttribute("label", String.fromCharCode(32, 32) + nodeList[i].label);
+      row.appendChild(cell);
+      item.appendChild(row);
+      orderArr.push([nodeList[i].id.substring(20), nodeList[i].label, item]);
+    }
+  }
+
+  var id = node.getAttribute("id");
+  var sortDirection = node.getAttribute("sortDirection");
+  if (id == "firstColumn" && sortDirection == "ascending") orderArr.sort(function(a, b) { return a[0] - b[0] });
+  if (id == "firstColumn" && sortDirection == "descending") orderArr.sort(function(a, b) { return b[0] - a[0] });
+  if (id == "secondColumn" && sortDirection == "ascending") orderArr.sort(function(a, b) { return a[1] > b[1] });
+  if (id == "secondColumn" && sortDirection == "descending") orderArr.sort(function(a, b) { return a[1] < b[1] });
+  node.setAttribute("sortDirection", sortDirection == "descending" ? "ascending" : "descending");
+  var children = dialog.document.getElementById("treechildren");
+  for (var i = 0; i < children.childNodes.length; i++) {
+    children.appendChild(orderArr[i][2]);
+    children.removeChild(children.firstChild);
+  }
+  dialog.document.getElementById("tree").focus();
+  dialog.document.getElementById("tree").view.selection.select(0);
+}
+
+this.edit = function() {
+  var id = dialog.document.getElementById("tree").view.getCellText(
+    dialog.document.getElementById("tree").view.selection.currentIndex,
+    dialog.document.getElementById("tree").columns.getColumnAt(0));
+  custombuttons.editButton(document.getElementById(id));
+  dialog.close();
+}
+
+this.remove = function() {
+  var id = dialog.document.getElementById("tree").view.getCellText(
+    dialog.document.getElementById("tree").view.selection.currentIndex,
+    dialog.document.getElementById("tree").columns.getColumnAt(0));
+  custombuttons.removeButton(document.getElementById(id));
+  dialog.close();
+}
+
+this.attr = function() {
+  var id = dialog.document.getElementById("tree").view.getCellText(
+    dialog.document.getElementById("tree").view.selection.currentIndex,
+    dialog.document.getElementById("tree").columns.getColumnAt(0));
+  var node = document.getElementById(id);
+  var out = new Array();
+  out.push('windowtype="' + document.documentElement.getAttribute("windowtype") + '" id="' + id + '"');
+  out.push("Attributes");
+  for (var i = 0; i < node.attributes.length; i++) {
+    if (node.attributes[i].nodeName == "cb-oncommand" ||
+        node.attributes[i].nodeName == "cb-init"      ||
+        node.attributes[i].nodeName == "Help") {
+      out.push(node.attributes[i].nodeName + " " + typeof node.attributes[i].nodeValue + "\n" + "[omitted]");
+    } else {
+      out.push(node.attributes[i].nodeName + " " + typeof node.attributes[i].nodeValue + "\n" + node.attributes[i].nodeValue);
+    }
+  }
+  openTab(out);
+  dialog.close();
+}
+
+this.prop = function() {
+  var id = dialog.document.getElementById("tree").view.getCellText(
+    dialog.document.getElementById("tree").view.selection.currentIndex,
+    dialog.document.getElementById("tree").columns.getColumnAt(0));
+  var node = document.getElementById(id);
+  var out = new Array();
+  out.push('windowtype="' + document.documentElement.getAttribute("windowtype") + '" id="' + id + '"');
+  out.push("Properties");
+  for (var i in node) {
+    if (i == "cbCommand"  ||
+        i == "cbInitCode" ||
+        i == "Help"       ||
+        i == "URI") {
+      out.push(i + " " + typeof node[i] + "\n" + "[omitted]");
+    } else {
+      out.push(i + " " + typeof node[i] + "\n" + node[i]);
+    }
+  }
+  openTab(out);
+  dialog.close();
+}
+
+this.link = function() {
+  var id = dialog.document.getElementById("tree").view.getCellText(
+    dialog.document.getElementById("tree").view.selection.currentIndex,
+    dialog.document.getElementById("tree").columns.getColumnAt(0));
+  var out = new Array();
+  out.push('windowtype="' + document.documentElement.getAttribute("windowtype") + '" id="' + id + '"');
+  out.push("URI");
+  out.push(unescape(document.getElementById(id).URI));
+  openTab(out);
+  dialog.close();
+}
+
+this.inspect = function() {
+  if (typeof(inspectDOMDocument) == "undefined") {
+    custombuttons.alertBox(this.label, "DOM Inspector is not enabled or installed.");
+    return;
+  }
+  var id = dialog.document.getElementById("tree").view.getCellText(
+    dialog.document.getElementById("tree").view.selection.currentIndex,
+    dialog.document.getElementById("tree").columns.getColumnAt(0));
+  inspectDOMNode(document.getElementById(id));
+  dialog.close();
+}
+
+this.saveXML = function() {
+  var tbitms = document.getElementsByTagName("toolbaritem");
+  for (var i = 0; i < tbitms.length; i++) {
+    tbitm = tbitms[i];
+    if (tbitm.id && /^custombuttons\-button\d+\-toolbaritem$/.test(tbitm.id)) {
+      var btn = tbitm.nextSibling;
+      var id = dialog.document.getElementById("tree").view.getCellText(
+        dialog.document.getElementById("tree").view.selection.currentIndex,
+        dialog.document.getElementById("tree").columns.getColumnAt(0));
+      btn.saveXML(document.getElementById(id).URI);
+      return dialog.close();
+    }
+  }
+  custombuttons.alertBox(this.label, "Custom Buttons XML Exporter/Importer is not installed or is disabled.");
+}
+
+// this.setAttribute("onclick", "custombuttons.gQuot.mHandler(event, this)");
+// Better use the "Code" tab or "oncommand" than adding "onclick"
+// if it doesn't send any click events
+
+]]></initcode>
+  <code><![CDATA[this.openWindow();]]></code>
+  <accelkey><![CDATA[]]></accelkey>
+  <help><![CDATA[]]></help>
+  <attributes/>
+</custombutton>
