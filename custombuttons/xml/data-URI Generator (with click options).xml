@@ -143,8 +143,8 @@ function copyDataURI() {
   custombuttons.alertBox(this.name, "Copied to Clipboard");
 }
 
-this.rightclick = copyDataURI;
 this.leftclick = showDataURI;
+this.rightclick = copyDataURI;
 this.setAttribute("onclick", "gQuot(event, this)"); 
 
 this.tooltipText = this.Help;
