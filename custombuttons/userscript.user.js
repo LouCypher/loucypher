@@ -2,9 +2,9 @@
 // @name            Custom Buttons XML install confirmation
 // @namespace       loucypher@mozillaca.com
 // @desription      Ask to install new button when opening a Custom Buttons XML file
-// @include         http://*
-// @include         https://*
-// @include         file://*        <-- apparently this doesn't work
+// @include         http://*.xml
+// @include         https://*.xml
+// @include         file://*.xml        <-- apparently this doesn't work
 // ==/UserScript==
 
 var cbNS1 = "http://xsms.nm.ru/custombuttons/";
