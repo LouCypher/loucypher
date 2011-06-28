@@ -1,6 +1,6 @@
 #summary Firefox extension
+<g:plusone size="medium"></g:plusone>
 
-<g:plusone size="medium" style="float: left;"></g:plusone>
 Tweet anything from Firefox context menu.
 
 = Compatibility =
