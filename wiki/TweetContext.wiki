@@ -20,4 +20,4 @@ Tweet anything from Firefox context menu
 
 === Echofon integration ===
 
-You can choose between default [http://twitter.com/share Twitter share] page or use [http://www.echofon.com/ Echofon] to tweet.
+You can choose between default Twitter [https://twitter.com/intent/tweet tweet page] or use [http://www.echofon.com/ Echofon] to tweet.
