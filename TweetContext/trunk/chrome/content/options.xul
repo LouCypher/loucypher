@@ -105,8 +105,7 @@
         <label value="&tweet.options.echofon.requires; "/>
         <label value="Echofon for Firefox" class="text-link"
                onclick="openURL(this.tooltipText); window.close();"
-               tooltiptext="https://addons.mozilla.org/firefox/addon/
-echofon-for-twitter/?src=tweetcontext" />
+               tooltiptext="&tweet.options.echofon.URL;" />
         <label value="."/>
       </hbox>
       <hbox id="echofon" flex="1">
@@ -116,9 +115,10 @@ echofon-for-twitter/?src=tweetcontext" />
         accesskey="&tweet.options.echofon.accesskey;"
         preference="extensions.TweetContext.useEchofon"
         oncommand="disableTwitter(this.checked);" />
-        <button label="&tweet.options.echofon.prefs;"
+        <button id="echofon-options"
+                label="&tweet.options.echofon.prefs;"
                 accesskey="&tweet.options.echofon.prefs.accesskey;"
-                oncommand="echofonPrefs(); window.close();" />
+                oncommand="getEchofon(echofonPrefs);" />
       </hbox>
    </groupbox>
 

@@ -99,8 +99,12 @@ TweetContext.init = {
                                  false);
 
     AddonManager.getAddonByID("twitternotifier@naan.net",
-      function(aObject) {
-        TweetContext.setPref("enableEchofon", aObject.isActive);
+      function(aAddon) {
+        try {
+          TweetContext.setPref("enableEchofon", aAddon.isActive);
+        } catch(ex) {
+          TweetContext.setPref("enableEchofon", false);
+        }
       }
     )
   }

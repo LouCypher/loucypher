@@ -6,7 +6,7 @@
     <em:type>2</em:type>
     <em:unpack>true</em:unpack>
     <em:name>Tweet Context</em:name>
-    <em:version>0.1pre</em:version>
+    <em:version>0.1pre20110629</em:version>
     <em:description>Tweet anything from context menu.</em:description>
     <em:creator>LouCypher</em:creator>
     <em:optionsURL>chrome://tweetcontext/content/options.xul</em:optionsURL>

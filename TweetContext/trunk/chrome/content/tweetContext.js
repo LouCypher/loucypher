@@ -82,18 +82,26 @@ var TweetContext = {
     let url = this.getParam(aURL);
     let text = this.getParam(aText)
 
-    if (this.getPref("useEchofon") &&
-        (typeof gEchofon == "object") && ("insertURL" in gEchofon)) {
-
+    if (this.getPref("useEchofon")) {
       // Use Echofon if available
-      if (aText && aURL) {
-        gEchofon.insertURL(text + " " + url);
+      if ((typeof gEchofon == "object") && ("insertURL" in gEchofon)) {
+        // Echofon v2
+        if (aText && aURL) {
+          gEchofon.insertURL(text + " " + url);
+        } else {
+          gEchofon.toggleWindow();
+        }
       } else {
-        gEchofon.toggleWindow();
+        // Echofon v1
+        gTwitterNotifier.onOpenPopup();
+        let t = gTwitterNotifier.$("twitternotifier-message-input");
+        t.setAttribute("rows", 5);
+        t.setAttribute("multiline", true);
+        gTwitterNotifier._util.notify("getRecent", {type: "timeline"});
+        t.value = (aText && aURL) ? (text + " " + url) : "";
+        t.focus();
       }
-
     } else {
-
       // Open Twitter Share page
       let tweetURL = (this.getPref("https")
                       ? "https" : "http") +

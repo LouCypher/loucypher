@@ -17,3 +17,4 @@
 <!ENTITY tweet.options.echofon.requires         "This feature requires">
 <!ENTITY tweet.options.echofon.prefs            "Echofon Options...">
 <!ENTITY tweet.options.echofon.prefs.accesskey  "O">
+<!ENTITY tweet.options.echofon.URL              "https://addons.mozilla.org/en-US/firefox/addon/echofon-for-twitter/?src=tweetcontext">

@@ -36,6 +36,8 @@
 const Cc = Components.classes;
 const Ci = Components.interfaces;
 
+Components.utils.import("resource://gre/modules/AddonManager.jsm");
+
 function $(aId) {
   return document.getElementById(aId);
 }
@@ -52,34 +54,36 @@ function setPref(aPrefString, aBoolean)  {
   prefService.setBoolPref(aPrefString, aBoolean);
 }
 
-function hideEchofon(aBoolean) {
-  setPref("enableEchofon", aBoolean);
-  $("tweetcontext-echofon").hidden = aBoolean;
-  $("echofon").hidden = !aBoolean;
+function hideEchofon(aAddon) {
+  let echofonEnable = null;
+  try {
+    echofonEnable = aAddon.isActive;
+  } catch(ex) {
+    echofonEnable = false;
+  }
+  setPref("enableEchofon", echofonEnable);
+  $("tweetcontext-echofon").hidden = echofonEnable;
+  $("echofon").hidden = !echofonEnable;
 }
 
 function disableTwitter(aBoolean) {
   $("extensions.TweetContext.openInTab-option").disabled = aBoolean;
   $("extensions.TweetContext.https-option").disabled = aBoolean;
+  $("echofon-options").disabled = !aBoolean;
 }
 
 function getEchofon(aCallback) {
-  Components.utils.import("resource://gre/modules/AddonManager.jsm");
-  AddonManager.getAddonByID("twitternotifier@naan.net",
-    function(aObject) {
-      try {
-        aCallback(aObject.isActive);
-      } catch(ex) {
-        aCallback(false);
-      }
-    }
-  )
+  AddonManager.getAddonByID("twitternotifier@naan.net", aCallback);
 }
 
 function getMostRecentWindow(aWinType) {
-  let wm = Cc["@mozilla.org/appshell/window-mediator;1"]
-           .getService(Ci.nsIWindowMediator);
-  return wm.getMostRecentWindow(aWinType);
+  return Cc["@mozilla.org/appshell/window-mediator;1"].
+         getService(Ci.nsIWindowMediator).getMostRecentWindow(aWinType);
+}
+
+function getWindowEnumerator() {
+  return Cc["@mozilla.org/embedcomp/window-watcher;1"].
+         getService(Ci.nsIWindowWatcher).getWindowEnumerator();
 }
 
 function openURL(aURL) {
@@ -93,16 +97,32 @@ function openURL(aURL) {
   }
 }
 
-function echofonPrefs() {
-  let win = getMostRecentWindow("Echofon:preferences");
-  if (win) {
-    win.focus();
-  } else {
-    window.openDialog("chrome://echofon/content/preferences/preferences.xul",
-                      "_blank",
-                      "chrome, dialog=yes, titlebar, toolbar, " +
-                      "centerscreen, resizable=no");
+function echofonPrefs(aAddon) {
+  let optionsURL = aAddon.optionsURL;
+  switch (optionsURL) {
+    case "chrome://twitternotifier/content/preference.xul":
+      let index = 1;
+      let em = Cc["@mozilla.org/embedcomp/window-watcher;1"].
+               getService(Ci.nsIWindowWatcher).getWindowEnumerator();
+      while (em.hasMoreElements()) {
+        let win = em.getNext();
+        if (win.document.documentElement == "twitternotifier-login") {
+          win.focus();
+          return;
+        }
+      }
+      index++;
+      break;
+    case "chrome://echofon/content/preferences/preferences.xul":
+      let win = getMostRecentWindow("Echofon:preferences");
+      if (win) {
+        win.focus();
+        return;
+      }
   }
+  window.openDialog(optionsURL, "",
+                    "chrome, dialog=yes, titlebar, toolbar, " +
+                    "centerscreen, resizable=no");
 }
 
 function onLoad() {
