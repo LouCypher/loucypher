@@ -1,0 +1,22 @@
+#labels Featured
+Tweet anything from Firefox context menu
+
+== Compatibility ==
+
+ * Firefox 4.0 - 6.0a2
+
+== Features ==
+
+=== Context menus ===
+
+ * Main context menu
+  * on web page
+  * on a link
+  * on a frame/iframe
+  * on an image
+ * Tab context menu
+ * Bookmark context menu
+
+=== Echofon integration ===
+
+
