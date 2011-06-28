@@ -13,7 +13,11 @@ Tweet anything from Firefox context menu
   * on a link
   * on a frame/iframe
   * on an image
+
  * Tab context menu
+
  * Bookmark context menu
 
 === Echofon integration ===
+
+You can choose between default [http://twitter.com/share Twitter share] page or use [http://www.echofon.com/ Echofon] to tweet.
