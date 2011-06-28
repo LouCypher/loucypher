@@ -1,4 +1,6 @@
-#summary Tweet anything from Firefox context menu.
+#summary Firefox extension
+
+Tweet anything from Firefox context menu.
 
 == Compatibility ==
 
