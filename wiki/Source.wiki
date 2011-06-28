@@ -1,7 +1,0 @@
-#summary Browse the source
-
-== Firefox extensions ==
- * [http://code.google.com/p/foxiewirex/source/browse/ FoxieWire]
- * [http://code.google.com/p/tabsession/source/browse/ Tab Session History]
- * [http://code.google.com/p/pastetotab/source/browse/ Paste to Tab and Go]
- * [http://code.google.com/p/shortenurl/source/browse/ Shorten URL]
