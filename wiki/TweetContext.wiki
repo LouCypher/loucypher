@@ -4,6 +4,8 @@
 
 Tweet anything from Firefox context menu.
 
+<wiki:toc max_depth="2"/>
+
 = Compatibility =
 
  * Firefox 4.0 - 6.0a2
