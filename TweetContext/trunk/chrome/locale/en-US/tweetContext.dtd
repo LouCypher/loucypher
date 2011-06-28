@@ -1,0 +1,19 @@
+<!ENTITY tweet.anything                         "Tweet Anything">
+<!ENTITY tweet.tab                              "Tweet This Tab">
+<!ENTITY tweet.page                             "Tweet This Page">
+<!ENTITY tweet.link                             "Tweet This Link">
+<!ENTITY tweet.frame                            "Tweet This Frame">
+<!ENTITY tweet.image                            "Tweet This Image">
+<!ENTITY tweet.bookmark                         "Tweet This Bookmark">
+<!ENTITY tweet.options                          "Tweet Context Options">
+<!ENTITY tweet.options.twitter                  "Twitter Options">
+<!ENTITY tweet.options.openTab                  "Open in New Tab">
+<!ENTITY tweet.options.openTab.accesskey        "T">
+<!ENTITY tweet.options.https                    "Use https">
+<!ENTITY tweet.options.https.accesskey          "h">
+<!ENTITY tweet.options.integration              "Echofon Integration">
+<!ENTITY tweet.options.echofon                  "Use Echofon">
+<!ENTITY tweet.options.echofon.accesskey        "E">
+<!ENTITY tweet.options.echofon.requires         "This feature requires">
+<!ENTITY tweet.options.echofon.prefs            "Echofon Options...">
+<!ENTITY tweet.options.echofon.prefs.accesskey  "O">

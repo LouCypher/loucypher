@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>TweetContext@loucypher</em:id>
+    <em:type>2</em:type>
+    <em:unpack>true</em:unpack>
+    <em:name>Tweet Context</em:name>
+    <em:version>0.1pre</em:version>
+    <em:description>Tweet anything from context menu.</em:description>
+    <em:creator>LouCypher</em:creator>
+    <em:optionsURL>chrome://tweetcontext/content/options.xul</em:optionsURL>
+    <em:iconURL>chrome://tweetcontext/skin/tweetContext32.png</em:iconURL>
+    <em:icon64URL>chrome://tweetcontext/skin/tweetContext64.png</em:icon64URL>
+    <em:homepageURL>http://loucypher.googlecode.com/</em:homepageURL>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>4.0</em:minVersion>
+        <em:maxVersion>6.0a2</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

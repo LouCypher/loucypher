@@ -1,0 +1,6 @@
+content   tweetcontext                          chrome/content/
+skin      tweetcontext    classic/1.0           chrome/skin/classic/
+locale    tweetcontext    en-US                 chrome/locale/en-US/
+
+overlay   chrome://browser/content/browser.xul  chrome://tweetcontext/content/FirefoxOverlay.xul
+style     chrome://browser/content/browser.xul  chrome://tweetcontext/skin/tweetContext.css

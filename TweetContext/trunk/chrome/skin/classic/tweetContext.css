@@ -1,0 +1,16 @@
+.tweetcontext-item {
+  list-style-image: url(tweet-16.png);
+}
+
+.tweetcontext-options {
+  list-style-image: url(t_mini-a.png);
+}
+
+.tweetcontext-item, .tweetcontext-options {
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+#tweetcontext-echofon { padding: 8px; }
+#tweetcontext-echofon label { margin: 1px 0 2px 0; }
+#tweetcontext-echofon label.text-link { border: none; }
+
