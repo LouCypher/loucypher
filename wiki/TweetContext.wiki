@@ -2,18 +2,18 @@
 
 Tweet anything from Firefox context menu.
 
-== Compatibility ==
+= Compatibility =
 
  * Firefox 4.0 - 6.0a2
 
-== Installation ==
+= Installation =
  * [https://addons.mozilla.org/firefox/addon/tweet-context/ Mozilla Add-ons]
  * [http://loucypher.googlecode.com/svn/TweetContext/xpi/ dev builds]
  * [http://code.google.com/p/loucypher/source/browse/#svn%2FTweetContext%2Ftrunk browser the source]
 
-== Features ==
+= Features =
 
-=== Context menus ===
+== Context menus ==
 
  * Main context menu
   * on web page
@@ -25,11 +25,11 @@ Tweet anything from Firefox context menu.
 
  * Bookmark context menu
 
-=== Echofon integration ===
+== Echofon integration ==
 
 You can choose between default Twitter [https://twitter.com/intent/tweet tweet page] or use [http://www.echofon.com/ Echofon] to tweet.
 
-== Screenshots ==
+= Screenshots =
 <sup>[https://picasaweb.google.com/zoolcar9/TweetContext Picasa album]</sup>
 
 [https://lh4.googleusercontent.com/-DJVldwnA_2w/TgoY7uWTntI/AAAAAAAABhM/LbMpLfz2N1s/s800/maincontext-tweet-page.png https://lh4.googleusercontent.com/-DJVldwnA_2w/TgoY7uWTntI/AAAAAAAABhM/LbMpLfz2N1s/s160/maincontext-tweet-page.png]
