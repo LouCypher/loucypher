@@ -6,6 +6,11 @@ Tweet anything from Firefox context menu.
 
  * Firefox 4.0 - 6.0a2
 
+== Installation ==
+ * [https://addons.mozilla.org/firefox/addon/tweet-context/ Mozilla Add-ons]
+ * [http://loucypher.googlecode.com/svn/TweetContext/xpi/ dev builds]
+ * [http://code.google.com/p/loucypher/source/browse/#svn%2FTweetContext%2Ftrunk browser the source]
+
 == Features ==
 
 === Context menus ===
