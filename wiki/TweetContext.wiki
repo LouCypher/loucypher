@@ -29,6 +29,10 @@ Tweet anything from Firefox context menu.
 
 You can choose between default Twitter [https://twitter.com/intent/tweet tweet page] or use [http://www.echofon.com/ Echofon] to tweet.
 
+= Issues =
+ * [http://code.google.com/p/loucypher/issues/list?q=label:Project-TweetContext Reported issues]
+ * [http://code.google.com/p/loucypher/issues/entry?template=Tweet%20Context Report new issues]
+
 = Screenshots =
 <sup>[https://picasaweb.google.com/zoolcar9/TweetContext Picasa album]</sup>
 
@@ -45,7 +49,3 @@ You can choose between default Twitter [https://twitter.com/intent/tweet tweet p
 [https://lh5.googleusercontent.com/-f8LEKD-jBxk/TgoYpFDanKI/AAAAAAAABg8/8IbaaKl4U7Y/s560/appmenu-tweet-options.png https://lh5.googleusercontent.com/-f8LEKD-jBxk/TgoYpFDanKI/AAAAAAAABg8/8IbaaKl4U7Y/s160/appmenu-tweet-options.png]
 [https://lh3.googleusercontent.com/-ODB4xxiUYFM/TgoY8kRqltI/AAAAAAAABhQ/XoZ4yPoV5jQ/s276/options.png https://lh3.googleusercontent.com/-ODB4xxiUYFM/TgoY8kRqltI/AAAAAAAABhQ/XoZ4yPoV5jQ/s160/options.png]
 [https://lh6.googleusercontent.com/-E9gee6C9Egc/TgoY_fGSImI/AAAAAAAABhU/lCICXk_6mLM/s276/options-echofon.png https://lh6.googleusercontent.com/-E9gee6C9Egc/TgoY_fGSImI/AAAAAAAABhU/lCICXk_6mLM/s160/options-echofon.png]
-
-= Issues =
- * [http://code.google.com/p/loucypher/issues/list?q=label:Project-TweetContext Reported issues]
- * [http://code.google.com/p/loucypher/issues/entry?template=Tweet%20Context Report new issues]
