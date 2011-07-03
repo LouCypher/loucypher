@@ -12,7 +12,7 @@
     <em:optionsURL>chrome://tweetcontext/content/options.xul</em:optionsURL>
     <em:iconURL>chrome://tweetcontext/skin/tweetContext32.png</em:iconURL>
     <em:icon64URL>chrome://tweetcontext/skin/tweetContext64.png</em:icon64URL>
-    <em:homepageURL>http://loucypher.googlecode.com/</em:homepageURL>
+    <em:homepageURL>http://code.google.com/p/loucypher/wiki/TweetContext</em:homepageURL>
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
