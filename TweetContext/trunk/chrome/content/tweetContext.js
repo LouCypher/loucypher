@@ -41,12 +41,20 @@ var TweetContext = {
     return "Tweet Context";
   },
 
+  get stringBundle() {
+    return document.getElementById("tweetcontext-strings");
+  },
+
   get prefBranch() {
     return Services.prefs.getBranch("extensions.TweetContext.");
   },
 
-  getPref: function tweetContext_getPref(aPrefString) {
+  getBoolPref: function tweetContext_getBoolPref(aPrefString) {
     return this.prefBranch.getBoolPref(aPrefString);
+  },
+
+  getIntPref: function tweetContext_getIntPref(aPrefString) {
+    return this.prefBranch.getIntPref(aPrefString);
   },
 
   setPref: function tweetContext_setPref(aPrefString, aPrefBoolValue) {
@@ -54,7 +62,7 @@ var TweetContext = {
   },
 
   get intro() {
-    return this.getPref("intro")
+    return this.getBoolPref("intro")
            ? "&related=" +
              encodeURIComponent("zoolcar9:Tweet Context developer")
            : "";
@@ -72,61 +80,67 @@ var TweetContext = {
     return aStr ? aStr : "";
   },
 
+  useTwitter: function tweetContext_useTwitter(aText, aURL) {
+    let url = this.getParam(aURL);
+    let text = this.getParam(aText);
+
+    let tweetURL = (this.getBoolPref("https") ? "https" : "http") +
+                    "://twitter.com/share?" + this.intro +
+                    "&url=" + encodeURIComponent(url) +
+                    "&text=" + encodeURIComponent(text);
+    if (this.getBoolPref("openInTab")) {
+      // Open in new tab
+      gBrowser.loadOneTab(tweetURL, null, null, null, false);
+    } else {
+      // Open in new window
+      window.open(tweetURL,
+                  "twitter_share",
+                  "width=600, height=400, toolbar=no, location=yes, " +
+                  "dialog, minimizable, resizable");
+    }
+    this.setPref("intro", false);
+  },
+
   share: function tweetContext_share(aText, aURL) {
-    var strings = document.getElementById("tweetcontext-strings");
     if (aURL && !this.isValidScheme(aURL)) {
-      this.alert(strings.getString("invalid_url"));
+      this.alert(this.stringBundle.getString("invalid_url"));
       return;
     }
 
     let url = this.getParam(aURL);
-    let text = this.getParam(aText)
+    let text = this.getParam(aText);
 
-    if (this.getPref("useEchofon")) {
-      // Use Echofon if available
-      if ((typeof gEchofon == "object") && ("insertURL" in gEchofon)) {
-        // Echofon v2
-        if (aText && aURL) {
+    switch (this.getIntPref("useAddon")) {
+      case 2: // use HootBar
+        if (typeof TWITTERBAR != "object") {
+          this.useTwitter(text, url);
+          return;
+        }
+        if (aText || aURL) {
+          if (TWITTERBAR.prefs.getBoolPref("confirm")) {
+            if (!TWITTERBAR.confirmPost()) return;
+          }
+          TWITTERBAR_UI.setBusy(true);
+          TWITTERBAR.startPost(text + " " + url);
+        } else {
+          gURLBar.value = this.stringBundle.getString("tweet_anything");
+          gURLBar.focus();
+        }
+        break;
+
+      case 1: // use Echofon
+        if (typeof gEchofon != "object") {
+          this.useTwitter(text, url);
+          return;
+        }
+        if (aText || aURL) {
           gEchofon.insertURL(text + " " + url);
         } else {
           gEchofon.toggleWindow();
         }
-      } else {
-        // Echofon v1
-        gTwitterNotifier.onOpenPopup();
-        let t = gTwitterNotifier.$("twitternotifier-message-input");
-        t.setAttribute("rows", 5);
-        t.setAttribute("multiline", true);
-        gTwitterNotifier._util.notify("getRecent", {type: "timeline"});
-        t.value = (aText && aURL) ? (text + " " + url) : "";
-        t.focus();
-      }
-    } else {
-      // Open Twitter Share page
-      let tweetURL = (this.getPref("https")
-                      ? "https" : "http") +
-                      "://twitter.com/share?" + this.intro +
-                      ((aURL && aText)
-                        ? "&url=" + encodeURIComponent(url) +
-                          "&text=" + encodeURIComponent(text)
-                        : "");
+        break;
 
-      if (this.getPref("openInTab")) {
-
-        // Open in new tab
-        gBrowser.loadOneTab(tweetURL, null, null, null, false);
-
-      } else {
-
-        // Open in new window
-        window.open(tweetURL,
-                    "twitter_share",
-                    "width=600, height=400, toolbar=no, location=yes, " +
-                    "dialog, minimizable, resizable");
-      }
-
-      this.setPref("intro", false);
-
+      default: this.useTwitter(text, url);
     }
   },
 
@@ -138,7 +152,6 @@ var TweetContext = {
     var wenum = Components.classes["@mozilla.org/embedcomp/window-watcher;1"]
                           .getService(Components.interfaces.nsIWindowWatcher)
                           .getWindowEnumerator();
-
     var index = 1;
     while (wenum.hasMoreElements()) {
       var win = wenum.getNext();
@@ -148,9 +161,20 @@ var TweetContext = {
       }
       index++
     }
-
     openDialog("chrome://tweetcontext/content/options.xul",
                "tweetcontext-options",
                "chrome, dialog=no, close, titlebar, centerscreen");
+  },
+
+  checkAddon: function tweetContext_checkAddon(aAddonId, aPrefBranch) {
+    AddonManager.getAddonByID(aAddonId,
+      function(aAddon) {
+        try {
+          TweetContext.setPref(aPrefBranch, aAddon.isActive);
+        } catch(ex) {
+          TweetContext.setPref(aPrefBranch, false);
+        }
+      }
+    )
   }
 }

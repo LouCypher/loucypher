@@ -10,7 +10,7 @@
   -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
 
-#tweetcontext-echofon { padding: 8px; }
-#tweetcontext-echofon label { margin: 1px 0 2px 0; }
-#tweetcontext-echofon label.text-link { border: none; }
+.tweetcontext-addon { padding: 8px; }
+.tweetcontext-addon label { margin: 1px 0 2px 0; }
+.tweetcontext-addon label.text-link { border: none; }
 

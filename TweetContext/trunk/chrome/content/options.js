@@ -38,42 +38,61 @@ const Ci = Components.interfaces;
 
 Components.utils.import("resource://gre/modules/AddonManager.jsm");
 
-function $(aId) {
-  return document.getElementById(aId);
+function $(aSelector) {
+  return document.querySelector(aSelector);
+}
+
+function $all(aSelector) {
+  return document.querySelectorAll(aSelector);
 }
 
 let prefService = Cc["@mozilla.org/preferences-service;1"].
                   getService(Ci.nsIPrefService).
                   getBranch("extensions.TweetContext.");
 
-function getPref(aPrefString) {
+function getBoolPref(aPrefString) {
   return prefService.getBoolPref(aPrefString);
 }
 
-function setPref(aPrefString, aBoolean)  {
-  prefService.setBoolPref(aPrefString, aBoolean);
+function getIntPref(aPrefString) {
+  return prefService.getIntPref(aPrefString);
 }
 
-function hideEchofon(aAddon) {
+function disableEchofon(aAddon) {
   let echofonEnable = null;
   try {
     echofonEnable = aAddon.isActive;
   } catch(ex) {
     echofonEnable = false;
   }
-  setPref("enableEchofon", echofonEnable);
-  $("tweetcontext-echofon").hidden = echofonEnable;
-  $("echofon").hidden = !echofonEnable;
+  $("#tweetcontext-echofon").hidden = echofonEnable;
+  $("#echofon-options").hidden = !echofonEnable;
+  $("#echofon").disabled = !echofonEnable;
+}
+
+function disableHootBar(aAddon) {
+  let hootbarEnable = null;
+  try {
+    hootbarEnable = aAddon.isActive;
+  } catch(ex) {
+    hootbarEnable = false;
+  }
+  $("#tweetcontext-hootbar").hidden = hootbarEnable;
+  $("#hootbar-options").hidden = !hootbarEnable;
+  $("#hootbar").disabled = !hootbarEnable;
 }
 
 function disableTwitter(aBoolean) {
-  $("extensions.TweetContext.openInTab-option").disabled = aBoolean;
-  $("extensions.TweetContext.https-option").disabled = aBoolean;
-  $("echofon-options").disabled = !aBoolean;
+  let checkbox = $all("#twitter-options checkbox");
+  for (var i = 0; i < checkbox.length; i++) {
+    checkbox[i].disabled = aBoolean;
+  }
+  //$("#echofon-options").disabled = !aBoolean;
+  //$("#hootbar-options").disabled = !aBoolean;
 }
 
-function getEchofon(aCallback) {
-  AddonManager.getAddonByID("twitternotifier@naan.net", aCallback);
+function getAddon(aAddonId, aCallback) {
+  AddonManager.getAddonByID(aAddonId, aCallback);
 }
 
 function getMostRecentWindow(aWinType) {
@@ -97,16 +116,16 @@ function openURL(aURL) {
   }
 }
 
-function echofonPrefs(aAddon) {
+function openPrefs(aAddon) {
   let optionsURL = aAddon.optionsURL;
   switch (optionsURL) {
-    case "chrome://twitternotifier/content/preference.xul":
+    case "chrome://hootbar/content/options.xul":
       let index = 1;
       let em = Cc["@mozilla.org/embedcomp/window-watcher;1"].
                getService(Ci.nsIWindowWatcher).getWindowEnumerator();
       while (em.hasMoreElements()) {
         let win = em.getNext();
-        if (win.document.documentElement == "twitternotifier-login") {
+        if (win.document.documentElement.id == "twitterbar-preference-window") {
           win.focus();
           return;
         }
@@ -126,8 +145,11 @@ function echofonPrefs(aAddon) {
 }
 
 function onLoad() {
-  getEchofon(hideEchofon);
-  disableTwitter(getPref("useEchofon") && getPref("enableEchofon"));
+  getAddon("twitternotifier@naan.net", disableEchofon);
+  getAddon("{1a0c9ebe-ddf9-4b76-b8a3-675c77874d37}", disableHootBar);
+  disableTwitter((getIntPref("useAddon") > 0) &&
+                 (getBoolPref("enableEchofon") ||
+                  getBoolPref("enableHootBar")));
 }
 
 window.addEventListener("load", onLoad, false);

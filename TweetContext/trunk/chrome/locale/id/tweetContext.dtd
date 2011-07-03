@@ -5,16 +5,22 @@
 <!ENTITY tweet.frame                            "Tweet bingkai ini">
 <!ENTITY tweet.image                            "Tweet gambar ini">
 <!ENTITY tweet.bookmark                         "Tweet bookmark ini">
+
 <!ENTITY tweet.options                          "Pilihan Tweet Context">
 <!ENTITY tweet.options.twitter                  "Pilihan Twitter">
 <!ENTITY tweet.options.openTab                  "Buka di tab baru">
 <!ENTITY tweet.options.openTab.accesskey        "T">
 <!ENTITY tweet.options.https                    "Gunakan https">
-<!ENTITY tweet.options.https.accesskey          "h">
-<!ENTITY tweet.options.integration              "Integrasi dengan Echofon">
-<!ENTITY tweet.options.echofon                  "Gunakan Echofon">
-<!ENTITY tweet.options.echofon.accesskey        "E">
-<!ENTITY tweet.options.echofon.requires         "Fitur ini membutuhkan">
-<!ENTITY tweet.options.echofon.prefs            "Pilihan Echofon...">
-<!ENTITY tweet.options.echofon.prefs.accesskey  "P">
-<!ENTITY tweet.options.echofon.URL              "https://addons.mozilla.org/id/firefox/addon/echofon-for-twitter/?src=tweetcontext">
+<!ENTITY tweet.options.https.accesskey          "s">
+<!ENTITY tweet.options.integration              "Integrasi Pengaya">
+<!ENTITY tweet.options.addon.requires           "membutuhkan">
+<!ENTITY tweet.options.addon.prefs              "Pilihan...">
+
+<!ENTITY tweet.options.addon.twitter            "Jangan gunakan pengaya">
+<!ENTITY tweet.options.addon.twitter.accesskey  "n">
+
+<!ENTITY tweet.options.addon.echofon            "Gunakan Echofon">
+<!ENTITY tweet.options.addon.echofon.accesskey  "E">
+
+<!ENTITY tweet.options.addon.hootbar            "Gunakan HootBar">
+<!ENTITY tweet.options.addon.hootbar.accesskey  "H">

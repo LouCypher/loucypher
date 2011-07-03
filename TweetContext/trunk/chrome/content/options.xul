@@ -55,37 +55,14 @@
                   name="extensions.TweetContext.openInTab"
                   type="bool" />
 
-      <preference id="extensions.TweetContext.useEchofon"
-                  name="extensions.TweetContext.useEchofon"
-                  type="bool" />
+      <preference id="extensions.TweetContext.useAddon"
+                  name="extensions.TweetContext.useAddon"
+                  type="int" />
 
     </preferences>
 
     <groupbox id="twitter-options">
       <caption label="&tweet.options.twitter;"/>
-<!--
-      <groupbox id="open-tweet">
-        <caption label="Open Twitter page" />
-        <radiogroup id="extensions.TweetContext.openInTab-option"
-                    orient="horizontal"
-                    preference="extensions.TweetContext.openInTab">
-          <radio id="open-window" label="in New Window" accesskey="W"
-                 value="false" />
-          <radio id="open-tab" label="in New Tab" accesskey="T"
-                 value="true" />
-        </radiogroup>
-      </groupbox>
-
-      <groupbox id="protocol">
-        <caption label="Protocol" />
-        <radiogroup id="extensions.TweetContext.https-option"
-                    orient="horizontal"
-                    preference="extensions.TweetContext.https">
-          <radio label="http" accesskey="h" value="false" />
-          <radio label="https" accesskey="s" value="true" />
-        </radiogroup>
-      </groupbox>
--->
       <checkbox
         id="extensions.TweetContext.openInTab-option"
         label="&tweet.options.openTab;"
@@ -99,28 +76,58 @@
         preference="extensions.TweetContext.https" />
 
    </groupbox>
-    <groupbox id="echofon-integration">
+
+    <groupbox id="addon-integration">
       <caption label="&tweet.options.integration;"/>
-      <hbox id="tweetcontext-echofon">
-        <label value="&tweet.options.echofon.requires; "/>
-        <label value="Echofon for Firefox" class="text-link"
-               onclick="openURL(this.tooltipText); window.close();"
-               tooltiptext="&tweet.options.echofon.URL;" />
-        <label value="."/>
-      </hbox>
-      <hbox id="echofon" flex="1">
-      <checkbox
-        id="extensions.TweetContext.useEchofon-checkbox"
-        label="&tweet.options.echofon;"
-        accesskey="&tweet.options.echofon.accesskey;"
-        preference="extensions.TweetContext.useEchofon"
-        oncommand="disableTwitter(this.checked);" />
-        <button id="echofon-options"
-                label="&tweet.options.echofon.prefs;"
-                accesskey="&tweet.options.echofon.prefs.accesskey;"
-                oncommand="getEchofon(echofonPrefs);" />
-      </hbox>
-   </groupbox>
+
+      <radiogroup
+        id="extensions.TweetContext.useAddon-option"
+        preference="extensions.TweetContext.useAddon">
+
+        <radio id="twitter" value="0"
+               label="&tweet.options.addon.twitter;"
+               accesskey="&tweet.options.addon.twitter.accesskey;"
+               preference="extensions.TweetContext.useAddon"
+               oncommand="disableTwitter(!this.selected);" />
+
+        <hbox flex="1">
+          <radio id="echofon" value="1"
+            label="&tweet.options.addon.echofon;"
+            accesskey="&tweet.options.addon.echofon.accesskey;"
+            preference="extensions.TweetContext.useAddon"
+            oncommand="disableTwitter(this.selected);" />
+          <button id="echofon-options"
+                  label="&tweet.options.addon.prefs;"
+                  oncommand="getAddon('twitternotifier@naan.net', openPrefs);" />
+          <hbox id="tweetcontext-echofon" class="tweetcontext-addon">
+            <label value="(&tweet.options.addon.requires; "/>
+            <label value="Echofon" class="text-link"
+                   onclick="openURL(this.tooltipText); window.close();"
+                   tooltiptext="https://addons.mozilla.org/firefox/addon/echofon-for-twitter/?src=tweetcontext" />
+            <label value=")"/>
+          </hbox>
+        </hbox>
+
+        <hbox flex="1">
+          <radio id="hootbar" value="2"
+            label="&tweet.options.addon.hootbar;"
+            accesskey="&tweet.options.addon.hootbar.accesskey;"
+            preference="extensions.TweetContext.useAddon"
+            oncommand="disableTwitter(this.selected);" />
+          <button id="hootbar-options"
+                  label="&tweet.options.addon.prefs;"
+                  oncommand="getAddon('{1a0c9ebe-ddf9-4b76-b8a3-675c77874d37}', openPrefs);" />
+          <hbox id="tweetcontext-hootbar" class="tweetcontext-addon">
+            <label value="(&tweet.options.addon.requires; "/>
+            <label value="HootBar" class="text-link"
+                   onclick="openURL(this.tooltipText); window.close();"
+                   tooltiptext="https://addons.mozilla.org/firefox/addon/hootbar/?src=tweetcontext" />
+            <label value=")"/>
+          </hbox>
+        </hbox>
+
+      </radiogroup>
+    </groupbox>
 
   </prefpane>
 
