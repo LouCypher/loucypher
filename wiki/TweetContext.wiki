@@ -13,7 +13,6 @@ Tweet anything from Firefox context menu.
 = Installation =
  * [https://addons.mozilla.org/firefox/addon/tweet-context/ Mozilla Add-ons]
  * [http://loucypher.googlecode.com/svn/TweetContext/xpi/TweetContext-dev.xpi dev build]
- * [http://code.google.com/p/loucypher/source/browse/#svn%2FTweetContext%2Ftrunk browse the source]
 
 = Features =
 
@@ -44,6 +43,9 @@ You can choose to use the following add-on to tweet or use Twitter [https://twit
  * [http://code.google.com/p/loucypher/issues/list?q=label:Project-TweetContext Reported issues]
  * [http://code.google.com/p/loucypher/issues/entry?template=Tweet%20Context Report new issues]
 
+Discussion forum:
+https://forums.mozilla.org/addons/viewtopic.php?t=3400
+
 = Screenshots =
 <sup>[https://picasaweb.google.com/zoolcar9/TweetContext Picasa album]</sup>
 
@@ -60,3 +62,8 @@ You can choose to use the following add-on to tweet or use Twitter [https://twit
 [https://lh5.googleusercontent.com/-f8LEKD-jBxk/TgoYpFDanKI/AAAAAAAABg8/8IbaaKl4U7Y/s560/appmenu-tweet-options.png https://lh5.googleusercontent.com/-f8LEKD-jBxk/TgoYpFDanKI/AAAAAAAABg8/8IbaaKl4U7Y/s187/appmenu-tweet-options.png]
 [https://lh3.googleusercontent.com/-ODB4xxiUYFM/TgoY8kRqltI/AAAAAAAABhQ/XoZ4yPoV5jQ/s276/options.png https://lh3.googleusercontent.com/-ODB4xxiUYFM/TgoY8kRqltI/AAAAAAAABhQ/XoZ4yPoV5jQ/s123/options.png]
 [https://lh6.googleusercontent.com/-E9gee6C9Egc/TgoY_fGSImI/AAAAAAAABhU/lCICXk_6mLM/s276/options-echofon.png https://lh6.googleusercontent.com/-E9gee6C9Egc/TgoY_fGSImI/AAAAAAAABhU/lCICXk_6mLM/s123/options-echofon.png]
+
+= Source =
+ * [http://code.google.com/p/loucypher/source/browse/#svn%2FTweetContext%2Ftrunk browse the source]
+
+ * Repository: http://loucypher.googlecode.com/svn/TweetContext/trunk/
