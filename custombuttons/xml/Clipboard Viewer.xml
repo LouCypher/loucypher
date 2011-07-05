@@ -316,7 +316,7 @@ this.updater = {
     let params = Button.updater.getButtonParameters(btnLink, link.href);
     custombuttons.cbService.installButton(params);
     custombuttons.alertBox(Button.name, "Button updated!");
-    Button.setAttribute("cb-edit-state", "active");
+    Button.setAttribute("cb-edit-state", "inactive");
   }
 }
 
