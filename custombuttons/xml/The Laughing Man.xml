@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custombutton xmlns:cb="http://xsms.nm.ru/custombuttons/"
+              xmlns:html="http://www.w3.org/1999/xhtml">
+  <html:head>
+    <html:title><![CDATA[The Laughing Man]]></html:title>
+    <html:link rel="shortcut icon" href=""/>
+    <html:style type="text/css"><![CDATA[body { font-size: medium; margin: 0; }
+body, code:before, help:before, initcode:before {
+  font-family: "Verdana", sans-serif;
+} 
+#wrapper { position: fixed; top: 1em; right: 1em; text-align: center; }
+p { font-size: small; text-align: center; }
+#button {
+  background-image: -moz-linear-gradient(center top, rgb(147, 200, 94) 30%, rgb(85, 168, 2) 55%);
+  border: 1px outset rgb(58, 116, 4);
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  padding: 0;
+  text-shadow: 0pt -1px 0pt rgb(58, 116, 4);
+  margin-bottom: 1em;
+}
+#button a {
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  text-decoration: none;
+}
+#button a, code, code:before, initcode, initcode:before, help, help:before {
+  display: block;
+}
+#credits { position: fixed; bottom: 1em; right: 1em; font-size: small; }
+custombutton { background-color: rgb(171, 171, 171); margin: 1em; }
+image, mode, accelkey { display: none; }
+name { font-weight: bold; font-size: x-large; }
+code:before, help:before, initcode:before {
+  font-weight: bold;
+  font-size: large;
+  margin: 0 0 1em;
+  padding: .5em;
+}
+code:before { content: "CODE"; }
+help:before { content: "Help"; }
+initcode:before { content: "Initialization Code"; }
+code, initcode, help {
+  background-color: rgb(255, 255, 255);
+  border: 1px inset rgb(170, 170, 170);
+  font: medium monospace;
+  margin: 1em 1em 2em 0;
+  padding: 1em;
+  text-align: left;
+  width: 840px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.clear { clear: both; }
+]]></html:style>
+  </html:head>
+  <html:body>
+    <html:div id="wrapper">
+      <html:div id="button">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EThe%20Laughing%20Man%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bcustombuttons-stdicon-4%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5B/*%0A%20%20%20%20%22The%20Laughing%20Man%22%20logo%20as%20portrayed%20in%0A%20%20%20%20%22Ghost%20in%20the%20Shell%3A%20Stand%20Alone%20Complex%22.%0A%0A%20%20%20%20Original%20image%20by%20Paul%20Nicholson%0A%0A%20%20%20%20Vectorized%20by%20elmex%0A%20%20%20%20http%3A//www.ta-sa.org/projects/laughing_man_logo.html%0A%0A%20%20%20%20SVG%20animated%20text%20by%20Johan%20Sundstr%F6m%0A%20%20%20%20http%3A//ecmanaut.blogspot.com/2011/07/optimized-svgs-at-gistgithubcom.html%0A%0A*/%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Blet%20quote%20%3D%20%22I%20thought%20what%20I%27d%20do%20was%2C%20%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%22I%27d%20pretend%20I%20was%20one%20of%20those%20deaf-mutes%22%3B%0A%0Alet%20pref%20%3D%20cbu.ps.getBranch%28%22custombuttons.TheLaughingMan.%22%29%3B%0A%0Alet%20p%2C%20t%3B%0Atry%20%7B%0A%20%20p%20%3D%20pref.getBoolPref%28%22preview%22%29%3B%0A%7D%20catch%28ex%29%20%7B%0A%20%20p%20%3D%20true%3B%0A%7D%0A%0Atry%20%7B%0A%20%20t%20%3D%20pref.getCharPref%28%22text%22%29%3B%0A%7D%20catch%28ex%29%20%7B%0A%20%20t%20%3D%20quote%3B%0A%7D%0A%0Alet%20preview%20%3D%20%7B%20prompt%3A%20%22Preview%22%2C%20value%3A%20p%7D%3B%0Alet%20text%20%3D%20custombuttons.promptBox%28this.name%2C%20%22Enter%20text%22%2C%20t%2C%20preview%29%3B%0Aif%20%28%21text%5B0%5D%29%20return%3B%0Aif%20%28text%5B1%5D%20%3D%3D%20%22%22%29%20text%5B1%5D%20%3D%20quote%3B%0A%0Apref.setBoolPref%28%22preview%22%2C%20preview.value%29%3B%0Apref.setCharPref%28%22text%22%2C%20text%5B1%5D%29%3B%0A%0Alet%20svg%20%3D%20%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20viewBox%3D%22-160%20-160%20360%20320%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22f%22%20d%3D%22m123%2C0a123%2C123%200%2C0%201-246%2C0a123%2C123%200%2C0%201%20246%2C0%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20fill%3D%22%23057%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20r%3D%22160%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20r%3D%22150%22%20fill%3D%22%23fff%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ctext%20font-size%3D%2228%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20font-stretch%3D%22condensed%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20font-family%3D%22Impact%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%20type%3D%22rotate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22360%200%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20to%3D%220%200%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%2210s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22transform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3CtextPath%20xlink%3Ahref%3D%22%23f%22%3E%7Btext%5B1%5D.toUpperCase%28%29%7D%3C/textPath%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/text%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20r%3D%22115%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20r%3D%2295%22%20fill%3D%22%23fff%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22m-8-119h16%20l2%2C5h-20z%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22160%22%20cy%3D%220%22%20r%3D%2240%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22m-95-20v-20h255a40%2C40%200%2C0%201%200%2C80h-55v-20z%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22m-85%200a85%2C85%200%2C0%200%20170%2C0h-20a65%2C65%200%2C0%201-130%2C0z%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22m-65%2020v20h140v-20z%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22m-115-20v10h25v30h250a20%2C20%200%2C0%200%200%2C-40z%22%20fill%3D%22%23fff%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22m-20%2010c-17-14-27-14-44%200%206-25%2037-25%2044%200z%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22m60%2010c-17-14-27-14-44%200%206-25%2037-25%2044%200z%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/g%3E%0A%20%20%20%20%20%20%20%20%20%20%3C/svg%3E%3B%0A%0Alet%20url%20%3D%20%22data%3Aimage/svg+xml%3Bbase64%2C%22%20+%20encodeURIComponent%28btoa%28svg%29%29%0A%0Acbu.gClipboard.write%28%22%3Cimg%20src%3D%5C%22%22%20+%20url%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%5C%22%20style%3D%5C%22width%3A%20200px%3B%5C%22%20alt%3D%5C%22%22%20+%20text%5B1%5D%20+%20%22%5C%22/%3E%22%29%3B%0A%0Aif%20%28preview.value%29%20%7B%0A%20%20let%20title%20%3D%20this.name%3B%0A%20%20let%20tab%20%3D%20gBrowser.mCurrentTab%3B%0A%20%20if%20%28gBrowser.currentURI.spec%20%3D%3D%20%22about%3Ablank%22%29%20%7B%0A%20%20%20%20gBrowser.loadURI%28url%29%3B%0A%20%20%7D%20else%20%7B%0A%20%20%20%20tab%20%3D%20gBrowser.loadOneTab%28url%2C%20null%2C%20null%2C%20null%2C%20false%29%3B%0A%20%20%7D%0A%20%20tab.linkedBrowser.addEventListener%28%22DOMContentLoaded%22%2C%20function%28e%29%20%7B%0A%20%20%20%20tab.setAttribute%28%22label%22%2C%20title%29%3B%0A%20%20%7D%2C%20false%29%3B%0A%7D%0A%0Acustombuttons.alertSlide%28this.name%2C%20%22Copied%20to%20clipboard%21%22%29%3B%0A%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="The Laughing Man">
+        <![CDATA[Install this button]]>
+        </html:a>
+      </html:div>
+      <html:a href="https://addons.mozilla.org/addon/custom-buttons/">
+        <![CDATA[What's this?]]>
+      </html:a>
+      <html:div id="credits">
+        <html:a href="http://custombuttons.mozdev.org/drupal/node/484">
+          <![CDATA[Custom Buttons XML]]><html:br/><![CDATA[Exporter/Importer]]>
+        </html:a>
+      </html:div>
+    </html:div>
+  </html:body>
+
+  <name>The Laughing Man</name>
+  <image><![CDATA[custombuttons-stdicon-4]]></image>
+  <mode>0</mode>
+  <initcode><![CDATA[/*
+    "The Laughing Man" logo as portrayed in
+    "Ghost in the Shell: Stand Alone Complex".
+
+    Original image by Paul Nicholson
+
+    Vectorized by elmex
+    http://www.ta-sa.org/projects/laughing_man_logo.html
+
+    SVG animated text by Johan Sundström
+    http://ecmanaut.blogspot.com/2011/07/optimized-svgs-at-gistgithubcom.html
+
+*/]]></initcode>
+  <code><![CDATA[let quote = "I thought what I'd do was, " +
+            "I'd pretend I was one of those deaf-mutes";
+
+let pref = cbu.ps.getBranch("custombuttons.TheLaughingMan.");
+
+let p, t;
+try {
+  p = pref.getBoolPref("preview");
+} catch(ex) {
+  p = true;
+}
+
+try {
+  t = pref.getCharPref("text");
+} catch(ex) {
+  t = quote;
+}
+
+let preview = { prompt: "Preview", value: p};
+let text = custombuttons.promptBox(this.name, "Enter text", t, preview);
+if (!text[0]) return;
+if (text[1] == "") text[1] = quote;
+
+pref.setBoolPref("preview", preview.value);
+pref.setCharPref("text", text[1]);
+
+let svg = <svg xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink"
+               viewBox="-160 -160 360 320">
+            <path id="f" d="m123,0a123,123 0,0 1-246,0a123,123 0,0 1 246,0"/>
+            <g fill="#057">
+              <circle r="160"/>
+              <circle r="150" fill="#fff"/>
+              <text font-size="28"
+                    font-stretch="condensed"
+                    font-family="Impact">
+                <animateTransform type="rotate"
+                                  from="360 0 0"
+                                  to="0 0 0"
+                                  dur="10s"
+                                  attributeName="transform"
+                                  repeatCount="indefinite"/>
+                <textPath xlink:href="#f">{text[1].toUpperCase()}</textPath>
+              </text>
+              <circle r="115"/>
+              <circle r="95" fill="#fff"/>
+              <path d="m-8-119h16 l2,5h-20z"/>
+              <circle cx="160" cy="0" r="40"/>
+              <path d="m-95-20v-20h255a40,40 0,0 1 0,80h-55v-20z"/>
+              <path d="m-85 0a85,85 0,0 0 170,0h-20a65,65 0,0 1-130,0z"/>
+              <path d="m-65 20v20h140v-20z"/>
+              <path d="m-115-20v10h25v30h250a20,20 0,0 0 0,-40z" fill="#fff"/>
+              <path d="m-20 10c-17-14-27-14-44 0 6-25 37-25 44 0z"/>
+              <path d="m60 10c-17-14-27-14-44 0 6-25 37-25 44 0z"/>
+            </g>
+          </svg>;
+
+let url = "data:image/svg+xml;base64," + encodeURIComponent(btoa(svg))
+
+cbu.gClipboard.write("<img src=\"" + url +
+                     "\" style=\"width: 200px;\" alt=\"" + text[1] + "\"/>");
+
+if (preview.value) {
+  let title = this.name;
+  let tab = gBrowser.mCurrentTab;
+  if (gBrowser.currentURI.spec == "about:blank") {
+    gBrowser.loadURI(url);
+  } else {
+    tab = gBrowser.loadOneTab(url, null, null, null, false);
+  }
+  tab.linkedBrowser.addEventListener("DOMContentLoaded", function(e) {
+    tab.setAttribute("label", title);
+  }, false);
+}
+
+custombuttons.alertSlide(this.name, "Copied to clipboard!");
+
+]]></code>
+  <accelkey><![CDATA[]]></accelkey>
+  <help><![CDATA[]]></help>
+  <attributes/>
+</custombutton>
