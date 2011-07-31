@@ -33,10 +33,8 @@
   the terms of any one of the MPL, the GPL or the LGPL.
 */
 
-const Cc = Components.classes;
-const Ci = Components.interfaces;
-
 Components.utils.import("resource://gre/modules/AddonManager.jsm");
+Components.utils.import("resource://gre/modules/Services.jsm");
 
 function $(aSelector) {
   return document.querySelector(aSelector);
@@ -44,18 +42,6 @@ function $(aSelector) {
 
 function $all(aSelector) {
   return document.querySelectorAll(aSelector);
-}
-
-let prefService = Cc["@mozilla.org/preferences-service;1"].
-                  getService(Ci.nsIPrefService).
-                  getBranch("extensions.TweetContext.");
-
-function getBoolPref(aPrefString) {
-  return prefService.getBoolPref(aPrefString);
-}
-
-function getIntPref(aPrefString) {
-  return prefService.getIntPref(aPrefString);
 }
 
 function disableEchofon(aAddon) {
@@ -84,7 +70,7 @@ function disableHootBar(aAddon) {
 
 function disableTwitter(aBoolean) {
   let checkbox = $all("#twitter-options checkbox");
-  for (var i = 0; i < checkbox.length; i++) {
+  for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].disabled = aBoolean;
   }
   //$("#echofon-options").disabled = !aBoolean;
@@ -96,13 +82,7 @@ function getAddon(aAddonId, aCallback) {
 }
 
 function getMostRecentWindow(aWinType) {
-  return Cc["@mozilla.org/appshell/window-mediator;1"].
-         getService(Ci.nsIWindowMediator).getMostRecentWindow(aWinType);
-}
-
-function getWindowEnumerator() {
-  return Cc["@mozilla.org/embedcomp/window-watcher;1"].
-         getService(Ci.nsIWindowWatcher).getWindowEnumerator();
+  return Services.wm.getMostRecentWindow(aWinType);
 }
 
 function openURL(aURL) {
@@ -121,8 +101,7 @@ function openPrefs(aAddon) {
   switch (optionsURL) {
     case "chrome://hootbar/content/options.xul":
       let index = 1;
-      let em = Cc["@mozilla.org/embedcomp/window-watcher;1"].
-               getService(Ci.nsIWindowWatcher).getWindowEnumerator();
+      let em = Services.ww.getWindowEnumerator();
       while (em.hasMoreElements()) {
         let win = em.getNext();
         if (win.document.documentElement.id == "twitterbar-preference-window") {
@@ -145,11 +124,12 @@ function openPrefs(aAddon) {
 }
 
 function onLoad() {
+  let prefService = Services.prefs.getBranch("extensions.TweetContext.");
   getAddon("twitternotifier@naan.net", disableEchofon);
   getAddon("{1a0c9ebe-ddf9-4b76-b8a3-675c77874d37}", disableHootBar);
-  disableTwitter((getIntPref("useAddon") > 0) &&
-                 (getBoolPref("enableEchofon") ||
-                  getBoolPref("enableHootBar")));
+  disableTwitter((prefService.getIntPref("useAddon") > 0) &&
+                 (prefService.getBoolPref("enableEchofon") ||
+                  prefService.getBoolPref("enableHootBar")));
 }
 
 window.addEventListener("load", onLoad, false);

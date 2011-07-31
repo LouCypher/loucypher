@@ -36,6 +36,7 @@
 var TweetContext = {
 
   init: null,
+  places: null,
 
   toString: function() {
     return "Tweet Context";
@@ -78,6 +79,41 @@ var TweetContext = {
 
   getParam: function tweetContext_getParam(aStr) {
     return aStr ? aStr : "";
+  },
+
+  getSelection: function tweetContext_getSelection(aChars) {
+//@https://addons.mozilla.org/en-US/firefox/files/browse/106796/file/chrome/content/contextsearch.js#L109
+    let focusedElement = document.commandDispatcher.focusedElement;
+    let selectedText = null;
+
+    // Check if the focused element is an input element (input/textarea)
+    let isTextInputNode;
+    try {
+      isTextInputNode = (focusedElement instanceof HTMLInputElement &&
+                         focusedElement.type == "text") ||
+                         focusedElement instanceof HTMLTextAreaElement;
+    } catch(ex) {
+      isTextInputNode = false;
+    }
+
+    // Check if texts are selected in an element
+    let textSelectedInNode;
+    try {
+      textSelectedInNode = focusedElement.selectionStart < focusedElement.selectionEnd;
+    } catch(ex) {
+      textSelectedInNode = false;
+    }
+
+    // get text selection from input node
+    if (isTextInputNode && textSelectedInNode) {
+      let startPos = focusedElement.selectionStart;
+      let endPos = focusedElement.selectionEnd;
+      if (aChars && aChars < endPos - startPos) {
+        endPos = startPos + (aChars <= 150 ? aChars : 150);
+      }
+      selectedText = focusedElement.value.substring(startPos, endPos);
+    }
+    return isTextInputNode ? selectedText : content.getSelection();
   },
 
   useTwitter: function tweetContext_useTwitter(aText, aURL) {
@@ -129,12 +165,13 @@ var TweetContext = {
         break;
 
       case 1: // use Echofon
-        if (typeof gEchofon != "object") {
+        if (typeof EchofonCommon != "object") {
           this.useTwitter(text, url);
           return;
         }
         if (aText || aURL) {
-          gEchofon.insertURL(text + " " + url);
+          let loc = document.getElementById("identity-box");
+          EchofonCommon.openComposeWindow(loc, text + " " + url, false);
         } else {
           gEchofon.toggleWindow();
         }
@@ -145,7 +182,7 @@ var TweetContext = {
   },
 
   setTooltip: function tweetContext_setTooltip(aNode, aTitle, aURL) {
-    aNode.tooltipText = aTitle + "\n" + aURL;
+    aNode.tooltipText = aTitle + (aURL ? ("\n" + aURL) : "");
   },
 
   openPref: function tweetContext_openPref() {

@@ -84,9 +84,9 @@ gBrowser.mContextTab.linkedBrowser.currentURI.spec);" />
               class="menuitem-iconic tweetcontext-item"
               label="&tweet.page;"
               onmouseover="TweetContext.setTooltip(
-this, content.document.title, content.document.URL);"
+this, content.document.title, content.location.href);"
               oncommand="TweetContext.share(
-content.document.title, content.document.URL);" />
+content.document.title, content.location.href);" />
 
     <menuitem id="context-tweetlink"
               insertafter="context-bookmarklink"
@@ -116,6 +116,14 @@ gContextMenu.target.ownerDocument.URL);" />
 this, gContextMenu.target.alt, gContextMenu.imageURL);"
               oncommand="TweetContext.share(
 gContextMenu.target.alt, gContextMenu.imageURL);" />
+
+    <menuitem id="context-tweetselected"
+              insertafter="context-searchselect"
+              class="menuitem-iconic tweetcontext-item"
+              label="Tweet Selected Text"
+              onmouseover="TweetContext.setTooltip(this,
+TweetContext.getSelection());"
+              oncommand="TweetContext.share(TweetContext.getSelection());" />
   </menupopup>
 
   <menupopup id="placesContext">

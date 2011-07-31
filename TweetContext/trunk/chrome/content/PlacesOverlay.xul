@@ -42,6 +42,7 @@
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
   <script type="application/x-javascript" src="tweetContext.js" />
+  <script type="application/x-javascript" src="tweetContextInitPlaces.js" />
 
   <page id="bookmarksPanel">
     <stringbundleset id="tweetContext-stringset">
@@ -60,73 +61,29 @@
   </page>
 
   <menupopup id="placesContext">
+    <menuseparator id="tweetcontext-separator"
+                   insertafter="placesContext_createBookmark" />
     <menuitem id="tweetcontext-bookmark"
+              insertafter="placesContext_createBookmark"
               class="menuitem-iconic tweetcontext-item"
               label="Tweet This Bookmark"
               onmouseover="TweetContext.setTooltip(this, 
-tw_getNode(document.popupNode).title, 
-tw_getNode(document.popupNode).uri);"
+TweetContext.places.getNode(document.popupNode).title, 
+TweetContext.places.getNode(document.popupNode).uri);"
               oncommand="TweetContext.share(
-tw_getNode(document.popupNode).title, 
-tw_getNode(document.popupNode).uri);" />
+TweetContext.places.getNode(document.popupNode).title, 
+TweetContext.places.getNode(document.popupNode).uri);" />
 
     <menuitem id="tweetcontext-history"
+              insertafter="placesContext_createBookmark"
               class="menuitem-iconic tweetcontext-item"
               label="Tweet This Page"
               onmouseover="TweetContext.setTooltip(this, 
-tw_getNode(document.popupNode).title, 
-tw_getNode(document.popupNode).uri);"
+TweetContext.places.getNode(document.popupNode).title, 
+TweetContext.places.getNode(document.popupNode).uri);"
               oncommand="TweetContext.share(
-tw_getNode(document.popupNode).title, 
-tw_getNode(document.popupNode).uri);" />
+TweetContext.places.getNode(document.popupNode).title, 
+TweetContext.places.getNode(document.popupNode).uri);" />
   </menupopup>
-
-  <script type="application/x-javascript"><![CDATA[
-    function tw_getNode(aNode) {
-      var view = PlacesUIUtils.getViewForNode(aNode);
-      return view.selectedNode;
-    }
-
-    function tw_initContext() {
-      let node = tw_getNode(document.popupNode);
-
-      let bmItem = document.getElementById("tweetcontext-bookmark");
-      bmItem.hidden = (!TweetContext.isValidScheme(node.uri)) || (node.itemId < 0);
-
-      let hsItem = document.getElementById("tweetcontext-history");
-      hsItem.hidden = (!TweetContext.isValidScheme(node.uri)) || (node.itemId >= 0);
-    }
-
-    function tw_onLoad() {
-      let win = getTopWin();
-      if (typeof gBrowser != 'object') { 
-        gBrowser = win.gBrowser;
-      }
-
-      if (typeof win.gEchofon == "object") {
-        gEchofon = win.gEchofon;
-      }
-
-      if (typeof win.TWITTERBAR == "object") {
-        TWITTERBAR = win.TWITTERBAR;
-      }
-
-      if (typeof win.TWITTERBAR_UI == "object") {
-        TWITTERBAR_UI = win.TWITTERBAR_UI;
-      }
-
-      if (typeof win.gTwitterNotifier == "object") {
-        gTwitterNotifier = win.gTwitterNotifier;
-      }
-
-      let popup = document.getElementById("placesContext");
-      popup.addEventListener("popupshowing", tw_initContext, false);
-      popup.removeEventListener("popuphiding", tw_initContext, false);
-    }
-
-    window.addEventListener("load", tw_onLoad, false);
-    window.removeEventListener("unload", tw_onLoad, false);
-
-  ]]></script>
 
 </overlay>

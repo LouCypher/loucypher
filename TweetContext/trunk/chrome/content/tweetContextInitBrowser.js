@@ -59,6 +59,9 @@ TweetContext.init = {
                           gContextMenu.onImage &&
                           TweetContext.isValidScheme(gContextMenu.imageURL));
 
+    gContextMenu.showItem("context-tweetselected",
+                          TweetContext.getSelection() &&
+                          (TweetContext.getSelection() != ""));
   },
 
   initTabContext: function tweetContext_initTabContext() {
