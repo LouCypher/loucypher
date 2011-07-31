@@ -23,6 +23,7 @@ Tweet anything from Firefox context menu.
   * on a link
   * on a frame/iframe
   * on an image
+  * tweet selected text
 
  * Tab context menu
 
@@ -60,6 +61,7 @@ https://forums.mozilla.org/addons/viewtopic.php?t=3400
 [https://lh5.googleusercontent.com/-f8LEKD-jBxk/TgoYpFDanKI/AAAAAAAABg8/8IbaaKl4U7Y/s560/appmenu-tweet-options.png https://lh5.googleusercontent.com/-f8LEKD-jBxk/TgoYpFDanKI/AAAAAAAABg8/8IbaaKl4U7Y/s187/appmenu-tweet-options.png]
 [https://lh3.googleusercontent.com/-2as4FylNorw/TjS5S-kDI-I/AAAAAAAAB0c/gYEBZVfxyCU/s560/sidebar-bookmarks.png https://lh3.googleusercontent.com/-2as4FylNorw/TjS5S-kDI-I/AAAAAAAAB0c/gYEBZVfxyCU/s120/sidebar-bookmarks.png]
 [https://lh4.googleusercontent.com/-Z-IpVldCtFM/TjS5Q-6oWLI/AAAAAAAAB0c/bKcc2BFWxKg/s560/sidebar-history.png https://lh4.googleusercontent.com/-Z-IpVldCtFM/TjS5Q-6oWLI/AAAAAAAAB0c/bKcc2BFWxKg/s120/sidebar-history.png]
+[https://lh4.googleusercontent.com/-8oRi_oEBLIU/TjTDSOujz4I/AAAAAAAAB00/Lq8rCbolJlg/s640/maincontext-tweet-selected-text.png https://lh4.googleusercontent.com/-8oRi_oEBLIU/TjTDSOujz4I/AAAAAAAAB00/Lq8rCbolJlg/s200/maincontext-tweet-selected-text.png]
 
 [https://lh5.googleusercontent.com/-qJAiGRrxr1g/ThDwVH7UwaI/AAAAAAAABjI/GmQpVrHzkcI/s346/options.png https://lh5.googleusercontent.com/-qJAiGRrxr1g/ThDwVH7UwaI/AAAAAAAABjI/GmQpVrHzkcI/s139/options.png]
 [https://lh3.googleusercontent.com/-_NhvalMevjw/ThDwVmIUkGI/AAAAAAAABjQ/iNS0pJd0Vy8/s346/options-echofon.png https://lh3.googleusercontent.com/-_NhvalMevjw/ThDwVmIUkGI/AAAAAAAABjQ/iNS0pJd0Vy8/s139/options-echofon.png]
