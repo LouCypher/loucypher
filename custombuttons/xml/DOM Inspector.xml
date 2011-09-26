@@ -7,7 +7,7 @@
     <html:style type="text/css"><![CDATA[body { font-size: medium; margin: 0; }
 body, code:before, help:before, initcode:before {
   font-family: "Verdana", sans-serif;
-} 
+}
 #wrapper { position: fixed; top: 1em; right: 1em; text-align: center; }
 p { font-size: small; text-align: center; }
 #button {
