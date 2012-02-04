@@ -169,11 +169,30 @@ var TweetContext = {
           this.useTwitter(text, url);
           return;
         }
+
+        if (EchofonCommon.pref().getBoolPref("login") == false ||
+            EchofonCommon.pref().getIntPref("activeUserId") == 0) {
+          var accounts = EchofonCommon.pref().getCharPref("accounts");
+          if (EchofonCommon.pref().getIntPref("activeUserId") == 0 &&
+              accounts == "{}") {
+            EchofonCommon.openPreferences();
+            return;
+          }
+          EchofonCommon.pref().setBoolPref("login", true);
+          if (EchofonCommon.pref().getIntPref("activeUserId") == 0) {
+            EchofonCommon.pref().setIntPref("activeUserId",
+                                            EchofonAccountManager.
+                                            instance().
+                                            getPrimaryAccount());
+          }
+          EchofonCommon.notify("initSession");
+        }
+
         if (aText || aURL) {
           let loc = document.getElementById("identity-box");
           EchofonCommon.openComposeWindow(loc, text + " " + url, false);
         } else {
-          gEchofon.toggleWindow();
+          EchofonOverlay.toggleWindow();
         }
         break;
 
