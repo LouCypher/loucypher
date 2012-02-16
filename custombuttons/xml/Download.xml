@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custombutton xmlns:cb="http://xsms.nm.ru/custombuttons/"
+              xmlns:html="http://www.w3.org/1999/xhtml">
+  <html:head>
+    <html:title><![CDATA[Download]]></html:title>
+    <html:link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAACv0lEQVR42o2TT2gcdRTHP+83v539NzvZnWY3EbN1Q4WWJCWHIo0IRlGjlioVtUJSwbbQDFIPHqyoF6uo9FZEMadID148CvbkSdBevLckFLXNRtJNcO24Ozu7M/PrISUSbcEvfOE9+D4e3/f4ijGGe2H6kjb9WznSUJOGGoDVzzbl3zrNfZD2Fc++MLfTf7f00z11GsD3/fcnJg99kpoCSimqw6UdwY2NlZ364uffmDiOCbttmmtXzy8tLX2oAWojDz1+7NiL/HpDkc/nOTTt8Onyf7fNPvkK6+vrdLt/EYbBE77vi/J9Pz86Ora/5DjMPlbl5I81Ji+4JMFud/01h6MfTHHmyzlENOXyyD6goICxarX2gKWzDAbw9tPnqdXLzB15bmc46LbZO7+BXYuYP3IapSyKJa8GNDRwYGioko0Tze9rML/vHeKe4esfvmDv9B6CbptO2OaP7z1enjnDbP04nU6HXLZoA5MKmCi5JUTA0rByvc8zw+c4Ovomv1za2h6+7HH88FmearxOv99HRMjYeYCHtVPyDoRRgZvNmNqwxqrYdEN4aeocf982fHv5K1595CzPT7xBr9fbthQEZO0MRceb0kPl6sFMJkcURRizfbh8DpJEcWr2PTQ5Xpt5iyiKUEohImSzWaKog+NUDmpBexsbt3DdAZubmyildnFu/wm2trZIkoQ4jhkMBgD0ehGWzjo6SVKTzxdYXl7GdV0ajQbj4+M0Gg3qY0N89PHFXe9cWFig1WrRbDYRkVQZTFFbFmEY0mq1CIKAKIpI0xRLgdZ6F8cerFKv17ny8xUsZRWtmcOPnii5I6PliodtZxABp1igUCwgKse1a1ex7Qy2naFSKVOp7GF1dQXPK9H+87frsri4eDKbK7+rM0VXKQsRMSKCyN3gGUNqDOYfiogw6Ae3o177gtwvzv8XdwDbV/rz7UWMWwAAAABJRU5ErkJggg=="/>
+    <html:style type="text/css"><![CDATA[body { font-size: medium; margin: 0; }
+body, code:before, help:before, initcode:before {
+  font-family: "Verdana", sans-serif;
+}
+#wrapper { position: fixed; top: 1em; right: 1em; text-align: center; }
+p { font-size: small; text-align: center; }
+#button {
+  background-image: -moz-linear-gradient(center top, rgb(147, 200, 94) 30%, rgb(85, 168, 2) 55%);
+  border: 1px outset rgb(58, 116, 4);
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  padding: 0;
+  text-shadow: 0pt -1px 0pt rgb(58, 116, 4);
+  margin-bottom: 1em;
+}
+#button a {
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  text-decoration: none;
+}
+#button a, code, code:before, initcode, initcode:before, help, help:before {
+  display: block;
+}
+#credits { position: fixed; bottom: 1em; right: 1em; font-size: small; }
+custombutton { background-color: rgb(171, 171, 171); margin: 1em; }
+image, mode, accelkey { display: none; }
+name { font-weight: bold; font-size: x-large; }
+code:before, help:before, initcode:before {
+  font-weight: bold;
+  font-size: large;
+  margin: 0 0 1em;
+  padding: .5em;
+}
+code:before { content: "CODE"; }
+help:before { content: "Help"; }
+initcode:before { content: "Initialization Code"; }
+code, initcode, help {
+  background-color: rgb(255, 255, 255);
+  border: 1px inset rgb(170, 170, 170);
+  font: medium monospace;
+  margin: 1em 1em 2em 0;
+  padding: 1em;
+  text-align: left;
+  width: 840px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.clear { clear: both; }
+]]></html:style>
+  </html:head>
+  <html:body>
+    <html:div id="wrapper">
+      <html:div id="button">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EDownload%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bdata%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAACv0lEQVR42o2TT2gcdRTHP+83v539NzvZnWY3EbN1Q4WWJCWHIo0IRlGjlioVtUJSwbbQDFIPHqyoF6uo9FZEMadID148CvbkSdBevLckFLXNRtJNcO24Ozu7M/PrISUSbcEvfOE9+D4e3/f4ijGGe2H6kjb9WznSUJOGGoDVzzbl3zrNfZD2Fc++MLfTf7f00z11GsD3/fcnJg99kpoCSimqw6UdwY2NlZ364uffmDiOCbttmmtXzy8tLX2oAWojDz1+7NiL/HpDkc/nOTTt8Onyf7fNPvkK6+vrdLt/EYbBE77vi/J9Pz86Ora/5DjMPlbl5I81Ji+4JMFud/01h6MfTHHmyzlENOXyyD6goICxarX2gKWzDAbw9tPnqdXLzB15bmc46LbZO7+BXYuYP3IapSyKJa8GNDRwYGioko0Tze9rML/vHeKe4esfvmDv9B6CbptO2OaP7z1enjnDbP04nU6HXLZoA5MKmCi5JUTA0rByvc8zw+c4Ovomv1za2h6+7HH88FmearxOv99HRMjYeYCHtVPyDoRRgZvNmNqwxqrYdEN4aeocf982fHv5K1595CzPT7xBr9fbthQEZO0MRceb0kPl6sFMJkcURRizfbh8DpJEcWr2PTQ5Xpt5iyiKUEohImSzWaKog+NUDmpBexsbt3DdAZubmyildnFu/wm2trZIkoQ4jhkMBgD0ehGWzjo6SVKTzxdYXl7GdV0ajQbj4+M0Gg3qY0N89PHFXe9cWFig1WrRbDYRkVQZTFFbFmEY0mq1CIKAKIpI0xRLgdZ6F8cerFKv17ny8xUsZRWtmcOPnii5I6PliodtZxABp1igUCwgKse1a1ex7Qy2naFSKVOp7GF1dQXPK9H+87frsri4eDKbK7+rM0VXKQsRMSKCyN3gGUNqDOYfiogw6Ae3o177gtwvzv8XdwDbV/rz7UWMWwAAAABJRU5ErkJggg%3D%3D%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5Bthis.xurl%20%3D%20%22chrome%3A//mozapps/content/downloads/downloads.xul%22%3B%0Avar%20thisButton%20%3D%20this%3B%0Awindow.setTimeout%28function%28%29%20%7B%0A%20%20var%20root%20%3D%20document.documentElement%3B%0A%20%20var%20xp%20%3D%20%22//*%5Bstarts-with%28@id%2C%20%27custombuttons-%27%29%5D%22%3B%0A%20%20var%20cbs%20%3D%20document.evaluate%28xp%2C%20root%2C%20null%2C%206%2C%20null%29%3B%0A%20%20if%20%28%21cbs.snapshotLength%29%20return%3B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20cbs.snapshotLength%3B%20i++%29%20%7B%0A%20%20%20%20var%20cb%20%3D%20cbs.snapshotItem%28i%29%3B%0A%20%20%20%20if%20%28cb.label%20%3D%3D%20%22Bottom%20Panel%22%29%20%7B%0A%20%20%20%20%20%20thisButton.bottomPanel%20%3D%20cb.bottomPanel%3B%0A%20%20%20%20%20%20thisButton.setAttribute%28%22onclick%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22if%20%28event.button%20%3D%3D%201%29%20%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22this.bottomPanel%28this.xurl%29%3B%22%29%0A%20%20%20%20%20%20return%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%29%0A%0Athis.appendChild%28cbu.makeXML%28%3Ctooltip%20xmlns%3D%7Bxulns%7D%20id%3D%7Bthis.id%20+%20%22-tooltip%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20width%3D%22800%22%20height%3D%7Bscreen.height%20/%202%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20noautohide%3D%22true%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20onpopupshowing%3D%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22this.firstChild.setAttribute%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%28%27src%27%2C%20this.parentNode.xurl%29%3B%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20onpopuphiding%3D%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22this.firstChild.%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22removeAttribute%28%27src%27%29%3B%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cbrowser%20flex%3D%221%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20disablehistory%3D%22true%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20clickthrough%3D%22never%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/tooltip%3E%29%29%3B%0A%0Athis.removeAttribute%28%22tooltiptext%22%29%3B%0Athis.tooltip%20%3D%20this.id%20+%20%22-tooltip%22%3B%0A%0A%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bvar%20features%20%3D%20%22chrome%2Cdialog%3Dno%2Cresizable%22%3B%0Avar%20url%20%3D%20%22chrome%3A//mozapps/content/downloads/downloads.xul%22%3B%0A%0Avar%20windowManager%20%3D%20Cc%5B%27@mozilla.org/appshell/window-mediator%3B1%27%5D.getService%28%29%3B%0Avar%20windowManagerInterface%20%3D%20windowManager.QueryInterface%28Ci.nsIWindowMediator%29%3B%0A%0Avar%20topWindow%20%3D%20windowManagerInterface.getMostRecentWindow%28%22Download%3AManager%22%29%3B%0Aif%20%28topWindow%29%20%7B%0A%20%20//topWindow.focus%28%29%3B%0A%20%20topWindow.close%28%29%3B%0A%7D%20else%20if%20%28features%29%20%7B%0A%20%20window.open%28url%2C%20%22_blank%22%2C%20features%29%3B%0A%7D%20else%20%7B%0A%20%20window.open%28url%2C%20%22_blank%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22chrome%2Cextrachrome%2Cmenubar%2Cresizable%2Cscrollbars%2Cstatus%2Ctoolbar%22%29%3B%0A%7D%0A%0A%0A/*var%20ww%20%3D%20Components.classes%5B%22@mozilla.org/embedcomp/window-watcher%3B1%22%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20.getService%28Components.interfaces.nsIWindowWatcher%29%3B%0Avar%20em%20%3D%20ww.getWindowEnumerator%28%29%3B%0A%0Avar%20index%20%3D%201%3B%0Awhile%28em.hasMoreElements%28%29%29%20%7B%0A%20%20var%20win%20%3D%20em.getNext%28%29%3B%0A%20%20if%28win.name%20%3D%3D%20%22dlmgr%22%29%20%7B%0A%20%20%20%20win.close%28%29%3B%0A%20%20%20%20return%3B%0A%20%20%7D%0A%20%20index++%0A%7D%0A%0AopenDialog%28%22chrome%3A//mozapps/content/downloads/downloads.xul%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22dlmgr%22%2C%20%22chrome%2C%20resizable%2C%20dialog%3Dno%22%29%3B%0A*/%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Download">
+        <![CDATA[Install this button]]>
+        </html:a>
+      </html:div>
+      <html:a href="https://addons.mozilla.org/addon/custom-buttons/">
+        <![CDATA[What's this?]]>
+      </html:a>
+      <html:div id="credits">
+        <html:a href="http://custombuttons.sourceforge.net/forum/viewtopic.php?t=78#p197">
+          <![CDATA[Custom Buttons XML]]><html:br/><![CDATA[Exporter/Importer]]>
+        </html:a>
+      </html:div>
+    </html:div>
+  </html:body>
+
+  <name>Download</name>
+  <image><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAACv0lEQVR42o2TT2gcdRTHP+83v539NzvZnWY3EbN1Q4WWJCWHIo0IRlGjlioVtUJSwbbQDFIPHqyoF6uo9FZEMadID148CvbkSdBevLckFLXNRtJNcO24Ozu7M/PrISUSbcEvfOE9+D4e3/f4ijGGe2H6kjb9WznSUJOGGoDVzzbl3zrNfZD2Fc++MLfTf7f00z11GsD3/fcnJg99kpoCSimqw6UdwY2NlZ364uffmDiOCbttmmtXzy8tLX2oAWojDz1+7NiL/HpDkc/nOTTt8Onyf7fNPvkK6+vrdLt/EYbBE77vi/J9Pz86Ora/5DjMPlbl5I81Ji+4JMFud/01h6MfTHHmyzlENOXyyD6goICxarX2gKWzDAbw9tPnqdXLzB15bmc46LbZO7+BXYuYP3IapSyKJa8GNDRwYGioko0Tze9rML/vHeKe4esfvmDv9B6CbptO2OaP7z1enjnDbP04nU6HXLZoA5MKmCi5JUTA0rByvc8zw+c4Ovomv1za2h6+7HH88FmearxOv99HRMjYeYCHtVPyDoRRgZvNmNqwxqrYdEN4aeocf982fHv5K1595CzPT7xBr9fbthQEZO0MRceb0kPl6sFMJkcURRizfbh8DpJEcWr2PTQ5Xpt5iyiKUEohImSzWaKog+NUDmpBexsbt3DdAZubmyildnFu/wm2trZIkoQ4jhkMBgD0ehGWzjo6SVKTzxdYXl7GdV0ajQbj4+M0Gg3qY0N89PHFXe9cWFig1WrRbDYRkVQZTFFbFmEY0mq1CIKAKIpI0xRLgdZ6F8cerFKv17ny8xUsZRWtmcOPnii5I6PliodtZxABp1igUCwgKse1a1ex7Qy2naFSKVOp7GF1dQXPK9H+87frsri4eDKbK7+rM0VXKQsRMSKCyN3gGUNqDOYfiogw6Ae3o177gtwvzv8XdwDbV/rz7UWMWwAAAABJRU5ErkJggg==]]></image>
+  <mode>0</mode>
+  <initcode><![CDATA[this.xurl = "chrome://mozapps/content/downloads/downloads.xul";
+var thisButton = this;
+window.setTimeout(function() {
+  var root = document.documentElement;
+  var xp = "//*[starts-with(@id, 'custombuttons-')]";
+  var cbs = document.evaluate(xp, root, null, 6, null);
+  if (!cbs.snapshotLength) return;
+  for (var i = 0; i < cbs.snapshotLength; i++) {
+    var cb = cbs.snapshotItem(i);
+    if (cb.label == "Bottom Panel") {
+      thisButton.bottomPanel = cb.bottomPanel;
+      thisButton.setAttribute("onclick",
+                              "if (event.button == 1) " +
+                              "this.bottomPanel(this.xurl);")
+      return;
+    }
+  }
+})
+
+this.appendChild(cbu.makeXML(<tooltip xmlns={xulns} id={this.id + "-tooltip"}
+                                      width="800" height={screen.height / 2}
+                                      noautohide="true"
+                                      onpopupshowing={
+                                        "this.firstChild.setAttribute" +
+                                        "('src', this.parentNode.xurl);"
+                                      }
+                                      onpopuphiding={
+                                        "this.firstChild." +
+                                        "removeAttribute('src');"
+                                      }>
+                               <browser flex="1"
+                                        disablehistory="true"
+                                        clickthrough="never"/>
+                             </tooltip>));
+
+this.removeAttribute("tooltiptext");
+this.tooltip = this.id + "-tooltip";
+
+]]></initcode>
+  <code><![CDATA[var features = "chrome,dialog=no,resizable";
+var url = "chrome://mozapps/content/downloads/downloads.xul";
+
+var windowManager = Cc['@mozilla.org/appshell/window-mediator;1'].getService();
+var windowManagerInterface = windowManager.QueryInterface(Ci.nsIWindowMediator);
+
+var topWindow = windowManagerInterface.getMostRecentWindow("Download:Manager");
+if (topWindow) {
+  //topWindow.focus();
+  topWindow.close();
+} else if (features) {
+  window.open(url, "_blank", features);
+} else {
+  window.open(url, "_blank",
+              "chrome,extrachrome,menubar,resizable,scrollbars,status,toolbar");
+}
+
+
+/*var ww = Components.classes["@mozilla.org/embedcomp/window-watcher;1"]
+            .getService(Components.interfaces.nsIWindowWatcher);
+var em = ww.getWindowEnumerator();
+
+var index = 1;
+while(em.hasMoreElements()) {
+  var win = em.getNext();
+  if(win.name == "dlmgr") {
+    win.close();
+    return;
+  }
+  index++
+}
+
+openDialog("chrome://mozapps/content/downloads/downloads.xul",
+            "dlmgr", "chrome, resizable, dialog=no");
+*/]]></code>
+  <accelkey><![CDATA[]]></accelkey>
+  <help><![CDATA[]]></help>
+  <attributes/>
+</custombutton>
