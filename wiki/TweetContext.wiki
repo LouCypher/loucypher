@@ -12,7 +12,7 @@ Tweet anything from Firefox context menu.
 
 = Installation =
  * [https://addons.mozilla.org/firefox/addon/tweet-context/ Mozilla Add-ons]
- * [http://loucypher.googlecode.com/svn/TweetContext/xpi/TweetContext-dev.xpi dev build]
+ * [https://loucypher.googlecode.com/svn/TweetContext/xpi/TweetContext-dev.xpi dev build]
 
 = Features =
 
