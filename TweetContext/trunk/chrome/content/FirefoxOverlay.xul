@@ -80,7 +80,7 @@ gBrowser.mContextTab.linkedBrowser.currentURI.spec);" />
 
   <menupopup id="contentAreaContextMenu">
     <menuitem id="context-tweetpage"
-              insertafter="context-bookmarkpage"
+              insertafter="context-sendpage"
               class="menuitem-iconic tweetcontext-item"
               label="&tweet.page;"
               onmouseover="TweetContext.setTooltip(
@@ -89,7 +89,7 @@ this, content.document.title, content.location.href);"
 content.document.title, content.location.href);" />
 
     <menuitem id="context-tweetlink"
-              insertafter="context-bookmarklink"
+              insertafter="context-sendlink"
               class="menuitem-iconic tweetcontext-item"
               label="&tweet.link;"
               onmouseover="TweetContext.setTooltip(
@@ -109,7 +109,7 @@ gContextMenu.target.ownerDocument.title,
 gContextMenu.target.ownerDocument.URL);" />
 
     <menuitem id="context-tweetimage"
-              insertafter="context-copyimage"
+              insertafter="context-sendimage"
               class="menuitem-iconic tweetcontext-item"
               label="&tweet.image;"
               onmouseover="TweetContext.setTooltip(
@@ -118,7 +118,7 @@ this, gContextMenu.target.alt, gContextMenu.imageURL);"
 gContextMenu.target.alt, gContextMenu.imageURL);" />
 
     <menuitem id="context-tweetselected"
-              insertafter="context-searchselect"
+              insertbefore="frame-sep"
               class="menuitem-iconic tweetcontext-item"
               label="Tweet Selected Text"
               onmouseover="TweetContext.setTooltip(this,

@@ -82,27 +82,23 @@ var TweetContext = {
   },
 
   getSelection: function tweetContext_getSelection(aChars) {
-//@https://addons.mozilla.org/en-US/firefox/files/browse/106796/file/chrome/content/contextsearch.js#L109
+//@https://addons.mozilla.org/files/browse/106796/file/chrome/content/contextsearch.js#L109
     let focusedElement = document.commandDispatcher.focusedElement;
     let selectedText = null;
 
     // Check if the focused element is an input element (input/textarea)
-    let isTextInputNode;
+    let isTextInputNode = false;
     try {
       isTextInputNode = (focusedElement instanceof HTMLInputElement &&
                          focusedElement.type == "text") ||
                          focusedElement instanceof HTMLTextAreaElement;
-    } catch(ex) {
-      isTextInputNode = false;
-    }
+    } catch(ex) {}
 
     // Check if texts are selected in an element
-    let textSelectedInNode;
+    let textSelectedInNode = false;
     try {
       textSelectedInNode = focusedElement.selectionStart < focusedElement.selectionEnd;
-    } catch(ex) {
-      textSelectedInNode = false;
-    }
+    } catch(ex) {}
 
     // get text selection from input node
     if (isTextInputNode && textSelectedInNode) {
@@ -188,11 +184,12 @@ var TweetContext = {
           EchofonCommon.notify("initSession");
         }
 
+        let loc = document.getElementById("identity-box");
         if (aText || aURL) {
-          let loc = document.getElementById("identity-box");
           EchofonCommon.openComposeWindow(loc, text + " " + url, false);
         } else {
-          EchofonOverlay.toggleWindow();
+          EchofonCommon.openComposeWindow(loc, "", false);
+          //EchofonOverlay.toggleWindow();
         }
         break;
 
