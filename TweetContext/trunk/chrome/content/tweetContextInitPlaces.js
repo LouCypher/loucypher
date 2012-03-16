@@ -58,6 +58,7 @@ TweetContext.places = {
 
     if (typeof win.EchofonCommon == "object") {
       EchofonCommon = win.EchofonCommon;
+      EchofonAccountManager = win.EchofonAccountManager;
     }
 
     if (typeof win.TWITTERBAR == "object") {
@@ -66,10 +67,6 @@ TweetContext.places = {
 
     if (typeof win.TWITTERBAR_UI == "object") {
       TWITTERBAR_UI = win.TWITTERBAR_UI;
-    }
-
-    if (typeof win.gTwitterNotifier == "object") {
-      gTwitterNotifier = win.gTwitterNotifier;
     }
 
     let popup = document.getElementById("placesContext");
