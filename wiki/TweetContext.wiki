@@ -8,7 +8,7 @@ Tweet anything from Firefox context menu.
 
 = Compatibility =
 
- * Firefox 4.0 - 7.`*`
+ * Firefox 4.0 - 11.`*`
 
 = Installation =
  * [https://addons.mozilla.org/firefox/addon/tweet-context/ Mozilla Add-ons]
