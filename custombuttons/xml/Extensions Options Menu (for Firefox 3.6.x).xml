@@ -64,7 +64,7 @@ code, initcode, help {
         <![CDATA[What's this?]]>
       </html:a>
       <html:div id="credits">
-        <html:a href="http://custombuttons.mozdev.org/drupal/node/484">
+        <html:a href="http://custombuttons.sourceforge.net/forum/viewtopic.php?t=78#p197">
           <![CDATA[Custom Buttons XML]]><html:br/><![CDATA[Exporter/Importer]]>
         </html:a>
       </html:div>
