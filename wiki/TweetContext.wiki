@@ -6,7 +6,7 @@
 Tweet anything from Firefox context menu.
 
 <wiki:toc max_depth="2"/>
-
+<a href="https://developer.mozilla.org/web/?WT.mc_id=mdn38" title="MDN is your Web Developer Toolbox for docs, demos and more on HTML, CSS, JavaScript and other Web standards and open technologies."><img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn38.png" alt="MDN is your Web Developer Toolbox for docs, demos and more on HTML, CSS, JavaScript and other Web standards and open technologies." align="right"/></a>
 = Compatibility =
 
  * Firefox 4.0 - 11.`*`
