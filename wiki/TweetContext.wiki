@@ -1,4 +1,5 @@
 #summary Firefox extension
+<a href="http://affiliates.mozilla.org/link/banner/9337" title="Download: Fast, Fun, Awesome"><img src="http://affiliates.mozilla.org/media/uploads/banners/fd4b8f93cb98d8776bdda2220065fef3c62b74a3.png" alt="Download Firefox" border="0" align="right"/></a>
 [http://twitter.com/share?text=Tweet+Context+%23Firefox+extension%2C+tweet+anything+from+context+menu+with+%40echofon+integration&related=zoolcar9:Tweet+Context+developer https://si0.twimg.com/a/1309282244/images/goodies/tweetn.png]
 <g:plusone size="medium" href="http://code.google.com/p/loucypher/wiki/TweetContext" annotation="bubble"></g:plusone>
 
