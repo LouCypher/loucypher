@@ -1,0 +1,22 @@
+<!ENTITY tweet.anything "发推">
+<!ENTITY tweet.tab "推此标签">
+<!ENTITY tweet.page "推此页">
+<!ENTITY tweet.link "推此链接">
+<!ENTITY tweet.frame "推此帧">
+<!ENTITY tweet.image "推此图片">
+<!ENTITY tweet.bookmark "推此书签">
+<!ENTITY tweet.options "Tweet Context 选项">
+<!ENTITY tweet.options.twitter "Twitter 选项">
+<!ENTITY tweet.options.openTab "在新标签打开">
+<!ENTITY tweet.options.openTab.accesskey "T">
+<!ENTITY tweet.options.https "使用 https">
+<!ENTITY tweet.options.https.accesskey "s">
+<!ENTITY tweet.options.integration "附加组件集成">
+<!ENTITY tweet.options.addon.requires "需要">
+<!ENTITY tweet.options.addon.prefs "选项...">
+<!ENTITY tweet.options.addon.twitter "不是用附加组件">
+<!ENTITY tweet.options.addon.twitter.accesskey "n">
+<!ENTITY tweet.options.addon.echofon "使用 Echofon">
+<!ENTITY tweet.options.addon.echofon.accesskey "E">
+<!ENTITY tweet.options.addon.hootbar "使用 HootBar">
+<!ENTITY tweet.options.addon.hootbar.accesskey "H">
