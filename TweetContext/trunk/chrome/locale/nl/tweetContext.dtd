@@ -1,0 +1,22 @@
+<!ENTITY tweet.anything "Iets tweeten">
+<!ENTITY tweet.tab "Dit tabblad tweeten">
+<!ENTITY tweet.page "Deze pagina tweeten">
+<!ENTITY tweet.link "Deze koppeling tweeten">
+<!ENTITY tweet.frame "Dit frame tweeten">
+<!ENTITY tweet.image "Deze afbeelding tweeten">
+<!ENTITY tweet.bookmark "Deze bladwijzer tweeten">
+<!ENTITY tweet.options "Tweet Context-opties">
+<!ENTITY tweet.options.twitter "Twitteropties">
+<!ENTITY tweet.options.openTab "Openen in nieuw tabblad">
+<!ENTITY tweet.options.openTab.accesskey "T">
+<!ENTITY tweet.options.https "Https gebruiken">
+<!ENTITY tweet.options.https.accesskey "s">
+<!ENTITY tweet.options.integration "Add-onintegratie">
+<!ENTITY tweet.options.addon.requires "vereist">
+<!ENTITY tweet.options.addon.prefs "Opties…">
+<!ENTITY tweet.options.addon.twitter "Add-on niet gebruiken">
+<!ENTITY tweet.options.addon.twitter.accesskey "n">
+<!ENTITY tweet.options.addon.echofon "Echofon gebruiken">
+<!ENTITY tweet.options.addon.echofon.accesskey "E">
+<!ENTITY tweet.options.addon.hootbar "Hootbar gebruiken">
+<!ENTITY tweet.options.addon.hootbar.accesskey "H">
