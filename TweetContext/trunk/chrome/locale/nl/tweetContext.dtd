@@ -11,7 +11,7 @@
 <!ENTITY tweet.options.openTab.accesskey "T">
 <!ENTITY tweet.options.https "Https gebruiken">
 <!ENTITY tweet.options.https.accesskey "s">
-<!ENTITY tweet.options.integration "Add-onintegratie">
+<!ENTITY tweet.options.integration "Add-on integratie">
 <!ENTITY tweet.options.addon.requires "vereist">
 <!ENTITY tweet.options.addon.prefs "Opties…">
 <!ENTITY tweet.options.addon.twitter "Add-on niet gebruiken">
