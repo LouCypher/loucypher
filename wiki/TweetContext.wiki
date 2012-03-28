@@ -1,24 +1,23 @@
 #summary Firefox extension
-<a href="http://affiliates.mozilla.org/link/banner/9337" title="Download: Fast, Fun, Awesome"><img src="http://affiliates.mozilla.org/media/uploads/banners/fd4b8f93cb98d8776bdda2220065fef3c62b74a3.png" alt="Download Firefox" border="0" align="right"/><img src="http://affiliates.mozilla.org/link/banner/9337?.png" width="1" height="1"/></a>
+<a href="http://mac.softpedia.com/progClean/Tweet-Context-Clean-101716.html" title="Softpedia guarantees that Tweet Context is 100% Clean, which means it does not contain any form of malware, including but not limited to: spyware, viruses, trojans and backdoors."><img src="http://mac.softpedia.com/base_img/softpedia_free_award_f.gif" alt='SOFTPEDIA "100% FREE" AWARD' border="0" align="right"/></a>
 [http://twitter.com/share?text=Tweet+Context+%23Firefox+extension%2C+tweet+anything+from+context+menu+with+%40echofon+integration&related=zoolcar9:Tweet+Context+developer https://si0.twimg.com/a/1309282244/images/goodies/tweetn.png]
 <g:plusone size="medium" href="http://code.google.com/p/loucypher/wiki/TweetContext" annotation="bubble"></g:plusone>
 
 Tweet anything from Firefox context menu.
 
 <wiki:toc max_depth="2"/>
-<a href="https://developer.mozilla.org/web/?WT.mc_id=mdn38" title="MDN is your Web Developer Toolbox for docs, demos and more on HTML, CSS, JavaScript and other Web standards and open technologies."><img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn38.png" alt="MDN is your Web Developer Toolbox for docs, demos and more on HTML, CSS, JavaScript and other Web standards and open technologies." align="right"/></a>
+<a href="http://affiliates.mozilla.org/link/banner/9337" title="Download: Fast, Fun, Awesome"><img src="http://affiliates.mozilla.org/media/uploads/banners/fd4b8f93cb98d8776bdda2220065fef3c62b74a3.png" alt="Download Firefox" border="0" align="right"/><img src="http://affiliates.mozilla.org/link/banner/9337?.png" width="1" height="1"/></a>
 = Compatibility =
-
  * Firefox 4.0 - 11.`*`
 
 = Installation =
  * [https://addons.mozilla.org/firefox/addon/tweet-context/ Mozilla Add-ons]
  * [https://loucypher.googlecode.com/svn/TweetContext/xpi/TweetContext-dev.xpi dev build]
 
+<a href="https://developer.mozilla.org/web/?WT.mc_id=mdn38" title="MDN is your Web Developer Toolbox for docs, demos and more on HTML, CSS, JavaScript and other Web standards and open technologies."><img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn38.png" alt="MDN is your Web Developer Toolbox for docs, demos and more on HTML, CSS, JavaScript and other Web standards and open technologies." align="right"/></a>
 = Features =
 
 == Context menus ==
-
  * Main context menu
   * on web page
   * on a link
