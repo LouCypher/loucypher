@@ -214,8 +214,7 @@ var TweetContext = {
       }
       index++
     }
-    openDialog("chrome://tweetcontext/content/options.xul",
-               "tweetcontext-options",
+    openDialog("chrome://tweetcontext/content/", "tweetcontext-options",
                "chrome, dialog=no, close, titlebar, centerscreen");
   },
 
