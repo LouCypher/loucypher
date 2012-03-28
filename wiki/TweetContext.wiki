@@ -11,7 +11,7 @@ Tweet anything from Firefox context menu.
  * Firefox 4.0 - 11.`*`
 
 = Install =
- * [https://addons.mozilla.org/firefox/addon/tweet-context/?src=external-home Latest release]
+ * [https://addons.mozilla.org/addon/tweet-context/?src=external-home Latest release]
  * [https://addons.mozilla.org/addon/tweet-context/versions All release versions]
  * [https://loucypher.googlecode.com/svn/TweetContext/xpi/TweetContext-dev.xpi Dev build]
 
