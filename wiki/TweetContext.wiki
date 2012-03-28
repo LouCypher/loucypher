@@ -36,8 +36,8 @@ Tweet anything from Firefox context menu.
 
 You can choose to use the following add-on to tweet or use Twitter [https://twitter.com/intent/tweet tweet page] (default).
 
- * Echofon - use [http://www.echofon.com/ Echofon] if available.
- * !HootBar - use [http://hootsuite.com/hootbar HootBar] if available.
+ * Echofon - use [https://addons.mozilla.org/addon/echofon-for-twitter/?src=tweet-context Echofon] if available.
+ * !HootBar - use [https://addons.mozilla.org/addon/hootbar/?src=tweet-context HootBar] if available.
 
 = Issues =
  * [http://code.google.com/p/loucypher/issues/list?q=label:Project-TweetContext Reported issues]
