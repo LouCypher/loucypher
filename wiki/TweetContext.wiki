@@ -10,9 +10,10 @@ Tweet anything from Firefox context menu.
 = Compatibility =
  * Firefox 4.0 - 11.`*`
 
-= Installation =
- * [https://addons.mozilla.org/firefox/addon/tweet-context/ Mozilla Add-ons]
- * [https://loucypher.googlecode.com/svn/TweetContext/xpi/TweetContext-dev.xpi dev build]
+= Install =
+ * [https://addons.mozilla.org/firefox/addon/tweet-context/?src=external-home Latest release]
+ * [https://addons.mozilla.org/addon/tweet-context/versions All release versions]
+ * [https://loucypher.googlecode.com/svn/TweetContext/xpi/TweetContext-dev.xpi Dev build]
 
 <a href="https://developer.mozilla.org/web/?WT.mc_id=mdn38" title="MDN is your Web Developer Toolbox for docs, demos and more on HTML, CSS, JavaScript and other Web standards and open technologies."><img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn38.png" alt="MDN is your Web Developer Toolbox for docs, demos and more on HTML, CSS, JavaScript and other Web standards and open technologies." align="right"/></a>
 = Features =
