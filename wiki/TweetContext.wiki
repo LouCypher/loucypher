@@ -2,6 +2,7 @@
 <a href="http://mac.softpedia.com/progClean/Tweet-Context-Clean-101716.html" title="Softpedia guarantees that Tweet Context is 100% Clean, which means it does not contain any form of malware, including but not limited to: spyware, viruses, trojans and backdoors."><img src="http://mac.softpedia.com/base_img/softpedia_free_award_f.gif" alt='SOFTPEDIA "100% FREE" AWARD' border="0" align="right"/></a>
 [http://twitter.com/share?text=Tweet+Context+%23Firefox+extension%2C+tweet+anything+from+context+menu+with+%40echofon+integration&related=zoolcar9:Tweet+Context+developer https://si0.twimg.com/a/1309282244/images/goodies/tweetn.png]
 <g:plusone size="medium" href="http://code.google.com/p/loucypher/wiki/TweetContext" annotation="bubble"></g:plusone>
+[https://addons.mozilla.org/addon/tweet-context/developers?src=external-home http://i.imgur.com/XJmQq.gif]
 
 Tweet anything from Firefox context menu.
 
