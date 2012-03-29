@@ -7,19 +7,29 @@
     <html:style type="text/css"><![CDATA[body { font-size: medium; margin: 0; }
 body, code:before, help:before, initcode:before {
   font-family: "Verdana", sans-serif;
-} 
+}
 #wrapper { position: fixed; top: 1em; right: 1em; text-align: center; }
 p { font-size: small; text-align: center; }
 #button {
-  background-image: -moz-linear-gradient(center top, rgb(147, 200, 94) 30%, rgb(85, 168, 2) 55%);
-  border: 1px outset rgb(58, 116, 4);
-  border-radius: 1em;
+  background-color: rgb(85, 168, 2);
+  background-image: linear-gradient(to bottom, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -moz-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -o-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -webkit-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  border: 1px solid rgb(58, 116, 4);
+  border-radius: .5em;
+  -moz-border-radius: .5em;
+  -webkit-border-radius: .5em;
   padding: 0;
-  text-shadow: 0pt -1px 0pt rgb(58, 116, 4);
   margin-bottom: 1em;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
 }
 #button a {
-  color: rgb(255, 255, 255);
+  color: #000;
+  text-shadow: -1pt -1px 0pt rgba(255, 255, 255, .5);
   padding: 1em;
   text-decoration: none;
 }
@@ -28,7 +38,7 @@ p { font-size: small; text-align: center; }
 }
 #credits { position: fixed; bottom: 1em; right: 1em; font-size: small; }
 custombutton { background-color: rgb(171, 171, 171); margin: 1em; }
-image, mode, accelkey { display: none; }
+date, image, mode, accelkey { display: none; }
 name { font-weight: bold; font-size: x-large; }
 code:before, help:before, initcode:before {
   font-weight: bold;
@@ -56,11 +66,11 @@ code, initcode, help {
   <html:body>
     <html:div id="wrapper">
       <html:div id="button">
-        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3ESidebar%20to%20the%20right%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bdata%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACm0lEQVR42o2T3UtTYRzHv2dnHnO+zGZaGfgPWARdGKX4FulKhaxmJJaJmV1kYEI4xbcI3FV0EXZVQoEVMUUoxZzmwC4MkixSfFnT5pjiEqfpznZenp6dYnbqwn7w8PDA8/0839/3/A5T1bVEvNML6BsQIAdFEJFH9mEBtqdFTHu7heCvMpvrmT/PjPHxCnnfZ8DqDD2FrssAJ/TDUu2E8dQJ6PV6FeDF827cqqsJQ5hLz7xkY243ltxUSwEaSnHPDqG2YAZZ2ccRFRWlgvwDaBtYIXWZBvAB2oJIEBkBVN8ZRWr8R+TkHAPLsuA4TgGFymazg5CQVYbuMpi7FNBwMiH8gizLuGIeRt6hNZSVnQfDqFpWlcfjoYD+ZdKQnxgWi6KMioa3KDiyidLSMzsD2l4tk6bTiWGxLEuoaBxB8VEBJSWFOwOaej2krWgvgvQThsQyTbKctlCSoYHJZNwZcPulm1jO7QfPBxRxJAsYb9hwLU/7f4DGnkXSWrgPfn9QAXBa0AyGcTadVQHujTzC0Kwdr6ueqAEtvYvEnJ9EHQQhSTIiKaC80Q5TBlFlUDPXjL4FK3ReLT5fmNgGNHe7SF2uHltbArqme/DF8QGe5BEENBFgxHiwUjQ2dvnhMbixZvgO0Sdgz3gCnJXO3yFaXeRmZhxtQUAH14pu3TusRv+ATmDpIiAsHTA6naHRmfe5IPpFYApIHT+Iwco3YFqt38j19DjaggCrs1dx4ItZhaAREevXI5qPwbpuHVMpnzCf4gC/wSN57AC+XnX8chAC1GbFUgcB5V/gtARplwfQXpWkCtHie4DOsYdgfQSTpsntDHJbJkg8/PA6XOF0F5c2cTHNhXpzLQ1WUoasc8KK0alBdBTfV8KWJFHZfwKGTWIJITCgXwAAAABJRU5ErkJggg%3D%3D%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5Bdocument.getElementById%28%22sidebar%22%29.style.maxWidth%20%3D%20%22none%22%3B%0Athis.tooltipText%20%3D%20%22Move%20%22%20+%20this.label%3B%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bfunction%20%24%28id%29%20%7B%0A%20%20return%20document.getElementById%28id%29%3B%0A%7D%0A%0Avar%20sides%20%3D%20%5B%22sidebar-box%22%2C%20%22sidebar-splitter%22%5D%3B%0A%0Avar%20apc%20%3D%20%24%28%22appcontent%22%29%3B%0Aif%20%28apc.nextSibling.id%20%3D%3D%20sides%5B1%5D%29%20%7B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20sides.length%3B%20i++%29%20%7B%0A%20%20%20%20apc.parentNode.insertBefore%28%24%28sides%5Bi%5D%29%2C%20apc%29%3B%0A%20%20%7D%0A%20%20this.tooltipText%20%3D%20%22Move%20%22%20+%20this.label%3B%0A//this.setAttribute%28%22cb-stdicon%22%2C%20%22custombuttons-stdicon-1%22%29%3B%0A%20%20this.image%20%3D%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACm0lEQVR42o2T3UtTYRzHv2dnHnO+zGZaGfgPWARdGKX4FulKhaxmJJaJmV1kYEI4xbcI3FV0EXZVQoEVMUUoxZzmwC4MkixSfFnT5pjiEqfpznZenp6dYnbqwn7w8PDA8/0839/3/A5T1bVEvNML6BsQIAdFEJFH9mEBtqdFTHu7heCvMpvrmT/PjPHxCnnfZ8DqDD2FrssAJ/TDUu2E8dQJ6PV6FeDF827cqqsJQ5hLz7xkY243ltxUSwEaSnHPDqG2YAZZ2ccRFRWlgvwDaBtYIXWZBvAB2oJIEBkBVN8ZRWr8R+TkHAPLsuA4TgGFymazg5CQVYbuMpi7FNBwMiH8gizLuGIeRt6hNZSVnQfDqFpWlcfjoYD+ZdKQnxgWi6KMioa3KDiyidLSMzsD2l4tk6bTiWGxLEuoaBxB8VEBJSWFOwOaej2krWgvgvQThsQyTbKctlCSoYHJZNwZcPulm1jO7QfPBxRxJAsYb9hwLU/7f4DGnkXSWrgPfn9QAXBa0AyGcTadVQHujTzC0Kwdr6ueqAEtvYvEnJ9EHQQhSTIiKaC80Q5TBlFlUDPXjL4FK3ReLT5fmNgGNHe7SF2uHltbArqme/DF8QGe5BEENBFgxHiwUjQ2dvnhMbixZvgO0Sdgz3gCnJXO3yFaXeRmZhxtQUAH14pu3TusRv+ATmDpIiAsHTA6naHRmfe5IPpFYApIHT+Iwco3YFqt38j19DjaggCrs1dx4ItZhaAREevXI5qPwbpuHVMpnzCf4gC/wSN57AC+XnX8chAC1GbFUgcB5V/gtARplwfQXpWkCtHie4DOsYdgfQSTpsntDHJbJkg8/PA6XOF0F5c2cTHNhXpzLQ1WUoasc8KK0alBdBTfV8KWJFHZfwKGTWIJITCgXwAAAABJRU5ErkJggg%3D%3D%22%3B%0A%20%20this.checked%20%3D%20false%3B%0A%20%20return%3B%0A%7D%0A%0Afor%20%28var%20i%20%3D%200%3B%20i%20%3C%20sides.length%3B%20i++%29%20%7B%0A%20%20apc.parentNode.insertBefore%28%24%28sides%5Bi%5D%29%2C%20apc.nextSibling%29%3B%0A%7D%0A%0A//this.setAttribute%28%22cb-stdicon%22%2C%20%22custombuttons-stdicon-2%22%29%3B%0Athis.image%20%3D%20%22data%3Aimage/png%3Bbase64%2CAAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACDenv/9PPz//Hw8P/v7u7/7Ovr/+rp6f/n5+f/5eTk/+Hh4f/f3t7/0X9C/8h/Uv+9c0r/q1w+/6tcPv+gRCL/tqmp//7+/v///////////1eWUf+cv43//////+Xl5f//////5eXl/+KtgP/v7PH/7ert/+ji5v/n5uz/oEQi/7apqf/+/v7//////ymqKf8quSb/k/CH/////////////////+Xl5f/irYD/8Ojo/+/m5v/q3d3/6ODi/7NuVv+2qan//v7+/yKbIf8H0gf/D98P/zLBL/9go1j/bplm/2KhW/9Tqk7/V6hT/2mcYv+cv43/6+Dg/+ri5f+za1L/sqio/yyDK/8AtQD/AN4A/wTnBP8h9iT/IfYl/yL2J/8n8yj/KPge/yX9FP8x8ib/bOh4/+zj5f/r5ej/s2tT/66kpP/+/v7/IJwg/w3ODP8S3RD/Jcsg/0C5Of9JsUb/PrRD/y64Qv8ptkn/aZxi/5y/jf/y7e3/8vH0/7NsU/+yqKj//v7+//////8uqCz/Krwi/33bbP/////////////////l5eX/5K97//z7+//69/f/9fDw//X09v+zblf/rqSk//7+/v///////////12aSv+cv43/////////////////5eXl/+Wrdv/+/v7//Pz8//b09P/29/v/smND/7apqf/+/v7//////////////////////////////////////+Xl5f/nsX3//v7+//7+/v/39vb/9vT0/7RtU/+yqKj//v7+///////////////////////////////////////l5eX/6bSB//7+/v/+/v7/+vj4//f29v+3cVf/rqSk//7+/v//////////////////////////////////////5eXl/+m3hP/+/v7//v7+//z8/P/6+Pj/uXJZ/6qiov/+/v7//////////////////////////////////////+Xl5f/ruYT//v7+//7+/v/+/v7//Pz8/7p1XP+Lg4P/xMTE/8fHx//Nzc3/1tbW/9bW1v+XkpL/lpGR/5eRkf+VkJD/67mB//339P/99fL/9+zq//fx8f+7c1j/k42O/83Nzf/W1tb/5eXl/+Xl5f/l5eX/k42O/wAAAAAAAAAAAAAAAOynXf/9g1D//XpH//1nNv/8Zzj/uUId/5ONjv/W1tb/5eXl/+Xl5f/l5eX/5eXl/5ONjv8AAAAAAAAAAAAAAADrnkj//VQS//1HCf/9LQD//SsA/7QmBv8AAAAAiIeH/4iHh/+Ih4f/iIeH/4iHh/8AAAAAAAAAAAAAAAAAAAAA6KZl/8l/Uf++c0r/wDIF/7guBP+zXUT/AACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQHArEEBwKxBg8CsQQ%3D%3D%22%3B%0Athis.tooltipText%20%3D%20%22Move%20Sidebar%20to%20the%20left%22%3B%0Athis.checked%20%3D%20true%3B%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" title="Sidebar to the right">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3ESidebar%20to%20the%20right%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bdata%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACm0lEQVR42o2T3UtTYRzHv2dnHnO+zGZaGfgPWARdGKX4FulKhaxmJJaJmV1kYEI4xbcI3FV0EXZVQoEVMUUoxZzmwC4MkixSfFnT5pjiEqfpznZenp6dYnbqwn7w8PDA8/0839/3/A5T1bVEvNML6BsQIAdFEJFH9mEBtqdFTHu7heCvMpvrmT/PjPHxCnnfZ8DqDD2FrssAJ/TDUu2E8dQJ6PV6FeDF827cqqsJQ5hLz7xkY243ltxUSwEaSnHPDqG2YAZZ2ccRFRWlgvwDaBtYIXWZBvAB2oJIEBkBVN8ZRWr8R+TkHAPLsuA4TgGFymazg5CQVYbuMpi7FNBwMiH8gizLuGIeRt6hNZSVnQfDqFpWlcfjoYD+ZdKQnxgWi6KMioa3KDiyidLSMzsD2l4tk6bTiWGxLEuoaBxB8VEBJSWFOwOaej2krWgvgvQThsQyTbKctlCSoYHJZNwZcPulm1jO7QfPBxRxJAsYb9hwLU/7f4DGnkXSWrgPfn9QAXBa0AyGcTadVQHujTzC0Kwdr6ueqAEtvYvEnJ9EHQQhSTIiKaC80Q5TBlFlUDPXjL4FK3ReLT5fmNgGNHe7SF2uHltbArqme/DF8QGe5BEENBFgxHiwUjQ2dvnhMbixZvgO0Sdgz3gCnJXO3yFaXeRmZhxtQUAH14pu3TusRv+ATmDpIiAsHTA6naHRmfe5IPpFYApIHT+Iwco3YFqt38j19DjaggCrs1dx4ItZhaAREevXI5qPwbpuHVMpnzCf4gC/wSN57AC+XnX8chAC1GbFUgcB5V/gtARplwfQXpWkCtHie4DOsYdgfQSTpsntDHJbJkg8/PA6XOF0F5c2cTHNhXpzLQ1WUoasc8KK0alBdBTfV8KWJFHZfwKGTWIJITCgXwAAAABJRU5ErkJggg%3D%3D%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5B//document.getElementById%28%22sidebar%22%29.style.maxWidth%20%3D%20%22none%22%3B%0Athis.tooltipText%20%3D%20%22Move%20%22%20+%20this.label%3B%0A%0A//new%20Function%28this.getAttribute%28%22cb-oncommand%22%29%29.call%28this%29%3B%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bvar%20prefString%20%3D%20%22custombuttons.SidebarToTheRight.isOnTheRight%22%3B%0A%0Afunction%20isOnTheRight%28%29%20%7B%0A%20%20try%20%7B%0A%20%20%20%20return%20cbu.ps.getBoolPref%28prefString%29%3B%0A%20%20%7D%20catch%28ex%29%20%7B%0A%20%20%20%20return%20false%3B%0A%20%20%7D%0A%7D%0A%0Afunction%20setPref%28aBoolean%29%20%7B%0A%20%20cbu.ps.setBoolPref%28prefString%2C%20aBoolean%29%3B%0A%7D%0A%0Afunction%20%24%28id%29%20%7B%0A%20%20return%20document.getElementById%28id%29%3B%0A%7D%0A%0Avar%20sides%20%3D%20%5B%22sidebar-box%22%2C%20%22sidebar-splitter%22%5D%3B%0A%0Avar%20apc%20%3D%20%24%28%22appcontent%22%29%3B%0A%0A%0Aif%20%28apc.nextSibling.id%20%3D%3D%20sides%5B1%5D%29%20%7B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20sides.length%3B%20i++%29%20%7B%0A%20%20%20%20apc.parentNode.insertBefore%28%24%28sides%5Bi%5D%29%2C%20apc%29%3B%0A%20%20%7D%0A%20%20setPref%28false%29%3B%0A%20%20this.tooltipText%20%3D%20%22Move%20%22%20+%20this.label%3B%0A//this.setAttribute%28%22cb-stdicon%22%2C%20%22custombuttons-stdicon-1%22%29%3B%0A%20%20this.image%20%3D%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABI1BMVEVISEsQEBFcdbqCues4aP3Nzc1DY7JlpuiHh4ikpK7n5u0HOMQm8jHx8PNinGns5ucivCpDtD58ruMP3w8ALf309/3i4eodQrn+/v5GsUke+Ch46Gzr7PTe3t9RllcMzg0gnCAELrgo8ydYcrpZomEvwTJJtil+seUE5wSCtek4Z/zFxcUSVP1TqFdEXbNdp+zs8PiDg4uioqoqqStRf8g5uUAQ3RLl5eVUbbMFMsAgyyUl9iFXcbfx7O+OjZNmmW7o4+gmuSpCuC5Qg/12q+UA3gCNv5wAK/3p6fA2Z/319fb79/bh4eGoqLQAtQAiRKD4+PpOqlMU/SVCf9Fs230+XKtInuvu7u97eoPW1tZKml0rgyyH8JMH0geAreIhmyIGJrRxm7blAAAAAnRSTlOBIG9lRPoAAADGSURBVBiVY2A34bZU1GNg5AACBkZGRoYwHRER9wS7SHMgsAOKMOg7s3hqiduxRsIEmEUNZHiVDbW1WSMjGUCAWQIImIwkoMCcQRNIBihzoggEeNn4IgTUgXwvCyQBFwkvL282JAGhAF5eiAq3KIiWAF4ZXrBAiIAxWAUvlxufmpOgpKmVmbwCSMBDTJonSErJ2tpaw9Uv2pwhzkPMjU83UMVeRVU4Nh6oIs7WQYzfH2RGjCPYjGCT0NBQ/whe3nA3OXNzH1kA9J8oLkocifUAAAAASUVORK5CYII%3D%22%3B%0A%20%20this.checked%20%3D%20false%3B%0A%20%20return%3B%0A%7D%0A%0A//if%20%28%21isOnTheRight%28%29%29%20return%3B%0Afor%20%28var%20i%20%3D%200%3B%20i%20%3C%20sides.length%3B%20i++%29%20%7B%0A%20%20apc.parentNode.insertBefore%28%24%28sides%5Bi%5D%29%2C%20apc.nextSibling%29%3B%0A%7D%0A%0AsetPref%28true%29%3B%0A//this.setAttribute%28%22cb-stdicon%22%2C%20%22custombuttons-stdicon-2%22%29%3B%0Athis.image%20%3D%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABI1BMVEVISEssLjdcdbqCues4aP3Nzc1DY7JlpuiHh4ikpK7n5u0HOMQm8jHx8PNinGns5ucivCpDtD58ruMP3w8ALf309/3i4eodQrn+/v5GsUke+Ch46Gzr7PTe3t9RllcMzg0gnCAELrgo8ydYcrpZomEvwTJJtil+seUE5wSCtek4Z/zFxcUSVP1TqFdEXrRdp+zs8PiDg4uioqoqqStRf8g5uUAQ3RLl5eVUbbMFMsAgyyUl9iFXcbfx7O+OjZNmmW7o4+gmuSpCuC5Qg/12q+UA3gCNv5wAK/3p6fA2Z/319fb79/bh4eGoqLQAtQAiRKD4+PpOqlMU/SVCf9Fs230+XKtInuvu7u97eoPW1tZKml0rgyyH8JMH0geAreIhmyIGJrS/NAP1AAAAAnRSTlOBXtjYGMEAAADBSURBVBiVVczXFsFAEIDh1evqovfeji6IXiKiRQmiv/9T2A0O/ou5+M7MACBBqVFAEmroKiqAgUQJncfEZsvuPyAoOo70VD7MA5wgKDKZYgR6C3YZIJ3vSlI8f0AT4dBMfWHRYrl/qLNIEj+gnLGscyTCiX5tQMhZMJRNOxGgF3L4JBioNasu8yBuoLUQbZyX4yRFUWH3Ru8hGHxyv1pj0W50nTPQBHMTf/Qv+MfKSPTaN+Cbk6SfPkB4XPE8X9k+AS/LJ4dKnvt+AAAAAElFTkSuQmCC%22%3B%0Athis.tooltipText%20%3D%20%22Move%20Sidebar%20to%20the%20left%22%3B%0Athis.checked%20%3D%20true%3B%0A%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install Sidebar to the right">
         <![CDATA[Install this button]]>
         </html:a>
       </html:div>
-      <html:a href="https://addons.mozilla.org/addon/custom-buttons/">
+      <html:a href="https://addons.mozilla.org/addon/custom-buttons/?src=custom-buttons-xml">
         <![CDATA[What's this?]]>
       </html:a>
       <html:div id="credits">
@@ -70,38 +80,61 @@ code, initcode, help {
       </html:div>
     </html:div>
   </html:body>
-
+  <date id="date" value="20120329"/>
   <name>Sidebar to the right</name>
   <image><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACm0lEQVR42o2T3UtTYRzHv2dnHnO+zGZaGfgPWARdGKX4FulKhaxmJJaJmV1kYEI4xbcI3FV0EXZVQoEVMUUoxZzmwC4MkixSfFnT5pjiEqfpznZenp6dYnbqwn7w8PDA8/0839/3/A5T1bVEvNML6BsQIAdFEJFH9mEBtqdFTHu7heCvMpvrmT/PjPHxCnnfZ8DqDD2FrssAJ/TDUu2E8dQJ6PV6FeDF827cqqsJQ5hLz7xkY243ltxUSwEaSnHPDqG2YAZZ2ccRFRWlgvwDaBtYIXWZBvAB2oJIEBkBVN8ZRWr8R+TkHAPLsuA4TgGFymazg5CQVYbuMpi7FNBwMiH8gizLuGIeRt6hNZSVnQfDqFpWlcfjoYD+ZdKQnxgWi6KMioa3KDiyidLSMzsD2l4tk6bTiWGxLEuoaBxB8VEBJSWFOwOaej2krWgvgvQThsQyTbKctlCSoYHJZNwZcPulm1jO7QfPBxRxJAsYb9hwLU/7f4DGnkXSWrgPfn9QAXBa0AyGcTadVQHujTzC0Kwdr6ueqAEtvYvEnJ9EHQQhSTIiKaC80Q5TBlFlUDPXjL4FK3ReLT5fmNgGNHe7SF2uHltbArqme/DF8QGe5BEENBFgxHiwUjQ2dvnhMbixZvgO0Sdgz3gCnJXO3yFaXeRmZhxtQUAH14pu3TusRv+ATmDpIiAsHTA6naHRmfe5IPpFYApIHT+Iwco3YFqt38j19DjaggCrs1dx4ItZhaAREevXI5qPwbpuHVMpnzCf4gC/wSN57AC+XnX8chAC1GbFUgcB5V/gtARplwfQXpWkCtHie4DOsYdgfQSTpsntDHJbJkg8/PA6XOF0F5c2cTHNhXpzLQ1WUoasc8KK0alBdBTfV8KWJFHZfwKGTWIJITCgXwAAAABJRU5ErkJggg==]]></image>
   <mode>0</mode>
-  <initcode><![CDATA[document.getElementById("sidebar").style.maxWidth = "none";
-this.tooltipText = "Move " + this.label;]]></initcode>
-  <code><![CDATA[function $(id) {
+  <initcode><![CDATA[//document.getElementById("sidebar").style.maxWidth = "none";
+this.tooltipText = "Move " + this.label;
+
+//new Function(this.getAttribute("cb-oncommand")).call(this);]]></initcode>
+  <code><![CDATA[var prefString = "custombuttons.SidebarToTheRight.isOnTheRight";
+
+function isOnTheRight() {
+  try {
+    return cbu.ps.getBoolPref(prefString);
+  } catch(ex) {
+    return false;
+  }
+}
+
+function setPref(aBoolean) {
+  cbu.ps.setBoolPref(prefString, aBoolean);
+}
+
+function $(id) {
   return document.getElementById(id);
 }
 
 var sides = ["sidebar-box", "sidebar-splitter"];
 
 var apc = $("appcontent");
+
+
 if (apc.nextSibling.id == sides[1]) {
   for (var i = 0; i < sides.length; i++) {
     apc.parentNode.insertBefore($(sides[i]), apc);
   }
+  setPref(false);
   this.tooltipText = "Move " + this.label;
 //this.setAttribute("cb-stdicon", "custombuttons-stdicon-1");
-  this.image = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACm0lEQVR42o2T3UtTYRzHv2dnHnO+zGZaGfgPWARdGKX4FulKhaxmJJaJmV1kYEI4xbcI3FV0EXZVQoEVMUUoxZzmwC4MkixSfFnT5pjiEqfpznZenp6dYnbqwn7w8PDA8/0839/3/A5T1bVEvNML6BsQIAdFEJFH9mEBtqdFTHu7heCvMpvrmT/PjPHxCnnfZ8DqDD2FrssAJ/TDUu2E8dQJ6PV6FeDF827cqqsJQ5hLz7xkY243ltxUSwEaSnHPDqG2YAZZ2ccRFRWlgvwDaBtYIXWZBvAB2oJIEBkBVN8ZRWr8R+TkHAPLsuA4TgGFymazg5CQVYbuMpi7FNBwMiH8gizLuGIeRt6hNZSVnQfDqFpWlcfjoYD+ZdKQnxgWi6KMioa3KDiyidLSMzsD2l4tk6bTiWGxLEuoaBxB8VEBJSWFOwOaej2krWgvgvQThsQyTbKctlCSoYHJZNwZcPulm1jO7QfPBxRxJAsYb9hwLU/7f4DGnkXSWrgPfn9QAXBa0AyGcTadVQHujTzC0Kwdr6ueqAEtvYvEnJ9EHQQhSTIiKaC80Q5TBlFlUDPXjL4FK3ReLT5fmNgGNHe7SF2uHltbArqme/DF8QGe5BEENBFgxHiwUjQ2dvnhMbixZvgO0Sdgz3gCnJXO3yFaXeRmZhxtQUAH14pu3TusRv+ATmDpIiAsHTA6naHRmfe5IPpFYApIHT+Iwco3YFqt38j19DjaggCrs1dx4ItZhaAREevXI5qPwbpuHVMpnzCf4gC/wSN57AC+XnX8chAC1GbFUgcB5V/gtARplwfQXpWkCtHie4DOsYdgfQSTpsntDHJbJkg8/PA6XOF0F5c2cTHNhXpzLQ1WUoasc8KK0alBdBTfV8KWJFHZfwKGTWIJITCgXwAAAABJRU5ErkJggg==";
+  this.image = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABI1BMVEVISEsQEBFcdbqCues4aP3Nzc1DY7JlpuiHh4ikpK7n5u0HOMQm8jHx8PNinGns5ucivCpDtD58ruMP3w8ALf309/3i4eodQrn+/v5GsUke+Ch46Gzr7PTe3t9RllcMzg0gnCAELrgo8ydYcrpZomEvwTJJtil+seUE5wSCtek4Z/zFxcUSVP1TqFdEXbNdp+zs8PiDg4uioqoqqStRf8g5uUAQ3RLl5eVUbbMFMsAgyyUl9iFXcbfx7O+OjZNmmW7o4+gmuSpCuC5Qg/12q+UA3gCNv5wAK/3p6fA2Z/319fb79/bh4eGoqLQAtQAiRKD4+PpOqlMU/SVCf9Fs230+XKtInuvu7u97eoPW1tZKml0rgyyH8JMH0geAreIhmyIGJrRxm7blAAAAAnRSTlOBIG9lRPoAAADGSURBVBiVY2A34bZU1GNg5AACBkZGRoYwHRER9wS7SHMgsAOKMOg7s3hqiduxRsIEmEUNZHiVDbW1WSMjGUCAWQIImIwkoMCcQRNIBihzoggEeNn4IgTUgXwvCyQBFwkvL282JAGhAF5eiAq3KIiWAF4ZXrBAiIAxWAUvlxufmpOgpKmVmbwCSMBDTJonSErJ2tpaw9Uv2pwhzkPMjU83UMVeRVU4Nh6oIs7WQYzfH2RGjCPYjGCT0NBQ/whe3nA3OXNzH1kA9J8oLkocifUAAAAASUVORK5CYII=";
   this.checked = false;
   return;
 }
 
+//if (!isOnTheRight()) return;
 for (var i = 0; i < sides.length; i++) {
   apc.parentNode.insertBefore($(sides[i]), apc.nextSibling);
 }
 
+setPref(true);
 //this.setAttribute("cb-stdicon", "custombuttons-stdicon-2");
-this.image = "data:image/png;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACDenv/9PPz//Hw8P/v7u7/7Ovr/+rp6f/n5+f/5eTk/+Hh4f/f3t7/0X9C/8h/Uv+9c0r/q1w+/6tcPv+gRCL/tqmp//7+/v///////////1eWUf+cv43//////+Xl5f//////5eXl/+KtgP/v7PH/7ert/+ji5v/n5uz/oEQi/7apqf/+/v7//////ymqKf8quSb/k/CH/////////////////+Xl5f/irYD/8Ojo/+/m5v/q3d3/6ODi/7NuVv+2qan//v7+/yKbIf8H0gf/D98P/zLBL/9go1j/bplm/2KhW/9Tqk7/V6hT/2mcYv+cv43/6+Dg/+ri5f+za1L/sqio/yyDK/8AtQD/AN4A/wTnBP8h9iT/IfYl/yL2J/8n8yj/KPge/yX9FP8x8ib/bOh4/+zj5f/r5ej/s2tT/66kpP/+/v7/IJwg/w3ODP8S3RD/Jcsg/0C5Of9JsUb/PrRD/y64Qv8ptkn/aZxi/5y/jf/y7e3/8vH0/7NsU/+yqKj//v7+//////8uqCz/Krwi/33bbP/////////////////l5eX/5K97//z7+//69/f/9fDw//X09v+zblf/rqSk//7+/v///////////12aSv+cv43/////////////////5eXl/+Wrdv/+/v7//Pz8//b09P/29/v/smND/7apqf/+/v7//////////////////////////////////////+Xl5f/nsX3//v7+//7+/v/39vb/9vT0/7RtU/+yqKj//v7+///////////////////////////////////////l5eX/6bSB//7+/v/+/v7/+vj4//f29v+3cVf/rqSk//7+/v//////////////////////////////////////5eXl/+m3hP/+/v7//v7+//z8/P/6+Pj/uXJZ/6qiov/+/v7//////////////////////////////////////+Xl5f/ruYT//v7+//7+/v/+/v7//Pz8/7p1XP+Lg4P/xMTE/8fHx//Nzc3/1tbW/9bW1v+XkpL/lpGR/5eRkf+VkJD/67mB//339P/99fL/9+zq//fx8f+7c1j/k42O/83Nzf/W1tb/5eXl/+Xl5f/l5eX/k42O/wAAAAAAAAAAAAAAAOynXf/9g1D//XpH//1nNv/8Zzj/uUId/5ONjv/W1tb/5eXl/+Xl5f/l5eX/5eXl/5ONjv8AAAAAAAAAAAAAAADrnkj//VQS//1HCf/9LQD//SsA/7QmBv8AAAAAiIeH/4iHh/+Ih4f/iIeH/4iHh/8AAAAAAAAAAAAAAAAAAAAA6KZl/8l/Uf++c0r/wDIF/7guBP+zXUT/AACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQHArEEBwKxBg8CsQQ==";
+this.image = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABI1BMVEVISEssLjdcdbqCues4aP3Nzc1DY7JlpuiHh4ikpK7n5u0HOMQm8jHx8PNinGns5ucivCpDtD58ruMP3w8ALf309/3i4eodQrn+/v5GsUke+Ch46Gzr7PTe3t9RllcMzg0gnCAELrgo8ydYcrpZomEvwTJJtil+seUE5wSCtek4Z/zFxcUSVP1TqFdEXrRdp+zs8PiDg4uioqoqqStRf8g5uUAQ3RLl5eVUbbMFMsAgyyUl9iFXcbfx7O+OjZNmmW7o4+gmuSpCuC5Qg/12q+UA3gCNv5wAK/3p6fA2Z/319fb79/bh4eGoqLQAtQAiRKD4+PpOqlMU/SVCf9Fs230+XKtInuvu7u97eoPW1tZKml0rgyyH8JMH0geAreIhmyIGJrS/NAP1AAAAAnRSTlOBXtjYGMEAAADBSURBVBiVVczXFsFAEIDh1evqovfeji6IXiKiRQmiv/9T2A0O/ou5+M7MACBBqVFAEmroKiqAgUQJncfEZsvuPyAoOo70VD7MA5wgKDKZYgR6C3YZIJ3vSlI8f0AT4dBMfWHRYrl/qLNIEj+gnLGscyTCiX5tQMhZMJRNOxGgF3L4JBioNasu8yBuoLUQbZyX4yRFUWH3Ru8hGHxyv1pj0W50nTPQBHMTf/Qv+MfKSPTaN+Cbk6SfPkB4XPE8X9k+AS/LJ4dKnvt+AAAAAElFTkSuQmCC";
 this.tooltipText = "Move Sidebar to the left";
-this.checked = true;]]></code>
+this.checked = true;
+
+]]></code>
   <accelkey><![CDATA[]]></accelkey>
   <help><![CDATA[]]></help>
   <attributes/>

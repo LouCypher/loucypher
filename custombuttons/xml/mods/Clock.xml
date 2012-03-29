@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custombutton xmlns:cb="http://xsms.nm.ru/custombuttons/"
+              xmlns:html="http://www.w3.org/1999/xhtml">
+  <html:head>
+    <html:title><![CDATA[Clock]]></html:title>
+    <html:link rel="shortcut icon" href=""/>
+    <html:style type="text/css"><![CDATA[body { font-size: medium; margin: 0; }
+body, code:before, help:before, initcode:before {
+  font-family: "Verdana", sans-serif;
+}
+#wrapper { position: fixed; top: 1em; right: 1em; text-align: center; }
+p { font-size: small; text-align: center; }
+#button {
+  background-color: rgb(85, 168, 2);
+  background-image: linear-gradient(to bottom, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -moz-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -o-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -webkit-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  border: 1px solid rgb(58, 116, 4);
+  border-radius: .5em;
+  -moz-border-radius: .5em;
+  -webkit-border-radius: .5em;
+  padding: 0;
+  margin-bottom: 1em;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+}
+#button a {
+  color: #000;
+  text-shadow: -1pt -1px 0pt rgba(255, 255, 255, .5);
+  padding: 1em;
+  text-decoration: none;
+}
+#button a, code, code:before, initcode, initcode:before, help, help:before {
+  display: block;
+}
+#credits { position: fixed; bottom: 1em; right: 1em; font-size: small; }
+custombutton { background-color: rgb(171, 171, 171); margin: 1em; }
+date, image, mode, accelkey { display: none; }
+name { font-weight: bold; font-size: x-large; }
+code:before, help:before, initcode:before {
+  font-weight: bold;
+  font-size: large;
+  margin: 0 0 1em;
+  padding: .5em;
+}
+code:before { content: "CODE"; }
+help:before { content: "Help"; }
+initcode:before { content: "Initialization Code"; }
+code, initcode, help {
+  background-color: rgb(255, 255, 255);
+  border: 1px inset rgb(170, 170, 170);
+  font: medium monospace;
+  margin: 1em 1em 2em 0;
+  padding: 1em;
+  text-align: left;
+  width: 840px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.clear { clear: both; }
+]]></html:style>
+  </html:head>
+  <html:body>
+    <html:div id="wrapper">
+      <html:div id="button">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EClock%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bcustombuttons-stdicon-1%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5Bfunction%20CanvasPixelPrinter%28canvas%29%20%7B%0A%20%20this.init%28canvas%29%3B%0A%7D%0A%0ACanvasPixelPrinter.prototype%20%3D%20%7B%0A%20%20canvas%3A%20null%2C%0A%20%20font%3A%20null%2C%0A%20%20_context%3A%20null%2C%0A%0A%20%20get%20context%28%29%20%7B%0A%20%20%20%20if%20%28%21this._context%29%20%7B%0A%20%20%20%20%20%20if%20%28this.canvas%29%0A%20%20%20%20%20%20%20%20this._context%20%3D%20this.canvas.getContext%28%222d%22%29%3B%0A%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20throw%28%22SimpleCanvas%20error%3A%20no%20canvas%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20return%20this._context%3B%0A%20%20%7D%2C%0A%0A%20%20init%3A%20function%28canvas%2C%20font%29%20%7B%0A%20%20%20%20if%20%28typeof%28canvas%29%20%3D%3D%20%22string%22%29%0A%20%20%20%20%20%20this.canvas%20%3D%20document.getElementById%28canvas%29%3B%0A%20%20%20%20else%0A%20%20%20%20%20%20this.canvas%20%3D%20canvas%3B%0A%20%20%7D%2C%0A%0A%20%20putch%3A%20function%28ch%29%20%7B%0A%20%20%20%20if%20%28this.font%20%26%26%20this.font%20%5Bch%5D%29%20%7B%0A%20%20%20%20%20%20var%20chr%20%3D%20this.font%20%5Bch%5D%3B%0A%20%20%20%20%20%20var%20chw%20%3D%20chr%20%5B0%5D%3B%0A%20%20%20%20%20%20var%20chh%20%3D%20chr%20%5B1%5D%3B%0A%20%20%20%20%20%20var%20i%2C%20j%2C%20k%3B%0A%20%20%20%20%20%20var%20line%2C%20cbit%3B%0A%20%20%20%20%20%20this.context.save%28%29%3B%0A%20%20%20%20%20%20for%20%28i%20%3D%200%3B%20i%20%3C%20chh%3B%20i++%29%20%7B%0A%20%20%20%20%20%20%20%20this.context.save%28%29%3B%0A%20%20%20%20%20%20%20%20this.context.translate%28chw%2C%200%29%3B%0A%20%20%20%20%20%20%20%20line%20%3D%20chr%20%5Bi%20+%202%5D%3B%0A%20%20%20%20%20%20%20%20for%20%28j%20%3D%200%3B%20j%20%3C%20chw%3B%20j++%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20this.context.translate%28-1%2C%200%29%3B%0A%20%20%20%20%20%20%20%20%20%20cbit%20%3D%20line%20%26%201%3B%0A%20%20%20%20%20%20%20%20%20%20line%20%3E%3E%3D%201%3B%0A%20%20%20%20%20%20%20%20%20%20if%20%28cbit%29%20this.context.fillRect%280%2C%200%2C%201%2C%201%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20this.context.restore%28%29%3B%0A%20%20%20%20%20%20%20%20this.context.translate%280%2C%201%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20this.context.restore%28%29%3B%0A%20%20%20%20%20%20this.context.translate%28chw%20+%201%2C%200%29%3B%0A%20%20%20%20%7D%0A%20%20%7D%2C%0A%0A%20%20print%3A%20function%28str%29%20%7B%0A%20%20%20%20this.context.save%28%29%3B%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20str.length%3B%20i++%29%20this.putch%28str.charAt%28i%29%29%3B%0A%20%20%20%20this.context.restore%28%29%3B%0A%20%20%7D%0A%7D%0A%0Afunction%20DigitalClock%28canvas%2C%20showSeconds%29%20%7B%0A%20%20this.showSeconds%20%3D%20showSeconds%3B%0A%20%20this.init%28canvas%29%3B%0A%7D%0A%0ADigitalClock.prototype%20%3D%20%7B%0A%20%20displayColor%3A%20%22black%22%2C%0A%20%20displayBackground%3A%20%22-moz-dialog%22%2C%0A%20%20displayBorderColor%3A%20%22transparent%22%2C%0A%20%20canvasBackground%3A%20%22transparent%22%2C%0A%20%20width%3A%2033%2C%0A%20%20height%3A%2016%2C%0A%20%20button%3A%20null%2C%0A%20%20_showSeconds%3A%20false%2C%0A%0A%20%20set%20showSeconds%28val%29%20%7B%0A%20%20%20%20this._showSeconds%20%3D%20val%3B%0A%20%20%20%20if%20%28val%29%20this.width%20%3D%2049%3B%0A%20%20%20%20else%20this.widht%20%3D%2033%3B%0A%20%20%7D%2C%0A%0A%20%20get%20showSeconds%28%29%20%7B%0A%20%20%20%20return%20this._showSeconds%3B%0A%20%20%7D%2C%0A%0A%20%20font%3A%20%7B%0A%20%20%20%20%220%22%3A%20%5B5%2C%208%2C%200x0E%2C%200x11%2C%200x11%2C%200x11%2C%200x11%2C%200x11%2C%200x11%2C%200x0E%5D%2C%0A%20%20%20%20%221%22%3A%20%5B5%2C%209%2C%200x02%2C%200x06%2C%200x0A%2C%200x12%2C%200x02%2C%200x02%2C%200x02%2C%200x02%5D%2C%0A%20%20%20%20%222%22%3A%20%5B5%2C%209%2C%200x0E%2C%200x11%2C%200x01%2C%200x02%2C%200x04%2C%200x08%2C%200x10%2C%200x1F%5D%2C%0A%20%20%20%20%223%22%3A%20%5B5%2C%209%2C%200x0E%2C%200x11%2C%200x01%2C%200x06%2C%200x01%2C%200x01%2C%200x11%2C%200x0E%5D%2C%0A%20%20%20%20%224%22%3A%20%5B5%2C%209%2C%200x02%2C%200x06%2C%200x0A%2C%200x12%2C%200x1F%2C%200x02%2C%200x02%2C%200x02%5D%2C%0A%20%20%20%20%225%22%3A%20%5B5%2C%209%2C%200x1F%2C%200x10%2C%200x10%2C%200x1E%2C%200x01%2C%200x01%2C%200x11%2C%200x0E%5D%2C%0A%20%20%20%20%226%22%3A%20%5B5%2C%209%2C%200x0E%2C%200x11%2C%200x10%2C%200x1E%2C%200x11%2C%200x11%2C%200x11%2C%200x0E%5D%2C%0A%20%20%20%20%227%22%3A%20%5B5%2C%209%2C%200x1F%2C%200x01%2C%200x01%2C%200x02%2C%200x04%2C%200x04%2C%200x04%2C%200x04%5D%2C%0A%20%20%20%20%228%22%3A%20%5B5%2C%209%2C%200x0E%2C%200x11%2C%200x11%2C%200x0E%2C%200x11%2C%200x11%2C%200x11%2C%200x0E%5D%2C%0A%20%20%20%20%229%22%3A%20%5B5%2C%209%2C%200x0E%2C%200x11%2C%200x11%2C%200x11%2C%200x0F%2C%200x01%2C%200x11%2C%200x0E%5D%2C%0A%20%20%20%20%22%3A%22%3A%20%5B3%2C%209%2C%200x00%2C%200x02%2C%200x02%2C%200x00%2C%200x00%2C%200x02%2C%200x02%2C%200x00%5D%0A%20%20%7D%2C%0A%0A%20%20init%3A%20function%28canvas%29%20%7B%0A%20%20%20%20this.__super.prototype.init.apply%28this%2C%20%5Bcanvas%5D%29%3B%0A%20%20%20%20this.context.translate%2820%2C%2020%29%3B%0A%20%20%7D%2C%0A%0A%20%20fixmod%3A%20function%28str%2C%20len%29%20%7B%0A%20%20%20%20while%20%28%28str.length%20%25%20len%29%20%21%3D%200%29%0A%20%20%20%20%20%20str%20%3D%20%220%22%20+%20str%3B%0A%20%20%20%20return%20str%3B%0A%20%20%7D%2C%0A%0A%20%20drawBorder%3A%20function%28%29%20%7B%0A%20%20%20%20this.context.save%28%29%3B%0A%20%20%20%20this.context.fillStyle%20%3D%20this.displayBorderColor%3B%0A%20%20%20%20this.context.fillRect%280%2C%201%2C%201%2C%20this.height%20-%202%29%3B%0A%20%20%20%20this.context.fillRect%281%2C%200%2C%20this.width%20-%202%2C%201%29%3B%0A%20%20%20%20this.context.fillRect%28this.width%20-%201%2C%201%2C%201%2C%20this.height%20-%202%29%3B%0A%20%20%20%20this.context.fillRect%281%2C%20this.height%20-%201%2C%20this.width%20-%202%2C%201%29%3B%0A%20%20%20%20this.context.restore%28%29%3B%0A%20%20%7D%2C%0A%0A%20%20getTimeString%3A%20function%28%29%20%7B%0A%20%20%20%20var%20date%20%3D%20new%20Date%28%29%3B%0A%20%20%20%20var%20h%20%3D%20this.fixmod%28date.getHours%28%29.toString%28%29%2C%202%29%3B%0A%20%20%20%20var%20m%20%3D%20this.fixmod%28date.getMinutes%28%29.toString%28%29%2C%202%29%3B%0A%20%20%20%20var%20res%20%3D%20h%20+%20%22%3A%22%20+%20m%3B%0A%20%20%20%20if%20%28this.showSeconds%29%20%7B%0A%20%20%20%20%20%20var%20s%20%3D%20this.fixmod%28date.getSeconds%28%29.toString%28%29%2C%202%29%3B%0A%20%20%20%20%20%20res%20+%3D%20%22%3A%22%20+%20s%3B%0A%20%20%20%20%7D%0A%20%20%20%20return%20res%3B%0A%20%20%7D%2C%0A%0A%20%20tick%3A%20function%28%29%20%7B%0A%20%20%20%20this.context.save%28%29%3B%0A%20%20%20%20this.context.scale%281%2C%201%29%3B%0A%20%20%20%20this.context.fillStyle%20%3D%20this.canvasBackground%3B%0A%20%20%20%20this.context.fillRect%280%2C%200%2C%20this.width%2C%20this.height%29%3B%0A%20%20%20%20this.context.fillStyle%20%3D%20this.displayBackground%3B%0A%20%20%20%20this.context.fillRect%281%2C%201%2C%20this.width%20-%202%2C%20this.height%20-%201%29%3B%0A%20%20%20%20this.drawBorder%28%29%3B%0A%20%20%20%20this.context.fillStyle%20%3D%20this.displayColor%3B%0A%20%20%20%20this.context.translate%283%2C%204%29%3B%0A%20%20%20%20var%20date%20%3D%20new%20Date%28%29%3B%0A%20%20%20%20var%20h%20%3D%20this.fixmod%28date.getHours%28%29.toString%28%29%2C%202%29%3B%0A%20%20%20%20var%20m%20%3D%20this.fixmod%28date.getMinutes%28%29.toString%28%29%2C%202%29%3B%0A%20%20%20%20var%20s%20%3D%20this.fixmod%28date.getSeconds%28%29.toString%28%29%2C%202%29%3B%0A%20%20%20%20this.print%28this.getTimeString%28%29%29%3B%0A%20%20%20%20this.context.restore%28%29%3B%0A%20%20%20%20this.button.setAttribute%28%22tooltiptext%22%2C%20this.getTime%28%22tooltip%22%29%29%3B%0A%20%20%7D%2C%0A%0A%20%20getTime%3A%20function%28mode%29%20%7B%0A%20%20%20%20var%20d%20%3D%20new%20Date%28%29%3B%0A%20%20%20%20/*%0A%20%20%20%20var%20p%20%3D%20%28d.getHours%28%29%20%3C%2012%29%20%3F%20%22AM%22%3A%20%22PM%22%3B%0A%20%20%20%20var%20time%20%3D%20d.toLocaleFormat%28%22%25I%3A%25M%20%22%29%20+%20p%3B%0A%20%20%20%20var%20date%20%3D%20d.toLocaleFormat%28%22%25A%2C%20%25B%20%25d%2C%20%25Y%22%29%3B%0A%20%20%20%20var%20res%20%3D%20%28mode%20%3D%3D%20%22tooltip%22%29%20%3F%20%28date%20+%20%22%5Cn%22%20+%20time%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20%28date%20+%20%22%20%22%20+%20time%29%3B%0A%20%20%20%20return%20res%3B%0A%20%20%20%20*/%0A%20%20%20%20var%20time%20%3D%20d.toLocaleFormat%28%22%25H%3A%25M%20%22%29%3B%0A%20%20%20%20var%20date%20%3D%20d.toLocaleFormat%28%22%25A%2C%20%25d%20%25B%20%25Y%22%29%3B%0A%20%20%20%20return%20%28mode%20%3D%3D%20%22tooltip%22%29%20%3F%20date%20%3A%20%28date%20+%20%22%20%22%20+%20time%29%3B%0A%20%20%7D%2C%0A%0A%20%20QueryInterface%3A%20function%28iid%29%20%7B%0A%20%20%20%20if%20%28iid.equals%28Components.interfaces.nsISupports%29%20%7C%7C%0A%20%20%20%20%20%20iid.equals%28Components.interfaces.nsITimerCallback%29%29%0A%20%20%20%20%20%20return%20this%3B%0A%20%20%20%20return%20Components.results.NS_ERROR_NO_INTERFACE%3B%0A%20%20%7D%2C%0A%0A%20%20notify%3A%20function%28oTimer%29%20%7B%0A%20%20%20%20this.tick%28%29%3B%0A%20%20%7D%2C%0A%0A%20%20oTimer%3A%20null%2C%0A%20%20start%3A%20function%28%29%20%7B%0A%20%20%20%20if%20%28this.oTimer%29%20this.stopTimer%28%29%3B%0A%20%20%20%20this.oTimer%20%3D%20Components.classes%20%5B%22@mozilla.org/timer%3B1%22%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.createInstance%28Components.interfaces.nsITimer%29%3B%0A%20%20%20%20this.oTimer.initWithCallback%28this%2C%201000%2C%201%29%3B%09%09%09%0A%20%20%7D%0A%7D%0A%0ADigitalClock.prototype.__proto__%20%3D%20CanvasPixelPrinter.prototype%3B%0ADigitalClock.prototype.__super%20%3D%20CanvasPixelPrinter%3B%0Athis.htmlNS%20%3D%20%22http%3A//www.w3.org/1999/xhtml%22%3B%0Athis.xulNS%20%3D%20%22http%3A//www.mozilla.org/keymaster/gatekeeper/there.is.only.xul%22%3B%0Avar%20canvas%20%3D%20this.getElementsByTagNameNS%28this.htmlNS%2C%20%22canvas%22%29%20%5B0%5D%3B%0Aif%20%28%21canvas%29%20%7B%0A%20%20var%20canvas%20%3D%20document.createElementNS%28this.htmlNS%2C%20%22canvas%22%29%3B%0A%20%20this.clock%20%3D%20new%20DigitalClock%28canvas%2C%20false%29%3B%0A%20%20this.clock%20%5B%22button%22%5D%20%3D%20this%3B%0A%20%20canvas.setAttribute%28%22width%22%2C%20this.clock.width%29%3B%0A%20%20canvas.setAttribute%28%22height%22%2C%20this.clock.height%29%3B%0A%20%20canvas.setAttribute%28%22style%22%2C%20%22width%3A%20%22%20+%20%28this.clock.width%20+%206%29%20+%20%22px%3B%20%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22min-width%3A%20%22%20+%20this.clock.width%20+%20%22px%3B%20%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22max-width%3A%20%22%20+%20%28this.clock.width%20+%206%29%20+%20%22px%3B%20%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22height%3A%20%22%20+%20%28this.clock.height%20+%201%29%20+%20%22px%3B%20%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22min-height%3A%20%22%20+%20this.clock.height%20+%20%22px%3B%20%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22max-height%3A%20%22%20+%20%28this.clock.height%20+%201%29%20+%20%22px%3B%20%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22margin%3A%200%20.5em%3B%22%29%3B%0A%20%20this.image%20%3D%20%22data%3A%22%3B%0A%20%20this.setAttribute%28%22class%22%2C%20%22%22%29%3B%0A%20%20canvas%20%3D%20this.appendChild%28canvas%29%3B%0A%20%20var%20pn%20%3D%20this.parentNode%3B%0A%20%20var%20ns%20%3D%20this.nextSibling%3B%0A%20%20var%20button%20%3D%20pn.removeChild%28this%29%3B%0A%20%20if%20%28ns%29%20pn.insertBefore%28button%2C%20ns%29%3B%0A%20%20else%20pn.appendChild%28button%29%3B%0A%7D%0A%0Athis.clock.start%28%29%3B%0A%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5B//%20Copy%20current%20time%20to%20clipboard%0Acbu.gClipboard.write%28this.clock.getTime%28%22%22%29%29%3B%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install Clock">
+        <![CDATA[Install this button]]>
+        </html:a>
+      </html:div>
+      <html:a href="https://addons.mozilla.org/addon/custom-buttons/?src=custom-buttons-xml">
+        <![CDATA[What's this?]]>
+      </html:a>
+      <html:div id="credits">
+        <html:a href="http://custombuttons.sourceforge.net/forum/viewtopic.php?t=78#p197">
+          <![CDATA[Custom Buttons XML]]><html:br/><![CDATA[Exporter/Importer]]>
+        </html:a>
+      </html:div>
+    </html:div>
+  </html:body>
+  <date id="date" value="20120329"/>
+  <name>Clock</name>
+  <image><![CDATA[custombuttons-stdicon-1]]></image>
+  <mode>0</mode>
+  <initcode><![CDATA[function CanvasPixelPrinter(canvas) {
+  this.init(canvas);
+}
+
+CanvasPixelPrinter.prototype = {
+  canvas: null,
+  font: null,
+  _context: null,
+
+  get context() {
+    if (!this._context) {
+      if (this.canvas)
+        this._context = this.canvas.getContext("2d");
+      else
+        throw("SimpleCanvas error: no canvas");
+    }
+    return this._context;
+  },
+
+  init: function(canvas, font) {
+    if (typeof(canvas) == "string")
+      this.canvas = document.getElementById(canvas);
+    else
+      this.canvas = canvas;
+  },
+
+  putch: function(ch) {
+    if (this.font && this.font [ch]) {
+      var chr = this.font [ch];
+      var chw = chr [0];
+      var chh = chr [1];
+      var i, j, k;
+      var line, cbit;
+      this.context.save();
+      for (i = 0; i < chh; i++) {
+        this.context.save();
+        this.context.translate(chw, 0);
+        line = chr [i + 2];
+        for (j = 0; j < chw; j++) {
+          this.context.translate(-1, 0);
+          cbit = line & 1;
+          line >>= 1;
+          if (cbit) this.context.fillRect(0, 0, 1, 1);
+        }
+        this.context.restore();
+        this.context.translate(0, 1);
+      }
+      this.context.restore();
+      this.context.translate(chw + 1, 0);
+    }
+  },
+
+  print: function(str) {
+    this.context.save();
+    for (var i = 0; i < str.length; i++) this.putch(str.charAt(i));
+    this.context.restore();
+  }
+}
+
+function DigitalClock(canvas, showSeconds) {
+  this.showSeconds = showSeconds;
+  this.init(canvas);
+}
+
+DigitalClock.prototype = {
+  displayColor: "black",
+  displayBackground: "-moz-dialog",
+  displayBorderColor: "transparent",
+  canvasBackground: "transparent",
+  width: 33,
+  height: 16,
+  button: null,
+  _showSeconds: false,
+
+  set showSeconds(val) {
+    this._showSeconds = val;
+    if (val) this.width = 49;
+    else this.widht = 33;
+  },
+
+  get showSeconds() {
+    return this._showSeconds;
+  },
+
+  font: {
+    "0": [5, 8, 0x0E, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x0E],
+    "1": [5, 9, 0x02, 0x06, 0x0A, 0x12, 0x02, 0x02, 0x02, 0x02],
+    "2": [5, 9, 0x0E, 0x11, 0x01, 0x02, 0x04, 0x08, 0x10, 0x1F],
+    "3": [5, 9, 0x0E, 0x11, 0x01, 0x06, 0x01, 0x01, 0x11, 0x0E],
+    "4": [5, 9, 0x02, 0x06, 0x0A, 0x12, 0x1F, 0x02, 0x02, 0x02],
+    "5": [5, 9, 0x1F, 0x10, 0x10, 0x1E, 0x01, 0x01, 0x11, 0x0E],
+    "6": [5, 9, 0x0E, 0x11, 0x10, 0x1E, 0x11, 0x11, 0x11, 0x0E],
+    "7": [5, 9, 0x1F, 0x01, 0x01, 0x02, 0x04, 0x04, 0x04, 0x04],
+    "8": [5, 9, 0x0E, 0x11, 0x11, 0x0E, 0x11, 0x11, 0x11, 0x0E],
+    "9": [5, 9, 0x0E, 0x11, 0x11, 0x11, 0x0F, 0x01, 0x11, 0x0E],
+    ":": [3, 9, 0x00, 0x02, 0x02, 0x00, 0x00, 0x02, 0x02, 0x00]
+  },
+
+  init: function(canvas) {
+    this.__super.prototype.init.apply(this, [canvas]);
+    this.context.translate(20, 20);
+  },
+
+  fixmod: function(str, len) {
+    while ((str.length % len) != 0)
+      str = "0" + str;
+    return str;
+  },
+
+  drawBorder: function() {
+    this.context.save();
+    this.context.fillStyle = this.displayBorderColor;
+    this.context.fillRect(0, 1, 1, this.height - 2);
+    this.context.fillRect(1, 0, this.width - 2, 1);
+    this.context.fillRect(this.width - 1, 1, 1, this.height - 2);
+    this.context.fillRect(1, this.height - 1, this.width - 2, 1);
+    this.context.restore();
+  },
+
+  getTimeString: function() {
+    var date = new Date();
+    var h = this.fixmod(date.getHours().toString(), 2);
+    var m = this.fixmod(date.getMinutes().toString(), 2);
+    var res = h + ":" + m;
+    if (this.showSeconds) {
+      var s = this.fixmod(date.getSeconds().toString(), 2);
+      res += ":" + s;
+    }
+    return res;
+  },
+
+  tick: function() {
+    this.context.save();
+    this.context.scale(1, 1);
+    this.context.fillStyle = this.canvasBackground;
+    this.context.fillRect(0, 0, this.width, this.height);
+    this.context.fillStyle = this.displayBackground;
+    this.context.fillRect(1, 1, this.width - 2, this.height - 1);
+    this.drawBorder();
+    this.context.fillStyle = this.displayColor;
+    this.context.translate(3, 4);
+    var date = new Date();
+    var h = this.fixmod(date.getHours().toString(), 2);
+    var m = this.fixmod(date.getMinutes().toString(), 2);
+    var s = this.fixmod(date.getSeconds().toString(), 2);
+    this.print(this.getTimeString());
+    this.context.restore();
+    this.button.setAttribute("tooltiptext", this.getTime("tooltip"));
+  },
+
+  getTime: function(mode) {
+    var d = new Date();
+    /*
+    var p = (d.getHours() < 12) ? "AM": "PM";
+    var time = d.toLocaleFormat("%I:%M ") + p;
+    var date = d.toLocaleFormat("%A, %B %d, %Y");
+    var res = (mode == "tooltip") ? (date + "\n" + time)
+                                  : (date + " " + time);
+    return res;
+    */
+    var time = d.toLocaleFormat("%H:%M ");
+    var date = d.toLocaleFormat("%A, %d %B %Y");
+    return (mode == "tooltip") ? date : (date + " " + time);
+  },
+
+  QueryInterface: function(iid) {
+    if (iid.equals(Components.interfaces.nsISupports) ||
+      iid.equals(Components.interfaces.nsITimerCallback))
+      return this;
+    return Components.results.NS_ERROR_NO_INTERFACE;
+  },
+
+  notify: function(oTimer) {
+    this.tick();
+  },
+
+  oTimer: null,
+  start: function() {
+    if (this.oTimer) this.stopTimer();
+    this.oTimer = Components.classes ["@mozilla.org/timer;1"]
+                            .createInstance(Components.interfaces.nsITimer);
+    this.oTimer.initWithCallback(this, 1000, 1);			
+  }
+}
+
+DigitalClock.prototype.__proto__ = CanvasPixelPrinter.prototype;
+DigitalClock.prototype.__super = CanvasPixelPrinter;
+this.htmlNS = "http://www.w3.org/1999/xhtml";
+this.xulNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+var canvas = this.getElementsByTagNameNS(this.htmlNS, "canvas") [0];
+if (!canvas) {
+  var canvas = document.createElementNS(this.htmlNS, "canvas");
+  this.clock = new DigitalClock(canvas, false);
+  this.clock ["button"] = this;
+  canvas.setAttribute("width", this.clock.width);
+  canvas.setAttribute("height", this.clock.height);
+  canvas.setAttribute("style", "width: " + (this.clock.width + 6) + "px; " +
+                               "min-width: " + this.clock.width + "px; " +
+                               "max-width: " + (this.clock.width + 6) + "px; " +
+                               "height: " + (this.clock.height + 1) + "px; " +
+                               "min-height: " + this.clock.height + "px; " +
+                               "max-height: " + (this.clock.height + 1) + "px; " +
+                               "margin: 0 .5em;");
+  this.image = "data:";
+  this.setAttribute("class", "");
+  canvas = this.appendChild(canvas);
+  var pn = this.parentNode;
+  var ns = this.nextSibling;
+  var button = pn.removeChild(this);
+  if (ns) pn.insertBefore(button, ns);
+  else pn.appendChild(button);
+}
+
+this.clock.start();
+]]></initcode>
+  <code><![CDATA[// Copy current time to clipboard
+cbu.gClipboard.write(this.clock.getTime(""));
+]]></code>
+  <accelkey><![CDATA[]]></accelkey>
+  <help><![CDATA[]]></help>
+  <attributes/>
+</custombutton>

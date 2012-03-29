@@ -29,7 +29,7 @@ p { font-size: small; text-align: center; }
 }
 #credits { position: fixed; bottom: 1em; right: 1em; font-size: small; }
 custombutton { background-color: rgb(171, 171, 171); margin: 1em; }
-image, mode, accelkey { display: none; }
+date, image, mode, accelkey { display: none; }
 name { font-weight: bold; font-size: x-large; }
 code:before, help:before, initcode:before {
   font-weight: bold;
@@ -61,7 +61,7 @@ code, initcode, help {
         <![CDATA[Install this button]]>
         </html:a>
       </html:div>
-      <html:a href="https://addons.mozilla.org/addon/custom-buttons/">
+      <html:a href="https://addons.mozilla.org/addon/custom-buttons/?src=custom-buttons-xml">
         <![CDATA[What's this?]]>
       </html:a>
       <html:div id="credits">
