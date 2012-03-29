@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custombutton xmlns:cb="http://xsms.nm.ru/custombuttons/"
+              xmlns:html="http://www.w3.org/1999/xhtml">
+  <html:head>
+    <html:title><![CDATA[Strikeout!]]></html:title>
+    <html:link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACfSURBVCjPY/jPgB8yUFNBiWDBzOy01PKEmZG7sSrIe5dVDqIjygP/Y1GQm5b2P7kDwvbAZkK6S8L/6P8hM32N/zPYu2C1InJ36P/A/x7/bc+YoSooLy3/D4Px/23+SyC5G8kEf0EIbZSmfdfov9wZDCvc0uzLYWyZ/2J3MRTYppn/14eaIvKOvxxDgUma7ju1M/LlkmnC5bwdNIoL7BAAWzr8P9A5d4gAAAAASUVORK5CYII="/>
+    <html:style type="text/css"><![CDATA[body { font-size: medium; margin: 0; }
+body, code:before, help:before, initcode:before {
+  font-family: "Verdana", sans-serif;
+}
+#wrapper { position: fixed; top: 1em; right: 1em; text-align: center; }
+p { font-size: small; text-align: center; }
+#button {
+  background-color: rgb(85, 168, 2);
+  background-image: linear-gradient(to bottom, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -moz-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -o-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -webkit-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  border: 1px solid rgb(58, 116, 4);
+  border-radius: .5em;
+  -moz-border-radius: .5em;
+  -webkit-border-radius: .5em;
+  padding: 0;
+  margin-bottom: 1em;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+}
+#button a {
+  color: #000;
+  text-shadow: -1pt -1px 0pt rgba(255, 255, 255, .5);
+  padding: 1em;
+  text-decoration: none;
+}
+#button a, code, code:before, initcode, initcode:before, help, help:before {
+  display: block;
+}
+#credits { position: fixed; bottom: 1em; right: 1em; font-size: small; }
+custombutton { background-color: rgb(171, 171, 171); margin: 1em; }
+date, image, mode, accelkey { display: none; }
+name { font-weight: bold; font-size: x-large; }
+code:before, help:before, initcode:before {
+  font-weight: bold;
+  font-size: large;
+  margin: 0 0 1em;
+  padding: .5em;
+}
+code:before { content: "CODE"; }
+help:before { content: "Help"; }
+initcode:before { content: "Initialization Code"; }
+code, initcode, help {
+  background-color: rgb(255, 255, 255);
+  border: 1px inset rgb(170, 170, 170);
+  font: medium monospace;
+  margin: 1em 1em 2em 0;
+  padding: 1em;
+  text-align: left;
+  width: 840px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.clear { clear: both; }
+]]></html:style>
+  </html:head>
+  <html:body>
+    <html:div id="wrapper">
+      <html:div id="button">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EStrikeout%21%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bdata%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACfSURBVCjPY/jPgB8yUFNBiWDBzOy01PKEmZG7sSrIe5dVDqIjygP/Y1GQm5b2P7kDwvbAZkK6S8L/6P8hM32N/zPYu2C1InJ36P/A/x7/bc+YoSooLy3/D4Px/23+SyC5G8kEf0EIbZSmfdfov9wZDCvc0uzLYWyZ/2J3MRTYppn/14eaIvKOvxxDgUma7ju1M/LlkmnC5bwdNIoL7BAAWzr8P9A5d4gAAAAASUVORK5CYII%3D%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5B/*Initialization%20Code*/%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bvar%20text%20%3D%20getSelection%28%29%3B%0Aif%20%28%21text%29%20%7B%0A%20%20alert%28%22No%20text%20selected.%22%29%3B%0A%20%20return%3B%0A%7D%0A%20%0AreplaceText%28convertText%28text%29%29%3B%0A%20%0A//%20Convert%20%27string%27%20to%20%27%20%u0336s%20%u0336t%20%u0336r%20%u0336i%20%u0336n%20%u0336g%20%u0336%27%0Afunction%20convertText%28aText%29%20%7B%0A%20%20if%20%28/%5Cu0336/g.test%28aText%29%29%20%7B%0A%20%20%20%20//%20Convert%20text%20back%20to%20normal%20if%20already%20strikedout%0A%20%20%20%20return%20aText.replace%28/%5Cu0336/g%2C%20%22%22%29%3B%0A%20%20%7D%0A%20%20var%20strikeout%20%3D%20%22%5Cu0336%22%3B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20aText.length%3B%20i++%29%20%7B%0A%20%20%20%20strikeout%20+%3D%20aText%5Bi%5D%20+%20%22%5Cu0336%22%3B%0A%20%20%7D%0A%20%20return%20strikeout%3B%0A%7D%0A%20%0A//%20Replace%20selectedText%20in%20textbox%0Afunction%20replaceText%28aNewText%29%20%7B%0A%20%20var%20textbox%20%3D%20document.commandDispatcher.focusedElement%3B%0A%20%20var%20startPos%20%3D%20textbox.selectionStart%3B%0A%20%20var%20endPos%20%3D%20textbox.selectionEnd%3B%0A%20%20var%20oPosition%20%3D%20textbox.scrollTop%3B%0A%20%20var%20oHeight%20%3D%20textbox.scrollHeight%3B%0A%20%20var%20textBefore%20%3D%20textbox.value.substring%280%2C%20startPos%29%3B%0A%20%20var%20textAfter%20%3D%20textbox.value.substring%28endPos%2C%20textbox.value.length%29%3B%0A%20%20textbox.value%20%3D%20textBefore%20+%20aNewText%20+%20textAfter%3B%0A%20%20textbox.selectionStart%20%3D%20startPos%3B%0A%20%20textbox.selectionEnd%20%3D%20startPos%20+%20aNewText.length%3B%0A%20%20textbox.scrollTop%20%3D%20oPosition%20+%20%28textbox.scrollHeight%20-%20oHeight%29%3B%0A%7D%0A%20%0A//%20Check%20if%20the%20focused%20element%20is%20an%20input%20element%20%28input/textarea%29%0Afunction%20isTextInputNode%28aNode%29%20%7B%0A%20%20try%20%7B%0A%20%20%20%20return%20%28%28aNode%20instanceof%20HTMLInputElement%20%26%26%20aNode.type%20%3D%3D%20%22text%22%29%20%7C%7C%0A%20%20%20%20%20%20%20%20%20%20%20%20aNode%20instanceof%20HTMLTextAreaElement%29%3B%0A%20%20%7D%20catch%28ex%29%20%7B%0A%20%20%20%20return%20false%3B%0A%20%20%7D%0A%7D%0A%20%0A//%20Check%20if%20texts%20are%20selected%20in%20an%20element%0Afunction%20textSelectedInNode%28aNode%29%20%7B%0A%20%20try%20%7B%0A%20%20%20%20return%20%28aNode.selectionStart%20%3C%20aNode.selectionEnd%29%0A%20%20%7D%20catch%28ex%29%20%7B%0A%20%20%20%20return%20false%3B%0A%20%20%7D%0A%7D%0A%20%0A//%20Get%20selected%20text%0Afunction%20getSelection%28aChars%29%20%7B%0A%20%20var%20focusedElement%20%3D%20document.commandDispatcher.focusedElement%3B%0A%20%20var%20selectedText%20%3D%20null%3B%0A%20%0A%20%20//%20get%20text%20selection%20from%20input%20node%0A%20%20if%20%28isTextInputNode%28focusedElement%29%20%26%26%0A%20%20%20%20%20%20textSelectedInNode%28focusedElement%29%29%20%7B%0A%20%20%20%20var%20startPos%20%3D%20focusedElement.selectionStart%3B%0A%20%20%20%20var%20endPos%20%3D%20focusedElement.selectionEnd%3B%0A%20%20%20%20if%20%28aChars%20%26%26%20aChars%20%3C%20endPos%20-%20startPos%29%20%7B%0A%20%20%20%20%20%20endPos%20%3D%20startPos%20+%20%28aChars%20%3C%3D%20150%20%3F%20aChars%20%3A%20150%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20selectedText%20%3D%20focusedElement.value.substring%28startPos%2C%20endPos%29%3B%0A%20%20%7D%0A%20%20return%20selectedText%3B%0A%7D%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install Strikeout!">
+        <![CDATA[Install this button]]>
+        </html:a>
+      </html:div>
+      <html:a href="https://addons.mozilla.org/addon/custom-buttons/?src=custom-buttons-xml">
+        <![CDATA[What's this?]]>
+      </html:a>
+      <html:div id="credits">
+        <html:a href="http://custombuttons.sourceforge.net/forum/viewtopic.php?t=78#p197">
+          <![CDATA[Custom Buttons XML]]><html:br/><![CDATA[Exporter/Importer]]>
+        </html:a>
+      </html:div>
+    </html:div>
+  </html:body>
+  <date id="date" value="20120329"/>
+  <name>Strikeout!</name>
+  <image><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACfSURBVCjPY/jPgB8yUFNBiWDBzOy01PKEmZG7sSrIe5dVDqIjygP/Y1GQm5b2P7kDwvbAZkK6S8L/6P8hM32N/zPYu2C1InJ36P/A/x7/bc+YoSooLy3/D4Px/23+SyC5G8kEf0EIbZSmfdfov9wZDCvc0uzLYWyZ/2J3MRTYppn/14eaIvKOvxxDgUma7ju1M/LlkmnC5bwdNIoL7BAAWzr8P9A5d4gAAAAASUVORK5CYII=]]></image>
+  <mode>0</mode>
+  <initcode><![CDATA[/*Initialization Code*/]]></initcode>
+  <code><![CDATA[var text = getSelection();
+if (!text) {
+  alert("No text selected.");
+  return;
+}
+ 
+replaceText(convertText(text));
+ 
+// Convert 'string' to ' ̶s ̶t ̶r ̶i ̶n ̶g ̶'
+function convertText(aText) {
+  if (/\u0336/g.test(aText)) {
+    // Convert text back to normal if already strikedout
+    return aText.replace(/\u0336/g, "");
+  }
+  var strikeout = "\u0336";
+  for (var i = 0; i < aText.length; i++) {
+    strikeout += aText[i] + "\u0336";
+  }
+  return strikeout;
+}
+ 
+// Replace selectedText in textbox
+function replaceText(aNewText) {
+  var textbox = document.commandDispatcher.focusedElement;
+  var startPos = textbox.selectionStart;
+  var endPos = textbox.selectionEnd;
+  var oPosition = textbox.scrollTop;
+  var oHeight = textbox.scrollHeight;
+  var textBefore = textbox.value.substring(0, startPos);
+  var textAfter = textbox.value.substring(endPos, textbox.value.length);
+  textbox.value = textBefore + aNewText + textAfter;
+  textbox.selectionStart = startPos;
+  textbox.selectionEnd = startPos + aNewText.length;
+  textbox.scrollTop = oPosition + (textbox.scrollHeight - oHeight);
+}
+ 
+// Check if the focused element is an input element (input/textarea)
+function isTextInputNode(aNode) {
+  try {
+    return ((aNode instanceof HTMLInputElement && aNode.type == "text") ||
+            aNode instanceof HTMLTextAreaElement);
+  } catch(ex) {
+    return false;
+  }
+}
+ 
+// Check if texts are selected in an element
+function textSelectedInNode(aNode) {
+  try {
+    return (aNode.selectionStart < aNode.selectionEnd)
+  } catch(ex) {
+    return false;
+  }
+}
+ 
+// Get selected text
+function getSelection(aChars) {
+  var focusedElement = document.commandDispatcher.focusedElement;
+  var selectedText = null;
+ 
+  // get text selection from input node
+  if (isTextInputNode(focusedElement) &&
+      textSelectedInNode(focusedElement)) {
+    var startPos = focusedElement.selectionStart;
+    var endPos = focusedElement.selectionEnd;
+    if (aChars && aChars < endPos - startPos) {
+      endPos = startPos + (aChars <= 150 ? aChars : 150);
+    }
+    selectedText = focusedElement.value.substring(startPos, endPos);
+  }
+  return selectedText;
+}
+]]></code>
+  <accelkey><![CDATA[]]></accelkey>
+  <help><![CDATA[]]></help>
+  <attributes/>
+</custombutton>
