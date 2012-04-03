@@ -1,4 +1,4 @@
-pref("extensions.TweetContext@loucypher.description", "chrome://tweetcontext/locale/tweetContext.properties");
+pref("extensions.TweetContext@loucypher.description", "chrome://tweetcontext/locale/tweetcontext.properties");
 pref("extensions.TweetContext.enableEchofon", false);
 pref("extensions.TweetContext.enableHootBar", false);
 pref("extensions.TweetContext.useAddon", 0);

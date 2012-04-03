@@ -6,10 +6,10 @@
     <em:type>2</em:type>
     <em:unpack>true</em:unpack>
     <em:name>Tweet Context</em:name>
-    <em:version>0.2.2a.20120329.01</em:version>
+    <em:version>0.2.2a.20120404.01</em:version>
     <em:description>Tweet anything from context menu.</em:description>
     <em:creator>LouCypher</em:creator>
-    <em:optionsURL>chrome://tweetcontext/content/options.xul</em:optionsURL>
+    <em:optionsURL>chrome://tweetcontext/content/</em:optionsURL>
     <em:iconURL>chrome://tweetcontext/skin/tweetContext32.png</em:iconURL>
     <em:icon64URL>chrome://tweetcontext/skin/tweetContext64.png</em:icon64URL>
     <em:homepageURL>http://code.google.com/p/loucypher/wiki/TweetContext</em:homepageURL>

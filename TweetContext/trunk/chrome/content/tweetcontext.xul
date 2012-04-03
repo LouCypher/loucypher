@@ -5,7 +5,7 @@
   The contents of this file are subject to the Mozilla Public License
   Version 1.1 (the "License"); you may not use this file except in
   compliance with the License. You may obtain a copy of the License at
-  http://www.mozilla.org/MPL/
+  http://www.mozilla.org/MPL/1.1/
 
   Software distributed under the License is distributed on an "AS IS" basis,
   WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
@@ -35,9 +35,9 @@
 -->
 
 <?xml-stylesheet href="chrome://global/skin/"?>
-<?xml-stylesheet href="../skin/tweetContext.css"?>
+<?xml-stylesheet href="../skin/"?>
 
-<!DOCTYPE overlay SYSTEM "../locale/tweetContext.dtd">
+<!DOCTYPE overlay SYSTEM "../locale/">
 
 <prefwindow
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
@@ -49,15 +49,15 @@
     <preferences>
       <preference id="extensions.TweetContext.https"
                   name="extensions.TweetContext.https"
-                  type="bool" />
+                  type="bool"/>
 
       <preference id="extensions.TweetContext.openInTab"
                   name="extensions.TweetContext.openInTab"
-                  type="bool" />
+                  type="bool"/>
 
       <preference id="extensions.TweetContext.useAddon"
                   name="extensions.TweetContext.useAddon"
-                  type="int" />
+                  type="int"/>
 
     </preferences>
 
@@ -67,13 +67,13 @@
         id="extensions.TweetContext.openInTab-option"
         label="&tweet.options.openTab;"
         accesskey="&tweet.options.openTab.accesskey;"
-        preference="extensions.TweetContext.openInTab" />
+        preference="extensions.TweetContext.openInTab"/>
 
       <checkbox
         id="extensions.TweetContext.https-option"
         label="&tweet.options.https;"
         accesskey="&tweet.options.https.accesskey;"
-        preference="extensions.TweetContext.https" />
+        preference="extensions.TweetContext.https"/>
 
    </groupbox>
 
@@ -88,22 +88,24 @@
                label="&tweet.options.addon.twitter;"
                accesskey="&tweet.options.addon.twitter.accesskey;"
                preference="extensions.TweetContext.useAddon"
-               oncommand="disableTwitter(!this.selected);" />
+               oncommand="disableTwitter(!this.selected);"/>
 
         <hbox flex="1">
           <radio id="echofon" value="1"
             label="&tweet.options.addon.echofon;"
             accesskey="&tweet.options.addon.echofon.accesskey;"
             preference="extensions.TweetContext.useAddon"
-            oncommand="disableTwitter(this.selected);" />
+            oncommand="disableTwitter(this.selected);"/>
           <button id="echofon-options"
                   label="&tweet.options.addon.prefs;"
-                  oncommand="getAddon('twitternotifier@naan.net', openPrefs);" />
+                  oncommand="getAddon('twitternotifier@naan.net',
+ openPrefs);"/>
           <hbox id="tweetcontext-echofon" class="tweetcontext-addon">
             <label value="(&tweet.options.addon.requires; "/>
             <label value="Echofon" class="text-link"
                    onclick="openURL(this.tooltipText); window.close();"
-                   tooltiptext="https://addons.mozilla.org/firefox/addon/echofon-for-twitter/?src=tweetcontext" />
+                   tooltiptext="https://addons.mozilla.org/addon/echofon-
+for-twitter/?src=external-tweetcontext"/>
             <label value=")"/>
           </hbox>
         </hbox>
@@ -113,15 +115,17 @@
             label="&tweet.options.addon.hootbar;"
             accesskey="&tweet.options.addon.hootbar.accesskey;"
             preference="extensions.TweetContext.useAddon"
-            oncommand="disableTwitter(this.selected);" />
+            oncommand="disableTwitter(this.selected);"/>
           <button id="hootbar-options"
                   label="&tweet.options.addon.prefs;"
-                  oncommand="getAddon('{1a0c9ebe-ddf9-4b76-b8a3-675c77874d37}', openPrefs);" />
+                  oncommand="getAddon('{1a0c9ebe-ddf9-4b76-b8a3-
+675c77874d37}', openPrefs);"/>
           <hbox id="tweetcontext-hootbar" class="tweetcontext-addon">
             <label value="(&tweet.options.addon.requires; "/>
             <label value="HootBar" class="text-link"
                    onclick="openURL(this.tooltipText); window.close();"
-                   tooltiptext="https://addons.mozilla.org/firefox/addon/hootbar/?src=tweetcontext" />
+                   tooltiptext="https://addons.mozilla.org/addon/hootbar/
+?src=external-tweetcontext"/>
             <label value=")"/>
           </hbox>
         </hbox>
@@ -131,6 +135,6 @@
 
   </prefpane>
 
-  <script type="application/x-javascript" src="options.js" />
+  <script type="application/x-javascript" src="options.js"/>
 
 </prefwindow>
