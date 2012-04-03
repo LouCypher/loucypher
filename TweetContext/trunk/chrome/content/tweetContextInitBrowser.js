@@ -4,7 +4,7 @@
   The contents of this file are subject to the Mozilla Public License
   Version 1.1 (the "License"); you may not use this file except in
   compliance with the License. You may obtain a copy of the License at
-  http://www.mozilla.org/MPL/
+  http://www.mozilla.org/MPL/1.1/
 
   Software distributed under the License is distributed on an "AS IS" basis,
   WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
@@ -101,9 +101,17 @@ TweetContext.init = {
                                  TweetContext.init.initBookmarkContext,
                                  false);
 
+    let th = document.getElementById("goPopup");
+    (th && !th.hasAttribute("context"))
+        &&  th.setAttribute("context", "historyContext");
+
+    let fh = document.getElementById("appmenu_historyMenupopup");
+    (fh && !fh.hasAttribute("context"))
+        &&  fh.setAttribute("context", "historyContext");
+
     TweetContext.checkAddon("twitternotifier@naan.net", "enableEchofon");
     TweetContext.checkAddon("{1a0c9ebe-ddf9-4b76-b8a3-675c77874d37}",
-                          "enableHootBar");
+                            "enableHootBar");
 
   }
 }

@@ -5,7 +5,7 @@
   The contents of this file are subject to the Mozilla Public License
   Version 1.1 (the "License"); you may not use this file except in
   compliance with the License. You may obtain a copy of the License at
-  http://www.mozilla.org/MPL/
+  http://www.mozilla.org/MPL/1.1/
 
   Software distributed under the License is distributed on an "AS IS" basis,
   WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
@@ -34,36 +34,49 @@
   the terms of any one of the MPL, the GPL or the LGPL.
 -->
 
-<?xml-stylesheet href="../skin/tweetContext.css"?>
+<?xml-stylesheet href="../skin/"?>
 
-<!DOCTYPE overlay SYSTEM "../locale/tweetContext.dtd">
+<!DOCTYPE overlay SYSTEM "../locale/">
 
 <overlay
   id="TweetContext-FirefoxOverlay"
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-  <script type="application/x-javascript" src="tweetContext.js" />
-  <script type="application/x-javascript" src="tweetContextInitBrowser.js" />
+  <script type="application/x-javascript" src="tweetContext.js"/>
+  <script type="application/x-javascript" src="tweetContextInitBrowser.js"/>
 
   <stringbundleset id="stringbundleset">
     <stringbundle
       id="tweetcontext-strings"
-      src="chrome://tweetcontext/locale/tweetContext.properties" />
+      src="chrome://tweetcontext/locale/tweetcontext.properties"/>
   </stringbundleset>
+
+  <popupset id="mainPopupSet">
+    <menupopup id="historyContext">
+    <menuitem
+      id="historyContext-tweethistory"
+      class="menuitem-iconic tweetcontext-item"
+      label="&tweet.page;"
+      onmouseover="TweetContext.setTooltip(this, 
+document.popupNode._placesNode.title, document.popupNode._placesNode.uri);"
+      oncommand="TweetContext.share(
+document.popupNode._placesNode.title, document.popupNode._placesNode.uri);"/>
+    </menupopup>
+  </popupset>
 
   <menupopup id="menu_ToolsPopup">
     <menuitem id="toolsPopup-tweetany"
               insertbefore="devToolsSeparator"
               class="menuitem-iconic tweetcontext-item"
               label="&tweet.anything;"
-              oncommand="TweetContext.share();" />
+              oncommand="TweetContext.share();"/>
 
     <menuitem
       id="toolsPopup-tweetcontext-options"
       insertbefore="menu_preferences"
       label="&tweet.options;"
       class="menuitem-iconic tweetcontext-options"
-      oncommand="TweetContext.openPref();" />
+      oncommand="TweetContext.openPref();"/>
   </menupopup>
 
   <menupopup id="tabContextMenu">
@@ -75,7 +88,7 @@
 gBrowser.mContextTab.label, 
 gBrowser.mContextTab.linkedBrowser.currentURI.spec);"
               oncommand="TweetContext.share(gBrowser.mContextTab.label, 
-gBrowser.mContextTab.linkedBrowser.currentURI.spec);" />
+gBrowser.mContextTab.linkedBrowser.currentURI.spec);"/>
   </menupopup>
 
   <menupopup id="contentAreaContextMenu">
@@ -86,7 +99,7 @@ gBrowser.mContextTab.linkedBrowser.currentURI.spec);" />
               onmouseover="TweetContext.setTooltip(
 this, content.document.title, content.location.href);"
               oncommand="TweetContext.share(
-content.document.title, content.location.href);" />
+content.document.title, content.location.href);"/>
 
     <menuitem id="context-tweetlink"
               insertafter="context-sendlink"
@@ -95,7 +108,7 @@ content.document.title, content.location.href);" />
               onmouseover="TweetContext.setTooltip(
 this, gContextMenu.linkText(), gContextMenu.linkURL);"
               oncommand="TweetContext.share(
-gContextMenu.linkText(), gContextMenu.linkURL);" />
+gContextMenu.linkText(), gContextMenu.linkURL);"/>
 
     <menuitem id="context-tweetframe"
               insertafter="frame"
@@ -106,7 +119,7 @@ gContextMenu.target.ownerDocument.title,
 gContextMenu.target.ownerDocument.URL);"
               oncommand="TweetContext.share(
 gContextMenu.target.ownerDocument.title, 
-gContextMenu.target.ownerDocument.URL);" />
+gContextMenu.target.ownerDocument.URL);"/>
 
     <menuitem id="context-tweetimage"
               insertafter="context-sendimage"
@@ -115,7 +128,7 @@ gContextMenu.target.ownerDocument.URL);" />
               onmouseover="TweetContext.setTooltip(
 this, gContextMenu.target.alt, gContextMenu.imageURL);"
               oncommand="TweetContext.share(
-gContextMenu.target.alt, gContextMenu.imageURL);" />
+gContextMenu.target.alt, gContextMenu.imageURL);"/>
 
     <menuitem id="context-tweetselected"
               insertbefore="frame-sep"
@@ -123,7 +136,7 @@ gContextMenu.target.alt, gContextMenu.imageURL);" />
               label="Tweet Selected Text"
               onmouseover="TweetContext.setTooltip(this,
 TweetContext.getSelection());"
-              oncommand="TweetContext.share(TweetContext.getSelection());" />
+              oncommand="TweetContext.share(TweetContext.getSelection());"/>
   </menupopup>
 
   <menupopup id="placesContext">
@@ -135,7 +148,7 @@ TweetContext.getSelection());"
       onmouseover="TweetContext.setTooltip(this, 
 document.popupNode._placesNode.title, document.popupNode._placesNode.uri);"
       oncommand="TweetContext.share(
-document.popupNode._placesNode.title, document.popupNode._placesNode.uri);" />
+document.popupNode._placesNode.title, document.popupNode._placesNode.uri);"/>
   </menupopup>
 
   <vbox id="appmenuSecondaryPane">
@@ -144,7 +157,7 @@ document.popupNode._placesNode.title, document.popupNode._placesNode.uri);" />
       insertafter="appmenu_addons"
       class="menuitem-iconic tweetcontext-item"
       label="&tweet.anything;"
-      oncommand="TweetContext.share();" />
+      oncommand="TweetContext.share();"/>
   </vbox>
 
   <menupopup id="appmenu_customizeMenu">
@@ -153,7 +166,7 @@ document.popupNode._placesNode.title, document.popupNode._placesNode.uri);" />
       insertafter="appmenu_preferences"
       label="&tweet.options;"
       class="menuitem-iconic tweetcontext-options"
-      oncommand="event.stopPropagation(); TweetContext.openPref();" />
+      oncommand="event.stopPropagation(); TweetContext.openPref();"/>
   </menupopup>
 
 </overlay>
