@@ -105,7 +105,7 @@
             <label value="Echofon" class="text-link"
                    onclick="openURL(this.tooltipText); window.close();"
                    tooltiptext="https://addons.mozilla.org/addon/echofon-
-for-twitter/?src=external-tweetcontext"/>
+for-twitter/"/>
             <label value=")"/>
           </hbox>
         </hbox>
@@ -124,8 +124,7 @@ for-twitter/?src=external-tweetcontext"/>
             <label value="(&tweet.options.addon.requires; "/>
             <label value="HootBar" class="text-link"
                    onclick="openURL(this.tooltipText); window.close();"
-                   tooltiptext="https://addons.mozilla.org/addon/hootbar/
-?src=external-tweetcontext"/>
+                   tooltiptext="https://addons.mozilla.org/addon/hootbar/"/>
             <label value=")"/>
           </hbox>
         </hbox>
