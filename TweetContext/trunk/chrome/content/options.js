@@ -86,10 +86,12 @@ function getMostRecentWindow(aWinType) {
 }
 
 function openURL(aURL) {
+  aURL += "?src=external-tweetcontext";
   let win = getMostRecentWindow("navigator:browser");
   let browser = win.gBrowser;
-  if ((browser.mCurrentBrowser.currentURI.spec == "about:blank") &&
-      !browser.mIsBusy) {
+  let currentURI = browser.mCurrentBrowser.currentURI.spec;
+  if (((currentURI == "about:blank") || (currentURI == "about:newtab"))
+      && !browser.mIsBusy) {
     browser.loadURI(aURL);
   } else {
     browser.loadOneTab(aURL, null, null, null, false);
@@ -104,7 +106,8 @@ function openPrefs(aAddon) {
       let em = Services.ww.getWindowEnumerator();
       while (em.hasMoreElements()) {
         let win = em.getNext();
-        if (win.document.documentElement.id == "twitterbar-preference-window") {
+        if (win.document.documentElement.id == "twitterbar-preference-window")
+        {
           win.focus();
           return;
         }
@@ -118,9 +121,8 @@ function openPrefs(aAddon) {
         return;
       }
   }
-  window.openDialog(optionsURL, "",
-                    "chrome, dialog=yes, titlebar, toolbar, " +
-                    "centerscreen, resizable=no");
+  openDialog(optionsURL, "", "chrome, dialog=yes, titlebar, " +
+                             "toolbar, centerscreen, resizable=no");
 }
 
 function onLoad() {
@@ -132,5 +134,5 @@ function onLoad() {
                   prefService.getBoolPref("enableHootBar")));
 }
 
-window.addEventListener("load", onLoad, false);
-window.removeEventListener("unload", onLoad, false);
+addEventListener("load", onLoad, false);
+removeEventListener("unload", onLoad, false);
