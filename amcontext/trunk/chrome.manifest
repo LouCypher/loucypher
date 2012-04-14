@@ -1,0 +1,4 @@
+content   amcontextmenu   ./
+
+overlay   about:addons                                                  chrome://amcontextmenu/content/addons.xul
+overlay   chrome://mozapps/content/extensions/extensions.xul            chrome://amcontextmenu/content/addons.xul
