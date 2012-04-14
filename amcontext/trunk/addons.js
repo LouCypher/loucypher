@@ -110,7 +110,7 @@ var AM_Context = {
     copyIdItem.disabled = isUserStyle;
 
     AM_context_Item("browse-dir").disabled =
-      isPlugin || isUserStyle || (aAddon.iconURL &&
+      isPlugin || isUserStyle || (isTheme && aAddon.iconURL &&
                                   /^https?/.test(aAddon.iconURL));
 
     var inspectItem = AM_context_Item("inspect-addon");
