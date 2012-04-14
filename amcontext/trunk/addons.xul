@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+    This Source Code Form is subject to the terms of the Mozilla Public
+    License, v. 2.0. If a copy of the MPL was not distributed with this
+    file, You can obtain one at http://mozilla.org/MPL/2.0/.
+-->
+
+<overlay id="addonsManager-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="addons.js"/>
+  <script type="application/javascript"
+          src="chrome://inspector/content/hooks.js"/>
+
+  <menupopup id="addonitem-popup">
+    <menuseparator id="AM-context-menuseparator"
+                   insertbefore="addonitem-menuseparator"/>
+
+    <menuitem
+      id="AM-context-copy-url"
+      insertafter="AM-context-menuseparator"
+      label="Copy Home Page URL"
+      tooltiptext=""
+      oncommand="AM_Context.getAddon(document.popupNode.value,
+ AM_Context.copyURL);"/>
+
+    <menuitem
+      id="AM-context-copy-guid"
+      insertafter="AM-context-copy-url"
+      label="Copy GUID"
+      tooltiptext=""
+      oncommand="AM_Context.getAddon(document.popupNode.value,
+ AM_Context.copyGUID);"/>
+
+    <menuitem
+      id="AM-context-browse-dir"
+      insertafter="AM-context-copy-guid"
+      label="Browse Install Directory"
+      oncommand="AM_Context.getAddon(document.popupNode.value,
+ AM_Context.browseDir);"/>
+
+    <menuitem
+      id="AM-context-inspect-addon"
+      insertafter="AM-context-browse-dir"
+      label="Inspect Add-on"
+      oncommand="AM_Context.getAddon(document.popupNode.value,
+ AM_Context.inspectAddon);"/>
+
+    <menuitem
+      id="AM-context-go-home"
+      insertafter="menuitem_about"
+      label="Visit Home Page"
+      tooltiptext=""
+      oncommand="AM_Context.getAddon(document.popupNode.value,
+ AM_Context.goHome);"/>
+
+    <menuitem
+      id="AM-context-go-support"
+      insertafter="AM-context-go-home"
+      label="Visit Add-on Support"
+      tooltiptext=""
+      oncommand="AM_Context.getAddon(document.popupNode.value,
+ AM_Context.support);"/>
+
+    <menuitem
+      id="AM-context-donate"
+      insertafter="AM-context-go-support"
+      label="Donate"
+      command="cmd_contribute"/>
+
+  </menupopup>
+
+</overlay>
