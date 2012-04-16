@@ -5,10 +5,10 @@
     <em:id>amcontextmenu@loucypher</em:id>
     <em:type>2</em:type>
     <em:name>Add-on Manager Context Menu</em:name>
-    <em:version>0.0.20120414.01</em:version>
+    <em:version>0.0.20120416.01</em:version>
     <em:description>Context Menu for Add-ons Manager.</em:description>
     <em:creator>LouCypher</em:creator>
-    <em:homepageURL>http://loucypher.googlecode.com/</em:homepageURL>
+    <em:homepageURL>https://addons.mozilla.org/user/60697/</em:homepageURL>
     <em:targetApplication>
       <Description><!--Firefox-->
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>

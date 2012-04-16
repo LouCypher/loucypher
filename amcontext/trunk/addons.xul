@@ -63,8 +63,15 @@
  AM_Context.support);"/>
 
     <menuitem
-      id="AM-context-donate"
+      id="AM-context-reviews"
       insertafter="AM-context-go-support"
+      label="Add-on Reviews"
+      oncommand="AM_Context.getAddon(document.popupNode.value,
+ AM_Context.review);"/>
+
+    <menuitem
+      id="AM-context-donate"
+      insertafter="AM-context-reviews"
       label="Donate"
       command="cmd_contribute"/>
 
