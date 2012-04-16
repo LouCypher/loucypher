@@ -9,7 +9,9 @@ function AM_context_Item(aId) {
 }
 
 var AM_Context = {
+
   toString: function AM_context_name() {
+    "use strict";
     return "Add-ons Manager Context Menu";
   },
 
@@ -68,8 +70,8 @@ var AM_Context = {
     openURL(url);
   },
 
-  donate: function AM_context_donate(aAddon) {
-    openURL(aAddon.contributionURL);
+  review: function AM_context_review(aAddon) {
+    openURL(aAddon.reviewURL);
   },
 
   support: function AM_context_support(aAddon) {
@@ -98,6 +100,9 @@ var AM_Context = {
     var supportItem = AM_context_Item("go-support");
     supportItem.disabled = !aAddon.supportURL;
     supportItem.tooltipText = aAddon.supportURL;
+
+    var reviewItem = AM_context_Item("reviews");
+    reviewItem.disabled = !aAddon.reviewURL;
 
     var donateItem = AM_context_Item("donate");
     donateItem.disabled = !aAddon.contributionURL;
