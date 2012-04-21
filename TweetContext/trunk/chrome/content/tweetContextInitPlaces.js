@@ -33,13 +33,14 @@
   the terms of any one of the MPL, the GPL or the LGPL.
 */
 
-TweetContext.places = {
+TweetContext.initPlaces = {
+
   getNode: function tw_getNode(aNode) {
     return PlacesUIUtils.getViewForNode(aNode).selectedNode;
   },
 
   initContext: function tw_initContext() {
-    let node = TweetContext.places.getNode(document.popupNode);
+    let node = TweetContext.initPlaces.getNode(document.popupNode);
 
     let bmItem = document.getElementById("tweetcontext-bookmark");
     bmItem.hidden = (!TweetContext.isValidScheme(node.uri)) ||
@@ -71,13 +72,13 @@ TweetContext.places = {
 
     let popup = document.getElementById("placesContext");
     popup.addEventListener("popupshowing",
-                           TweetContext.places.initContext,
+                           TweetContext.initPlaces.initContext,
                            false);
     popup.removeEventListener("popuphiding",
-                              TweetContext.places.initContext,
+                              TweetContext.initPlaces.initContext,
                               false);
   }
 }
 
-window.addEventListener("load", TweetContext.places.onLoad, false);
-window.removeEventListener("unload", TweetContext.places.onLoad, false);
+window.addEventListener("load", TweetContext.initPlaces.onLoad, false);
+window.removeEventListener("unload", TweetContext.initPlaces.onLoad, false);

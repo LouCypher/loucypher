@@ -35,8 +35,8 @@
 
 var TweetContext = {
 
-  init: null,
-  places: null,
+  initBrowser: null,
+  initPlaces: null,
 
   toString: function() {
     return "Tweet Context";
@@ -46,20 +46,20 @@ var TweetContext = {
     return document.getElementById("tweetcontext-strings");
   },
 
-  get prefBranch() {
+  get prefs() {
     return Services.prefs.getBranch("extensions.TweetContext.");
   },
 
   getBoolPref: function tweetContext_getBoolPref(aPrefString) {
-    return this.prefBranch.getBoolPref(aPrefString);
+    return this.prefs.getBoolPref(aPrefString);
   },
 
   getIntPref: function tweetContext_getIntPref(aPrefString) {
-    return this.prefBranch.getIntPref(aPrefString);
+    return this.prefs.getIntPref(aPrefString);
   },
 
   setPref: function tweetContext_setPref(aPrefString, aPrefBoolValue) {
-    return this.prefBranch.setBoolPref(aPrefString, aPrefBoolValue);
+    return this.prefs.setBoolPref(aPrefString, aPrefBoolValue);
   },
 
   get intro() {
@@ -214,17 +214,29 @@ var TweetContext = {
       }
       index++
     }
-    openDialog("chrome://tweetcontext/content/", "tweetcontext-options",
+    openDialog("chrome://tweetcontext/content/options.xul",
+               "tweetcontext-options",
                "chrome, dialog=no, close, titlebar, centerscreen");
   },
 
-  checkAddon: function tweetContext_checkAddon(aAddonId, aPrefBranch) {
+  // Get and return contribution URL from pref
+  get contributionURL() {
+    return Services.urlFormatter
+                   .formatURL(this.prefs.getCharPref("contributionURL"));
+  },
+
+  // Load donation page
+  contribute: function pasteToTab_contribute() {
+    gBrowser.loadOneTab(this.contributionURL, null, null, null, false);
+  },
+
+  checkAddon: function tweetContext_checkAddon(aAddonId, aPrefs) {
     AddonManager.getAddonByID(aAddonId,
       function(aAddon) {
         try {
-          TweetContext.setPref(aPrefBranch, aAddon.isActive);
+          TweetContext.setPref(aPrefs, aAddon.isActive);
         } catch(ex) {
-          TweetContext.setPref(aPrefBranch, false);
+          TweetContext.setPref(aPrefs, false);
         }
       }
     )

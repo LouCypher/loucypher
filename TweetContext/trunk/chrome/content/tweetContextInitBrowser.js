@@ -33,7 +33,7 @@
   the terms of any one of the MPL, the GPL or the LGPL.
 */
 
-TweetContext.init = {
+TweetContext.initBrowser = {
 
   initMainContext: function tweetContext_initMainContext() {
     gContextMenu.showItem("context-tweetpage",
@@ -79,26 +79,26 @@ TweetContext.init = {
   load: function tweetContext_init(aEvent) {
     let cm = document.getElementById("contentAreaContextMenu");
     cm.addEventListener("popupshowing",
-                        TweetContext.init.initMainContext,
+                        TweetContext.initBrowser.initMainContext,
                         false);
     cm.removeEventListener("popuphiding",
-                           TweetContext.init.initMainContext,
+                           TweetContext.initBrowser.initMainContext,
                            false);
 
     let tm = document.getElementById("tabContextMenu");
     tm && tm.addEventListener("popupshowing",
-                              TweetContext.init.initTabContext,
+                              TweetContext.initBrowser.initTabContext,
                               false);
     tm && tm.removeEventListener("popuphiding",
-                                 TweetContext.init.initTabContext,
+                                 TweetContext.initBrowser.initTabContext,
                                  false);
 
     let bm = document.getElementById("placesContext");
     bm && bm.addEventListener("popupshowing",
-                              TweetContext.init.initBookmarkContext,
+                              TweetContext.initBrowser.initBookmarkContext,
                               false);
     bm && bm.removeEventListener("popuphiding",
-                                 TweetContext.init.initBookmarkContext,
+                                 TweetContext.initBrowser.initBookmarkContext,
                                  false);
 
     let th = document.getElementById("goPopup");
@@ -113,8 +113,22 @@ TweetContext.init = {
     TweetContext.checkAddon("{1a0c9ebe-ddf9-4b76-b8a3-675c77874d37}",
                             "enableHootBar");
 
+    // Load donation page on first installation only
+    // Check connection first
+    //BrowserOffline.toggleOfflineStatus(); // offline test
+    if (TweetContext.prefs.getBoolPref("firstRun") && navigator.onLine) {
+      var req = new XMLHttpRequest();
+      req.open("GET", TweetContext.contributionURL, true);
+      req.onreadystatechange = function (aEvent) {
+        if ((req.readyState == 4) && (req.status == 200)) {
+          TweetContext.prefs.setBoolPref("firstRun", false);
+          TweetContext.contribute();
+        }
+      }
+      req.send(null);
+    }
   }
 }
 
-window.addEventListener("load", TweetContext.init.load, false);
-window.removeEventListener("unload", TweetContext.init.load, false);
+window.addEventListener("load", TweetContext.initBrowser.load, false);
+window.removeEventListener("unload", TweetContext.initBrowser.load, false);
