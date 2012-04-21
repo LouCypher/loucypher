@@ -15,7 +15,7 @@
   The Original Code is Tweet Context extension.
 
   The Initial Developer of the Original Code is LouCypher.
-  Portions created by the Initial Developer are Copyright (C) 2011
+  Portions created by the Initial Developer are Copyright (C) 2012
   the Initial Developer. All Rights Reserved.
 
   Contributor(s) (alphabetical order):
@@ -34,106 +34,17 @@
   the terms of any one of the MPL, the GPL or the LGPL.
 -->
 
-<?xml-stylesheet href="chrome://global/skin/"?>
-<?xml-stylesheet href="../skin/"?>
-
-<!DOCTYPE overlay SYSTEM "../locale/">
-
-<prefwindow
-  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-  id="tweetcontext-options"
-  title="&tweet.options;">
-
-  <prefpane id="prefpane-menu" flex="1">
-
-    <preferences>
-      <preference id="extensions.TweetContext.https"
-                  name="extensions.TweetContext.https"
-                  type="bool"/>
-
-      <preference id="extensions.TweetContext.openInTab"
-                  name="extensions.TweetContext.openInTab"
-                  type="bool"/>
-
-      <preference id="extensions.TweetContext.useAddon"
-                  name="extensions.TweetContext.useAddon"
-                  type="int"/>
-
-    </preferences>
-
-    <groupbox id="twitter-options">
-      <caption label="&tweet.options.twitter;"/>
-      <checkbox
-        id="extensions.TweetContext.openInTab-option"
-        label="&tweet.options.openTab;"
-        accesskey="&tweet.options.openTab.accesskey;"
-        preference="extensions.TweetContext.openInTab"/>
-
-      <checkbox
-        id="extensions.TweetContext.https-option"
-        label="&tweet.options.https;"
-        accesskey="&tweet.options.https.accesskey;"
-        preference="extensions.TweetContext.https"/>
-
-   </groupbox>
-
-    <groupbox id="addon-integration">
-      <caption label="&tweet.options.integration;"/>
-
-      <radiogroup
-        id="extensions.TweetContext.useAddon-option"
-        preference="extensions.TweetContext.useAddon">
-
-        <radio id="twitter" value="0"
-               label="&tweet.options.addon.twitter;"
-               accesskey="&tweet.options.addon.twitter.accesskey;"
-               preference="extensions.TweetContext.useAddon"
-               oncommand="disableTwitter(!this.selected);"/>
-
-        <hbox flex="1">
-          <radio id="echofon" value="1"
-            label="&tweet.options.addon.echofon;"
-            accesskey="&tweet.options.addon.echofon.accesskey;"
-            preference="extensions.TweetContext.useAddon"
-            oncommand="disableTwitter(this.selected);"/>
-          <button id="echofon-options"
-                  label="&tweet.options.addon.prefs;"
-                  oncommand="getAddon('twitternotifier@naan.net',
- openPrefs);"/>
-          <hbox id="tweetcontext-echofon" class="tweetcontext-addon">
-            <label value="(&tweet.options.addon.requires; "/>
-            <label value="Echofon" class="text-link"
-                   onclick="openURL(this.tooltipText); window.close();"
-                   tooltiptext="https://addons.mozilla.org/addon/echofon-
-for-twitter/"/>
-            <label value=")"/>
-          </hbox>
-        </hbox>
-
-        <hbox flex="1">
-          <radio id="hootbar" value="2"
-            label="&tweet.options.addon.hootbar;"
-            accesskey="&tweet.options.addon.hootbar.accesskey;"
-            preference="extensions.TweetContext.useAddon"
-            oncommand="disableTwitter(this.selected);"/>
-          <button id="hootbar-options"
-                  label="&tweet.options.addon.prefs;"
-                  oncommand="getAddon('{1a0c9ebe-ddf9-4b76-b8a3-
-675c77874d37}', openPrefs);"/>
-          <hbox id="tweetcontext-hootbar" class="tweetcontext-addon">
-            <label value="(&tweet.options.addon.requires; "/>
-            <label value="HootBar" class="text-link"
-                   onclick="openURL(this.tooltipText); window.close();"
-                   tooltiptext="https://addons.mozilla.org/addon/hootbar/"/>
-            <label value=")"/>
-          </hbox>
-        </hbox>
-
-      </radiogroup>
-    </groupbox>
-
-  </prefpane>
-
-  <script type="application/x-javascript" src="options.js"/>
-
-</prefwindow>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Thank you for installing Tweet Context</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script type="application/javascript"><![CDATA[
+  Components.utils.import("resource://gre/modules/Services.jsm");
+  location.replace(Services.urlFormatter.formatURL(
+                   Services.prefs.getCharPref(
+                   "extensions.TweetContext.contributionURL")));
+]]></script>
+</head>
+<body></body>
+</html>
