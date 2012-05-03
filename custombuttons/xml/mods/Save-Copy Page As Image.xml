@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custombutton xmlns:cb="http://xsms.nm.ru/custombuttons/"
+              xmlns:html="http://www.w3.org/1999/xhtml">
+  <html:head>
+    <html:title><![CDATA[Save/Copy Page As Image]]></html:title>
+    <html:link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABnRSTlMAAAAAAP9DpOgcAAAAGXRFWHRTb2Z0d2FyZQBHcmFwaGljQ29udmVydGVyNV1I7gAAAHxJREFUeJy0koENgCAMBDugI3Ur13AO1qifPLyAaQImXkgtpQdRNLPYHF8F0ufZXhbnGlVAFmtUB49SCuaKR2OqD4JA39WgIx4Ba5izA9Hd8WaIqnB1ELQlor6RKiQV3iekwtTR56nAPjLVUyGj3d3uTf/+t94AAAD//wMALza1C6CmDCsAAAAASUVORK5CYII="/>
+    <html:style type="text/css"><![CDATA[
+body { font-size: medium; margin: 0; }
+body, code:before, help:before, initcode:before {
+  font-family: "Verdana", sans-serif;
+}
+#wrapper { position: fixed; top: 1em; right: 1em; text-align: center; }
+p { font-size: small; text-align: center; }
+#button {
+  background-color: rgb(85, 168, 2);
+  background-image: linear-gradient(to bottom, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -moz-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -o-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -webkit-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  border: 1px solid rgb(58, 116, 4);
+  border-radius: .5em;
+  -moz-border-radius: .5em;
+  -webkit-border-radius: .5em;
+  padding: 0;
+  margin-bottom: 1em;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+}
+#button a {
+  color: #000;
+  text-shadow: -1pt -1px 0pt rgba(255, 255, 255, .5);
+  padding: 1em;
+  text-decoration: none;
+}
+:-moz-any-link:focus {
+  color: white;
+  outline-color: transparent;
+  text-decoration: none;
+}
+#button a, code, code:before, initcode, initcode:before, help, help:before {
+  display: block;
+}
+#credits { position: fixed; bottom: 1em; right: 1em; font-size: small; }
+custombutton { background-color: rgb(171, 171, 171); margin: 1em; }
+date, image, mode, accelkey { display: none; }
+name { font-weight: bold; font-size: x-large; }
+code:before, help:before, initcode:before {
+  font-weight: bold;
+  font-size: large;
+  margin: 0 0 1em;
+  padding: .5em;
+}
+code:before { content: "CODE"; }
+help:before { content: "Help"; }
+initcode:before { content: "Initialization Code"; }
+code, initcode, help {
+  background-color: rgb(255, 255, 255);
+  border: 1px inset rgb(170, 170, 170);
+  font: medium monospace;
+  margin: 1em 1em 2em 0;
+  padding: 1em;
+  text-align: left;
+  width: 840px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.clear { clear: both; }
+]]></html:style>
+  </html:head>
+  <html:body>
+    <html:div id="wrapper">
+      <html:div id="button">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3ESave/Copy%20Page%20As%20Image%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bdata%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABnRSTlMAAAAAAP9DpOgcAAAAGXRFWHRTb2Z0d2FyZQBHcmFwaGljQ29udmVydGVyNV1I7gAAAHxJREFUeJy0koENgCAMBDugI3Ur13AO1qifPLyAaQImXkgtpQdRNLPYHF8F0ufZXhbnGlVAFmtUB49SCuaKR2OqD4JA39WgIx4Ba5izA9Hd8WaIqnB1ELQlor6RKiQV3iekwtTR56nAPjLVUyGj3d3uTf/+t94AAAD//wMALza1C6CmDCsAAAAASUVORK5CYII%3D%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5B/*%0A%20%20%20Original%20button%20by%20morat%0A%20%20%20-%20http%3A//custombuttons.sourceforge.net/forum/viewtopic.php%3Ff%3D4%26t%3D246%0A%0A%20%20%20References%3A%0A%20%20%20-%20http%3A//prefbar.tuxfamily.org/buttons.html%23pagetoimage%0A%20%20%20-%20http%3A//robert.ocallahan.org/2005/05/rendering-web-page-to-images_13.html%0A%20*/%0A%0Athis.toDataURL%20%3D%20function%20toDataURL%28aImageFormat%2C%20aImageOptions%29%20%7B%0A%20%20var%20mainWindow%20%3D%20document.getElementById%28%22main-window%22%29%3B%0A%20%20if%20%28%21mainWindow.getAttribute%28%22xmlns%3Ahtml%22%29%29%0A%20%20%20%20mainWindow.setAttribute%28%22xmlns%3Ahtml%22%2C%20xhtmlns%29%3B%0A%20%20var%20width%20%3D%20content.innerWidth%20+%20content.scrollMaxX%3B%0A%20%20var%20height%20%3D%20content.innerHeight%20+%20content.scrollMaxY%3B%0A%20%20if%20%28width%20%3E%2016384%29%20width%20%3D%2016384%3B%20//%20limit%20width%0A%20%20if%20%28height%20%3E%2016384%29%20height%20%3D%2016384%3B%20//%20limit%20height%0A%20%20var%20canvas%20%3D%20document.createElementNS%28xhtmlns%2C%20%22html%3Acanvas%22%29%3B%0A%20%20var%20ctx%20%3D%20canvas.getContext%28%222d%22%29%3B%0A%20%20canvas.width%20%3D%20width%3B%0A%20%20canvas.height%20%3D%20height%3B%0A%20%20ctx.drawWindow%28content%2C%200%2C%200%2C%20width%2C%20height%2C%20%22rgb%280%2C0%2C0%29%22%29%3B%0A%20%20return%20canvas.toDataURL%28aImageFormat%2C%20aImageOptions%29%3B%0A%7D%0A%0Athis.onclick%20%3D%20function%28event%29%20%7B%0A%20%20if%20%28event.button%20%21%3D%201%29%20return%3B%0A%20%20var%20image%20%3D%20new%20Image%28%29%3B%0A%20%20image.onload%20%3D%20function%28%29%20%7B%0A%20%20%20%20var%20node%20%3D%20document.popupNode%3B%0A%20%20%20%20document.popupNode%20%3D%20image%3B%0A%20%20%20%20goDoCommand%28%22cmd_copyImageContents%22%29%3B%0A%20%20%20%20document.popupNode%20%3D%20node%3B%0A%20%20%7D%0A%20%20image.src%20%3D%20this.toDataURL%28%22image/png%22%2C%20%22transparency%3Dnone%22%29%3B%0A%7D%0A%0Athis.tooltipText%20%3D%20this.Help%3B%0A%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bvar%20fp%20%3D%20Cc%5B%22@mozilla.org/filepicker%3B1%22%5D.createInstance%28Ci.nsIFilePicker%29%3B%0Afp.init%28window%2C%20%22Edit%20Page%20As%20Image%22%2C%20Ci.nsIFilePicker.modeSave%29%3B%0A//fp.filterIndex%20%3D%200%3B%0Afp.appendFilter%28%22PNG%20Image%22%2C%20%22*.png%22%29%3B%0Afp.appendFilter%28%22JPEG%20image%22%2C%20%22*.jpg%22%29%3B%0Afp.defaultString%20%3D%20content.document.title%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28%28fp.filterIndex%20%3D%3D%200%29%20%3F%20%22.png%22%20%3A%20%22.jpg%22%29%3B%0A%0Avar%20rv%20%3D%20fp.show%28%29%3B%0Aif%20%28rv%20%3D%3D%20Ci.nsIFilePicker.returnCancel%29%20return%3B%0A%0Avar%20imgData%3B%0Aswitch%20%28fp.filterIndex%29%20%7B%0A%20%20%20case%200%3A%20imgData%20%3D%20this.toDataURL%28%22image/png%22%2C%20%22transparency%3Dnone%22%29%3B%20break%3B%0A%20%20default%3A%20imgData%20%3D%20this.toDataURL%28%22image/jpeg%22%2C%20%22quality%3D80%22%29%3B%0A%7D%0A%0Avar%20ios%20%3D%20Cc%5B%22@mozilla.org/network/io-service%3B1%22%5D.getService%28Ci.nsIIOService%29%3B%0Avar%20channel%20%3D%20ios.newChannel%28imgData%2C%200%2C%20null%29%3B%0A%0Avar%20bis%20%3D%20Cc%5B%22@mozilla.org/binaryinputstream%3B1%22%5D.%0A%20%20%20%20%20%20%20%20%20%20createInstance%28Ci.nsIBinaryInputStream%29%3B%0Abis.setInputStream%28channel.open%28%29%29%3B%0Avar%20bytes%20%3D%20bis.readBytes%28bis.available%28%29%29%3B%0A%0Avar%20fos%20%3D%20Cc%5B%22@mozilla.org/network/safe-file-output-stream%3B1%22%5D.%0A%20%20%20%20%20%20%20%20%20%20createInstance%28Ci.nsIFileOutputStream%29%3B%0Afos.init%28fp.file%2C%200x04%7C0x08%7C0x20%2C%20-1%2C%200%29%3B%0Afos.write%28bytes%2C%20bytes.length%29%3B%0Aif%20%28fos%20instanceof%20Ci.nsISafeOutputStream%29%20fos.finish%28%29%3B%0Aelse%20fos.close%28%29%3B%0A%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5BLeft+click%3A%20Save%20page%20as%20image%0AMiddle+click%3A%20Copy%20page%20as%20image%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install Save/Copy Page As Image">
+        <![CDATA[Install this button]]>
+        </html:a>
+      </html:div>
+      <html:a href="https://addons.mozilla.org/addon/custom-buttons/?src=external-custombuttons-xml">
+        <![CDATA[What's this?]]>
+      </html:a>
+      <html:div id="credits">
+        <html:a href="http://custombuttons.sourceforge.net/forum/viewtopic.php?t=78#p197">
+          <![CDATA[Custom Buttons XML]]><html:br/><![CDATA[Exporter/Importer]]>
+        </html:a>
+      </html:div>
+    </html:div>
+  </html:body>
+  <name>Save/Copy Page As Image</name>
+  <image><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABnRSTlMAAAAAAP9DpOgcAAAAGXRFWHRTb2Z0d2FyZQBHcmFwaGljQ29udmVydGVyNV1I7gAAAHxJREFUeJy0koENgCAMBDugI3Ur13AO1qifPLyAaQImXkgtpQdRNLPYHF8F0ufZXhbnGlVAFmtUB49SCuaKR2OqD4JA39WgIx4Ba5izA9Hd8WaIqnB1ELQlor6RKiQV3iekwtTR56nAPjLVUyGj3d3uTf/+t94AAAD//wMALza1C6CmDCsAAAAASUVORK5CYII=]]></image>
+  <mode>0</mode>
+  <initcode><![CDATA[/*
+   Original button by morat
+   - http://custombuttons.sourceforge.net/forum/viewtopic.php?f=4&t=246
+
+   References:
+   - http://prefbar.tuxfamily.org/buttons.html#pagetoimage
+   - http://robert.ocallahan.org/2005/05/rendering-web-page-to-images_13.html
+ */
+
+this.toDataURL = function toDataURL(aImageFormat, aImageOptions) {
+  var mainWindow = document.getElementById("main-window");
+  if (!mainWindow.getAttribute("xmlns:html"))
+    mainWindow.setAttribute("xmlns:html", xhtmlns);
+  var width = content.innerWidth + content.scrollMaxX;
+  var height = content.innerHeight + content.scrollMaxY;
+  if (width > 16384) width = 16384; // limit width
+  if (height > 16384) height = 16384; // limit height
+  var canvas = document.createElementNS(xhtmlns, "html:canvas");
+  var ctx = canvas.getContext("2d");
+  canvas.width = width;
+  canvas.height = height;
+  ctx.drawWindow(content, 0, 0, width, height, "rgb(0,0,0)");
+  return canvas.toDataURL(aImageFormat, aImageOptions);
+}
+
+this.onclick = function(event) {
+  if (event.button != 1) return;
+  var image = new Image();
+  image.onload = function() {
+    var node = document.popupNode;
+    document.popupNode = image;
+    goDoCommand("cmd_copyImageContents");
+    document.popupNode = node;
+  }
+  image.src = this.toDataURL("image/png", "transparency=none");
+}
+
+this.tooltipText = this.Help;
+]]></initcode>
+  <code><![CDATA[var fp = Cc["@mozilla.org/filepicker;1"].createInstance(Ci.nsIFilePicker);
+fp.init(window, "Edit Page As Image", Ci.nsIFilePicker.modeSave);
+//fp.filterIndex = 0;
+fp.appendFilter("PNG Image", "*.png");
+fp.appendFilter("JPEG image", "*.jpg");
+fp.defaultString = content.document.title
+                 + ((fp.filterIndex == 0) ? ".png" : ".jpg");
+
+var rv = fp.show();
+if (rv == Ci.nsIFilePicker.returnCancel) return;
+
+var imgData;
+switch (fp.filterIndex) {
+   case 0: imgData = this.toDataURL("image/png", "transparency=none"); break;
+  default: imgData = this.toDataURL("image/jpeg", "quality=80");
+}
+
+var ios = Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService);
+var channel = ios.newChannel(imgData, 0, null);
+
+var bis = Cc["@mozilla.org/binaryinputstream;1"].
+          createInstance(Ci.nsIBinaryInputStream);
+bis.setInputStream(channel.open());
+var bytes = bis.readBytes(bis.available());
+
+var fos = Cc["@mozilla.org/network/safe-file-output-stream;1"].
+          createInstance(Ci.nsIFileOutputStream);
+fos.init(fp.file, 0x04|0x08|0x20, -1, 0);
+fos.write(bytes, bytes.length);
+if (fos instanceof Ci.nsISafeOutputStream) fos.finish();
+else fos.close();
+
+]]></code>
+  <accelkey><![CDATA[]]></accelkey>
+  <help><![CDATA[Left+click: Save page as image
+Middle+click: Copy page as image]]></help>
+  <attributes/>
+</custombutton>
