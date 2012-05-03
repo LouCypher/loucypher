@@ -21,7 +21,7 @@
       insertafter="AM-context-menuseparator"
       label="Copy Home Page URL"
       tooltiptext=""
-      oncommand="AM_Context.getAddon(document.popupNode.value,
+      oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.copyURL);"/>
 
     <menuitem
@@ -29,21 +29,21 @@
       insertafter="AM-context-copy-url"
       label="Copy GUID"
       tooltiptext=""
-      oncommand="AM_Context.getAddon(document.popupNode.value,
+      oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.copyGUID);"/>
 
     <menuitem
       id="AM-context-browse-dir"
       insertafter="AM-context-copy-guid"
       label="Browse Install Directory"
-      oncommand="AM_Context.getAddon(document.popupNode.value,
+      oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.browseDir);"/>
 
     <menuitem
       id="AM-context-inspect-addon"
       insertafter="AM-context-browse-dir"
       label="Inspect Add-on"
-      oncommand="AM_Context.getAddon(document.popupNode.value,
+      oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.inspectAddon);"/>
 
     <menuitem
@@ -51,7 +51,7 @@
       insertafter="menuitem_about"
       label="Visit Home Page"
       tooltiptext=""
-      oncommand="AM_Context.getAddon(document.popupNode.value,
+      oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.goHome);"/>
 
     <menuitem
@@ -59,14 +59,14 @@
       insertafter="AM-context-go-home"
       label="Visit Add-on Support"
       tooltiptext=""
-      oncommand="AM_Context.getAddon(document.popupNode.value,
+      oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.support);"/>
 
     <menuitem
       id="AM-context-reviews"
       insertafter="AM-context-go-support"
       label="Add-on Reviews"
-      oncommand="AM_Context.getAddon(document.popupNode.value,
+      oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.review);"/>
 
     <menuitem

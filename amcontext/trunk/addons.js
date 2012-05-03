@@ -15,6 +15,12 @@ var AM_Context = {
     return "Add-ons Manager Context Menu";
   },
 
+  getPopupNode: function AM_context_getPopupNode(aNode) {
+    return "triggerNode" in aNode.parentNode
+            ? aNode.parentNode.triggerNode
+            : document.popupNode;
+  },
+
   getAddon: function AM_context_addonsManager(aId, aCallback, aEvent) {
     if (gDetailView._addon) {
       aCallback(gDetailView._addon, aEvent);
