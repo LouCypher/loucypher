@@ -61,11 +61,13 @@ this.updater = {
     }
   },
 
+  // Check if the URI is Custom Button URI (custombutton://...)
   isValidCbURI: function updater_isValidCbURI(aURL) {
     if (!aURL) return false;
     return /^custombutton\:\/\//.test(aURL);
   },
 
+  // Convert 'custombutton:' URI to DOM
   convertURItoDOM: function updater_convertURItoDOM(aURL) {
     if (!this.isValidCbURI(aURL)) {
       custombuttons.alertBox(self.name, "Not a Custom Buttons link!");
@@ -81,6 +83,7 @@ this.updater = {
     }
   },
 
+  // Get value from XML element
   getParamValue: function updater_getParamValue(aDocument, aNodeName) {
     var node = aDocument.querySelector(aNodeName);
     if (!node) return "";
@@ -92,6 +95,7 @@ this.updater = {
     }
   },
 
+  // Set button parameters from XML alement
   getButtonParameters: function updater_getButtonParameters(aButtonLink, aURL) {
     var dom = this.convertURItoDOM(aURL);
     var params = custombuttons.cbService.getButtonParameters(aButtonLink)
@@ -109,6 +113,7 @@ this.updater = {
     return params;
   },
 
+  // Reset button attribute if user click the button during update
   resetAttributes: function updater_resetAttributes() {
     self.image = this.btnImage;
     self.tooltipText = self.name;
@@ -118,14 +123,16 @@ this.updater = {
     self.tooltipText = this.btnTooltip;
   },
 
+  // Check button for update
   checkForUpdate: function updater_checkForUpdate(aCallback) {
-    if (!navigator.onLine) {
+    if (!navigator.onLine) {                // If browser is in offline mode
+                                            // ask to switch to online
       var online = custombuttons.confirmBox(self.name,
                              "Firefox is currently in offline mode.\n"
                            + "Switch to online mode and try again?",
                              "Yes", "No");
       if (!online) return;
-      BrowserOffline.toggleOfflineStatus();
+      BrowserOffline.toggleOfflineStatus(); // switch to online
     }
 
     var url = this.updateURL + "?" + Date.now();
@@ -154,6 +161,7 @@ this.updater = {
     req.send(null);
   },
 
+  // Get update from XML
   getUpdate: function updater_getUpdate(aDocument) {
     if (aDocument.documentElement.localName != "custombutton") {
       custombuttons.alertBox(self.name,
