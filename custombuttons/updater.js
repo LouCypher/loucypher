@@ -175,7 +175,7 @@ this.updater = {
     if (link.href == self.URI) {
       let as = Cc['@mozilla.org/alerts-service;1'].
                getService(Ci.nsIAlertsService);
-      as.showAlertNotification(btnIcon, "No update found!",
+      as.showAlertNotification(this.btnImage, "No update found!",
                                "Finish checking", false, "", null);
       return;
     } 
