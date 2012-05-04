@@ -38,7 +38,7 @@ this.updater = {
   baseURL: "https://loucypher.googlecode.com/svn/custombuttons/xml/",
 
   get updateURL() {
-    return this.baseURL + encodeURIComponent(self.name.replace(/\//g, "-"))
+    return this.baseURL + encodeURIComponent(self.name.replace(/(\/|:)/g, "-"))
                         + ".xml";
   },
 
@@ -254,6 +254,14 @@ this.updater = {
                                            initUpdaterCbPopup, false);
     $(uIDs[0]).parentNode.removeEventListener("popuphiding",
                                               initUpdaterCbPopup, false);
+
+    self.onDestroy = function(aReason) {
+      if (aReason != "delete") return;
+      for (var i = 0; i < kIDs.length; i++) {
+        $(kIDs[i]).parentNode.removeChild($(kIDs[i] + "-separator"));
+        $(kIDs[i]).parentNode.removeChild($(kIDs[i]));
+      }
+    }
   }
 }
 
