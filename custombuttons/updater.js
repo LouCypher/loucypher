@@ -257,6 +257,8 @@ this.updater = {
 
     self.onDestroy = function(aReason) {
       if (aReason != "delete") return;
+      $(uIDs[0]).parentNode.removeEventListener("popupshowing",
+                                             initUpdaterCbPopup, false);
       for (var i = 0; i < kIDs.length; i++) {
         $(kIDs[i]).parentNode.removeChild($(kIDs[i] + "-separator"));
         $(kIDs[i]).parentNode.removeChild($(kIDs[i]));
