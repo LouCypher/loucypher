@@ -198,71 +198,61 @@ this.updater = {
     }
 
     function addMenuItem(aNewIDs, aNodeIDs, aSeparator) {
-      for (var i = 0; i < aNewIDs.length; i++) {
-        // Remove previously created menuitems if any
-        if ($(aNewIDs[i])) {
-          if (aSeparator &&
-              ($(aNewIDs[i]).nextSibling.localName == "menuseparator")) {
-            $(aNewIDs[i]).parentNode.removeChild($(aNewIDs[i]).nextSibling);
-          }
-          $(aNewIDs[i]).parentNode.removeChild($(aNewIDs[i]));
+      // Remove previously created menuitems if any
+      if ($(aNewIDs)) {
+        if (aSeparator &&
+            ($(aNewIDs).nextSibling.localName == "menuseparator")) {
+          $(aNewIDs).parentNode.removeChild($(aNewIDs).nextSibling);
         }
+        $(aNewIDs).parentNode.removeChild($(aNewIDs));
+      }
 
-        let mi = cbu.makeXML(<menuitem xmlns={xulns} id={aNewIDs[i]}
-                              class="menuitem-iconic"
-                              image={self.image}
-                              label="Check for updates for this button"
-                              onclick={"if (event.button == 1) { "
-                                     + "var btn = document.getElementById('"
+      let mi = cbu.makeXML(<menuitem xmlns={xulns} id={aNewIDs}
+                            class="menuitem-iconic"
+                            image={self.image}
+                            label="Check for updates for this button"
+                            onclick={"if (event.button == 1) { "
+                                   + "var btn = document.getElementById('"
+                                   + self.id
+                                   + "'); btn.updater.openUpdateURL(); }"}
+                            oncommand={"var btn = document.getElementById('"
                                      + self.id
-                                     + "'); btn.updater.openUpdateURL(); }"}
-                              oncommand={"var btn = document.getElementById('"
-                                       + self.id
-                                       + "'); btn.updater.checkForUpdate("
-                                       + "btn.updater.getUpdate);"}/>);
-        if (i == 0) {
-          mi.setAttribute("observes",
-                          "custombuttons-contextbroadcaster-primary");
-        }
-        $(aNodeIDs[i]).parentNode.insertBefore(mi, $(aNodeIDs[i]).nextSibling);
-        if (aSeparator) {
-          let sep = cbu.makeXML(<menuseparator xmlns={xulns}
-                                               id={mi.id + "-separator"}/>);
-          mi.parentNode.insertBefore(sep, mi.nextSibling);
-        }
+                                     + "'); btn.updater.checkForUpdate("
+                                     + "btn.updater.getUpdate);"}
+                            observes="custombuttons-contextbroadcaster-primary"/>);
+      $(aNodeIDs).parentNode.insertBefore(mi, $(aNodeIDs).nextSibling);
+      if (aSeparator) {
+        let sep = cbu.makeXML(<menuseparator xmlns={xulns}
+                                             id={mi.id + "-separator"}/>);
+        mi.parentNode.insertBefore(sep, mi.nextSibling);
       }
     }
 
     function initUpdaterCbPopup(aEvent) {
       var popupNode = "triggerNode" in aEvent.target
                         ? aEvent.target.triggerNode : document.popupNode;
-      for (var i = 0; i < kIDs.length; i++) {
-        $(kIDs[i]).hidden = (popupNode != self);
-        ($(kIDs[i]).nextSibling.id == $(kIDs[i]).id + "-separator") &&
-        ($(kIDs[i]).nextSibling.hidden = (popupNode != self));
-      }
+      $(kIDs).hidden = (popupNode != self);
+      ($(kIDs).nextSibling.id == $(kIDs).id + "-separator") &&
+      ($(kIDs).nextSibling.hidden = (popupNode != self));
     }
 
-    let kIDs = [self.id + "-checkForUpdate", self.id + "-checkForUpdate-sub"];
-    let uIDs = ["custombuttons-contextpopup-updateButton",
-                "custombuttons-contextpopup-updateButton-sub"];
+    let kIDs = self.id + "-checkForUpdate";
+    let uIDs = "custombuttons-contextpopup-updateButton";
 
     // Add 'Check for Update...' menuitem to CB contextmenu
     addMenuItem(kIDs, uIDs, true);
 
-    $(uIDs[0]).parentNode.addEventListener("popupshowing",
+    $(uIDs).parentNode.addEventListener("popupshowing",
                                            initUpdaterCbPopup, false);
-    $(uIDs[0]).parentNode.removeEventListener("popuphiding",
+    $(uIDs).parentNode.removeEventListener("popuphiding",
                                               initUpdaterCbPopup, false);
 
     self.onDestroy = function(aReason) {
       if (aReason != "delete") return;
-      $(uIDs[0]).parentNode.removeEventListener("popupshowing",
+      $(uIDs).parentNode.removeEventListener("popupshowing",
                                              initUpdaterCbPopup, false);
-      for (var i = 0; i < kIDs.length; i++) {
-        $(kIDs[i]).parentNode.removeChild($(kIDs[i] + "-separator"));
-        $(kIDs[i]).parentNode.removeChild($(kIDs[i]));
-      }
+      $(kIDs).parentNode.removeChild($(kIDs + "-separator"));
+      $(kIDs).parentNode.removeChild($(kIDs));
     }
   }
 }
