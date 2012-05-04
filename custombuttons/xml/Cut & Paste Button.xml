@@ -2,7 +2,7 @@
 <custombutton xmlns:cb="http://xsms.nm.ru/custombuttons/"
               xmlns:html="http://www.w3.org/1999/xhtml">
   <html:head>
-    <html:title><![CDATA[Cut &amp; Paste Button]]></html:title>
+    <html:title>Cut &amp; Paste Button</html:title>
     <html:link rel="shortcut icon" href=""/>
     <html:style type="text/css"><![CDATA[
 body { font-size: medium; margin: 0; }
