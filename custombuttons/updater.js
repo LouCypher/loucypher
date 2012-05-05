@@ -67,7 +67,7 @@ this.updater = {
       case "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}":
         return "chrome://communicator/skin/icons/loading.gif";
       default:
-        return "chrome://custombuttons/skin/button.png";
+        return "chrome://global/skin/icons/loading_16.png";
     }
   },
 
