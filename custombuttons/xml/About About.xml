@@ -3,14 +3,7 @@
               xmlns:html="http://www.w3.org/1999/xhtml">
   <html:head>
     <html:title><![CDATA[About About]]></html:title>
-    <html:link rel="shortcut icon" href="data:image/png;base64,
-iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAAS9JREFUeNqkUz1LA0EQfftxsUq0EREUGxux8o9YWVqKnT8hFpJeEOz8
-B1rZ+AvsbBNBRSJpYhE4CB7J7Zczl0bNXmDNg7e73M6beTPsyRAClqF+uVKogxTYp+2w5vreB3Q1
-HY6JO7EICsDume0UZYnxZIKv6RSn/XWMRgVuX1uSQg5E71K2907uLoJzv8RCKeT9j+q8ur01l5zv
-n2+OzrX1UJ4qMP+iRUJO8tntRXtgrabCylsD5lwLY4Pm5kZUzA6Gj5SgcmAtXCTBrEz8u2qszBxY
-B+1MCWYShABrtaHFG0MJTKJegrWVA+4/1YGU8oeDmiEugqchVg6MFdnCIdZAKQ3W6rxAk59UprK0
-Fois1U/vGOTX7Qf8A29DDATtDeIaUSfqLZsQ/Esug28BBgBGIMAJudMj8gAAAABJRU5ErkJggg=="/>
+    <html:link rel="shortcut icon" href="http://www.mozilla.org/media/img/favicon.png"/>
     <html:style type="text/css"><![CDATA[
 body { font-size: medium; margin: 0; }
 body, code:before, help:before, initcode:before {
@@ -20,20 +13,20 @@ body, code:before, help:before, initcode:before {
 p { font-size: small; text-align: center; }
 #button {
   background-color: rgb(85, 168, 2);
-  background-image:    -moz-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
-  background-image:      -o-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: linear-gradient(to bottom, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -moz-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -o-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
   background-image: -webkit-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
-  background-image:         linear-gradient(to bottom, rgb(147, 200, 94), rgb(85, 168, 2));
   border: 1px solid rgb(58, 116, 4);
-     -moz-border-radius: .5em;
+  border-radius: .5em;
+  -moz-border-radius: .5em;
   -webkit-border-radius: .5em;
-          border-radius: .5em;
   padding: 0;
   margin-bottom: 1em;
-     -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
-       -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
   -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
-          box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
 }
 #button a {
   color: #000;
@@ -94,14 +87,7 @@ code, initcode, help {
     </html:div>
   </html:body>
   <name>About About</name>
-  <image>data:image/png;base64,
-iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAAS9JREFUeNqkUz1LA0EQfftxsUq0EREUGxux8o9YWVqKnT8hFpJeEOz8
-B1rZ+AvsbBNBRSJpYhE4CB7J7Zczl0bNXmDNg7e73M6beTPsyRAClqF+uVKogxTYp+2w5vreB3Q1
-HY6JO7EICsDume0UZYnxZIKv6RSn/XWMRgVuX1uSQg5E71K2907uLoJzv8RCKeT9j+q8ur01l5zv
-n2+OzrX1UJ4qMP+iRUJO8tntRXtgrabCylsD5lwLY4Pm5kZUzA6Gj5SgcmAtXCTBrEz8u2qszBxY
-B+1MCWYShABrtaHFG0MJTKJegrWVA+4/1YGU8oeDmiEugqchVg6MFdnCIdZAKQ3W6rxAk59UprK0
-Fois1U/vGOTX7Qf8A29DDATtDeIaUSfqLZsQ/Esug28BBgBGIMAJudMj8gAAAABJRU5ErkJggg==</image>
+  <image></image>
   <mode>0</mode>
   <initcode><![CDATA[/* ***** BEGIN LICENSE BLOCK *****
  * Version: MPL 1.1/GPL 2.0/LGPL 2.1
