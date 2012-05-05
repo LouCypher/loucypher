@@ -31,8 +31,8 @@
 
 this.updater = {
   btnClick: self.onclick,
-  btnImage: self.image,
   btnType: self.type,
+  btnImage: self.image,
   btnTooltip: self.tooltipText,
 
   baseURL: "https://loucypher.googlecode.com/svn/custombuttons/xml/",
@@ -44,6 +44,16 @@ this.updater = {
 
   openUpdateURL: function updater_openUpdateURL() {
     switchToTabHavingURI(this.updateURL);
+  },
+
+  get stdIcon() {
+    var stdIcon = parseInt(self.cbStdIcon.match(/\d/));
+    switch (stdIcon) {
+       case 4: return "chrome://custombuttons/skin/stdicons/bbutton.png";
+       case 3: return "chrome://custombuttons/skin/stdicons/gbutton.png";
+       case 2: return "chrome://custombuttons/skin/stdicons/rbutton.png";
+      default: return "chrome://custombuttons/skin/button.png";
+    }
   },
 
   get bsyIcon() {
@@ -170,12 +180,14 @@ this.updater = {
     }
 
     //inspectDOMDocument(aDocument); return;
+    let icon = self.updater.btnImage ? self.updater.btnImage
+                                     : self.updater.stdIcon;
     let button = aDocument.getElementById("button");
     let link = button.getElementsByTagNameNS(xhtmlns, "a")[0];
     if (link.href == self.URI) {
       let as = Cc['@mozilla.org/alerts-service;1'].
                getService(Ci.nsIAlertsService);
-      as.showAlertNotification(self.image, "No update found!",
+      as.showAlertNotification(icon, "No update found!",
                                "Finish checking", false, "", null);
       return;
     } 
@@ -193,6 +205,9 @@ this.updater = {
   },
 
   init: function updater_onLoad() {
+
+    var icon = this.btnImage ? this.btnImage : this.stdIcon;
+
     function $(aId) {
       return document.getElementById(aId);
     }
@@ -207,9 +222,9 @@ this.updater = {
         $(aNewIDs).parentNode.removeChild($(aNewIDs));
       }
 
-      let mi = cbu.makeXML(<menuitem xmlns={xulns} id={aNewIDs}
+      var mi = cbu.makeXML(<menuitem xmlns={xulns} id={aNewIDs}
                             class="menuitem-iconic"
-                            image={self.image}
+                            image={icon}
                             label="Check for updates for this button"
                             onclick={"if (event.button == 1) { "
                                    + "var btn = document.getElementById('"
@@ -222,7 +237,7 @@ this.updater = {
                             observes="custombuttons-contextbroadcaster-primary"/>);
       $(aNodeIDs).parentNode.insertBefore(mi, $(aNodeIDs).nextSibling);
       if (aSeparator) {
-        let sep = cbu.makeXML(<menuseparator xmlns={xulns}
+        var sep = cbu.makeXML(<menuseparator xmlns={xulns}
                                              id={mi.id + "-separator"}/>);
         mi.parentNode.insertBefore(sep, mi.nextSibling);
       }
@@ -236,8 +251,8 @@ this.updater = {
       ($(kIDs).nextSibling.hidden = (popupNode != self));
     }
 
-    let kIDs = self.id + "-checkForUpdate";
-    let uIDs = "custombuttons-contextpopup-updateButton";
+    var kIDs = self.id + "-checkForUpdate";
+    var uIDs = "custombuttons-contextpopup-updateButton";
 
     // Add 'Check for Update...' menuitem to CB contextmenu
     addMenuItem(kIDs, uIDs, true);
