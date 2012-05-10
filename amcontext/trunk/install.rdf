@@ -4,30 +4,45 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>amcontextmenu@loucypher</em:id>
     <em:type>2</em:type>
+    <em:unpack>true</em:unpack>
     <em:name>Add-on Manager Context Menu</em:name>
-    <em:version>0.0.20120504.01</em:version>
-    <em:description>Context Menu for Add-ons Manager.</em:description>
+    <em:version>0.1a2012051001</em:version>
+    <em:description>Add more items to Add-on Manager context menu.</em:description>
     <em:creator>LouCypher</em:creator>
-    <em:homepageURL>https://addons.mozilla.org/user/60697/</em:homepageURL>
+    <em:homepageURL>http://loucypher.googlecode.com/</em:homepageURL>
+    <em:localized>
+      <Description
+       em:locale="en-US"
+       em:name="Add-on Manager Context Menu"
+       em:description="Add more items to Add-on Manager context menu.">
+      </Description>
+    </em:localized>
+    <em:localized>
+      <Description
+       em:locale="id"
+       em:name="Menu Konteks untuk Pengelola Pengaya"
+       em:description="Menambahkan lebih banyak menuitem pada menu konteks di Pengelola Pengaya.">
+      </Description>
+    </em:localized>
     <em:targetApplication>
       <Description><!--Firefox-->
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>9.0</em:minVersion>
-        <em:maxVersion>13.*</em:maxVersion>
+        <em:maxVersion>14.0a2</em:maxVersion>
       </Description>
     </em:targetApplication>
     <em:targetApplication>
       <Description><!-- SeaMonkey -->
         <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
-        <em:minVersion>2.0</em:minVersion>
-        <em:maxVersion>2.8.*</em:maxVersion>
+        <em:minVersion>2.1</em:minVersion>
+        <em:maxVersion>2.9.*</em:maxVersion>
       </Description>
     </em:targetApplication>
     <em:targetApplication>
       <Description><!--Thunderbird-->
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
         <em:minVersion>9.0</em:minVersion>
-        <em:maxVersion>11.*</em:maxVersion>
+        <em:maxVersion>12.*</em:maxVersion>
       </Description>
     </em:targetApplication>
   </Description>
