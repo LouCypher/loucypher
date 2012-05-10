@@ -4,10 +4,6 @@
  *  file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-function AM_context_Item(aId) {
-  return document.getElementById("AM-context-" + aId);
-}
-
 var AM_Context = {
 
   toString: function AM_context_name() {
@@ -40,6 +36,18 @@ var AM_Context = {
   copyToClipboard: function AM_context_copyToClipboard(aString) {
     Cc["@mozilla.org/widget/clipboardhelper;1"].
     getService(Ci.nsIClipboardHelper).copyString(aString);
+  },
+
+  copyName: function AM_context_copyName(aAddon) {
+    AM_Context.copyToClipboard(aAddon.name);
+  },
+
+  copyVersion: function AM_context_copyVersion(aAddon) {
+    AM_Context.copyToClipboard(aAddon.version);
+  },
+
+  copyNameVersion: function AM_context_copyNameVersion(aAddon) {
+    AM_Context.copyToClipboard(aAddon.name + " " + aAddon.version);
   },
 
   copyGUID: function AM_context_copyGUID(aAddon) {
@@ -85,6 +93,11 @@ var AM_Context = {
   },
 
   setItemsAttributes: function AM_context_setItemsAttributes(aAddon, aEvent) {
+
+    function AM_context_Item(aId) {
+      return document.getElementById("AM-context-" + aId);
+    }
+
     var addonType = aEvent.target.getAttribute("addontype");
     var isExtension = (addonType == "extension");
     var isTheme = (addonType == "theme");
@@ -92,15 +105,31 @@ var AM_Context = {
     var isUserStyle = (addonType == "userstyle");
     var isUserScript = (addonType == "user-script");
 
-    var copyItem = AM_context_Item("copy-url");
+    var copyNameItem = AM_context_Item("copy-name");
+    copyNameItem.tooltipText = aAddon.name;
+    copyNameItem.disabled = isUserStyle;
+
+    var copyVersionItem = AM_context_Item("copy-version");
+    copyVersionItem.tooltipText = aAddon.version;
+    copyVersionItem.disabled = isUserStyle;
+
+    var copyNameVersionItem = AM_context_Item("copy-nameversion");
+    copyNameVersionItem.tooltipText = aAddon.name + " " + aAddon.version;
+    copyNameVersionItem.disabled = isUserStyle;
+
+    var copyIdItem = AM_context_Item("copy-guid");
+    copyIdItem.tooltipText = aAddon.id;
+    copyIdItem.disabled = isUserStyle;
+
+    var copyURLItem = AM_context_Item("copy-url");
     var goHomeItem = AM_context_Item("go-home");
     if (aAddon.homepageURL) {
-      copyItem.tooltipText = goHomeItem.tooltipText = aAddon.homepageURL;
+      copyURLItem.tooltipText = goHomeItem.tooltipText = aAddon.homepageURL;
     } else if (aAddon.reviewURL) {
-      copyItem.tooltipText =  goHomeItem.tooltipText =
+      copyURLItem.tooltipText =  goHomeItem.tooltipText =
         aAddon.reviewURL.replace(/\/reviews\/.*$/, "/");
     }
-    copyItem.disabled = goHomeItem.disabled =
+    copyURLItem.disabled = goHomeItem.disabled =
       !(aAddon.homepageURL || aAddon.reviewURL);
 
     var supportItem = AM_context_Item("go-support");
@@ -116,10 +145,6 @@ var AM_Context = {
       (!aAddon.contributionAmount ? "" : " (" + aAddon.contributionAmount +
                                          " suggested)");
 
-    var copyIdItem = AM_context_Item("copy-guid");
-    copyIdItem.tooltipText = aAddon.id;
-    copyIdItem.disabled = isUserStyle;
-
     AM_context_Item("browse-dir").disabled =
       isPlugin || isUserStyle || (isTheme && aAddon.iconURL &&
                                   /^https?/.test(aAddon.iconURL));
@@ -127,8 +152,10 @@ var AM_Context = {
     var inspectItem = AM_context_Item("inspect-addon");
     inspectItem.disabled = !("inspectObject" in window);
     inspectItem.className = isUserScript ? "greasemonkey" : "";
-    document.getElementById("addonitem-menuseparator")
-            .className = isUserScript ? "greasemonkey" : "";
+
+    var separator = AM_context_Item("menuseparator-2");
+    separator.className = isUserScript ? "greasemonkey" : "";
+    separator.hidden = isUserStyle;
   },
 
   initPopup: function AM_context_initPopup(aEvent) {
