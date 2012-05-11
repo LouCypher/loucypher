@@ -73,7 +73,7 @@ BJbhJCO2lsVCjturS2wfdBiMs5k+soJ5sdfSchJNg/12zKPXdSqHXfKB5c7qEsU44GnlEwBXSylr
       ShortName:before { content: "ShortName: "; }
       Description:before { content: "Description: "; }
       Url:before { content: "Url: "; text-transform: uppercase; }
-      Url:after { content: "http://custombuttons.sourceforge.net/forum/search.php?author={searchTerms}&amp;fid[]=4&amp;sf=titleonly&amp;sr=topics"; }
+      Url:after { content: "http://custombuttons.sourceforge.net/forum/search.php?amp;fid[]=4&amp;sf=titleonly&amp;sr=topics&amp;author={searchTerms}"; }
       InputEncoding:before { content: "InputEncoding: "; }
     ]]></html:style>
     <html:title>Search Custom Buttons by Author</html:title>
