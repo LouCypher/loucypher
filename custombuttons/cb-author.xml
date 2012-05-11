@@ -4,17 +4,30 @@
                        xmlns:html="http://www.w3.org/1999/xhtml">
   <html:head>
     <html:link rel="author" href="https://mozillians.org/zoolcar9"/>
-    <html:link rel="canonical" href="https://loucypher.googlecode.com/svn/custombuttons/cb-author.xml"/>
+    <html:link rel="canonical"
+     href="https://loucypher.googlecode.com/svn/custombuttons/cb-author.xml"/>
     <html:link rel="contact" href="mailto:loucypher@mozillaca.com"/>
-    <html:link rel="search" type="application/opensearchdescription+xml" title=">Search Custom Buttons by Author" href="https://loucypher.googlecode.com/svn/custombuttons/cb-author.xml"/>
-    <html:link rel="shortcut icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAcFJREFUOMvFk71uE1EQhb879+56185ujCLiRAKZn0ikQRS0iIIeXoAyT0BFkToSPAC8BBR0FIgGpSFCIEXGSmHJhMgkMVjGdvzL5g6FkYEGEVJwmpmjOac6Z4yqchoIp4R7+O7DGrABxCf0DoF18+BtvXtjuZhcTP7er8BOu8+bz92ec2KSS2nMXGBRBQ+oKl6nQj/bp9OrogoLUYAxJC4Uod4dYsXgPew0uzSPxnhVymcKOCvUvhzhUZbTiPPFPF5h7D05ESS0hkZ/zF5vxOOtOs+q+1wppVxeTMhQXn1ssbnbYuKV+8/fM8iOaY0m9CYZkRMktpZQhECEl7Umt1bOYsSQc5b5OESAw/6Y7YMOd6+dIxRhLnAkgSO2FomdkIaONHR4VQL5ydPQETkhEEOpkGOr8ZVQzOwWO0EiK6ShJQ0tNy8s8KTSIDCQBJbhJCO2lsVCjturS2wfdBiMs5k+soJ5sdfSchJNg/12zKPXdSqHXfKB5c7qEsU44GnlEwBXSylr18tkP9q72xthNvfbujKf/y1n80vef0KtM8BZY3pp4JJ/qbE1pueq7f49J2bDGXOiKmeqw2q7v27++zd+B3C7rBbMhDo1AAAAAElFTkSuQmCC"/>
+    <html:link rel="search" type="application/opensearchdescription+xml"
+     title=">Search Custom Buttons by Author"
+     href="https://loucypher.googlecode.com/svn/custombuttons/cb-author.xml"/>
+    <html:link rel="shortcut icon" href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A
+/wD/oL2nkwAAAcFJREFUOMvFk71uE1EQhb879+56185ujCLiRAKZn0ikQRS0iIIeXoAyT0BFkToS
+PAC8BBR0FIgGpSFCIEXGSmHJhMgkMVjGdvzL5g6FkYEGEVJwmpmjOac6Z4yqchoIp4R7+O7DGrAB
+xCf0DoF18+BtvXtjuZhcTP7er8BOu8+bz92ec2KSS2nMXGBRBQ+oKl6nQj/bp9OrogoLUYAxJC4U
+od4dYsXgPew0uzSPxnhVymcKOCvUvhzhUZbTiPPFPF5h7D05ESS0hkZ/zF5vxOOtOs+q+1wppVxe
+TMhQXn1ssbnbYuKV+8/fM8iOaY0m9CYZkRMktpZQhECEl7Umt1bOYsSQc5b5OESAw/6Y7YMOd6+d
+IxRhLnAkgSO2FomdkIaONHR4VQL5ydPQETkhEEOpkGOr8ZVQzOwWO0EiK6ShJQ0tNy8s8KTSIDCQ
+BJbhJCO2lsVCjturS2wfdBiMs5k+soJ5sdfSchJNg/12zKPXdSqHXfKB5c7qEsU44GnlEwBXSylr
+18tkP9q72xthNvfbujKf/y1n80vef0KtM8BZY3pp4JJ/qbE1pueq7f49J2bDGXOiKmeqw2q7v27+
++zd+B3C7rBbMhDo1AAAAAElFTkSuQmCC"/>
     <html:meta name="description" content="Search buttons by author"/>
     <html:script type="text/javascript"><![CDATA[
       function install() {
         try {
           window.external.AddSearchProvider("https://loucypher.googlecode.com/svn/custombuttons/cb-author.xml");
         } catch (ex) {
-          alert("Your browser doesn't support OpenSearch.");
+          alert("You will need a browser which supports OpenSearch to install this plugin.");
         }
       }
     ]]></html:script>
@@ -56,11 +69,11 @@
       ShortName:before, Description:before, Url:before, InputEncoding:before {
         display: block;
       }
-      Image, Developer, Contact, SearchForm { display: none; }
+      Image, Developer, Contact, SearchForm, Url[type^="application"] { display: none; }
       ShortName:before { content: "ShortName: "; }
       Description:before { content: "Description: "; }
       Url:before { content: "Url: "; text-transform: uppercase; }
-      Url:after { content: "http://www.google.com/search?q={searchTerms}"; }
+      Url:after { content: "http://custombuttons.sourceforge.net/forum/search.php?author={searchTerms}&amp;fid[]=4&amp;sf=titleonly&amp;sr=topics"; }
       InputEncoding:before { content: "InputEncoding: "; }
     ]]></html:style>
     <html:title>Search Custom Buttons by Author</html:title>
@@ -74,11 +87,23 @@
   </html:body>
   <ShortName>Search Custom Buttons by Author</ShortName>
   <Description>Search buttons by author</Description>
-  <Url type="text/html" method="get" template="http://custombuttons.sourceforge.net/forum/search.php?author={searchTerms}&amp;fid[]=4&amp;sf=titleonly&amp;sr=topics"/>
-  <Image width="16" height="16">data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAcFJREFUOMvFk71uE1EQhb879+56185ujCLiRAKZn0ikQRS0iIIeXoAyT0BFkToSPAC8BBR0FIgGpSFCIEXGSmHJhMgkMVjGdvzL5g6FkYEGEVJwmpmjOac6Z4yqchoIp4R7+O7DGrABxCf0DoF18+BtvXtjuZhcTP7er8BOu8+bz92ec2KSS2nMXGBRBQ+oKl6nQj/bp9OrogoLUYAxJC4Uod4dYsXgPew0uzSPxnhVymcKOCvUvhzhUZbTiPPFPF5h7D05ESS0hkZ/zF5vxOOtOs+q+1wppVxeTMhQXn1ssbnbYuKV+8/fM8iOaY0m9CYZkRMktpZQhECEl7Umt1bOYsSQc5b5OESAw/6Y7YMOd6+dIxRhLnAkgSO2FomdkIaONHR4VQL5ydPQETkhEEOpkGOr8ZVQzOwWO0EiK6ShJQ0tNy8s8KTSIDCQBJbhJCO2lsVCjturS2wfdBiMs5k+soJ5sdfSchJNg/12zKPXdSqHXfKB5c7qEsU44GnlEwBXSylr18tkP9q72xthNvfbujKf/y1n80vef0KtM8BZY3pp4JJ/qbE1pueq7f49J2bDGXOiKmeqw2q7v27++zd+B3C7rBbMhDo1AAAAAElFTkSuQmCC</Image>
+  <Url type="text/html" method="get"
+   template="http://custombuttons.sourceforge.net/forum/search.php?author={searchTerms}&amp;fid[]=4&amp;sf=titleonly&amp;sr=topics"/>
+  <Image width="16" height="16">data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A
+/wD/oL2nkwAAAcFJREFUOMvFk71uE1EQhb879+56185ujCLiRAKZn0ikQRS0iIIeXoAyT0BFkToS
+PAC8BBR0FIgGpSFCIEXGSmHJhMgkMVjGdvzL5g6FkYEGEVJwmpmjOac6Z4yqchoIp4R7+O7DGrAB
+xCf0DoF18+BtvXtjuZhcTP7er8BOu8+bz92ec2KSS2nMXGBRBQ+oKl6nQj/bp9OrogoLUYAxJC4U
+od4dYsXgPew0uzSPxnhVymcKOCvUvhzhUZbTiPPFPF5h7D05ESS0hkZ/zF5vxOOtOs+q+1wppVxe
+TMhQXn1ssbnbYuKV+8/fM8iOaY0m9CYZkRMktpZQhECEl7Umt1bOYsSQc5b5OESAw/6Y7YMOd6+d
+IxRhLnAkgSO2FomdkIaONHR4VQL5ydPQETkhEEOpkGOr8ZVQzOwWO0EiK6ShJQ0tNy8s8KTSIDCQ
+BJbhJCO2lsVCjturS2wfdBiMs5k+soJ5sdfSchJNg/12zKPXdSqHXfKB5c7qEsU44GnlEwBXSylr
+18tkP9q72xthNvfbujKf/y1n80vef0KtM8BZY3pp4JJ/qbE1pueq7f49J2bDGXOiKmeqw2q7v27+
++zd+B3C7rBbMhDo1AAAAAElFTkSuQmCC</Image>
   <Developer>LouCypher</Developer>
   <Contact>loucypher@mozillaca.com</Contact>
   <InputEncoding>UTF-8</InputEncoding>
   <moz:SearchForm>http://custombuttons.sourceforge.net/forum/viewforum.php?f=4</moz:SearchForm>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://loucypher.googlecode.com/svn/custombuttons/cb-author.xml"/>
+  <Url type="application/opensearchdescription+xml" rel="self"
+   template="https://loucypher.googlecode.com/svn/custombuttons/cb-author.xml"/>
 </OpenSearchDescription>
