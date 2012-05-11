@@ -12,7 +12,7 @@
     <html:script type="text/javascript"><![CDATA[
       function install() {
         try {
-          window.external.AddSearchProvider(this.location.href);
+          window.external.AddSearchProvider("https://loucypher.googlecode.com/svn/custombuttons/cb-author.xml");
         } catch (ex) {
           alert("Your browser doesn't support OpenSearch.");
         }
