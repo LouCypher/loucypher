@@ -141,9 +141,10 @@ var AM_Context = {
 
     var donateItem = AM_context_Item("donate");
     donateItem.disabled = !aAddon.contributionURL;
-    donateItem.label = "Donate" + 
-      (!aAddon.contributionAmount ? "" : " (" + aAddon.contributionAmount +
-                                         " suggested)");
+    donateItem.tooltipText =
+               gStrings.ext.formatStringFromName("contributionAmount2",
+                                                 [aAddon.contributionAmount],
+                                                 1);
 
     AM_context_Item("browse-dir").disabled =
       isPlugin || isUserStyle || (isTheme && aAddon.iconURL &&

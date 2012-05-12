@@ -45,7 +45,6 @@
       id="AM-context-copy-name"
       insertafter="AM-context-menuseparator-2"
       label="&AMcontext.copyName;"
-      tooltiptext=""
       oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.copyName);"/>
 
@@ -53,7 +52,6 @@
       id="AM-context-copy-version"
       insertafter="AM-context-copy-name"
       label="&AMcontext.copyVersion;"
-      tooltiptext=""
       oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.copyVersion);"/>
 
@@ -61,7 +59,6 @@
       id="AM-context-copy-nameversion"
       insertafter="AM-context-copy-version"
       label="&AMcontext.copyNameVersion;"
-      tooltiptext=""
       oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.copyNameVersion);"/>
 
@@ -69,7 +66,6 @@
       id="AM-context-copy-guid"
       insertafter="AM-context-copy-nameversion"
       label="&AMcontext.copyId;"
-      tooltiptext=""
       oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.copyGUID);"/>
 
@@ -77,7 +73,6 @@
       id="AM-context-copy-url"
       insertafter="AM-context-copy-guid"
       label="&AMcontext.copyHomePageURL;"
-      tooltiptext=""
       oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.copyURL);"/>
 
@@ -85,7 +80,6 @@
       id="AM-context-go-home"
       insertafter="menuitem_about"
       label="&AMcontext.visitHomePage;"
-      tooltiptext=""
       oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.goHome);"/>
 
@@ -93,7 +87,6 @@
       id="AM-context-go-support"
       insertafter="AM-context-go-home"
       label="&AMcontext.visitSupport;"
-      tooltiptext=""
       oncommand="AM_Context.getAddon(AM_Context.getPopupNode(this).value,
  AM_Context.support);"/>
 
