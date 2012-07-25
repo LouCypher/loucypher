@@ -222,23 +222,23 @@ this.updater = {
         $(aNewIDs).parentNode.removeChild($(aNewIDs));
       }
 
-      var mi = cbu.makeXML(<menuitem xmlns={xulns} id={aNewIDs}
-                            class="menuitem-iconic"
-                            image={icon}
-                            label="Check for updates for this button"
-                            onclick={"if (event.button == 1) { "
-                                   + "var btn = document.getElementById('"
-                                   + self.id
-                                   + "'); btn.updater.openUpdateURL(); }"}
-                            oncommand={"var btn = document.getElementById('"
-                                     + self.id
-                                     + "'); btn.updater.checkForUpdate("
-                                     + "btn.updater.getUpdate);"}
-                            observes="custombuttons-contextbroadcaster-primary"/>);
+      var mi = cbu.makeXML(
+                    '<menuitem xmlns="' + xulns + '"'
+                  + ' id="' + aNewIDs + '"'
+                  + ' class="menuitem-iconic"'
+                  + ' image="' + icon + '"'
+                  + ' label="Check for updates for this button"'
+                  + ' onclick="if (event.button == 1) {'
+                  + ' var btn = document.getElementById(\''
+                  + self.id + '\'); btn.updater.openUpdateURL(); }" '
+                  + ' oncommand="var btn = document.getElementById(\''
+                  + self.id + '\'); btn.updater.checkForUpdate('
+                  + 'btn.updater.getUpdate);"'
+                  + ' observes="custombuttons-contextbroadcaster-primary"/>');
       $(aNodeIDs).parentNode.insertBefore(mi, $(aNodeIDs).nextSibling);
       if (aSeparator) {
-        var sep = cbu.makeXML(<menuseparator xmlns={xulns}
-                                             id={mi.id + "-separator"}/>);
+        var sep = cbu.makeXML('<menuseparator xmlns="' + xulns + '"'
+                            + ' id="' + mi.id + '-separator"/>');
         mi.parentNode.insertBefore(sep, mi.nextSibling);
       }
     }
