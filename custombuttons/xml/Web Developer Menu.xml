@@ -4,8 +4,7 @@
   <html:head>
     <html:title><![CDATA[Web Developer Menu]]></html:title>
     <html:link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAANf7bzMYAQAAACBjSFJNAABsmwAAcm8AAPauAACFgwAAbvcAAOhBAAAxdAAAF2yhti2bAAABrUlEQVQYGU3BTUiTAQDH4T+9smkmrdrCLiIh6Fivk6BLH2a7dBBzKxYRKS4cFXQwC1cLyiAiKQ9qJJEJ5aFDHYT0okUsiOnqEEFQYrEgtC/DKGzg3v1qK9aeRxUek7qUEVLekfozDwaSnbE9ZcpatVBPB7WW0aac8M6hXz9JcjzeUqosY9mJlwhm2ghJ3SuisWUWaH/od0hBo2ml1G5PuzA5iWkZbcG1fYsZXhMYkRqKg5PBJ/ojZLdcmJxgU9p2KDKTZI5Rdt9uHp8m8lU5h+1pF5tpwfGq69MkT5lmghgvaJzSPyGbtY5tmFSxgxuMMUGMLqqblXewaGY1TYjTHPjROtvxZe9UzT79VxO+bBmsZ5BrGV+gobhijQq5zw7Rg5f9XOQDvW+6bSrk6b3LAFH6OU/Vhei3eS7NnirVX0GbOfyI+wxyj2GKotKxjZ2LH4m+81cqq/ZqjCtWTybOOCV9yglWH/0ON1OBc5IC8y/xpfqt55SNKM+39XoG4vhvyXz8lvckcIx5bCqw606Cz4SXVN5Ymdg+VzJqM7VBTjlVrkq55VXdlmf+JXfrb0i92HYaP+PsAAAAAElFTkSuQmCC"/>
-    <html:style type="text/css"><![CDATA[
-body { font-size: medium; margin: 0; }
+    <html:style type="text/css"><![CDATA[body { font-size: medium; margin: 0; }
 body, code:before, help:before, initcode:before {
   font-family: "Verdana", sans-serif;
 }
@@ -32,11 +31,6 @@ p { font-size: small; text-align: center; }
   color: #000;
   text-shadow: -1pt -1px 0pt rgba(255, 255, 255, .5);
   padding: 1em;
-  text-decoration: none;
-}
-:-moz-any-link:focus {
-  color: white;
-  outline-color: transparent;
   text-decoration: none;
 }
 #button a, code, code:before, initcode, initcode:before, help, help:before {
@@ -76,7 +70,7 @@ code, initcode, help {
         <![CDATA[Install this button]]>
         </html:a>
       </html:div>
-      <html:a href="https://addons.mozilla.org/addon/custom-buttons/?src=external-custombuttons-xml">
+      <html:a href="https://addons.mozilla.org/addon/custom-buttons/?src=custom-buttons-xml">
         <![CDATA[What's this?]]>
       </html:a>
       <html:div id="credits">
@@ -86,6 +80,7 @@ code, initcode, help {
       </html:div>
     </html:div>
   </html:body>
+  <date id="date" value="20120329"/>
   <name>Web Developer Menu</name>
   <image><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAANf7bzMYAQAAACBjSFJNAABsmwAAcm8AAPauAACFgwAAbvcAAOhBAAAxdAAAF2yhti2bAAABrUlEQVQYGU3BTUiTAQDH4T+9smkmrdrCLiIh6Fivk6BLH2a7dBBzKxYRKS4cFXQwC1cLyiAiKQ9qJJEJ5aFDHYT0okUsiOnqEEFQYrEgtC/DKGzg3v1qK9aeRxUek7qUEVLekfozDwaSnbE9ZcpatVBPB7WW0aac8M6hXz9JcjzeUqosY9mJlwhm2ghJ3SuisWUWaH/od0hBo2ml1G5PuzA5iWkZbcG1fYsZXhMYkRqKg5PBJ/ojZLdcmJxgU9p2KDKTZI5Rdt9uHp8m8lU5h+1pF5tpwfGq69MkT5lmghgvaJzSPyGbtY5tmFSxgxuMMUGMLqqblXewaGY1TYjTHPjROtvxZe9UzT79VxO+bBmsZ5BrGV+gobhijQq5zw7Rg5f9XOQDvW+6bSrk6b3LAFH6OU/Vhei3eS7NnirVX0GbOfyI+wxyj2GKotKxjZ2LH4m+81cqq/ZqjCtWTybOOCV9yglWH/0ON1OBc5IC8y/xpfqt55SNKM+39XoG4vhvyXz8lvckcIx5bCqw606Cz4SXVN5Ymdg+VzJqM7VBTjlVrkq55VXdlmf+JXfrb0i92HYaP+PsAAAAAElFTkSuQmCC]]></image>
   <mode>0</mode>
