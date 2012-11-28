@@ -71,6 +71,12 @@ this.updater = {
     }
   },
 
+  // DOM parser
+  makeXML: function makeXML(aXMLString) {
+    return (new DOMParser).parseFromString(aXMLString, "application/xml")
+                          .documentElement;
+  },
+
   // Check if the URI is Custom Button URI (custombutton://...)
   isValidCbURI: function updater_isValidCbURI(aURL) {
     if (!aURL) return false;
@@ -222,7 +228,7 @@ this.updater = {
         $(aNewIDs).parentNode.removeChild($(aNewIDs));
       }
 
-      var mi = cbu.makeXML(
+      var mi = this.makeXML(
                     '<menuitem xmlns="' + xulns + '"'
                   + ' id="' + aNewIDs + '"'
                   + ' class="menuitem-iconic"'
@@ -237,8 +243,8 @@ this.updater = {
                   + ' observes="custombuttons-contextbroadcaster-primary"/>');
       $(aNodeIDs).parentNode.insertBefore(mi, $(aNodeIDs).nextSibling);
       if (aSeparator) {
-        var sep = cbu.makeXML('<menuseparator xmlns="' + xulns + '"'
-                            + ' id="' + mi.id + '-separator"/>');
+        var sep = this.makeXML('<menuseparator xmlns="' + xulns + '"'
+                             + ' id="' + mi.id + '-separator"/>');
         mi.parentNode.insertBefore(sep, mi.nextSibling);
       }
     }
