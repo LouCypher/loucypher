@@ -72,7 +72,7 @@ code, initcode, help {
   <html:body>
     <html:div id="wrapper">
       <html:div id="button">
-        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EBrowser%20Cache%20Settings%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bcustombuttons-stdicon-2%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5Bthis.pref%20%3D%20cbu.ps.getBranch%28%22browser.cache.%22%29%3B%0Athis.setPref%20%3D%20function%20setPref%28b%29%20%7B%0A%20%20this.pref.setBoolPref%28%22disk.enable%22%2C%20b%29%3B%0A%20%20this.pref.setBoolPref%28%22disk_cache_ssl%22%2C%20b%29%3B%0A%20%20this.pref.setBoolPref%28%22memory.enable%22%2C%20b%29%3B%0A%7D%0Athis.onclick%20%3D%20function%20onclick%28e%29%20%7B%0A%20%20switch%20%28e.button%29%20%7B%0A%20%20%20%20case%200%3A%20this.setPref%28false%29%3B%20break%3B%0A%20%20%20%20case%201%3A%20this.setPref%28true%29%3B%0A%20%20%20%20default%3A%0A%20%20%7D%0A%7D%0Athis.tooltipText%20%3D%20this.Help%3B%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5BKlik%20kiri%3A%0A-%20browser.cache.disk.enable%20%20%20%20%3D%20false%0A-%20browser.cache.disk_cache_ssl%20%3D%20false%0A-%20browser.cache.memory.enable%20%20%3D%20false%0A%0AKlik%20tengah%3A%0A-%20browser.cache.disk.enable%20%20%20%20%3D%20true%0A-%20browser.cache.disk_cache_ssl%20%3D%20true%0A-%20browser.cache.memory.enable%20%20%3D%20true%0A%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install Browser Cache Settings">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EBrowser%20Cache%20Settings%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bcustombuttons-stdicon-2%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5Bvar%20pref%20%3D%20cbu.ps.getBranch%28%22browser.cache.%22%29%3B%0Afunction%20setPref%28b%29%20%7B%0A%20%20pref.setBoolPref%28%22disk.enable%22%2C%20b%29%3B%0A%20%20pref.setBoolPref%28%22disk_cache_ssl%22%2C%20b%29%3B%0A%20%20pref.setBoolPref%28%22memory.enable%22%2C%20b%29%3B%0A%7D%0Athis.onclick%20%3D%20function%20onclick%28e%29%20%7B%0A%20%20switch%20%28e.button%29%20%7B%0A%20%20%20%20case%200%3A%20setPref%28false%29%3B%20break%3B%0A%20%20%20%20case%201%3A%20setPref%28true%29%3B%0A%20%20%20%20default%3A%0A%20%20%7D%0A%7D%0Athis.tooltipText%20%3D%20this.Help%3B%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5B/*CODE*/%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5BKlik%20kiri%3A%0A-%20browser.cache.disk.enable%20%20%20%20%3D%20false%0A-%20browser.cache.disk_cache_ssl%20%3D%20false%0A-%20browser.cache.memory.enable%20%20%3D%20false%0A%0AKlik%20tengah%3A%0A-%20browser.cache.disk.enable%20%20%20%20%3D%20true%0A-%20browser.cache.disk_cache_ssl%20%3D%20true%0A-%20browser.cache.memory.enable%20%20%3D%20true%0A%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install Browser Cache Settings">
         <![CDATA[Install this button]]>
         </html:a>
       </html:div>
@@ -89,21 +89,21 @@ code, initcode, help {
   <name>Browser Cache Settings</name>
   <image><![CDATA[custombuttons-stdicon-2]]></image>
   <mode>0</mode>
-  <initcode><![CDATA[this.pref = cbu.ps.getBranch("browser.cache.");
-this.setPref = function setPref(b) {
-  this.pref.setBoolPref("disk.enable", b);
-  this.pref.setBoolPref("disk_cache_ssl", b);
-  this.pref.setBoolPref("memory.enable", b);
+  <initcode><![CDATA[var pref = cbu.ps.getBranch("browser.cache.");
+function setPref(b) {
+  pref.setBoolPref("disk.enable", b);
+  pref.setBoolPref("disk_cache_ssl", b);
+  pref.setBoolPref("memory.enable", b);
 }
 this.onclick = function onclick(e) {
   switch (e.button) {
-    case 0: this.setPref(false); break;
-    case 1: this.setPref(true);
+    case 0: setPref(false); break;
+    case 1: setPref(true);
     default:
   }
 }
 this.tooltipText = this.Help;]]></initcode>
-  <code><![CDATA[]]></code>
+  <code><![CDATA[/*CODE*/]]></code>
   <accelkey><![CDATA[]]></accelkey>
   <help><![CDATA[Klik kiri:
 - browser.cache.disk.enable    = false
