@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>LouCypher @ Tumblr</ShortName>
+  <Description>LouCypher's blog on Tumblr</Description>
+  <Developer>LouCypher</Developer>
+  <Contact>searchplugins@loucypher.oib.com</Contact>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16">data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAA5NAAAOTQFG1WgJAAAC
+eklEQVQozzVSSWtTYRQ9994v7zVpSWwaqk0HtRUVKVarYu1CheI8oasi4oA/QBDEn+BGV/4FQdy5
+ckCcEKFo0doiiJUKKp3Q2AxN6su733UR3Z3NmThHABCRMABq4FyGutupUGbnxMyIIIlgVVu7OCao
+EBERvHctScu38cZOvnyYtvfx5IyVqx6wXHvnwPDISr0SRRVw3ZlZU8BXjvjTu+XhBBwjn7TnHy0Z
+QIRVdcuOvS7VXKsWY/uj3jOAawfoxmnuERtss64Q9RK+fLd8C6lqd9e6DX2Dv+dndbkYQJiEAdrR
+inuPbOqT7cogXMGPOdRqyAYEIN/Vm05n05k8JcK4HjNYhOnTPG6P2XCG+pNoUptZQFuI+9MWqXX2
+9JbKS13NWJPtLhUX46gqABaWyWCfl2iTQyrCk1m7M02VGDAT1Dua3NWLZ0cvnBta35u1sgMocMze
+uoG7n+1pwX5FwqTMrMDi/OK+8+cHTx1/N/6xMPs935x1ScKljH6N6Wvdni0ZgMAhVlI1EVmpR9me
+jWEYvnvweOLli4OHRlzO0Zsq3tYMZoFzsWrsjZihSkQAVkq/AJw8uv/Y6JnacokaAzth770BZsbM
+RKSqIqKq+Y6Oscn3HYVyRJhbrkoikYBXNTOAiIhIRLz3zOy9TyQSxWIxsyq9Z+36sgQz7yfZe29E
+IkJEZmZmqmpmzAKQ9x7A61djFobFhd+VuYoDAEBVnXP6zwkA4rhOhJbWtQP9B27dvC7tqdWRTlR+
+ckOjwWm8tdEqTLX2D10YGDqzeeeJb+NTkssVyoUP0+OC/9Eb2g2QSud6tx5ds2m4ODulaAl8dXhk
+m6uUepqTfwHoBDbtwVkIgAAAABN0RVh0Q3JlYXRpb24gVGltZQAH2AUTDPHkoz0AAAAldEVYdGRh
+dGU6Y3JlYXRlADIwMTAtMDItMThUMjM6NTY6MTMtMDY6MDDU5d+WAAAAJXRFWHRkYXRlOm1vZGlm
+eQAyMDEwLTAyLTE4VDIzOjU2OjEzLTA2OjAwpbhnKgAAAABJRU5ErkJggg==</Image>
+  <moz:SearchForm>http://loucypher.tumblr.com/</moz:SearchForm>
+  <Url type="text/html"
+       method="get"
+       template="http://loucypher.tumblr.com/search/{searchTerms}"/>
+  <Url type="application/opensearchdescription+xml"
+       rel="self"
+       template="https://loucypher.googlecode.com/svn/misc/search/search.xml"/>
+</OpenSearchDescription>
