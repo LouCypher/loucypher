@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/"
+                       xmlns:html="http://www.w3.org/1999/xhtml">
+  <html:head>
+    <html:title>LouCypher @ Tumblr</html:title>
+    <html:meta name="description" content="LouCypher's blog on Tumblr"/>
+    <html:meta charset="utf-8"/>
+    <html:link rel="author"
+               href="http://loucypher.tumblr.com/"/>
+    <html:link rel="publisher"
+               href="https://plus.google.com/101088441440269967746"/>
+    <html:link rel="contact" href="searchplugins@loucypher.oib.com"/>
+    <html:link rel="canonical" href="search.xml"/>
+    <html:link rel="search" href="search.xml"
+               type="application/opensearchdescription+xml"
+               title=">LouCypher @ Tumblr"/>
+    <html:link rel="shortcut icon" href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAA5NAAAOTQFG1WgJAAAC
+eklEQVQozzVSSWtTYRQ9994v7zVpSWwaqk0HtRUVKVarYu1CheI8oasi4oA/QBDEn+BGV/4FQdy5
+ckCcEKFo0doiiJUKKp3Q2AxN6su733UR3Z3NmThHABCRMABq4FyGutupUGbnxMyIIIlgVVu7OCao
+EBERvHctScu38cZOvnyYtvfx5IyVqx6wXHvnwPDISr0SRRVw3ZlZU8BXjvjTu+XhBBwjn7TnHy0Z
+QIRVdcuOvS7VXKsWY/uj3jOAawfoxmnuERtss64Q9RK+fLd8C6lqd9e6DX2Dv+dndbkYQJiEAdrR
+inuPbOqT7cogXMGPOdRqyAYEIN/Vm05n05k8JcK4HjNYhOnTPG6P2XCG+pNoUptZQFuI+9MWqXX2
+9JbKS13NWJPtLhUX46gqABaWyWCfl2iTQyrCk1m7M02VGDAT1Dua3NWLZ0cvnBta35u1sgMocMze
+uoG7n+1pwX5FwqTMrMDi/OK+8+cHTx1/N/6xMPs935x1ScKljH6N6Wvdni0ZgMAhVlI1EVmpR9me
+jWEYvnvweOLli4OHRlzO0Zsq3tYMZoFzsWrsjZihSkQAVkq/AJw8uv/Y6JnacokaAzth770BZsbM
+RKSqIqKq+Y6Oscn3HYVyRJhbrkoikYBXNTOAiIhIRLz3zOy9TyQSxWIxsyq9Z+36sgQz7yfZe29E
+IkJEZmZmqmpmzAKQ9x7A61djFobFhd+VuYoDAEBVnXP6zwkA4rhOhJbWtQP9B27dvC7tqdWRTlR+
+ckOjwWm8tdEqTLX2D10YGDqzeeeJb+NTkssVyoUP0+OC/9Eb2g2QSud6tx5ds2m4ODulaAl8dXhk
+m6uUepqTfwHoBDbtwVkIgAAAABN0RVh0Q3JlYXRpb24gVGltZQAH2AUTDPHkoz0AAAAldEVYdGRh
+dGU6Y3JlYXRlADIwMTAtMDItMThUMjM6NTY6MTMtMDY6MDDU5d+WAAAAJXRFWHRkYXRlOm1vZGlm
+eQAyMDEwLTAyLTE4VDIzOjU2OjEzLTA2OjAwpbhnKgAAAABJRU5ErkJggg=="/>
+    <html:style type="text/css"><![CDATA[
+      body {
+        background: #fff;
+        color: #000;
+        width: 25em;
+        margin: 4em auto;
+        padding: 3em;
+        border: 1px solid ThreeDShadow;
+           -moz-border-radius: 10px;
+             -o-border-radius: 10px;
+        -webkit-border-radius: 10px;
+                border-radius: 10px;
+           -moz-box-shadow: 3px 6px 9px rgba(0, 0, 0, .5);
+             -o-box-shadow: 3px 6px 9px rgba(0, 0, 0, .5);
+        -webkit-box-shadow: 3px 6px 9px rgba(0, 0, 0, .5);
+                box-shadow: 3px 6px 9px rgba(0, 0, 0, .5);
+      }
+      OpenSearchDescription {
+        background-color: #0099b9;
+      }
+      Contact, Developer, Image, SearchForm, Url { display: none; }
+      Description, ShortName, InputEncoding {
+        margin: 0 0 1em;
+      }
+      Description, Description:before, InputEncoding, InputEncoding:before,
+      ShortName, ShortName:before {
+        display: block;
+      }
+      *:before { font-weight: bold; }
+      Description:before { content: "Description: "; }
+      InputEncoding:before { content: "InputEncoding: "; }
+      ShortName:before { content: "ShortName: "; }
+    ]]></html:style>
+    <html:script type="text/javascript">
+    </html:script>
+  </html:head>
+  <html:body>
+    <html:a href="https://plus.google.com/101088441440269967746?rel=author">
+    </html:a>
+    <ShortName>LouCypher @ Tumblr</ShortName>
+    <Description>LouCypher's blog on Tumblr</Description>
+    <Developer>LouCypher</Developer>
+    <Contact>searchplugins@loucypher.oib.com</Contact>
+    <InputEncoding>UTF-8</InputEncoding>
+    <Url type="text/html"
+         method="get"
+         template="http://loucypher.tumblr.com/search/{searchTerms}"/>
+    <Image width="16" height="16">data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAA5NAAAOTQFG1WgJAAAC
+eklEQVQozzVSSWtTYRQ9994v7zVpSWwaqk0HtRUVKVarYu1CheI8oasi4oA/QBDEn+BGV/4FQdy5
+ckCcEKFo0doiiJUKKp3Q2AxN6su733UR3Z3NmThHABCRMABq4FyGutupUGbnxMyIIIlgVVu7OCao
+EBERvHctScu38cZOvnyYtvfx5IyVqx6wXHvnwPDISr0SRRVw3ZlZU8BXjvjTu+XhBBwjn7TnHy0Z
+QIRVdcuOvS7VXKsWY/uj3jOAawfoxmnuERtss64Q9RK+fLd8C6lqd9e6DX2Dv+dndbkYQJiEAdrR
+inuPbOqT7cogXMGPOdRqyAYEIN/Vm05n05k8JcK4HjNYhOnTPG6P2XCG+pNoUptZQFuI+9MWqXX2
+9JbKS13NWJPtLhUX46gqABaWyWCfl2iTQyrCk1m7M02VGDAT1Dua3NWLZ0cvnBta35u1sgMocMze
+uoG7n+1pwX5FwqTMrMDi/OK+8+cHTx1/N/6xMPs935x1ScKljH6N6Wvdni0ZgMAhVlI1EVmpR9me
+jWEYvnvweOLli4OHRlzO0Zsq3tYMZoFzsWrsjZihSkQAVkq/AJw8uv/Y6JnacokaAzth770BZsbM
+RKSqIqKq+Y6Oscn3HYVyRJhbrkoikYBXNTOAiIhIRLz3zOy9TyQSxWIxsyq9Z+36sgQz7yfZe29E
+IkJEZmZmqmpmzAKQ9x7A61djFobFhd+VuYoDAEBVnXP6zwkA4rhOhJbWtQP9B27dvC7tqdWRTlR+
+ckOjwWm8tdEqTLX2D10YGDqzeeeJb+NTkssVyoUP0+OC/9Eb2g2QSud6tx5ds2m4ODulaAl8dXhk
+m6uUepqTfwHoBDbtwVkIgAAAABN0RVh0Q3JlYXRpb24gVGltZQAH2AUTDPHkoz0AAAAldEVYdGRh
+dGU6Y3JlYXRlADIwMTAtMDItMThUMjM6NTY6MTMtMDY6MDDU5d+WAAAAJXRFWHRkYXRlOm1vZGlm
+eQAyMDEwLTAyLTE4VDIzOjU2OjEzLTA2OjAwpbhnKgAAAABJRU5ErkJggg==</Image>
+    <moz:SearchForm>http://loucypher.tumblr.com/</moz:SearchForm>
+    <Url type="application/opensearchdescription+xml"
+         rel="self"
+         template="http://mycroftproject.com/updateos.php/id0/loucypher-tumblr.xml"/>
+  </html:body>
+</OpenSearchDescription>
