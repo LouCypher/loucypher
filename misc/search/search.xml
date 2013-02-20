@@ -97,6 +97,6 @@ eQAyMDEwLTAyLTE4VDIzOjU2OjEzLTA2OjAwpbhnKgAAAABJRU5ErkJggg==</Image>
     <moz:SearchForm>http://loucypher.tumblr.com/</moz:SearchForm>
     <Url type="application/opensearchdescription+xml"
          rel="self"
-         template="http://mycroftproject.com/updateos.php/id0/loucypher-tumblr.xml"/>
+         template="https://loucypher.googlecode.com/svn/misc/search/search.xml"/>
   </html:body>
 </OpenSearchDescription>
