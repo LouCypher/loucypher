@@ -1,0 +1,7 @@
+.error-404 a.permalink { display: none; }
+.error-404 .post-panel {
+  background-image: url("http://media.tumblr.com/abf8ff0567ae3bd23a4f98340be302a0/tumblr_inline_mijftlCj0q1qzobxb.jpg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 404px;
+}
