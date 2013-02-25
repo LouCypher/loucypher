@@ -1,0 +1,92 @@
+#header .blog-title { margin: -.5em 0 0; }
+#header .blog-title a { font-size: xx-large; }
+#header .blog-title a:after {
+  content: "The title says it all";
+  display: block;
+  font-size: small;
+  font-variant: small-caps;
+}
+
+article > a.permalink {
+  opacity: .25;
+  position: absolute;
+  top: 0; left: -50px;
+  text-indent: -999em;
+}
+article:hover > a.permalink,
+article > a.permalink:hover { opacity: 1; }
+article > a.permalink .icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("http://assets.tumblr.com/images/dashboard_master_sprite.png")
+              -835px -62px no-repeat;
+}
+
+.copy a { border-bottom: none !important; }
+.install {
+  color: #fff;
+  background: #0c0;
+  margin: 0 auto 20px;
+  font-weight: bold;
+  width: 250px;
+  text-align: center;
+}
+.install a {
+  display: block;
+  padding: 1em;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.install a:hover { background: #080; }
+.install, .install a {
+     -moz-border-radius: .5em;
+       -o-border-radius: .5em;
+  -webkit-border-radius: .5em;
+          border-radius: .5em;
+}
+
+.install a::before { content: "Install '"; }
+.install a::after { content: "'"; }
+
+.bookmarklet a { cursor: move; }
+
+a.imglink:hover { background-color: transparent; }
+
+.disabled {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.update {
+  background-color: infobackground;
+  color: infotext;
+  border: 1px solid infotext;
+  padding: .5em;
+}
+
+.update ul { padding-left: 1em; }
+.update li { margin-left: 1em; }
+
+.hidden { display: none; }
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; margin: 0; padding: 0;}
+
+.photo-panel{ background: transparent; }
+
+.social > * {
+  margin: 0;
+  padding: 0 12pt !important;
+}
+
+pre, code{
+  font-family: "Courier New", monospace;
+  font-size: 10pt;
+  background: #eee;
+}
+.prettyprint {
+  overflow: auto;
+  padding: .5em !important;
+}
+
