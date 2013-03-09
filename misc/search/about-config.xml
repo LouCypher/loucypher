@@ -24,9 +24,9 @@ W1iWBc/zIEkSJiYmvjYMI3YvyisrK0vpdHrJNM0DAO1EIvFc07QAx3G4vr52z87O9gghX+i6/nh/
 f7+4sLDwFgD6YWGMwTCMaA+vrq7+Vq1WWa1WY+Vy+f0gDmPsvxsAwPLy8ucedhzn52q1+iXHcbi7
 u3s3iAMA/wADcXAHhTJOWgAAAABJRU5ErkJggg==</Image>
   <moz:SearchForm>about:config</moz:SearchForm>
-  <Url type="text/html"
+  <Url type="application/vnd.mozilla.xul+xml"
        method="get"
-       template="http://config?filter={searchTerms}"/>
+       template="config?filter={searchTerms}"/>
   <Url type="application/opensearchdescription+xml"
        rel="self"
        template="https://loucypher.googlecode.com/svn/misc/search/about-config.xml"/>
