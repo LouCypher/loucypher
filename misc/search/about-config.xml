@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>about:config</ShortName>
+  <Description>Search on about:config</Description>
+  <Developer>LouCypher</Developer>
+  <Contact>searchplugins@loucypher.oib.com</Contact>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16">data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALwSURB
+VDiNbVLPSyNnGH7mm8yPNGEmE7NxB0wjaxSUst1QWNjtgmb9G7KQXj2Yk+xFBrZEWHKRHoqXUMlB
+6Hqqh9LC3kQQXKQWQyuLJAcxIqITF9dJTHTyzY+vlyatkO/0fPC87/u87/NwjDEMeqVSKZdKpQoA
+UK/Xl/P5/LtBPPL/z+Li4sMeVhTlu0wmM5nJZCbD4XBuEAcAuJ6Ccrn8dnp6+vuTk5O/eZ53ksnk
+N7quCwBwfn7uHh8f/ynLciiRSHy1vb39w9zc3Jt+g0KhoGWz2U/Dw8M8IQSEELiui6urKwBALBYD
+z/NgjIExBtM0vY2NjQfFYvG6r2B9ff2vmZmZJ6Iool6vo9lsQtM0MMZgWRYURcHo6Cg8z8POzs7H
+XC73GAACvV1s277pdrtoNBqQZRnxeLw/MRqNotVq4eLiAqFQCJ1Op92r41VVzdVqtR/HxsZeBINB
+3rZtyLKMy8tLWqlUfj89Pa1JkvRIVdWAbdtwHAfBYFDf3d2d2dra8gOCILyempp6KooiAECWZfi+
+j8PDw1/z+XwOANbW1n4ZGhp6xXEcCCGIx+OBaDT6cm9vL0Jc1+UopaCUondAz/Pg+363J5NSStvt
+NnzfRzgchud5oJTCcRzws7OzrWazqQqCkBQEgUQiEbTbbSiKMrm5uTl5cHDwKpVKZV3X5UdGRtDp
+dNBoNLyjo6Nty7J+6rtQKpU+pNPpb3Vdx83NDSil8H0frutCkiSoqgpZlmGaJiqVyh/z8/PP7rlA
+CJH/9RixWAyiKKLb7ULTNIRCIQiCgFarBUIIOI4T70XZMIzY+Pj4E57nIQgCbNsGAEQiEUiShNvb
+W1iWBc/zIEkSJiYmvjYMI3YvyisrK0vpdHrJNM0DAO1EIvFc07QAx3G4vr52z87O9gghX+i6/nh/
+f7+4sLDwFgD6YWGMwTCMaA+vrq7+Vq1WWa1WY+Vy+f0gDmPsvxsAwPLy8ucedhzn52q1+iXHcbi7
+u3s3iAMA/wADcXAHhTJOWgAAAABJRU5ErkJggg==</Image>
+  <moz:SearchForm>about:config</moz:SearchForm>
+  <Url type="application/vnd.mozilla.xul+xml"
+       method="get"
+       template="about:config?filter={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml"
+       rel="self"
+       template="https://loucypher.googlecode.com/svn/misc/search/about-config.xml"/>
+</OpenSearchDescription>
