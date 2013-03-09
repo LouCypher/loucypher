@@ -28,5 +28,5 @@ eQAyMDEwLTAyLTE4VDIzOjU2OjEzLTA2OjAwpbhnKgAAAABJRU5ErkJggg==</Image>
        template="http://loucypher.tumblr.com/search/{searchTerms}"/>
   <Url type="application/opensearchdescription+xml"
        rel="self"
-       template="https://loucypher.googlecode.com/svn/misc/search/loucypher.tumblr.xml"/>
+       template="https://loucypher.googlecode.com/svn/misc/search/loucypher@tumblr.xml"/>
 </OpenSearchDescription>
