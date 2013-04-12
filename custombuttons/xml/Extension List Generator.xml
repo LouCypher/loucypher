@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custombutton xmlns:cb="http://xsms.nm.ru/custombuttons/"
+              xmlns:html="http://www.w3.org/1999/xhtml">
+  <html:head>
+    <html:title><![CDATA[Extension List Generator]]></html:title>
+    <html:link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABVUlEQVQ4y2P4//8/AyWYoALpQsb9ftPM/4tnM+4nywCQ5s5jRf8d+7T+k2VAxHzH/TUHkv57TDMgzgWyJYz74xZ6/E9Y4vU/ZaXv/9Jd0f/LDkb+j13v8N9xmtp/oy6J/xqN/P+5Ihj2YzUApHnxtb7/My83/e8+W/C/9nj8//yD/v+T99j/D99u8N9nk/J/h9Vi/+Vq2P5jNQBkMz7NTuvE/1ut5v0vV8+M3QCQs3Fptlsh+l93Ktd/pTaW/wKpjAgDYFEFCjCQn3HZDNLME8tYANLDEcrgADcAFlWg0AYFGC5nK3ew/McaC6BEAopnUFSBQhubZpMVbP81JrFgdwEyBkUVup9BNoM0681hBdMYYYCMQfGMzc8gGqQZ5BIQxhkLoEQCimeQs0E2IcuB+CDNxkvZ/ktX4jAAlMJAiQRkA8iZML+CaBAfJA7SDOTvJyovEMIAruB4gKjNkYMAAAAASUVORK5CYII="/>
+    <html:style type="text/css"><![CDATA[
+body { font-size: medium; margin: 0; }
+body, code:before, help:before, initcode:before {
+  font-family: "Verdana", sans-serif;
+}
+#wrapper { position: fixed; top: 1em; right: 1em; text-align: center; }
+p { font-size: small; text-align: center; }
+#button {
+  background-color: rgb(85, 168, 2);
+  background-image: linear-gradient(to bottom, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -moz-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -o-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  background-image: -webkit-linear-gradient(top, rgb(147, 200, 94), rgb(85, 168, 2));
+  border: 1px solid rgb(58, 116, 4);
+  border-radius: .5em;
+  -moz-border-radius: .5em;
+  -webkit-border-radius: .5em;
+  padding: 0;
+  margin-bottom: 1em;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .25);
+}
+#button a {
+  color: #000;
+  text-shadow: -1pt -1px 0pt rgba(255, 255, 255, .5);
+  padding: 1em;
+  text-decoration: none;
+}
+:-moz-any-link:focus {
+  color: white;
+  outline-color: transparent;
+  text-decoration: none;
+}
+#button a, code, code:before, initcode, initcode:before, help, help:before {
+  display: block;
+}
+#credits { position: fixed; bottom: 1em; right: 1em; font-size: small; }
+custombutton { background-color: rgb(171, 171, 171); margin: 1em; }
+date, image, mode, accelkey { display: none; }
+name { font-weight: bold; font-size: x-large; }
+code:before, help:before, initcode:before {
+  font-weight: bold;
+  font-size: large;
+  margin: 0 0 1em;
+  padding: .5em;
+}
+code:before { content: "CODE"; }
+help:before { content: "Help"; }
+initcode:before { content: "Initialization Code"; }
+code, initcode, help {
+  background-color: rgb(255, 255, 255);
+  border: 1px inset rgb(170, 170, 170);
+  font: medium monospace;
+  margin: 1em 1em 2em 0;
+  padding: 1em;
+  text-align: left;
+  width: 840px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.clear { clear: both; }
+]]></html:style>
+  </html:head>
+  <html:body>
+    <html:div id="wrapper">
+      <html:div id="button">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EExtension%20List%20Generator%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bdata%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABVUlEQVQ4y2P4//8/AyWYoALpQsb9ftPM/4tnM+4nywCQ5s5jRf8d+7T+k2VAxHzH/TUHkv57TDMgzgWyJYz74xZ6/E9Y4vU/ZaXv/9Jd0f/LDkb+j13v8N9xmtp/oy6J/xqN/P+5Ihj2YzUApHnxtb7/My83/e8+W/C/9nj8//yD/v+T99j/D99u8N9nk/J/h9Vi/+Vq2P5jNQBkMz7NTuvE/1ut5v0vV8+M3QCQs3Fptlsh+l93Ktd/pTaW/wKpjAgDYFEFCjCQn3HZDNLME8tYANLDEcrgADcAFlWg0AYFGC5nK3ew/McaC6BEAopnUFSBQhubZpMVbP81JrFgdwEyBkUVup9BNoM0681hBdMYYYCMQfGMzc8gGqQZ5BIQxhkLoEQCimeQs0E2IcuB+CDNxkvZ/ktX4jAAlMJAiQRkA8iZML+CaBAfJA7SDOTvJyovEMIAruB4gKjNkYMAAAAASUVORK5CYII%3D%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5B/*%0A%20*%20%20This%20Source%20Code%20Form%20is%20subject%20to%20the%20terms%20of%20the%20Mozilla%20Public%0A%20*%20%20License%2C%20v.%202.0.%20If%20a%20copy%20of%20the%20MPL%20was%20not%20distributed%20with%20this%0A%20*%20%20file%2C%20You%20can%20obtain%20one%20at%20http%3A//mozilla.org/MPL/2.0/.%0A%20*%0A%20*%20%20Contributor%28s%29%3A%0A%20*%20%20-%20LouCypher%20%28original%20code%29%0A%20*/%0A%0Athis.type%20%3D%20%22menu%22%3B%0A%0Avar%20menupopup%20%3D%20this.appendChild%28document.createElement%28%22menupopup%22%29%29%3B%0Amenupopup.setAttribute%28%22oncommand%22%2C%20%22generate%28event%29%3B%22%29%3B%0Amenupopup.generate%20%3D%20generate.bind%28%29%3B%0A%0A%5B%22HTML%22%2C%20%22Markdown%22%2C%20%22BBCode%22%2C%0A%20%22BBCode%20%28inside%20spoiler%20tag%29%22%5D.forEach%28function%28format%29%20%7B%0A%20%20var%20menuitem%20%3D%20menupopup.appendChild%28document.createElement%28%22menuitem%22%29%29%3B%0A%20%20menuitem.setAttribute%28%22label%22%2C%20format%29%3B%0A%20%20if%20%28format%20%3D%3D%20%22BBCode%20%28inside%20spoiler%20tag%29%22%29%20%7B%0A%20%20%20%20menuitem.setAttribute%28%22tooltiptext%22%2C%20%22Not%20all%20forums%20support%20this%20tag%22%29%3B%0A%20%20%7D%0A%7D%29%0A%0Afunction%20isDefaultTheme%28aTheme%29%20%7B%0A%20%20return%20aTheme.id%20%3D%3D%20%22%7B972ce4c6-7e08-4474-a285-3208198ce6fd%7D%22%20%7C%7C%0A%20%20%20%20%20%20%20%20%20aTheme.id%20%3D%3D%20%22modern@themes.mozilla.org%22%3B%0A%7D%0A%0Afunction%20generate%28aEvent%29%20%7B%0A%20%20AddonManager.getAddonsByTypes%28%5B%22theme%22%2C%20%22extension%22%5D%2C%20function%28addons%29%20%7B%0A%20%20%20%20var%20theme%3B%0A%20%20%20%20var%20extArray%20%3D%20%5B%5D%3B%0A%20%20%20%20addons.forEach%28function%28addon%29%20%7B%0A%20%20%20%20%20%20if%20%28addon.isActive%29%20%7B%0A%20%20%20%20%20%20%20%20if%20%28addon.type%20%3D%3D%20%22theme%22%29%20theme%20%3D%20addon%3B%0A%20%20%20%20%20%20%20%20else%20extArray.push%28addon%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%29%0A%20%20%20%20extArray.sort%28function%28a%2C%20b%29%20%7B%0A%20%20%20%20%20%20a%20%3D%20a.name.toLowerCase%28%29%3B%0A%20%20%20%20%20%20b%20%3D%20b.name.toLowerCase%28%29%3B%0A%20%20%20%20%20%20if%20%28a%20%3C%20b%29%20return%20-1%3B%0A%20%20%20%20%20%20if%20%28a%20%3E%20b%29%20return%201%3B%0A%20%20%20%20%20%20return%200%3B%0A%20%20%20%20%7D%29%0A%20%20%20%20switch%20%28aEvent.target.getAttribute%28%22label%22%29%29%20%7B%0A%20%20%20%20%20%20case%20%22HTML%22%3A%20generateHTML%28theme%2C%20extArray%29%3B%20break%3B%0A%20%20%20%20%20%20case%20%22Markdown%22%3A%20generateMarkdown%28theme%2C%20extArray%29%3B%20break%3B%0A%20%20%20%20%20%20case%20%22BBCode%22%3A%20generateBBCode%28theme%2C%20extArray%29%3B%20break%3B%0A%20%20%20%20%20%20case%20%22BBCode%20%28inside%20spoiler%20tag%29%22%3A%20generateBBCodeS%28theme%2C%20extArray%29%3B%20break%3B%0A%20%20%20%20%7D%0A%20%20%7D%29%0A%7D%0A%0Afunction%20generateHTML%28aTheme%2C%20aArray%29%20%7B%0A%20%20var%20extensions%20%3D%20%22%3Ch1%3EFirefox%20info%3C/h1%3E%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%3Ch2%3EUser%20agent%3C/h2%3E%3Cp%3E%22%20+%20navigator.userAgent%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%3C/p%3E%3Ch2%3ETheme%3C/h2%3E%3Cp%3E%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28%21isDefaultTheme%28aTheme%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%27%3Ca%20href%3D%22%27%20+%20getThemeURL%28aTheme%29%20+%20%27%22%3E%27%20+%20aTheme.name%20+%20%27%3C/a%3E%27%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20aTheme.name%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%3C/p%3E%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28%21isDefaultTheme%28aTheme%29%20%26%26%20aTheme.screenshots%20%26%26%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%21/getpersonas/.test%28aTheme.screenshots%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%27%3Cp%3E%3Cimg%20src%3D%22%27%20+%20aTheme.screenshots%5B0%5D.url%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%27%22%20alt%3D%22%27%20+%20aTheme.name%20+%20%27%22/%3E%3C/p%3E%27%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20%22%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%3Ch2%3EExtensions%3C/h2%3E%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%27%3Col%20style%3D%22width%3A900px%22%3E%27%3B%0A%20%20aArray.forEach%28function%28addon%29%20%7B%0A%20%20%20%20extensions%20+%3D%20%27%3Cli%20style%3D%22margin-bottom%3A1em%22%3E%27%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28addon.reviewURL%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%27%3Ca%20href%3D%22%27%20+%20getAMOPage%28addon.reviewURL%29%20+%20%27%22%3E%27%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20addon.name%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20addon.homepageURL%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%27%3Ca%20href%3D%22%27%20+%20addon.homepageURL%20+%20%27%22%3E%27%20+%20addon.name%20+%20%27%3C/a%3E%27%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20%27%3Ca%20href%3D%22http%3A//www.google.com/search%3Fq%3D%22%27%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20encodeURIComponent%28addon.name%20+%20%22%20firefox%20extension%22%29%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%27%22%3E%27%20+%20addon.name%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%3C/a%3E%22%20+%20%28addon.version%20%3F%20%22%20%22%20+%20addon.version%20%3A%20%22%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%3Cbr/%3E%22%20+%20addon.description%20+%20%22%3C/li%3E%22%3B%0A%20%20%7D%29%0A%20%20extensions%20+%3D%20%22%3C/ol%3E%22%3B%0A%20%20doSomething%28extensions%2C%20%22text/html%22%29%3B%0A%7D%0A%0Afunction%20generateMarkdown%28aTheme%2C%20aArray%29%20%7B%0A%20%20var%20idx%20%3D%200%3B%0A%20%20var%20extensions%20%3D%20%22%23%20Firefox%20info%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%5Cn%5Cn%23%23%20User%20agent%5Cn%5Cn%22%20+%20navigator.userAgent%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%5Cn%5Cn%23%23%20Theme%5Cn%5Cn%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28%21isDefaultTheme%28aTheme%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5B%22%20+%20aTheme.name%20+%20%22%5D%28%22%20+%20getThemeURL%28aTheme%29%20+%20%22%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20aTheme.name%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28%21isDefaultTheme%28aTheme%29%20%26%26%20aTheme.screenshots%20%26%26%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%21/getpersonas/.test%28aTheme.screenshots%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5Cn%5Cn%21%5B%22%20+%20aTheme.name%20+%20%22%5D%28%22%20+%20aTheme.screenshots%5B0%5D.url%20+%20%22%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20%22%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%5Cn%5Cn%23%23%20Extensions%22%3B%0A%20%20aArray.forEach%28function%28addon%29%20%7B%0A%20%20%20%20idx++%3B%0A%20%20%20%20extensions%20+%3D%20%22%5Cn%5Cn%22%20+%20idx%20+%20%22.%20%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28addon.reviewURL%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5B%22%20+%20addon.name%20+%20%22%5D%28%22%20+%20getAMOPage%28addon.reviewURL%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20addon.homepageURL%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5B%22%20+%20addon.name%20+%20%22%5D%28%22%20+%20addon.homepageURL%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20%22%5B%22%20+%20addon.name%20+%20%22%5D%28%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22http%3A//www.google.com/search%3Fq%3D%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20encodeURIComponent%28addon.name%20+%20%22%20firefox%20extension%22%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%29%22%20+%20%28addon.version%20%3F%20%22%20%22%20+%20addon.version%20%3A%20%22%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%20%20%5Cn%22%20+%20addon.description%3B%0A%20%20%7D%29%0A%20%20doSomething%28extensions%2C%20%22text/plain%22%2C%20%22%250A%250A.md%22%29%3B%0A%7D%0A%0Afunction%20generateBBCode%28aTheme%2C%20aArray%29%20%7B%0A%20%20var%20extensions%20%3D%20%22%5Bb%5DUser%20agent%3A%5B/b%5D%20%22%20+%20navigator.userAgent%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%5Cn%5Cn%5Bb%5DTheme%3A%5B/b%5D%20%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28%21isDefaultTheme%28aTheme%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5Burl%3D%22%20+%20getThemeURL%28aTheme%29%20+%20%22%5D%22%20+%20aTheme.name%20+%20%22%5B/url%5D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20aTheme.name%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28%21isDefaultTheme%28aTheme%29%20%26%26%20aTheme.screenshots%20%26%26%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%21/getpersonas/.test%28aTheme.screenshots%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5Cn%5Bimg%5D%22%20+%20aTheme.screenshots%5B0%5D.url%20+%20%22%5B/img%5D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20%22%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%5Cn%5Cn%5Bb%5DExtensions%3A%5B/b%5D%5Cn%5Blist%3D1%5D%22%3B%0A%20%20aArray.forEach%28function%28addon%29%20%7B%0A%20%20%20%20extensions%20+%3D%20%22%5B*%5D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28addon.reviewURL%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5Burl%3D%22%20+%20getAMOPage%28addon.reviewURL%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20addon.homepageURL%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5Burl%3D%22%20+%20addon.homepageURL%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20%22%5Burl%3Dhttp%3A//www.google.com/search%3Fq%3D%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20encodeURIComponent%28addon.name%20+%20%22%20firefox%20extension%22%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%5D%22%20+%20addon.name%20+%20%22%5B/url%5D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28addon.version%20%3F%20%22%20%22%20+%20addon.version%20%3A%20%22%22%29%3B%0A%20%20%7D%29%0A%20%20extensions%20+%3D%20%22%5B/list%5D%22%3B%0A%20%20doSomething%28extensions%2C%20%22text/plain%22%29%3B%0A%7D%0A%0Afunction%20generateBBCodeS%28aTheme%2C%20aArray%29%20%7B%0A%20%20var%20extensions%20%3D%20%22%5Bspoiler%3DFirefox%20info%5D%22%20+%20navigator.userAgent%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%5Cn%5Cn%5Bb%5DTheme%3A%5B/b%5D%20%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28%21isDefaultTheme%28aTheme%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5Burl%3D%22%20+%20getThemeURL%28aTheme%29%20+%20%22%5D%22%20+%20aTheme.name%20+%20%22%5B/url%5D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20aTheme.name%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28%21isDefaultTheme%28aTheme%29%20%26%26%20aTheme.screenshots%20%26%26%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%21/getpersonas/.test%28aTheme.screenshots%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5Cn%5Bimg%5D%22%20+%20aTheme.screenshots%5B0%5D.url%20+%20%22%5B/img%5D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20%22%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%5Cn%5Cn%5Bb%5DExtensions%3A%5B/b%5D%5Cn%5Blist%3D1%5D%22%3B%0A%20%20aArray.forEach%28function%28addon%29%20%7B%0A%20%20%20%20extensions%20+%3D%20%22%5B*%5D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28addon.reviewURL%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5Burl%3D%22%20+%20getAMOPage%28addon.reviewURL%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20addon.homepageURL%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3F%20%22%5Burl%3D%22%20+%20addon.homepageURL%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20%22%5Burl%3Dhttp%3A//www.google.com/search%3Fq%3D%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20encodeURIComponent%28addon.name%20+%20%22%20firefox%20extension%22%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22%5D%22%20+%20addon.name%20+%20%22%5B/url%5D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%28addon.version%20%3F%20%22%20%22%20+%20addon.version%20%3A%20%22%22%29%3B%0A%20%20%7D%29%0A%20%20extensions%20+%3D%20%22%5B/list%5D%5B/spoiler%5D%22%3B%0A%20%20doSomething%28extensions%2C%20%22text/plain%22%29%3B%0A%7D%0A%0Afunction%20getAMOPage%28aReviewURL%29%20%7B%0A%20%20var%20url%20%3D%20aReviewURL.replace%28/%5C/reviews%5C/.*%24/%2C%20%22/%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.replace%28/mozilla.org%5C/.*%5C/addon%5C//%2C%20%22mozilla.org/addon/%22%29%3B%0A%20%20url%20+%3D%20%22%3Fsrc%3Dexternal-extension-list-generator%22%3B%0A%20%20return%20url%3B%0A%7D%0A%0Afunction%20getThemeURL%28aAddon%29%20%7B%0A%20%20var%20url%3B%0A%20%20if%20%28aAddon.reviewURL%29%20%7B%0A%20%20%20%20return%20getAMOPage%28aAddon.reviewURL%29%3B%0A%20%20%7D%20else%20%7B%0A%20%20%20%20var%20id%20%3D%20aAddon.id.match%28/%5Cd+/%29.toString%28%29%3B%0A%20%20%20%20if%20%28/getpersonas/.test%28aAddon.screenshots%5B0%5D.url%29%29%20%7B%0A%20%20%20%20%20%20url%20%3D%20%22http%3A//www.getpersonas.com/persona/%22%20+%20id%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20url%20%3D%20%22http%3A//addons.mozilla.org/addon/%22%20+%20id%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20url%20+%3D%20%22/%3Fsrc%3Dexternal-extension-list-generator%22%3B%0A%20%20return%20url%3B%0A%7D%0A%0Afunction%20doSomething%28aString%2C%20aContentType%2C%20aExt%29%20%7B%0A%20%20var%20prompts%20%3D%20Services.prompt%3B%0A%20%20var%20flags%20%3D%20prompts.BUTTON_POS_0%20*%20prompts.BUTTON_TITLE_IS_STRING%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20prompts.BUTTON_POS_1%20*%20prompts.BUTTON_TITLE_CANCEL%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20prompts.BUTTON_POS_2%20*%20prompts.BUTTON_TITLE_IS_STRING%3B%0A%20%20var%20doWhat%20%3D%20prompts.confirmEx%28null%2C%20%22Extension%20List%20Generator%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22Extension%20list%20has%20been%20generated.%22%2C%20flags%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22Copy%22%2C%20%22%22%2C%20%22View%22%2C%20null%2C%20%7Bvalue%3Afalse%7D%29%3B%0A%20%20switch%20%28doWhat%29%20%7B%0A%20%20%20%20case%200%3A%20//%20Copy%0A%20%20%20%20%20%20Cc%5B%22@mozilla.org/widget/clipboardhelper%3B1%22%5D.getService%28Ci.nsIClipboardHelper%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.copyString%28aString%29%3B%0A%20%20%20%20%20%20Cc%5B%22@mozilla.org/alerts-service%3B1%22%5D.getService%28Ci.nsIAlertsService%29.%0A%20%20%20%20%20%20showAlertNotification%28%22chrome%3A//mozapps/skin/xpinstall/xpinstallItemGeneric.png%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22Extension%20List%20Generator%22%2C%20%22Copied%20to%20clipboard%21%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20false%2C%20%22%22%2C%20null%29%3B%0A%20%20%20%20%20%20break%3B%0A%20%20%20%20case%202%3A%20//%20View%0A%20%20%20%20%20%20var%20url%20%3D%20%22data%3A%22%20+%20aContentType%20+%20%22%3Bcharset%3Dutf-8%2C%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20encodeURIComponent%28aString%29%20+%20%28aExt%20%3F%20aExt%20%3A%20%22%22%29%3B%0A%20%20%20%20%20%20if%20%28Application.id%20%3D%3D%20%22%7B3550f703-e582-4d05-9a08-453d09bdfdc6%7D%22%29%20%7B%0A%20%20%20%20%20%20%20%20//%20Thunderbird%0A%20%20%20%20%20%20%20%20openContentTab%28url%2C%20%22tab%22%2C%20%22%5Ehttps%3F%3A%22%29%3B%0A%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20switchToTabHavingURI%28url%2C%20true%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20default%3A%20//%20Close%0A%20%20%7D%0A%7D%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5B/*CODE*/%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5BGenerate%20list%20of%20enabled%20extensions%20in%20BB%20Code%20format.%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install Extension List Generator">
+        <![CDATA[Install this button]]>
+        </html:a>
+      </html:div>
+      <html:a href="https://addons.mozilla.org/addon/custom-buttons/?src=external-custombuttons-xml">
+        <![CDATA[What's this?]]>
+      </html:a>
+      <html:div id="credits">
+        <html:a href="http://custombuttons.sourceforge.net/forum/viewtopic.php?t=78#p197">
+          <![CDATA[Custom Buttons XML]]><html:br/><![CDATA[Exporter/Importer]]>
+        </html:a>
+      </html:div>
+    </html:div>
+  </html:body>
+  <name>Extension List Generator</name>
+  <image><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABVUlEQVQ4y2P4//8/AyWYoALpQsb9ftPM/4tnM+4nywCQ5s5jRf8d+7T+k2VAxHzH/TUHkv57TDMgzgWyJYz74xZ6/E9Y4vU/ZaXv/9Jd0f/LDkb+j13v8N9xmtp/oy6J/xqN/P+5Ihj2YzUApHnxtb7/My83/e8+W/C/9nj8//yD/v+T99j/D99u8N9nk/J/h9Vi/+Vq2P5jNQBkMz7NTuvE/1ut5v0vV8+M3QCQs3Fptlsh+l93Ktd/pTaW/wKpjAgDYFEFCjCQn3HZDNLME8tYANLDEcrgADcAFlWg0AYFGC5nK3ew/McaC6BEAopnUFSBQhubZpMVbP81JrFgdwEyBkUVup9BNoM0681hBdMYYYCMQfGMzc8gGqQZ5BIQxhkLoEQCimeQs0E2IcuB+CDNxkvZ/ktX4jAAlMJAiQRkA8iZML+CaBAfJA7SDOTvJyovEMIAruB4gKjNkYMAAAAASUVORK5CYII=]]></image>
+  <mode>0</mode>
+  <initcode><![CDATA[/*
+ *  This Source Code Form is subject to the terms of the Mozilla Public
+ *  License, v. 2.0. If a copy of the MPL was not distributed with this
+ *  file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ *  Contributor(s):
+ *  - LouCypher (original code)
+ */
+
+this.type = "menu";
+
+var menupopup = this.appendChild(document.createElement("menupopup"));
+menupopup.setAttribute("oncommand", "generate(event);");
+menupopup.generate = generate.bind();
+
+["HTML", "Markdown", "BBCode",
+ "BBCode (inside spoiler tag)"].forEach(function(format) {
+  var menuitem = menupopup.appendChild(document.createElement("menuitem"));
+  menuitem.setAttribute("label", format);
+  if (format == "BBCode (inside spoiler tag)") {
+    menuitem.setAttribute("tooltiptext", "Not all forums support this tag");
+  }
+})
+
+function isDefaultTheme(aTheme) {
+  return aTheme.id == "{972ce4c6-7e08-4474-a285-3208198ce6fd}" ||
+         aTheme.id == "modern@themes.mozilla.org";
+}
+
+function generate(aEvent) {
+  AddonManager.getAddonsByTypes(["theme", "extension"], function(addons) {
+    var theme;
+    var extArray = [];
+    addons.forEach(function(addon) {
+      if (addon.isActive) {
+        if (addon.type == "theme") theme = addon;
+        else extArray.push(addon);
+      }
+    })
+    extArray.sort(function(a, b) {
+      a = a.name.toLowerCase();
+      b = b.name.toLowerCase();
+      if (a < b) return -1;
+      if (a > b) return 1;
+      return 0;
+    })
+    switch (aEvent.target.getAttribute("label")) {
+      case "HTML": generateHTML(theme, extArray); break;
+      case "Markdown": generateMarkdown(theme, extArray); break;
+      case "BBCode": generateBBCode(theme, extArray); break;
+      case "BBCode (inside spoiler tag)": generateBBCodeS(theme, extArray); break;
+    }
+  })
+}
+
+function generateHTML(aTheme, aArray) {
+  var extensions = "<h1>Firefox info</h1>"
+                 + "<h2>User agent</h2><p>" + navigator.userAgent
+                 + "</p><h2>Theme</h2><p>"
+                 + (!isDefaultTheme(aTheme)
+                    ? '<a href="' + getThemeURL(aTheme) + '">' + aTheme.name + '</a>'
+                    : aTheme.name)
+                 + "</p>"
+                 + (!isDefaultTheme(aTheme) && aTheme.screenshots &&
+                    !/getpersonas/.test(aTheme.screenshots)
+                    ? '<p><img src="' + aTheme.screenshots[0].url +
+                      '" alt="' + aTheme.name + '"/></p>'
+                    : "")
+                 + "<h2>Extensions</h2>"
+                 + '<ol style="width:900px">';
+  aArray.forEach(function(addon) {
+    extensions += '<li style="margin-bottom:1em">'
+                + (addon.reviewURL
+                   ? '<a href="' + getAMOPage(addon.reviewURL) + '">' +
+                     addon.name
+                   : addon.homepageURL
+                     ? '<a href="' + addon.homepageURL + '">' + addon.name + '</a>'
+                     : '<a href="http://www.google.com/search?q="' +
+                       encodeURIComponent(addon.name + " firefox extension") +
+                       '">' + addon.name)
+                + "</a>" + (addon.version ? " " + addon.version : "")
+                + "<br/>" + addon.description + "</li>";
+  })
+  extensions += "</ol>";
+  doSomething(extensions, "text/html");
+}
+
+function generateMarkdown(aTheme, aArray) {
+  var idx = 0;
+  var extensions = "# Firefox info"
+                 + "\n\n## User agent\n\n" + navigator.userAgent
+                 + "\n\n## Theme\n\n"
+                 + (!isDefaultTheme(aTheme)
+                    ? "[" + aTheme.name + "](" + getThemeURL(aTheme) + ")"
+                    : aTheme.name)
+                 + (!isDefaultTheme(aTheme) && aTheme.screenshots &&
+                    !/getpersonas/.test(aTheme.screenshots)
+                    ? "\n\n![" + aTheme.name + "](" + aTheme.screenshots[0].url + ")"
+                    : "")
+                 + "\n\n## Extensions";
+  aArray.forEach(function(addon) {
+    idx++;
+    extensions += "\n\n" + idx + ". "
+                + (addon.reviewURL
+                   ? "[" + addon.name + "](" + getAMOPage(addon.reviewURL)
+                   : addon.homepageURL
+                     ? "[" + addon.name + "](" + addon.homepageURL
+                     : "[" + addon.name + "](" +
+                       "http://www.google.com/search?q=" +
+                       encodeURIComponent(addon.name + " firefox extension"))
+                + ")" + (addon.version ? " " + addon.version : "")
+                + "  \n" + addon.description;
+  })
+  doSomething(extensions, "text/plain", "%0A%0A.md");
+}
+
+function generateBBCode(aTheme, aArray) {
+  var extensions = "[b]User agent:[/b] " + navigator.userAgent
+                 + "\n\n[b]Theme:[/b] "
+                 + (!isDefaultTheme(aTheme)
+                    ? "[url=" + getThemeURL(aTheme) + "]" + aTheme.name + "[/url]"
+                    : aTheme.name)
+                 + (!isDefaultTheme(aTheme) && aTheme.screenshots &&
+                    !/getpersonas/.test(aTheme.screenshots)
+                    ? "\n[img]" + aTheme.screenshots[0].url + "[/img]"
+                    : "")
+                 + "\n\n[b]Extensions:[/b]\n[list=1]";
+  aArray.forEach(function(addon) {
+    extensions += "[*]"
+                + (addon.reviewURL
+                   ? "[url=" + getAMOPage(addon.reviewURL)
+                   : addon.homepageURL
+                     ? "[url=" + addon.homepageURL
+                     : "[url=http://www.google.com/search?q=" +
+                       encodeURIComponent(addon.name + " firefox extension"))
+                + "]" + addon.name + "[/url]"
+                + (addon.version ? " " + addon.version : "");
+  })
+  extensions += "[/list]";
+  doSomething(extensions, "text/plain");
+}
+
+function generateBBCodeS(aTheme, aArray) {
+  var extensions = "[spoiler=Firefox info]" + navigator.userAgent
+                 + "\n\n[b]Theme:[/b] "
+                 + (!isDefaultTheme(aTheme)
+                    ? "[url=" + getThemeURL(aTheme) + "]" + aTheme.name + "[/url]"
+                    : aTheme.name)
+                 + (!isDefaultTheme(aTheme) && aTheme.screenshots &&
+                    !/getpersonas/.test(aTheme.screenshots)
+                    ? "\n[img]" + aTheme.screenshots[0].url + "[/img]"
+                    : "")
+                 + "\n\n[b]Extensions:[/b]\n[list=1]";
+  aArray.forEach(function(addon) {
+    extensions += "[*]"
+                + (addon.reviewURL
+                   ? "[url=" + getAMOPage(addon.reviewURL)
+                   : addon.homepageURL
+                     ? "[url=" + addon.homepageURL
+                     : "[url=http://www.google.com/search?q=" +
+                       encodeURIComponent(addon.name + " firefox extension"))
+                + "]" + addon.name + "[/url]"
+                + (addon.version ? " " + addon.version : "");
+  })
+  extensions += "[/list][/spoiler]";
+  doSomething(extensions, "text/plain");
+}
+
+function getAMOPage(aReviewURL) {
+  var url = aReviewURL.replace(/\/reviews\/.*$/, "/")
+                      .replace(/mozilla.org\/.*\/addon\//, "mozilla.org/addon/");
+  url += "?src=external-extension-list-generator";
+  return url;
+}
+
+function getThemeURL(aAddon) {
+  var url;
+  if (aAddon.reviewURL) {
+    return getAMOPage(aAddon.reviewURL);
+  } else {
+    var id = aAddon.id.match(/\d+/).toString();
+    if (/getpersonas/.test(aAddon.screenshots[0].url)) {
+      url = "http://www.getpersonas.com/persona/" + id;
+    } else {
+      url = "http://addons.mozilla.org/addon/" + id;
+    }
+  }
+  url += "/?src=external-extension-list-generator";
+  return url;
+}
+
+function doSomething(aString, aContentType, aExt) {
+  var prompts = Services.prompt;
+  var flags = prompts.BUTTON_POS_0 * prompts.BUTTON_TITLE_IS_STRING +
+              prompts.BUTTON_POS_1 * prompts.BUTTON_TITLE_CANCEL +
+              prompts.BUTTON_POS_2 * prompts.BUTTON_TITLE_IS_STRING;
+  var doWhat = prompts.confirmEx(null, "Extension List Generator",
+                                 "Extension list has been generated.", flags,
+                                 "Copy", "", "View", null, {value:false});
+  switch (doWhat) {
+    case 0: // Copy
+      Cc["@mozilla.org/widget/clipboardhelper;1"].getService(Ci.nsIClipboardHelper)
+                                                 .copyString(aString);
+      Cc["@mozilla.org/alerts-service;1"].getService(Ci.nsIAlertsService).
+      showAlertNotification("chrome://mozapps/skin/xpinstall/xpinstallItemGeneric.png",
+                            "Extension List Generator", "Copied to clipboard!",
+                            false, "", null);
+      break;
+    case 2: // View
+      var url = "data:" + aContentType + ";charset=utf-8,"
+              + encodeURIComponent(aString) + (aExt ? aExt : "");
+      if (Application.id == "{3550f703-e582-4d05-9a08-453d09bdfdc6}") {
+        // Thunderbird
+        openContentTab(url, "tab", "^https?:");
+      } else {
+        switchToTabHavingURI(url, true);
+      }
+    default: // Close
+  }
+}]]></initcode>
+  <code><![CDATA[/*CODE*/]]></code>
+  <accelkey><![CDATA[]]></accelkey>
+  <help><![CDATA[Generate list of enabled extensions in BB Code format.]]></help>
+  <attributes/>
+</custombutton>
