@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Uptobox</ShortName>
+  <Description>Search on uptobox.com</Description>
+  <Developer>LouCypher</Developer>
+  <Contact>searchplugins@loucypher.oib.com</Contact>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16">data:application/ico;base64,\
+AAABAAIAEBAAAAEACABoBQAAJgAAACAgAAABACAAqBAAAI4FAAAoAAAAEAAAACAAAAABAAgAAAAA\
+AAABAAASCwAAEgsAAAABAAAAAQAAISEhACIiIgAoKCgAKSkpACwsLAAtLS0ALy8vADAwMAAyMjIA\
+MzMzADc3NwA5OTkAOjo6ADw8PAA/Pz8AQkJCAENDQwBGRkYASUlJAEpKSgBSUlIAU1NTAFhYWABa\
+WloAXFxcAGJiYgBlZWUAZmZmAGpqagBra2sAcHBwAHJycgB3d3cAfX19ANlrTQDZbE4A2W1PANpu\
+UQDab1EA2nFUANtzVgDbdFgA23VZANx4XADceF0A3XleAN16XwDefmQA3n9lAN+EawDfhmwA4IZt\
+AOCHbgDgiHAA4YtzAOGLdADhjHQA4Yx1AOKRewCCgoIAhoaGAIeHhwCLi4sAkJCQAJWVlQCampoA\
+n5+fALKhnQC3oZsAuKSeAKurqwCtra0At6eiALqsqQC7r6sAv66qALKysgC/u7oAvb29AL+/vwDA\
+r6oAwrGtAMSzrwDGtrEAwL6+AMi4tADklYAA5JiDAOWZhADmnooA5p+LAOeikADnpJEA6KWTAOio\
+lgDstKUA7LWmAOy2pwDqt6kA7LaoAO24qgDtuasA6b6yAOu/swDvwLQA78K2APDDtwDwxrsA8ci8\
+AMHBwQDCwcAAwsLCAMPDwwDExMQAxcXFAMfHxwDIyMgAycnJAMrKygDLy8sAzMzMAM3NzQDOzs4A\
+z8/PANrRzwDR0dEA0tLSANPT0wDV1dUA1tbWANfX1wDa19YA2NjYANra2gDb29sA3dvbANzc3ADf\
+3d0A39/fAObOyADg2NUA4dnXAOzW0ADo4d8A4eHhAOTk5ADl5eUA5+fnAOnp6QDt7e0A+O3qAPPz\
+8wD19PQA9/f3APn5+QD7+/sA/Pz8AP7+/gD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\
+AAAAAAAAAAAAAAAAAAAAAAAAAJycmn1tcZScnJycbW2UnJyclXQ/Hj5xeJxCi21obm2cnIQPAAAA\
+AEyLbjEiIiJqkJE+AAIWCwAPnDEiMTMiM0h9EQBtfYgLAm4xMW2QMSNobQcEdJyEGQBqIlZtl2gi\
+O04HDXGckSELPjFokJxuMV9tDRFxnJE8DW4xV4+XaDE7bQ8UeJyROxE7MTFtbVYzUG0PEHSclDsP\
+QFYxWWgzVottFBZxnJE/Fm0xVlY6M25GbRYacZyRQRZWVmhoVl99nG0cGXGckT8cU1dfTI+Qmpxx\
+Hh50nJFGHlVWa5ecnJyckHhGeJyVdEaMbJCcnJycnJyQeJicnIB4gHicnJycnJwAAAAAAAAAAAAA\
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA\
+ACAAAABAAAAAAQAgAAAAAAAAEAAAEgsAABILAAAAAAAAAAAAAP//////////////////////////\
+///////////08vL/6enp/+np6f/p6en/9vb2////////////////////////////////////////\
+////////////////////////////////////////////////////////////////////////////\
+///////////////////p6en/xcXF/8XFxf/FxcX/xcXF/8XFxf++vr7/wcHB/+7u7v//////////\
+////////////////////////////7u7u/8rKyv/BwcH/vr6+/76+vv/FxcX/5eXl////////////\
+///////////////////////////6+vr/zc3N/+Xl5f/l5eX/3Nzc/8rKyv/Kysr/0tLS/+Li4v/l\
+5eX/ysrK/9LS0v//////////////////////8vLy/83Nzf/c3Nz/8evp//Xr6P/26ub/9evo/+3p\
+6P/S0tL/vr6+//r6+v///////////////////////////9LS0v/29vb/srKy/15eXv8xMTH/JSUl\
+/yIiIv8pKSn/Pj4+/3p6ev/W1tb/2dnZ/9zc3P///////////+7u7v/S0tL//fj3//LNw//mnor/\
+34Rr/95+ZP/ghm7/6KWT//TWzf/x8O//vr6+///////////////////////l5eX//////5WVlf8p\
+KSn/Hh4e/yIiIv8iIiL/IiIi/yIiIv8eHh7/IiIi/0JCQv/Z2dn/vr6+//r6+v//////4uLi//z0\
+8v/noI3/23JV/9lrTP/Za0z/2WtM/9lrTP/Za0z/3HZa//DFuv/l5eX/4uLi////////////////\
+//////+ysrL/Hh4e/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/0JCQv/y8vL/\
++vr6/9nZ2f/99/X/4Yt0/9hpSv/ZbE7/2WxO/9lsTv/ZbE7/2WxO/9lsTv/ZbE7/2WtM//be1/++\
+vr7////////////u7u7/+vr6/0JCQv8iIiL/IiIi/yIiIv8iIiL/Ghoa/xoaGv8aGhr/IiIi/yIi\
+Iv8iIiL/Hh4e/52dnf//////4uLi//DFuv/YaUr/2WxO/9lsTv/ZbE7/2GlK/9hnSP/Za0z/2WxO\
+/9lsTv/Za0z/5ZqG/+np6f////////////r6+v++vr7/Hh4e/yIiIv8iIiL/IiIi/0tLS/+RkZH/\
+nZ2d/3Z2dv8uLi7/IiIi/yIiIv8iIiL/Pj4+//r6+v//////4IZu/9lsTv/ZbE7/2WxO/9x2Wv/q\
+rp7/7bqt/+GLdP/Za0z/2WxO/9lsTv/ablD/+/Ds/////////////////35+fv8iIiL/IiIi/yIi\
+Iv9RUVH/6enp/////////////////7a2tv8lJSX/IiIi/yIiIv8eHh7/3Nzc//z08v/ablD/2WxO\
+/9lsTv/ZbE7/8s/F/////////////PHu/9+FbP/ZbE7/2WxO/9hpSv/yzcP/////////////////\
+UVFR/yUlJf8lJSX/IiIi/7Kysv/6+vr/3Nzc/+Li4v/i4uL//vz7/15eXv8lJSX/JSUl/x4eHv+2\
+trb/9+Da/9lrTP/ablD/2m5Q/+GKcv/+/Pv/5eXl/+Li4v/6+vr/8MW6/9lrTP/ablD/2WxO/+qu\
+nv////////////////85OTn/KSkp/ykpKf8pKSn/7u7u/+Xl5f/////////////////p6en/paWl\
+/yUlJf8pKSn/JSUl/52dnf/uzsX/2WxO/9pwU//ablD/7biq/+7u7v///////////+Li4v/88vD/\
+2nBT/9pwU//acFP/5JaB/////////////vz7/zU1Nf8pKSn/KSkp/zk5Of/+/Pv/9vb2////////\
+/////////9LS0v/BwcH/JSUl/ykpKf8pKSn/jY2N/+LAt//ablD/23JV/9puUP/yzcP/zc3N////\
+////////+vr6///////dfGH/23JV/9tyVf/hi3T////////////6+vr/NTU1/y4uLv8uLi7/RkZG\
+//78+//6+vr/////////////////2dnZ/83Nzf8lJSX/Li4u/y4uLv+Kior/3Lqx/9pwU//bdFf/\
+2nBT//XY0P/Kysr//////////////////////+CGbv/bdFf/23RX/+CGbv////////////r6+v85\
+OTn/MTEx/zExMf9LS0v/+vr6//78+//////////////////c3Nz/1tbW/ykpKf8xMTH/MTEx/4qK\
+iv/Ytq3/23JV/9x2Wv/bclX/9tvU/8XFxf//////////////////////4Yt0/9x2Wv/cdlr/4IZu\
+////////////+vr6/z4+Pv81NTX/NTU1/05OTv/6+vr//vz7/////////////////9zc3P/W1tb/\
+Li4u/zU1Nf81NTX/jY2N/929s//bdln/3Hld/9t2Wf/01s3/xcXF///////////////////////h\
+inL/3Hld/9x5Xf/hi3T////////////6+vr/Pj4+/zk5Of85OTn/Tk5O//r6+v/+/Pv/////////\
+////////3Nzc/9bW1v8xMTH/OTk5/zk5Of+NjY3/58a9/9x5Xf/dfGH/3Hld//DFuv++vr7/////\
+///////y8vL//vr5/96AZv/dfGH/3Xxh/+SWgf////////////r6+v9CQkL/Pj4+/z4+Pv9RUVH/\
++vr6//78+//////////////////c3Nz/1tbW/zU1Nf8+Pj7/Pj4+/42Njf/yz8X/3Xtg/95+ZP/e\
+fmT/6aqZ/9zc3P/u7u7//////83Nzf/45uH/3Xtg/95+ZP/efmT/6KaU////////////+vr6/0ZG\
+Rv9CQkL/QkJC/1VVVf/6+vr//vz7/////////////////9zc3P/W1tb/OTk5/0JCQv9CQkL/jY2N\
+//PQx//efmT/34Jo/9+CaP/ghm7/+u3q/8rKyv/FxcX/9PLy/+qunv/egGb/34Jo/96AZv/vwbX/\
+///////////6+vr/S0tL/0ZGRv9GRkb/Wlpa//r6+v/+/Pv/////////////////3Nzc/9bW1v8+\
+Pj7/RkZG/0ZGRv+NjY3/89DH/96AZv/fhGv/34Rr/9+CaP/oppT/+OTe//rt6v/xyb7/4IZu/9+E\
+a//fhGv/3oBm//ff2P////////////r6+v9OTk7/S0tL/0tLS/9eXl7/+vr6//78+///////////\
+///////c3Nz/1tbW/0ZGRv9LS0v/S0tL/42Njf/z0cj/34Rr/+CIb//giG//4Ihv/+CGbv/ij3j/\
+45R+/+GKcv/ghm7/4Ihv/+CIb//ikXr//vr5////////////+vr6/1FRUf9RUVH/UVFR/15eXv/6\
++vr//vz7/////////////////9zc3P/W1tb/S0tL/1FRUf9RUVH/kZGR//TSyf/giG//4Ypy/+GK\
+cv/hi3T/4Ypy/+GKcv/hinL/4Ypy/+GKcv/hinL/4Ypy//DFuv/////////////////6+vr/VVVV\
+/1VVVf9VVVX/YWFh//r6+v/+/Pv/////////////////3Nzc/9bW1v9OTk7/VVVV/1VVVf+RkZH/\
+9NLJ/+GLdP/hjXb/4Ypy/+y0pf/hinL/4Y12/+GNdv/hjXb/4Y12/+GNdv/kloH//PTy/+Xl5f//\
+//////////r6+v9aWlr/Wlpa/1paWv9kZGT/+vr6//78+//////////////////c3Nz/1tbW/1FR\
+Uf9aWlr/Wlpa/5GRkf/00sn/4Y12/+KRev/hi3T/9t7X/+24qv/ikXr/4o94/+KPeP/ij3j/5ZqG\
+//jm4f/p6en//vz7////////////+vr6/15eXv9eXl7/Xl5e/2lpaf/6+vr//vz7////////////\
+/////9zc3P/W1tb/VVVV/15eXv9eXl7/lZWV//TUy//ikXr/5JR//+KPeP/23tf//fj3//LNw//r\
+saH/6q6e/+6/sf/56OP//////+np6f/////////////////6+vr/YWFh/2RkZP9kZGT/bW1t//r6\
++v/+/Pv/////////////////3Nzc/9bW1v9aWlr/ZGRk/2RkZP+VlZX/9NTL/+SUf//kmIP/45N9\
+//ff2P/l5eX///////349//99/X//vz7//b29v/u7u7///////////////////////r6+v9kZGT/\
+aWlp/2lpaf9xcXH/+vr6//78+//////////////////c3Nz/1tbW/2FhYf9paWn/aWlp/5mZmf/0\
+1Mv/5JiD/+Wahv/kloH/99/Y/8rKyv/29vb/4uLi/+Li4v/u7u7/////////////////////////\
+////////+vr6/2lpaf9tbW3/bW1t/3Fxcf/6+vr//vz7/////////////////9zc3P/W1tb/ZGRk\
+/21tbf9tbW3/mZmZ//TUy//lmob/5p6K/+SYg//339j/ysrK////////////////////////////\
+////////////////////////////////g4OD/3Fxcf9xcXH/dnZ2//78+//+/Pv/////////////\
+////3Nzc/9bW1v9paWn/cXFx/3Fxcf+dnZ3/9NbN/+aeiv/noI3/5p6K//rt6v/i4uL/////////\
+///////////////////////////////////////////////////Nzc3/dnZ2/3Fxcf96enr/////\
+///////////////////////c3Nz/2dnZ/2lpaf9xcXH/cXFx/52dnf/01s3/5p6K/+egjf/vwLP/\
+//////r6+v//////////////////////////////////////////////////////7u7u//78+//p\
+6en/5eXl/+Xl5f///////////////////////////+np6f/6+vr/4uLi/+Xl5f/l5eX/7u7u//34\
+9//67er/+u3q//76+f/6+vr/////////////////////////////////////////////////////\
+////////////6enp/8XFxf/FxcX/xcXF/+Xl5f///////////////////////////9LS0v/FxcX/\
+xcXF/8XFxf/FxcX/ysrK/8XFxf/FxcX/2dnZ////////////////////////////////////////\
+////////////////////////////////////////////////////////////////////////////\
+////////////////////////////////////////////////////////////////////////////\
+//////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Image>
+  <moz:SearchForm>https://www.google.com/search?sitesearch=uptobox.com</moz:SearchForm>
+  <Url type="text/html"
+       method="get"
+       template="https://www.google.com/search?sitesearch=uptobox.com&amp;q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml"
+       rel="self"
+       template="https://loucypher.googlecode.com/svn/misc/search/uptobox-via-google.xml"/>
+</OpenSearchDescription>
