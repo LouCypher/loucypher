@@ -72,7 +72,7 @@ code, initcode, help {
   <html:body>
     <html:div id="wrapper">
       <html:div id="button">
-        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EJSON%20Inspector%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bcustombuttons-stdicon-1%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5B//%20Check%20if%20DOM%20Inspector%20is%20installed%20and%20enabled%0Aif%20%28typeof%20inspectDOMDocument%20%21%3D%20%22function%22%29%20%7B%0A%20%20this.tooltipText%20%3D%20%22DOM%20Inspector%20extension%20is%20not%20installed%20or%20is%20disabled.%22%3B%0A%20%20this.disabled%20%3D%20true%3B%0A%20%20return%3B%0A%7D%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bvar%20pre%20%3D%20content.document.querySelector%28%22body%20%3E%20pre%22%29%3B%0Avar%20json%3B%0Aif%20%28pre%29%20%7B%0A%20%20try%20%7B%0A%20%20%20%20json%20%3D%20JSON.parse%28pre.textContent%29%3B%0A%20%20%7D%20catch%28ex%29%20%7B%0A%20%20%20%20custombuttons.alertBox%28this.name%2C%20ex%29%3B%0A%20%20%7D%0A%20%20if%20%28typeof%20json%20%3D%3D%20%22object%22%29%20inspectObject%28json%29%3B%0A%7D%20else%20%7B%0A%20%20custombuttons.alertBox%28this.name%2C%20%22Not%20JSON%20file%22%29%3B%0A%7D%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install JSON Inspector">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EJSON%20Inspector%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bcustombuttons-stdicon-3%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5B//%20Check%20if%20DOM%20Inspector%20is%20installed%20and%20enabled%0Aif%20%28typeof%20inspectDOMDocument%20%21%3D%20%22function%22%29%20%7B%0A%20%20var%20domi%20%3D%20%22DOM%20Inspector%22%0A%20%20this.tooltipText%20%3D%20this.name%20+%20%22%20button%20requires%20%22%20+%20domi%20+%20%22%20extension.%5Cn%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22Click%20the%20button%20to%20%22%0A%20%20AddonManager.getAddonByID%28%22inspector@mozilla.org%22%2C%20function%28addon%29%20%7B%0A%20%20%20%20if%20%28addon%29%0A%20%20%20%20%20%20self.tooltipText%20+%3D%20%22enable%20%22%20+%20domi%20+%20%22.%22%3B%0A%20%20%20%20else%0A%20%20%20%20%20%20self.tooltipText%20+%3D%20%22install%20%22%20+%20domi%20+%20%22.%22%3B%0A%0A%20%20%20%20self.Help%20%3D%20self.tooltipText%3B%0A%20%20%7D%29%0A%20%20return%3B%0A%7D%0A%0Avar%20helpText%20%3D%20%22Left-click%3A%20enter%20JSON%20data%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20+%20%22Middle-click%3A%20inspect%20JSON%20data%20from%20web%20content%22%3B%0A%0Athis.Help%20%3D%20helpText%3B%0Athis.tooltipText%20%3D%20this.name%20+%20%22%5Cn%5Cn%22%20+%20this.Help%3B%0A%0Athis.XUL%20%3D%20%27%3C%3Fxml%20version%3D%221.0%22%3F%3E%5C%0A%3C%3Fxml-stylesheet%20type%3D%22text/css%22%20href%3D%22chrome%3A//global/skin/%22%3F%3E%5C%0A%3Cdialog%20xmlns%3D%22http%3A//www.mozilla.org/keymaster/gatekeeper/there.is.only.xul%22%5C%0A%20%20%20%20%20%20%20%20id%3D%22json-input%22%5C%0A%20%20%20%20%20%20%20%20width%3D%22640%22%20height%3D%22480%22%5C%0A%20%20%20%20%20%20%20%20title%3D%22JSON%20Inspector%22%5C%0A%20%20%20%20%20%20%20%20buttons%3D%22extra1%2C%20extra2%2C%20cancel%22%5C%0A%20%20%20%20%20%20%20%20buttonlabelextra1%3D%22Inspect%22%5C%0A%20%20%20%20%20%20%20%20buttonlabelextra2%3D%22Clear%22%5C%0A%20%20%20%20%20%20%20%20buttonlabelcancel%3D%22Close%22%5C%0A%20%20%20%20%20%20%20%20buttonaccesskeyextra1%3D%22I%22%5C%0A%20%20%20%20%20%20%20%20buttonaccesskeyextra2%3D%22r%22%5C%0A%20%20%20%20%20%20%20%20buttonaccesskeycancel%3D%22C%22%5C%0A%20%20%20%20%20%20%20%20ondialogextra1%3D%22inspect%28%29%3B%22%5C%0A%20%20%20%20%20%20%20%20ondialogextra2%3D%22clear%28%29%3B%22%5C%0A%20%20%20%20%20%20%20%20ondialogcancel%3D%22close%28%29%3B%22%3E%5C%0A%20%20%3Ctextbox%20id%3D%22textbox%22%20multiline%3D%22true%22%20flex%3D%221%22%20placeholder%3D%22Insert%20JSON%20data%20here%22/%3E%5C%0A%20%20%3Cscript%20type%3D%22application/javascript%22%20src%3D%22chrome%3A//inspector/content/hooks.js%22/%3E%5C%0A%20%20%3Cscript%20type%3D%22application/x-javascript%22%3E%5C%0A%20%20%20%20const%20textbox%20%3D%20document.getElementById%28%22textbox%22%29%3B%5C%0A%20%20%20%20function%20showAlert%28aText%29%20%7B%5C%0A%20%20%20%20%20%20Components.utils.import%28%22resource%3A//gre/modules/Services.jsm%22%29%3B%5C%0A%20%20%20%20%20%20Services.prompt.alert%28null%2C%20document.title%2C%20aText%29%3B%5C%0A%20%20%20%20%7D%5C%0A%20%20%20%20function%20clear%28%29%20%7B%5C%0A%20%20%20%20%20%20textbox.value%20%3D%20%22%22%3B%5C%0A%20%20%20%20%7D%5C%0A%20%20%20%20function%20inspect%28%29%20%7B%5C%0A%20%20%20%20%20%20let%20data%20%3D%20textbox.value%3B%5C%0A%20%20%20%20%20%20if%20%28data%20%3D%3D%3D%20%22%22%29%5C%0A%20%20%20%20%20%20%20%20showAlert%28%22Data%20is%20empty%21%22%29%3B%5C%0A%20%20%20%20%20%20else%20%7B%5C%0A%20%20%20%20%20%20%20%20try%20%7B%5C%0A%20%20%20%20%20%20%20%20%20%20inspectObject%28JSON.parse%28data%29%29%3B%5C%0A%20%20%20%20%20%20%20%20%20%20close%28%29%3B%5C%0A%20%20%20%20%20%20%20%20%7D%20catch%20%28ex%29%20%7B%5C%0A%20%20%20%20%20%20%20%20%20%20showAlert%28ex%29%3B%5C%0A%20%20%20%20%20%20%20%20%7D%5C%0A%20%20%20%20%20%20%7D%5C%0A%20%20%20%20%7D%5C%0A%20%20%3C/script%3E%5C%0A%3C/dialog%3E%27%3B%0A%0Athis.onclick%20%3D%20function%20onclick%28aEvent%29%20%7B%0A%20%20if%20%28aEvent.button%20%21%3D%3D%201%29%20return%3B%0A%20%20aEvent.preventDefault%28%29%3B%0A%20%20var%20pre%20%3D%20content.document.querySelector%28%22body%20%3E%20pre%22%29%3B%0A%20%20var%20json%3B%0A%20%20if%20%28pre%29%20%7B%0A%20%20%20%20try%20%7B%0A%20%20%20%20%20%20json%20%3D%20JSON.parse%28pre.textContent%29%3B%0A%20%20%20%20%7D%20catch%28ex%29%20%7B%0A%20%20%20%20%20%20custombuttons.alertBox%28this.name%2C%20ex%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28typeof%20json%20%3D%3D%3D%20%22object%22%29%20inspectObject%28json%29%3B%0A%20%20%7D%20else%20%7B%0A%20%20%20%20custombuttons.alertBox%28this.name%2C%20%22Not%20JSON%20file%22%29%3B%0A%20%20%7D%0A%7D%0A%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bif%20%28typeof%20inspectObject%20%21%3D%3D%20%22function%22%29%20%7B%0A%20%20AddonManager.getAddonByID%28%22inspector@mozilla.org%22%2C%20function%28addon%29%20%7B%0A%20%20%20%20if%20%28addon%29%20%7B%0A%20%20%20%20%20%20addon.userDisabled%20%3D%20false%3B%0A%20%20%20%20%20%20let%20restart%20%3D%20custombuttons.confirmBox%28self.name%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20addon.name%20+%20%22%20will%20be%20enabled%20after%20you%20restart%20%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Application.name%20+%20%22.%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22Restart%20now%22%2C%20%22Undo%22%29%3B%0A%20%20%20%20%20%20if%20%28restart%29%0A%20%20%20%20%20%20%20%20Application.restart%28%29%3B%0A%20%20%20%20%20%20else%0A%20%20%20%20%20%20%09addon.userDisabled%20%3D%20true%3B%0A%20%20%20%20%7D%0A%20%20%20%20else%0A%20%20%20%20%20%20loadURI%28%22https%3A//addons.mozilla.org/firefox/downloads/latest/6622/addon-6622-latest.xpi%22%20+%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%3Fsrc%3Dexternal-JSON-Insptector%22%29%3B%0A%20%20%7D%29%0A%20%20return%3B%0A%7D%0A%0Avar%20ww%20%3D%20Services.ww%3B%0Avar%20em%20%3D%20ww.getWindowEnumerator%28%29%3B%0Avar%20winName%20%3D%20%22json_inspect%22%3B%0Avar%20index%20%3D%201%3B%0Awhile%20%28em.hasMoreElements%28%29%29%20%7B%0A%20%20let%20win%20%3D%20em.getNext%28%29%3B%0A%20%20if%28win.name%20%3D%3D%20winName%29%20%7B%0A%20%20%20%20win.focus%28%29%3B%0A%20%20%20%20return%3B%0A%20%20%7D%0A%20%20index++%0A%7D%0Avar%20xurl%20%3D%20%22data%3Aapplication/vnd.mozilla.xul+xml%3Bbase64%2C%22%20+%0A%20%20%20%20%20%20%20%20%20%20%20encodeURIComponent%28btoa%28this.XUL%29%29%3B%0AopenDialog%28xurl%2C%20winName%2C%20%22chrome%2C%20dialog%3Dno%2C%20centerscreen%2C%20minimizable%2C%20resizable%22%29%3B%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5BLeft-click%3A%20enter%20JSON%20dataMiddle-click%3A%20inspect%20JSON%20data%20from%20web%20content%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install JSON Inspector">
         <![CDATA[Install this button]]>
         </html:a>
       </html:div>
@@ -87,27 +87,127 @@ code, initcode, help {
     </html:div>
   </html:body>
   <name>JSON Inspector</name>
-  <image><![CDATA[custombuttons-stdicon-1]]></image>
+  <image><![CDATA[custombuttons-stdicon-3]]></image>
   <mode>0</mode>
   <initcode><![CDATA[// Check if DOM Inspector is installed and enabled
 if (typeof inspectDOMDocument != "function") {
-  this.tooltipText = "DOM Inspector extension is not installed or is disabled.";
-  this.disabled = true;
+  var domi = "DOM Inspector"
+  this.tooltipText = this.name + " button requires " + domi + " extension.\n"
+                   + "Click the button to "
+  AddonManager.getAddonByID("inspector@mozilla.org", function(addon) {
+    if (addon)
+      self.tooltipText += "enable " + domi + ".";
+    else
+      self.tooltipText += "install " + domi + ".";
+
+    self.Help = self.tooltipText;
+  })
   return;
-}]]></initcode>
-  <code><![CDATA[var pre = content.document.querySelector("body > pre");
-var json;
-if (pre) {
-  try {
-    json = JSON.parse(pre.textContent);
-  } catch(ex) {
-    custombuttons.alertBox(this.name, ex);
+}
+
+var helpText = "Left-click: enter JSON data"
+             + "Middle-click: inspect JSON data from web content";
+
+this.Help = helpText;
+this.tooltipText = this.name + "\n\n" + this.Help;
+
+this.XUL = '<?xml version="1.0"?>\
+<?xml-stylesheet type="text/css" href="chrome://global/skin/"?>\
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"\
+        id="json-input"\
+        width="640" height="480"\
+        title="JSON Inspector"\
+        buttons="extra1, extra2, cancel"\
+        buttonlabelextra1="Inspect"\
+        buttonlabelextra2="Clear"\
+        buttonlabelcancel="Close"\
+        buttonaccesskeyextra1="I"\
+        buttonaccesskeyextra2="r"\
+        buttonaccesskeycancel="C"\
+        ondialogextra1="inspect();"\
+        ondialogextra2="clear();"\
+        ondialogcancel="close();">\
+  <textbox id="textbox" multiline="true" flex="1" placeholder="Insert JSON data here"/>\
+  <script type="application/javascript" src="chrome://inspector/content/hooks.js"/>\
+  <script type="application/x-javascript">\
+    const textbox = document.getElementById("textbox");\
+    function showAlert(aText) {\
+      Components.utils.import("resource://gre/modules/Services.jsm");\
+      Services.prompt.alert(null, document.title, aText);\
+    }\
+    function clear() {\
+      textbox.value = "";\
+    }\
+    function inspect() {\
+      let data = textbox.value;\
+      if (data === "")\
+        showAlert("Data is empty!");\
+      else {\
+        try {\
+          inspectObject(JSON.parse(data));\
+          close();\
+        } catch (ex) {\
+          showAlert(ex);\
+        }\
+      }\
+    }\
+  </script>\
+</dialog>';
+
+this.onclick = function onclick(aEvent) {
+  if (aEvent.button !== 1) return;
+  aEvent.preventDefault();
+  var pre = content.document.querySelector("body > pre");
+  var json;
+  if (pre) {
+    try {
+      json = JSON.parse(pre.textContent);
+    } catch(ex) {
+      custombuttons.alertBox(this.name, ex);
+    }
+    if (typeof json === "object") inspectObject(json);
+  } else {
+    custombuttons.alertBox(this.name, "Not JSON file");
   }
-  if (typeof json == "object") inspectObject(json);
-} else {
-  custombuttons.alertBox(this.name, "Not JSON file");
-}]]></code>
+}
+]]></initcode>
+  <code><![CDATA[if (typeof inspectObject !== "function") {
+  AddonManager.getAddonByID("inspector@mozilla.org", function(addon) {
+    if (addon) {
+      addon.userDisabled = false;
+      let restart = custombuttons.confirmBox(self.name,
+                                             addon.name + " will be enabled after you restart " +
+                                             Application.name + ".",
+                                             "Restart now", "Undo");
+      if (restart)
+        Application.restart();
+      else
+      	addon.userDisabled = true;
+    }
+    else
+      loadURI("https://addons.mozilla.org/firefox/downloads/latest/6622/addon-6622-latest.xpi" + 
+              "?src=external-JSON-Insptector");
+  })
+  return;
+}
+
+var ww = Services.ww;
+var em = ww.getWindowEnumerator();
+var winName = "json_inspect";
+var index = 1;
+while (em.hasMoreElements()) {
+  let win = em.getNext();
+  if(win.name == winName) {
+    win.focus();
+    return;
+  }
+  index++
+}
+var xurl = "data:application/vnd.mozilla.xul+xml;base64," +
+           encodeURIComponent(btoa(this.XUL));
+openDialog(xurl, winName, "chrome, dialog=no, centerscreen, minimizable, resizable");
+]]></code>
   <accelkey><![CDATA[]]></accelkey>
-  <help><![CDATA[]]></help>
+  <help><![CDATA[Left-click: enter JSON dataMiddle-click: inspect JSON data from web content]]></help>
   <attributes/>
 </custombutton>
