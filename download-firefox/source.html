@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<html itemscope itemtype="http://schema.org/" contextmenu="context-menu">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Firefox Download Link Generator</title>
+    <meta name="description" content="Generate link to download the latest Firefox version from Mozilla download server."/>
+    <meta name="author" content="https://github.com/LouCypher"/>
+    <meta name="robots" content="nofollow"/>
+    <meta itemprop="name" content="Firefox Download Link Generator"/>
+    <meta itemprop="description" content="Generate link to download the latest Firefox version from Mozilla download server."/>
+    <meta itemprop="author" content="https://github.com/LouCypher"/>
+    <meta itemprop="url" content="http://zoolcar9.lhukie.net/download-firefox/"/>
+    <meta itemprop="image" content="http://zoolcar9.lhukie.net/images/apple_touch_icon-firefox.png"/>
+    <link rel="author" href="https://github.com/LouCypher"/>
+    <link rel="publisher" href="https://plus.google.com/101088441440269967746"/>
+    <link rel="license" href="http://mozilla.org/MPL/2.0/"/>
+    <link rel="image_src" href="/images/apple_touch_icon-firefox.png"/>
+    <link rel="apple-touch-icon" href="/images/apple_touch_icon-firefox.png"/>
+    <link rel="canonical" href="/download-firefox/"/>
+
+    <style type="text/css">
+      body, option:nth-child(odd) {
+        background: buttonface;
+        color: buttontext;
+      }
+      body { text-align: center }
+      fieldset, option {
+        background: #fff;
+        color: #000;
+      }
+      fieldset {
+           -moz-border-radius: 10px;
+         -opera-border-radius: 10px;
+        -webkit-border-radius: 10px;
+                border-radius: 10px;
+        margin: 5em auto;
+        line-height: 1.5em;
+        padding: 1em 0;
+        max-width: 768px;
+        min-width: 560px;
+      }
+      a:link { color: #00f }
+      a:visited { color: #60c }
+      a:active, a:hover { color: #f00 }
+      a:visited:hover { color: #c00 }
+      label, select, input, button { cursor: pointer }
+      option { cursor: default }
+      select, option {
+        height: 1.5em;
+        max-height: 1.5em;
+      }
+      select, input[type="checkbox"] {
+        line-height: 1em;
+        padding: 0;
+      }
+      select { margin: 0 1em 0 .5em }
+      input[type="checkbox"] { margin: 0 .5em 0 0 }
+      .small { font-size: x-small }
+      .disabled { color: #888 }
+      #buttons button, input[type="reset"], input[type="submit"] { margin: 0 .5em }
+      .nojs #stubber, .nojs #buttons, #submitter { display: none }
+      .nojs #submitter { display: block }
+      .clear { clear: both; margin-top: 1em }
+      #stubber, #link { margin: 1em 0 0 }
+    </style>
+
+    <script type="text/javascript">
+      function about() {
+        alert(document.title + "\nby LouCypher\n\n" +
+              document.head.children.description.content);
+      }
+
+      function getStorage() {
+        try {
+          var storage = localStorage.getItem("firefox-download");
+          return storage ? JSON.parse(storage) : null;
+        } catch (ex) {
+          document.getElementById("buttons").className = "hidden";
+          return null;
+        }
+      }
+
+      function setStorage() {
+        var form = document.download;
+        var data = {
+          os: form.os.value,
+          lang: form.lang.value,
+          stub: form.stub.checked
+        }
+        localStorage.setItem("firefox-download", JSON.stringify(data));
+      }
+
+      function detect() {
+        var form = document.download;
+
+        var platform = navigator.platform;
+        if (/^Win/.test(platform))
+          form.os.value = "win"
+        if (/^Mac/.test(platform))
+          form.os.value = "osx";
+        if (/^Linux/.test(platform)) {
+          if (/64$/.test(platform))
+            form.os.value = "linux64";
+          else
+            form.os.value = "linux";
+        }
+
+        var lang;
+        if ("browserLanguage" in navigator)
+          lang = navigator.browserLanguage;
+        else
+          lang = navigator.language;
+
+        if (lang === "jv" || lang === "jw" || lang === "su")
+          lang = "id";
+
+        var oLang = document.querySelector('option[value="' + lang + '"]') ||
+                    document.querySelector('option[value^="' + lang.match(/\w+/).toString() + '"]');
+        form.lang.selectedIndex = oLang.index;
+      }
+
+      function updateTitle(node) {
+        node.title = node.options[node.selectedIndex].title;
+      }
+
+      function generateLink() {
+        var form = document.download;
+        var url = form.action + "?product=firefox-"
+                              + (form.os.value === "win" && form.stub.checked ? "stub" : "latest")
+                              + "&os=" + form.os.value
+                              + "&lang=" + form.lang.value;
+        form.stub.disabled = form.os.value !== "win";
+        document.getElementById("stubber").className = form.stub.disabled ? "disabled" : "";
+        var link = document.getElementById("download-link");
+        if ("innerText" in link)
+          link.href = link.innerText = url;
+        else
+          link.href = link.textContent = url;
+      }
+
+      function resetForm() {
+        localStorage.removeItem("firefox-download");
+        document.download.stub.checked = false;
+        detect();
+        generateLink()
+      }
+
+      function onLoad() {
+        document.getElementById("downloader").removeAttribute("class");
+
+        var form = document.download;
+        var data = getStorage();
+        if (data) {
+          form.os.value = data.os;
+          form.lang.value = data.lang;
+          form.stub.checked = data.stub;
+        }
+        else
+          detect();
+
+        generateLink();
+        updateTitle(document.download.lang);
+      }
+    </script>
+  </head>
+
+  <body onload="onLoad();generateLink();">
+    <fieldset id="downloader" class="nojs">
+      <form name="download" id="download" action="https://download.mozilla.org/" method="get">
+
+        <label for="os">System</label>
+        <select name="os" id="os" onchange="generateLink();">
+          <option value="win">Windows</option>
+          <option value="osx">Mac OS X</option>
+          <option value="linux">Linux</option>
+          <option value="linux64">Linux 64</option>
+        </select>
+
+        <label for="lang">Language</label>
+        <select name="lang" id="lang" title="" onchange="generateLink(); updateTitle(this);">
+          <option value="ach" title="ach &mdash; Acholi">Acholi</option>
+          <option value="af" title="af &mdash; Afrikaans">Afrikaans</option>
+          <option value="ar" title="ar &mdash; Arabic">&#x0639;&#x0631;&#x0628;&#x064A;</option>
+          <option value="as" title="as &mdash; Assamese">&#x0985;&#x09B8;&#x09AE;&#x09C0;&#x09AF;&#x09BC;&#x09BE;</option>
+          <option value="ast" title="ast &mdash; Asturian">Asturianu</option>
+          <option value="be" title="be &mdash; Belarusian">&#x0411;&#x0435;&#x043B;&#x0430;&#x0440;&#x0443;&#x0441;&#x043A;&#x0430;&#x044F;</option>
+          <option value="bg" title="bg &mdash; Bulgarian">&#x0411;&#x044A;&#x043B;&#x0433;&#x0430;&#x0440;&#x0441;&#x043A;&#x0438;</option>
+          <option value="bn-BD" title="bn-BD &mdash; Bengali (Bangladesh)">&#x09AC;&#x09BE;&#x0982;&#x09B2;&#x09BE; (&#x09AC;&#x09BE;&#x0982;&#x09B2;&#x09BE;&#x09A6;&#x09C7;&#x09B6;)</option>
+          <option value="br" title="br &mdash; Breton">Brezhoneg</option>
+          <option value="bs" title="bs &mdash; Bosnian">Bosanski</option>
+          <option value="ca" title="ca &mdash; Catalan">Catal&#x00E0;</option>
+          <option value="cs" title="cs &mdash; Czech">&#x010C;e&#x0161;tina</option>
+          <option value="csb" title="csb &mdash; Kashubian">Kasz&#x00EB;bsczi</option>
+          <option value="cy" title="cy &mdash; Welsh">Cymraeg</option>
+          <option value="da" title="da &mdash; Danish">Danks</option>
+          <option value="de" title="de &mdash; German">Deutsch</option>
+          <option value="el" title="el &mdash; Greek">&#x0395;&#x03BB;&#x03BB;&#x03B7;&#x03BD;&#x03B9;&#x03BA;&#x03AC;</option>
+          <option value="en-US" title="en-US" selected>English (US)</option>
+          <option value="en-GB" title="en-GB">English (British)</option>
+          <option value="en-ZA" title="en-ZA">English (South African)</option>
+          <option value="eo" title="eo">Esperanto</option>
+          <option value="es-ES" title="es-ES &mdash; Spanish (Spain)">Espa&#x00F1;ol (de Espa&#x00F1;a)</option>
+          <option value="es-AR" title="es-AR &mdash; Spanish (Argentina)">Espa&#x00F1;ol (de Argentina)</option>
+          <option value="es-CL" title="es-CL &mdash; Spanish (Chile)">Espa&#x00F1;ol (de Chile)</option>
+          <option value="es-MX" title="es-MX &mdash; Spanish (Mexico)">Espa&#x00F1;ol (de M&#x00E9;xico)</option>
+          <option value="et" title="et &mdash; Estonian">Eesti keel</option>
+          <option value="eu" title="eu &mdash; Basque">Euskara</option>
+          <option value="fa" title="fa &mdash; Persian">&#x0641;&#x0627;&#x0631;&#x0633;&#x06CC;</option>
+          <option value="ff" title="ff &mdash; Fulah">Pulaar-Fulfulde</option>
+          <option value="fi" title="fi &mdash; Finnish">Suomi</option>
+          <option value="fr" title="fr &mdash; French">Fran&#x00E7;ais</option>
+          <option value="fy-NL" title="fy-NL &mdash; Frisian">Frysk</option>
+          <option value="ga-IE" title="ga-IE &mdash; Irish">Gaeilge</option>
+          <option value="gd" title="gd &mdash; Gaelic (Scotland)">G&#x00E0;idhlig</option>
+          <option value="gl" title="gl &mdash; Galician">Galego</option>
+          <option value="gu-IN" title="gu-IN &mdash; Gujarati">&#x0A97;&#x0AC1;&#x0A9C;&#x0AB0;&#x0ABE;&#x0AA4;&#x0AC0;</option>
+          <option value="he" title="he &mdash; Hebrew">&#x05E2;&#x05D1;&#x05E8;&#x05D9;&#x05EA;</option>
+          <option value="hi-IN" title="hi-IN &mdash; Hindi (India)">&#x0939;&#x093F;&#x0928;&#x094D;&#x0926;&#x0940; (&#x092D;&#x093E;&#x0930;&#x0924;)</option>
+          <option value="hr" title="hr &mdash; Croatian">Hrvatski</option>
+          <option value="hu" title="hu &mdash; Hungarian">Magyar</option>
+          <option value="hy-AM" title="hy-AM &mdash; Armenian">&#x0540;&#x0561;&#x0575;&#x0565;&#x0580;&#x0565;&#x0576;</option>
+          <option value="id" title="id &mdash; Indonesian">Bahasa Indonesia</option>
+          <option value="is" title="is &mdash; Icelandic">&#x00ED;slenska</option>
+          <option value="it" title="it &mdash; Italian">Italiano</option>
+          <option value="ja" title="ja &mdash; Japanese">&#x65E5;&#x672C;&#x8A9E;</option>
+          <option value="kk" title="kk &mdash; Kazakh">&#x049A;&#x0430;&#x0437;&#x0430;&#x049B;</option>
+          <option value="km" title="km &mdash; Khmer">&#x1781;&#x17D2;&#x1798;&#x17C2;&#x179A;</option>
+          <option value="kn" title="kn &mdash; Kannada">&#x0C95;&#x0CA8;&#x0CCD;&#x0CA8;&#x0CA1;</option>
+          <option value="ko" title="ko &mdash; Korean">&#xD55C;&#xAD6D;&#xC5B4;</option>
+          <option value="lij" title="lij &mdash; Ligurian">Ligure</option>
+          <option value="lt" title="lt &mdash; Lithuanian">Lietuvi&#x0173; kalba</option>
+          <option value="lv" title="lv &mdash; Latvian">Latvie&#x0161;u</option>
+          <option value="mai" title="mai &mdash; Maithili">&#x092E;&#x0948;&#x0925;&#x093F;&#x0932;&#x0940; &#x09AE;&#x09C8;&#x09A5;&#x09BF;&#x09B2;&#x09C0;</option>
+          <option value="mk" title="mk &mdash; Macedonian">&#x041C;&#x0430;&#x043A;&#x0435;&#x0434;&#x043E;&#x043D;&#x0441;&#x043A;&#x0438;</option>
+          <option value="ml" title="ml &mdash; Malayalam">&#x0D2E;&#x0D32;&#x0D2F;&#x0D3E;&#x0D33;&#x0D02;</option>
+          <option value="mr" title="mr &mdash; Marathi">&#x092E;&#x0930;&#x093E;&#x0920;&#x0940;</option>
+          <option value="nl" title="nl &mdash; Dutch">Nederlands</option>
+          <option value="nb-NO" title="nb-NO &mdash; Norwegian (Bokmål)">Norsk bokm&#x00E5;l</option>
+          <option value="nn-NO" title="nn-NO &mdash; Norwegian (Nynorsk)">Norsk nynorsk</option>
+          <option value="nso" title="nso &mdash; Northern Sotho">Sepedi</option>
+          <option value="or" title="or &mdash; Oriya">&#x0B13;&#x0B21;&#x0B3C;&#x0B3F;&#x0B06;</option>
+          <option value="pa-IN" title="pa-IN &mdash; Punjabi">&#x0A2A;&#x0A70;&#x0A1C;&#x0A3E;&#x0A2C;&#x0A40;</option>
+          <option value="pl" title="pl &mdash; Polish">Polski</option>
+          <option value="pt-PT" title="pt-PT &mdash; Portuguese (Portugal)">Portugu&#x00EA;s (Europeu)</option>
+          <option value="pt-BR" title="pt-BR &mdash; Portuguese (Brazilian)">Portugu&#x00EA;s (do Brasil)</option>
+          <option value="rm" title="rm &mdash; Romansh">Rumantsch</option>
+          <option value="ro" title="ro &mdash; Romanian">Rom&#x00E2;n&#x0103;</option>
+          <option value="ru" title="ru &mdash; Russian">&#x0420;&#x0443;&#x0441;&#x0441;&#x043A;&#x0438;&#x0439;</option>
+          <option value="si" title="si &mdash; Sinhala">&#x0DC3;&#x0DD2;&#x0D82;&#x0DC4;&#x0DBD;</option>
+          <option value="sk" title="sk &mdash; Slovak">Sloven&#x010D;ina</option>
+          <option value="sl" title="sl &mdash; Slovenian">Sloven&#x0161;&#x010D;ina</option>
+          <option value="son" title="son &mdash; Songhai">So&#x014B;ay</option>
+          <option value="sq" title="sq &mdash; Albanian">Shqip</option>
+          <option value="sr" title="sr &mdash; Serbian">&#x0421;&#x0440;&#x043F;&#x0441;&#x043A;&#x0438;</option>
+          <option value="sv-SE" title="sv-SE &mdash; Swedish">Svenska</option>
+          <option value="ta" title="ta &mdash; Tamil">&#x0BA4;&#x0BAE;&#x0BBF;&#x0BB4;&#x0BCD;</option>
+          <option value="te" title="te &mdash; Telugu">&#x0C24;&#x0C46;&#x0C32;&#x0C41;&#x0C17;&#x0C41;</option>
+          <option value="th" title="th &mdash; Thai">&#x0E44;&#x0E17;&#x0E22;</option>
+          <option value="tr" title="tr &mdash; Turkish">T&#x00FC;rk&#x00E7;e</option>
+          <option value="uk" title="uk &mdash; Ukrainian">&#x0423;&#x043A;&#x0440;&#x0430;&#x0457;&#x043D;&#x0441;&#x044C;&#x043A;&#x0430;</option>
+          <option value="vi" title="vi &mdash; Vietnamese">Ti&#x1EBF;ng Vi&#x1EC7;t</option>
+          <option value="zh-TW" title="zh-TW &mdash; Chinese (Traditional)">&#x6B63;&#x9AD4;&#x4E2D;&#x6587; (&#x7E41;&#x9AD4;)</option>
+          <option value="zh-CN" title="zh-CN &mdash; Chinese (Simplified)">&#x4E2D;&#x6587; (&#x7B80;&#x4F53;)</option>
+          <option value="zu" title="zu &mdash; Zulu">isiZulu</option>
+        </select>
+
+        <div id="stubber">
+          <input id="stub" name="stub" type="checkbox" onclick="generateLink();"/>
+          <label for="stub">Online installer <span class="small">(Windows only)</span></label>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="submitter">
+          <label for="product">Installer</label>
+          <select name="product" id="product">
+            <option value="firefox-latest" selected>Offline</option>
+            <option value="firefox-stub">Online (Windows only)</option>
+          </select>
+          <div class="clear"></div>
+          <input type="reset" value="Reset"/>
+          <input type="submit" value="Download"/>
+        </div>
+      </form>
+
+      <div id="link"><a id="download-link"></a></div>
+
+      <div class="clear"></div>
+
+      <div id="buttons">
+        <button onclick="resetForm();">Reset settings</button>
+        <button onclick="setStorage();">Remember settings</button>
+      </div>
+    </fieldset>
+
+    <!-- Firefox only -->
+    <menu id="context-menu" type="context">
+      <menuitem label="About Firefox Download Link Generator" icon="/favicon.ico" onclick="about();">
+      </menuitem>
+    </menu>
+  </body>
+</html>
