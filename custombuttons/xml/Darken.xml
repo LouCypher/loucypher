@@ -72,7 +72,7 @@ code, initcode, help {
   <html:body>
     <html:div id="wrapper">
       <html:div id="button">
-        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EDarken%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bcustombuttons-stdicon-1%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5B/*%0A%20%20%20%20Style%20copied%20from%20%27Global%20-%20Pseudo%20Brightness%20Control%60%0A%20%20%20%20http%3A//userstyles.org/styles/45663%0A%20%20%20%20by%20luckymouse%20%0A%20%20%20%20http%3A//userstyles.org/users/14255%0A*/%0A%0Avar%20domain%20%3D%20content.location.hostname%3B%0A%0Avar%20css%20%3D%20%27@namespace%20url%28%22%27%20+%20xulns%20+%20%27%22%29%3B%5C%0A%23main-window%5Bstylish-domain%3D%22%27%20+%20domain%20+%20%27%22%5D%20%23browser%20%7B%5C%0A%20%20background-color%3A%20%23000%20%21important%3B%5C%0A%7D%5C%0A%23main-window%5Bstylish-domain%3D%22%27%20+%20domain%20+%20%27%22%5D%20%23content%20%7B%5C%0A%20%20opacity%3A%20.85%20%21important%3B%5C%0A%7D%27%3B%0A%0Avar%20uri%20%3D%20makeURI%28%22data%3Atext/css%2C%22%20+%20encodeURIComponent%28css%29%29%3B%0Avar%20sss%20%3D%20Cc%5B%22@mozilla.org/content/style-sheet-service%3B1%22%5D.%0A%20%20%20%20%20%20%20%20%20%20getService%28Ci.nsIStyleSheetService%29%3B%0Aif%20%28sss.sheetRegistered%28uri%2C%20sss.USER_SHEET%29%29%20%7B%0A%20%20sss.unregisterSheet%28uri%2C%20sss.USER_SHEET%29%3B%0A%7D%20else%20%7B%0A%20%20sss.loadAndRegisterSheet%28uri%2C%20sss.USER_SHEET%29%3B%0A%7D%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install Darken">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3EDarken%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bcustombuttons-stdicon-1%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5B/*%0A%20*%20%20This%20Source%20Code%20Form%20is%20subject%20to%20the%20terms%20of%20the%20Mozilla%20Public%0A%20*%20%20License%2C%20v.%202.0.%20If%20a%20copy%20of%20the%20MPL%20was%20not%20distributed%20with%20this%0A%20*%20%20file%2C%20You%20can%20obtain%20one%20at%20http%3A//mozilla.org/MPL/2.0/.%0A%20*/%0A%0A/*%0A%20%20%20%20Based%20on%20%27Global%20-%20Pseudo%20Brightness%20Control%27%20userstyle%0A%20%20%20%20http%3A//userstyles.org/styles/45663%0A%20%20%20%20by%20luckymouse%0A%20%20%20%20http%3A//userstyles.org/users/14255%0A%20%20%20%20License%20under%20Public%20Domain%20Dedication%20%0A%20%20%20%20http%3A//creativecommons.org/publicdomain/zero/1.0/%0A*/%0A%0Aconst%20prefName%20%3D%20%22custombutton.darken.darkLevel%22%3B%0A%0Afunction%20getDarkLevel%28%29%20%7B%0A%20%20try%20%7B%0A%20%20%20%20return%20cbu.ps.getIntPref%28prefName%29%3B%0A%20%20%7D%20catch%20%28ex%29%20%7B%0A%20%20%20%20return%200%3B%0A%20%20%7D%0A%7D%0A%0Afunction%20getOpacity%28aDarkLevel%29%20%7B%0A%20%20var%20opacity%20%3D%200%3B%0A%20%20if%20%28aDarkLevel%20%3D%3D%3D%2050%29%0A%20%20%20%20opacity%20%3D%20aDarkLevel%20/%20100%3B%0A%20%20else%0A%20%20%20%20opacity%20%3D%20%28100%20-%20aDarkLevel%29%20/%20100%3B%0A%20%20return%20opacity%3B%0A%7D%0A%0Afunction%20mouseWheel%28aEvent%29%20%7B%0A%20%20var%20darkLevel%20%3D%20getDarkLevel%28%29%3B%0A%20%20if%20%28aEvent.detail%20%3E%200%29%20%7B%20%20%20%20%20%20%20%20%20%20//%20Scroll%20down%0A%20%20%20%20if%20%28darkLevel%20%3C%20100%29%0A%20%20%20%20%20%20darkLevel++%3B%20%20%20%20%20%20//%20Increase%20number%20if%20value%20%3C%20100%0A%20%20%20%20else%0A%20%20%20%20%20%20aEvent.stopPropagation%28%29%3B%20%20%20%20%20//%20else%20stop%20%28max%20%3D%20100%29%0A%20%20%7D%0A%20%20else%20%7B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20Scroll%20up%0A%20%20%20%20if%20%28darkLevel%20%3E%200%29%0A%20%20%20%20%20%20darkLevel--%3B%20%20%20%20%20%20//%20Decrease%20number%20if%20value%20%3E%200%0A%20%20%20%20else%0A%20%20%20%20%20%20aEvent.stopPropagation%28%29%3B%20%20%20%20%20//%20else%20stop%20%28min%20%3D%200%29%0A%20%20%7D%0A%20%20gBrowser.style.opacity%20%3D%20getOpacity%28darkLevel%29%3B%0A%20%20cbu.ps.setIntPref%28prefName%2C%20darkLevel%29%3B%0A%7D%0A%0Athis.onclick%20%3D%20function%20onclick%28aEvent%29%20%7B%0A%20%20if%20%28aEvent.button%20%21%3D%3D%201%29%0A%20%20%20%20return%3B%0A%20%20gBrowser.style.opacity%20%3D%20%221%22%3B%0A%20%20cbu.ps.setIntPref%28prefName%2C%200%29%3B%0A%7D%0A%0Athis.addEventListener%28%22DOMMouseScroll%22%2C%20mouseWheel%29%3B%0A%0Avar%20browser%20%3D%20document.getElementById%28%22browser%22%29%3B%0Abrowser.style.backgroundColor%20%3D%20%22black%22%3B%0AgBrowser.style.opacity%20%3D%20getOpacity%28getDarkLevel%28%29%29%3B%0A%0Athis.tooltipText%20%3D%20this.name%20+%20%22%5Cn%22%20+%20this.Help%3B%0A%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bcustombuttons.alertBox%28this.name%2C%20this.Help%29%3B%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5BScroll%20your%20mouse%20wheel%20up/down%20on%20this%20button%20to%20adjust%20brightness.%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install Darken">
         <![CDATA[Install this button]]>
         </html:a>
       </html:div>
@@ -89,33 +89,76 @@ code, initcode, help {
   <name>Darken</name>
   <image><![CDATA[custombuttons-stdicon-1]]></image>
   <mode>0</mode>
-  <initcode><![CDATA[]]></initcode>
-  <code><![CDATA[/*
-    Style copied from 'Global - Pseudo Brightness Control`
+  <initcode><![CDATA[/*
+ *  This Source Code Form is subject to the terms of the Mozilla Public
+ *  License, v. 2.0. If a copy of the MPL was not distributed with this
+ *  file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+/*
+    Based on 'Global - Pseudo Brightness Control' userstyle
     http://userstyles.org/styles/45663
-    by luckymouse 
+    by luckymouse
     http://userstyles.org/users/14255
+    License under Public Domain Dedication 
+    http://creativecommons.org/publicdomain/zero/1.0/
 */
 
-var domain = content.location.hostname;
+const prefName = "custombutton.darken.darkLevel";
 
-var css = '@namespace url("' + xulns + '");\
-#main-window[stylish-domain="' + domain + '"] #browser {\
-  background-color: #000 !important;\
-}\
-#main-window[stylish-domain="' + domain + '"] #content {\
-  opacity: .85 !important;\
-}';
+function getDarkLevel() {
+  try {
+    return cbu.ps.getIntPref(prefName);
+  } catch (ex) {
+    return 0;
+  }
+}
 
-var uri = makeURI("data:text/css," + encodeURIComponent(css));
-var sss = Cc["@mozilla.org/content/style-sheet-service;1"].
-          getService(Ci.nsIStyleSheetService);
-if (sss.sheetRegistered(uri, sss.USER_SHEET)) {
-  sss.unregisterSheet(uri, sss.USER_SHEET);
-} else {
-  sss.loadAndRegisterSheet(uri, sss.USER_SHEET);
-}]]></code>
+function getOpacity(aDarkLevel) {
+  var opacity = 0;
+  if (aDarkLevel === 50)
+    opacity = aDarkLevel / 100;
+  else
+    opacity = (100 - aDarkLevel) / 100;
+  return opacity;
+}
+
+function mouseWheel(aEvent) {
+  var darkLevel = getDarkLevel();
+  if (aEvent.detail > 0) {          // Scroll down
+    if (darkLevel < 100)
+      darkLevel++;      // Increase number if value < 100
+    else
+      aEvent.stopPropagation();     // else stop (max = 100)
+  }
+  else {                            // Scroll up
+    if (darkLevel > 0)
+      darkLevel--;      // Decrease number if value > 0
+    else
+      aEvent.stopPropagation();     // else stop (min = 0)
+  }
+  gBrowser.style.opacity = getOpacity(darkLevel);
+  cbu.ps.setIntPref(prefName, darkLevel);
+}
+
+this.onclick = function onclick(aEvent) {
+  if (aEvent.button !== 1)
+    return;
+  gBrowser.style.opacity = "1";
+  cbu.ps.setIntPref(prefName, 0);
+}
+
+this.addEventListener("DOMMouseScroll", mouseWheel);
+
+var browser = document.getElementById("browser");
+browser.style.backgroundColor = "black";
+gBrowser.style.opacity = getOpacity(getDarkLevel());
+
+this.tooltipText = this.name + "\n" + this.Help;
+]]></initcode>
+  <code><![CDATA[custombuttons.alertBox(this.name, this.Help);
+]]></code>
   <accelkey><![CDATA[]]></accelkey>
-  <help><![CDATA[]]></help>
+  <help><![CDATA[Scroll your mouse wheel up/down on this button to adjust brightness.]]></help>
   <attributes/>
 </custombutton>
