@@ -72,7 +72,7 @@ code, initcode, help {
   <html:body>
     <html:div id="wrapper">
       <html:div id="button">
-        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3ECheck%20for%20Updates%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bchrome%3A//branding/content/icon16.png%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5Bthis.updater%20%3D%20Cc%5B%27@mozilla.org/updates/update-manager%3B1%27%5D.getService%28Ci.nsIUpdateManager%29%3B%0Athis.prompter%20%3D%20Cc%5B%22@mozilla.org/updates/update-prompt%3B1%22%5D.createInstance%28Ci.nsIUpdatePrompt%29%3B%0A%0Afunction%20%24%28aSelector%2C%20aNode%29%20%7B%0A%20%20return%20%28aNode%20%7C%7C%20document%29.querySelector%28aSelector%29%3B%0A%7D%0A%0Afunction%20makeXML%28aXMLString%29%20%7B%0A%20%20return%20%28new%20DOMParser%29.parseFromString%28aXMLString%2C%20%22application/xml%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.documentElement%3B%0A%7D%0A%0Afunction%20insertMenuItem%28aParent%2C%20aSibling%2C%20aXUL%29%20%7B%0A%20%20aParent.insertBefore%28makeXML%28aXUL%29%2C%20aSibling%29%3B%0A%7D%0A%0Afunction%20openURL%28aURL%29%20%7B%0A%20%20if%20%28Application.id%20%3D%3D%20%22%7B3550f703-e582-4d05-9a08-453d09bdfdc6%7D%22%29%0A%20%20%20%20openContentTab%28aURL%29%3B%20//%20Thunderbird%0A%20%20else%20%7B%0A%20%20%20%20var%20tabs%20%3D%20gBrowser.mTabs%3B%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20tabs.length%3B%20i++%29%20%7B%0A%20%20%20%20%20%20if%20%28tabs%5Bi%5D.linkedBrowser.currentURI.spec%20%3D%3D%20aURL%29%20%7B%0A%20%20%20%20%20%20%20%20gBrowser.selectedTab%20%3D%20tabs%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20return%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20gBrowser.loadOneTab%28aURL%2C%20null%2C%20null%2C%20null%2C%20false%29%3B%0A%20%20%7D%0A%7D%0A%0Athis.openReleaseNotes%20%3D%20function%20openReleaseNotes%28%29%20%7B%0A%20%20openURL%28this.updater.getUpdateAt%280%29.detailsURL%29%3B%0A%7D%0A%0Athis.openChangeset%20%3D%20function%20openChangeset%28%29%20%7B%0A%20%20var%20url%20%3D%20%22about%3Abuildconfig%22%3B%0A%20%20var%20req%20%3D%20new%20XMLHttpRequest%28%29%3B%0A%20%20req.open%28%22GET%22%2C%20url%2C%20false%29%3B%0A%20%20req.send%28null%29%3B%0A%20%20var%20changeset%20%3D%20req.responseText.match%28/http%3A%5C/%5C/hg.mozilla.org%5C/%5B%5E%5C%22%5D*/%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.toString%28%29%3B%0A%20%20openURL%28changeset%29%3B%0A%7D%0A%0Athis.showUpdateHistory%20%3D%20function%20showUpdateHistory%28%29%20%7B%0A%20%20openURL%28%22chrome%3A//mozapps/content/update/history.xul%22%29%3B%0A%7D%0A%0Athis.aboutApp%20%3D%20function%20aboutApp%28%29%20%7B%0A%20%20if%20%28Application.id%20%3D%3D%20%22%7B92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a%7D%22%29%0A%20%20%20%20goAbout%28%29%3B%0A%20%20else%0A%20%20%20%20openAboutDialog%28%29%3B%0A%7D%0A%0Avar%20xml%20%3D%20%27%3Cmenupopup%20xmlns%3D%22%27%20+%20xulns%20+%20%27%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncontextmenu%3D%22event.preventDefault%28%29%3B%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22event.stopPropagation%28%29%3B%22%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Release%20Notes%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22this.parentNode.parentNode.openReleaseNotes%28%29%3B%22/%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Changeset%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22this.parentNode.parentNode.openChangeset%28%29%3B%22/%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Show%20Update%20History%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22this.parentNode.parentNode.showUpdateHistory%28%29%3B%22/%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cmenuseparator%20id%3D%22%27%20+%20this.id%20+%20%27-separator%22/%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22About%20%27%20+%20Application.name%20+%20%27%20%27%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20+%20Application.version%20+%20%27%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20class%3D%22menuitem-iconic%22%20image%3D%22%27%20+%20this.image%20+%20%27%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22this.parentNode.parentNode.aboutApp%28%29%3B%22/%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%3C/menupopup%3E%27%3B%0A%0A//LOG%28xml%29%3B%0A%0Athis.appendChild%28makeXML%28xml%29%29%3B%0Athis.type%20%3D%20%22menu-button%22%3B%0A%0Aswitch%20%28Application.id%29%20%7B%0A%20%20case%20%22%7B92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a%7D%22%3A%20//%20SeaMonkey%0A%20%20%20%20this.image%20%3D%20%22chrome%3A//communicator/skin/brand/throbber16-single.png%22%3B%0A%20%20%20%20break%3B%0A%20%20case%20%22%7B3550f703-e582-4d05-9a08-453d09bdfdc6%7D%22%3A%20//%20Thunderbird%0A%20%20%20%20this.image%20%3D%20%22chrome%3A//branding/content/about-logo.png%22%3B%0A%20%20%20%20var%20button%20%3D%20this%3B%0A%20%20%20%20window.setTimeout%28function%28%29%20%7B%0A%20%20%20%20%20%20var%20tButton%20%3D%20document.getAnonymousElementByAttribute%28button%2C%20%22class%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22box-inherit%20toolbarbutton-menubutton-button%22%29%3B%0A%20%20%20%20%20%20var%20icon%20%3D%20document.getAnonymousElementByAttribute%28tButton%2C%20%22class%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22toolbarbutton-icon%22%29%3B%0A%20%20%20%20%20%20icon.setAttribute%28%22style%22%2C%20%22width%3A%2016px%3B%20height%3A%2016px%3B%22%29%3B%0A%20%20%20%20%7D%29%0A%20%20%20%20break%3B%0A%20%20default%3A%20this.image%20%3D%20%22chrome%3A//branding/content/icon16.png%22%3B%0A%7D%0A%0A%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bvar%20updater%20%3D%20this.updater%3B%0Avar%20prompter%20%3D%20this.prompter%3B%0A%0Aif%20%28updater.activeUpdate%20%26%26%20updater.activeUpdate.state%20%3D%3D%20%22pending%22%29%20%7B%0A%20%20prompter.showUpdateDownloaded%28updater.activeUpdate%29%3B%0A%7D%20else%20%7B%0A%20%20prompter.checkForUpdates%28%29%3B%0A%7D%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install Check for Updates">
+        <html:a href="custombutton://%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Ccustombutton%20xmlns%3Acb%3D%22http%3A//xsms.nm.ru/custombuttons/%22%3E%0A%20%20%3Cname%3ECheck%20for%20Updates%3C/name%3E%0A%20%20%3Cimage%3E%3C%21%5BCDATA%5Bchrome%3A//branding/content/icon16.png%5D%5D%3E%3C/image%3E%0A%20%20%3Cmode%3E0%3C/mode%3E%0A%20%20%3Cinitcode%3E%3C%21%5BCDATA%5Bconst%20%7Bappinfo%7D%20%3D%20Services%3B%0A%0Athis.updater%20%3D%20Cc%5B%27@mozilla.org/updates/update-manager%3B1%27%5D.getService%28Ci.nsIUpdateManager%29%3B%0Athis.prompter%20%3D%20Cc%5B%22@mozilla.org/updates/update-prompt%3B1%22%5D.createInstance%28Ci.nsIUpdatePrompt%29%3B%0A%0Avar%20thisUpdate%20%3D%20this.updater.updateCount%20%3F%20this.updater.getUpdateAt%280%29%20%3A%20null%3B%0A%0Afunction%20%24%28aSelector%2C%20aNode%29%20%28aNode%20%7C%7C%20document%29.querySelector%28aSelector%29%3B%0A%0Afunction%20makeXML%28aXMLString%29%20%28new%20DOMParser%29.parseFromString%28aXMLString%2C%20%22application/xml%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.documentElement%3B%0A%0Afunction%20insertMenuItem%28aParent%2C%20aSibling%2C%20aXUL%29%20%7B%0A%20%20aParent.insertBefore%28makeXML%28aXUL%29%2C%20aSibling%29%3B%0A%7D%0A%0Afunction%20openURL%28aURL%29%20%7B%0A%20%20if%20%28appinfo.ID%20%3D%3D%3D%20%22%7B3550f703-e582-4d05-9a08-453d09bdfdc6%7D%22%29%0A%20%20%20%20openContentTab%28aURL%29%3B%20//%20Thunderbird%0A%20%20else%20%7B%0A%20%20%20%20var%20tabs%20%3D%20gBrowser.mTabs%3B%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20tabs.length%3B%20i++%29%20%7B%0A%20%20%20%20%20%20if%20%28tabs%5Bi%5D.linkedBrowser.currentURI.spec%20%3D%3D%20aURL%29%20%7B%0A%20%20%20%20%20%20%20%20gBrowser.selectedTab%20%3D%20tabs%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20return%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20gBrowser.loadOneTab%28aURL%2C%20null%2C%20null%2C%20null%2C%20false%29%3B%0A%20%20%7D%0A%7D%0A%0Athis.openReleaseNotes%20%3D%20function%20openReleaseNotes%28%29%20%7B%0A%20%20if%20%28thisUpdate%29%0A%20%20%20%20openURL%28thisUpdate.detailsURL%29%3B%0A%7D%0A%0Athis.openChangeset%20%3D%20function%20openChangeset%28%29%20%7B%0A%20%20var%20url%20%3D%20%22about%3Abuildconfig%22%3B%0A%20%20var%20req%20%3D%20new%20XMLHttpRequest%28%29%3B%0A%20%20req.open%28%22GET%22%2C%20url%2C%20false%29%3B%0A%20%20req.send%28null%29%3B%0A%20%20var%20changeset%20%3D%20req.responseText.match%28/https%3F%3A%5C/%5C/hg.mozilla.org%5C/%5B%5E%5C%22%5D*/%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.toString%28%29%3B%0A%20%20openURL%28changeset%29%3B%0A%7D%0A%0Athis.showUpdateHistory%20%3D%20function%20showUpdateHistory%28%29%20%7B%0A%20%20openURL%28%22chrome%3A//mozapps/content/update/history.xul%22%29%3B%0A%7D%0A%0Athis.aboutApp%20%3D%20function%20aboutApp%28%29%20%7B%0A%20%20if%20%28appinfo.ID%20%3D%3D%3D%20%22%7B92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a%7D%22%29%0A%20%20%20%20goAbout%28%29%3B%0A%20%20else%0A%20%20%20%20openAboutDialog%28%29%3B%0A%7D%0A%0Avar%20appNameVer%20%3D%20thisUpdate%20%3F%20thisUpdate.name%20%3A%20%28appinfo.name%20+%20%22%20%22%20+%20appinfo.version%29%3B%0Avar%20xml%20%3D%20%27%3Cmenupopup%20xmlns%3D%22%27%20+%20xulns%20+%20%27%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncontextmenu%3D%22event.preventDefault%28%29%3B%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22event.stopPropagation%28%29%3B%22%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Release%20Notes%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22this.parentNode.parentNode.openReleaseNotes%28%29%3B%22/%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Changeset%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22this.parentNode.parentNode.openChangeset%28%29%3B%22/%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22Show%20Update%20History%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22this.parentNode.parentNode.showUpdateHistory%28%29%3B%22/%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cmenuseparator%20id%3D%22%27%20+%20this.id%20+%20%27-separator%22/%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cmenuitem%20label%3D%22About%20%27%20+%20appNameVer%20+%20%27%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20class%3D%22menuitem-iconic%22%20image%3D%22%27%20+%20this.image%20+%20%27%22%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oncommand%3D%22this.parentNode.parentNode.aboutApp%28%29%3B%22/%3E%5C%0A%20%20%20%20%20%20%20%20%20%20%20%3C/menupopup%3E%27%3B%0A%0A//LOG%28xml%29%3B%0A%0Athis.appendChild%28makeXML%28xml%29%29%3B%0Athis.type%20%3D%20%22menu-button%22%3B%0A%0Aswitch%20%28appinfo.ID%29%20%7B%0A%20%20case%20%22%7B92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a%7D%22%3A%20//%20SeaMonkey%0A%20%20%20%20this.image%20%3D%20%22chrome%3A//communicator/skin/brand/throbber16-single.png%22%3B%0A%20%20%20%20break%3B%0A%20%20case%20%22%7B3550f703-e582-4d05-9a08-453d09bdfdc6%7D%22%3A%20//%20Thunderbird%0A%20%20%20%20this.image%20%3D%20%22chrome%3A//branding/content/about-logo.png%22%3B%0A%20%20%20%20var%20button%20%3D%20this%3B%0A%20%20%20%20window.setTimeout%28function%28%29%20%7B%0A%20%20%20%20%20%20var%20tButton%20%3D%20document.getAnonymousElementByAttribute%28button%2C%20%22class%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22box-inherit%20toolbarbutton-menubutton-button%22%29%3B%0A%20%20%20%20%20%20var%20icon%20%3D%20document.getAnonymousElementByAttribute%28tButton%2C%20%22class%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22toolbarbutton-icon%22%29%3B%0A%20%20%20%20%20%20icon.setAttribute%28%22style%22%2C%20%22width%3A%2016px%3B%20height%3A%2016px%3B%22%29%3B%0A%20%20%20%20%7D%29%0A%20%20%20%20break%3B%0A%20%20default%3A%20this.image%20%3D%20%22chrome%3A//branding/content/icon16.png%22%3B%0A%7D%0A%0A%5D%5D%3E%3C/initcode%3E%0A%20%20%3Ccode%3E%3C%21%5BCDATA%5Bvar%20updater%20%3D%20this.updater%3B%0Avar%20prompter%20%3D%20this.prompter%3B%0A%0Aif%20%28updater.activeUpdate%20%26%26%20updater.activeUpdate.state%20%3D%3D%20%22pending%22%29%20%7B%0A%20%20prompter.showUpdateDownloaded%28updater.activeUpdate%29%3B%0A%7D%20else%20%7B%0A%20%20prompter.checkForUpdates%28%29%3B%0A%7D%0A%5D%5D%3E%3C/code%3E%0A%20%20%3Caccelkey%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/accelkey%3E%0A%20%20%3Chelp%3E%3C%21%5BCDATA%5B%5D%5D%3E%3C/help%3E%0A%20%20%3Cattributes/%3E%0A%3C/custombutton%3E" rel="nofollow" title="Install Check for Updates">
         <![CDATA[Install this button]]>
         </html:a>
       </html:div>
@@ -89,24 +89,24 @@ code, initcode, help {
   <name>Check for Updates</name>
   <image><![CDATA[chrome://branding/content/icon16.png]]></image>
   <mode>0</mode>
-  <initcode><![CDATA[this.updater = Cc['@mozilla.org/updates/update-manager;1'].getService(Ci.nsIUpdateManager);
+  <initcode><![CDATA[const {appinfo} = Services;
+
+this.updater = Cc['@mozilla.org/updates/update-manager;1'].getService(Ci.nsIUpdateManager);
 this.prompter = Cc["@mozilla.org/updates/update-prompt;1"].createInstance(Ci.nsIUpdatePrompt);
 
-function $(aSelector, aNode) {
-  return (aNode || document).querySelector(aSelector);
-}
+var thisUpdate = this.updater.updateCount ? this.updater.getUpdateAt(0) : null;
 
-function makeXML(aXMLString) {
-  return (new DOMParser).parseFromString(aXMLString, "application/xml")
-                        .documentElement;
-}
+function $(aSelector, aNode) (aNode || document).querySelector(aSelector);
+
+function makeXML(aXMLString) (new DOMParser).parseFromString(aXMLString, "application/xml")
+                                            .documentElement;
 
 function insertMenuItem(aParent, aSibling, aXUL) {
   aParent.insertBefore(makeXML(aXUL), aSibling);
 }
 
 function openURL(aURL) {
-  if (Application.id == "{3550f703-e582-4d05-9a08-453d09bdfdc6}")
+  if (appinfo.ID === "{3550f703-e582-4d05-9a08-453d09bdfdc6}")
     openContentTab(aURL); // Thunderbird
   else {
     var tabs = gBrowser.mTabs;
@@ -121,7 +121,8 @@ function openURL(aURL) {
 }
 
 this.openReleaseNotes = function openReleaseNotes() {
-  openURL(this.updater.getUpdateAt(0).detailsURL);
+  if (thisUpdate)
+    openURL(thisUpdate.detailsURL);
 }
 
 this.openChangeset = function openChangeset() {
@@ -129,7 +130,7 @@ this.openChangeset = function openChangeset() {
   var req = new XMLHttpRequest();
   req.open("GET", url, false);
   req.send(null);
-  var changeset = req.responseText.match(/http:\/\/hg.mozilla.org\/[^\"]*/)
+  var changeset = req.responseText.match(/https?:\/\/hg.mozilla.org\/[^\"]*/)
                                   .toString();
   openURL(changeset);
 }
@@ -139,12 +140,13 @@ this.showUpdateHistory = function showUpdateHistory() {
 }
 
 this.aboutApp = function aboutApp() {
-  if (Application.id == "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}")
+  if (appinfo.ID === "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}")
     goAbout();
   else
     openAboutDialog();
 }
 
+var appNameVer = thisUpdate ? thisUpdate.name : (appinfo.name + " " + appinfo.version);
 var xml = '<menupopup xmlns="' + xulns + '"\
                       oncontextmenu="event.preventDefault();"\
                       oncommand="event.stopPropagation();">\
@@ -155,8 +157,7 @@ var xml = '<menupopup xmlns="' + xulns + '"\
              <menuitem label="Show Update History"\
                        oncommand="this.parentNode.parentNode.showUpdateHistory();"/>\
              <menuseparator id="' + this.id + '-separator"/>\
-             <menuitem label="About ' + Application.name + ' '
-                                      + Application.version + '"\
+             <menuitem label="About ' + appNameVer + '"\
                        class="menuitem-iconic" image="' + this.image + '"\
                        oncommand="this.parentNode.parentNode.aboutApp();"/>\
            </menupopup>';
@@ -166,7 +167,7 @@ var xml = '<menupopup xmlns="' + xulns + '"\
 this.appendChild(makeXML(xml));
 this.type = "menu-button";
 
-switch (Application.id) {
+switch (appinfo.ID) {
   case "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}": // SeaMonkey
     this.image = "chrome://communicator/skin/brand/throbber16-single.png";
     break;
